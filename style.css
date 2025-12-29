@@ -57,33 +57,38 @@ header nav a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 74, 173, 0.6); /* Adjust overlay */
+    background: rgba(0, 0, 0, 0.3); /* subtle dark overlay */
     z-index: 0;
 }
 
 #hero h1, #hero p, #hero .cta-buttons {
     position: relative;
     z-index: 1;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
 }
 
 #hero h1 {
+    animation-delay: 0.5s;
     font-size: 3rem;
     margin-bottom: 20px;
 }
 
 #hero p {
+    animation-delay: 1s;
     font-size: 1.5rem;
     margin-bottom: 30px;
 }
 
 .cta-buttons .btn {
+    animation-delay: 1.5s;
     padding: 15px 30px;
     margin: 5px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
     transition: all 0.3s;
-    display: inline-block;
 }
 
 .btn-primary {
@@ -93,6 +98,7 @@ header nav a:hover {
 
 .btn-primary:hover {
     background-color: #ffc107;
+    transform: scale(1.05);
 }
 
 .btn-secondary {
@@ -102,11 +108,28 @@ header nav a:hover {
 
 .btn-secondary:hover {
     background-color: #e0e0e0;
+    transform: scale(1.05);
+}
+
+/* Fade in animation */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Sections */
 section {
     padding: 80px 50px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 section h2 {
@@ -133,7 +156,6 @@ section p, section li {
     width: 500px;
     max-width: 100%;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 .split .text {
@@ -146,7 +168,7 @@ ul {
     padding-left: 20px;
 }
 
-/* Cards for Charity, Connect, Donate */
+/* Cards for Charity */
 .cards {
     display: flex;
     justify-content: space-around;
@@ -159,16 +181,17 @@ ul {
     color: #fff;
     padding: 30px;
     border-radius: 10px;
-    flex: 1 1 250px;
+    flex: 1 1 200px;
     text-align: center;
     font-weight: bold;
     font-size: 1.2rem;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    transition: transform 0.3s;
+    transition: all 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
 /* Counter numbers */
@@ -208,13 +231,5 @@ footer img {
 
     .cards {
         flex-direction: column;
-    }
-
-    #hero h1 {
-        font-size: 2rem;
-    }
-
-    #hero p {
-        font-size: 1.2rem;
     }
 }
