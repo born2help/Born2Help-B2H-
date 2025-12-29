@@ -4,118 +4,166 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>B2H – Born for Humanity</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 <style>
-  body { font-family: Arial, sans-serif; margin:0; padding:0; background:#0b0f19; color:#fff; }
+  /* Basic Reset */
+  * { margin:0; padding:0; box-sizing:border-box; font-family:'Montserrat', sans-serif; }
+  body { background:#0b0f19; color:#fff; line-height:1.6; }
   a { text-decoration:none; }
-  section { padding:60px 20px; max-width:1000px; margin:auto; }
-  h1,h2 { text-align:center; margin-bottom:20px; }
-  h2 { color: #1e90ff; margin-bottom:40px; } /* Restored blue headers */
-  p, li { font-size:1.2rem; line-height:1.8; }
-  ul { padding:0; list-style:none; }
-  li { margin-bottom:15px; }
-  .btn { padding:15px 30px; border-radius:10px; font-weight:bold; display:inline-block; }
-  
-  /* Section backgrounds and styling restored */
-  #hero { background: linear-gradient(135deg, #0b0f19, #1e3c72); color:#ffd700; padding:80px 20px; }
-  #founder { background: linear-gradient(135deg, #0d1321, #1a1f3d); border-radius:15px; padding:60px 20px; }
-  #join { background:#ffd700; color:#0b0f19; border-radius:15px; padding:60px 20px; }
-  #charity { background:#0d1321; border-radius:15px; padding:60px 20px; }
-  #tokenomics, #roadmap, #transparency { padding:60px 20px; }
-  
+
+  /* Header */
+  header { display:flex; justify-content:space-between; align-items:center; padding:20px 40px; background:#0d1321; position:sticky; top:0; z-index:1000; }
+  header img { height:60px; }
+  nav a { color:#fff; margin-left:20px; font-weight:600; transition:0.3s; }
+  nav a:hover { color:#ffd700; }
+
+  /* Hero Section */
+  #hero { display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; height:100vh; background:linear-gradient(135deg,#0b0f19,#1e3c72); color:#ffd700; padding:0 20px; }
+  #hero h1 { font-size:3rem; margin:20px 0; }
+  #hero p { font-size:1.5rem; margin-bottom:30px; max-width:700px; }
+  .cta-buttons { display:flex; gap:20px; flex-wrap:wrap; justify-content:center; }
+  .btn { padding:15px 30px; border-radius:10px; font-weight:bold; transition:0.3s; }
   .btn-primary { background:#1e90ff; color:#fff; }
-  .btn-secondary { background:#0b0f19; color:#ffd700; }
+  .btn-primary:hover { background:#63b3ed; }
+  .btn-secondary { background:#ffd700; color:#0b0f19; }
+  .btn-secondary:hover { background:#ffec99; }
+
+  /* Sections */
+  section { padding:80px 20px; max-width:1100px; margin:auto; }
+  h2 { color:#1e90ff; text-align:center; margin-bottom:40px; font-size:2.5rem; }
+  p, li { font-size:1.2rem; }
+  ul { list-style:none; padding:0; }
+  li { margin-bottom:15px; }
+
+  /* Split Section */
+  .split { display:flex; flex-wrap:wrap; gap:40px; align-items:center; justify-content:center; }
+  .split img { flex:1; max-width:400px; border-radius:15px; }
+  .split .text { flex:2; }
+
+  /* Cards */
+  .cards { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
+  .card { background:#1a1f3d; border-radius:15px; padding:30px; flex:1 1 250px; min-width:250px; text-align:center; transition:0.3s; }
+  .card:hover { transform:translateY(-5px); background:#1e90ff; }
+
+  /* Animated Numbers */
+  .counter { font-size:2rem; font-weight:bold; color:#ffd700; }
+
+  /* Footer */
+  footer { background:#0d1321; text-align:center; padding:40px 20px; margin-top:50px; }
+  footer img { height:50px; margin-bottom:10px; }
+  footer p { color:#fff; }
 </style>
 </head>
 <body>
 
-<!-- HERO SECTION -->
+<!-- Header -->
+<header>
+  <img src="A_logo_for_&quot;B2H&quot;features_the_text&quot;Born_for_Humanity.png" alt="B2H Logo">
+  <nav>
+    <a href="#hero">Home</a>
+    <a href="#founder">Founder</a>
+    <a href="#join">Mission</a>
+    <a href="#tokenomics">Tokenomics</a>
+    <a href="#roadmap">Roadmap</a>
+    <a href="#transparency">Transparency</a>
+  </nav>
+</header>
+
+<!-- Hero Section -->
 <section id="hero">
+  <img src="A_logo_for_&quot;B2H&quot;features_the_text&quot;Born_for_Humanity.png" alt="B2H Logo" style="height:120px; margin-bottom:20px;">
   <h1>B2H – Born for Humanity</h1>
-  <p style="font-size:1.5rem;">A token with purpose. A movement for humanity. Together, we rise.</p>
-  <p style="font-size:1.2rem; margin-top:20px; color:#ffd700;">
-    🚀 Phase 1 is live! B2H is now available on Solana. Your investment helps humanity automatically. Join the mission today!
-  </p>
+  <p>A token with purpose. A movement for humanity. Together, we rise.</p>
+  <div class="cta-buttons">
+    <a href="#join" class="btn btn-primary">Join Community</a>
+    <a href="#tokenomics" class="btn btn-secondary">Buy Tokens</a>
+    <a href="#charity" class="btn btn-primary">See Impact</a>
+  </div>
 </section>
 
-<!-- FOUNDER MESSAGE -->
+<!-- Founder Message -->
 <section id="founder">
   <h2>👤 Founder Message</h2>
-  <p>
-    Assalamu Alaikum, I am <strong>Mubashir Munnawar Ud Din</strong>, Founder & CEO of B2H – Born for Humanity.  
-    I come from humble beginnings, and my mission is simple yet powerful:
-    <br><br>
-    <em>Every token, every transaction, and every participant contributes directly to help the poor, needy, patients, and humanity — while allowing investors to grow responsibly.</em>
-    <br><br>
-    With your support, we can build a transparent, everlasting humanitarian system that no one can hijack.  
-    Together, we rise, we impact, and we make history.
-  </p>
-  <div style="text-align:center; margin-top:30px;">
-    <a href="#join" class="btn btn-secondary">Join the Mission</a>
+  <div class="split">
+    <img src="founder-photo.png" alt="Founder Photo">
+    <div class="text">
+      <p>
+        Assalamu Alaikum, I am <strong>Mubashir Munnawar Ud Din</strong>, Founder & CEO of B2H – Born for Humanity.
+        <br><br>
+        I come from humble beginnings, and my mission is simple yet powerful:
+        <br><br>
+        <em>Every token, every transaction, and every participant contributes directly to help the poor, needy, patients, and humanity — while allowing investors to grow responsibly.</em>
+        <br><br>
+        Together, we rise, we impact, and we make history.
+      </p>
+      <div style="margin-top:30px;">
+        <a href="#join" class="btn btn-secondary">Join the Mission</a>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- JOIN THE MISSION -->
+<!-- Join the Mission -->
 <section id="join">
   <h2>🤝 Join the B2H Mission</h2>
-  <p>Every token you purchase helps humanity automatically, while allowing your investment to grow.</p>
-  <ul>
-    <li>1️⃣ Buy B2H tokens on Solana</li>
-    <li>2️⃣ Every transaction contributes to charity automatically</li>
-    <li>3️⃣ Track donations in real-time on our website</li>
-    <li>4️⃣ Become part of a global humanitarian movement</li>
-  </ul>
-  <div style="text-align:center; margin-top:30px;">
-    <a href="#tokenomics" class="btn btn-secondary">Get Started</a>
+  <div class="cards">
+    <div class="card">1️⃣ Buy B2H tokens on Solana</div>
+    <div class="card">2️⃣ Every transaction contributes to charity automatically</div>
+    <div class="card">3️⃣ Track donations in real-time on our website</div>
+    <div class="card">4️⃣ Become part of a global humanitarian movement</div>
   </div>
 </section>
 
-<!-- CHARITY WALLET & FIRST DONATIONS -->
+<!-- Charity Contributions -->
 <section id="charity">
   <h2>💖 Charity Contributions</h2>
-  <p>B2H is already helping real people. Here’s how your contribution makes a difference:</p>
-  <ul>
-    <li>🏥 5 patients received medicines in week 1</li>
-    <li>🏠 3 poor families supported with food & water</li>
-    <li>💧 First water project funded for a village</li>
-    <li>🎓 Educational support for 2 children</li>
-  </ul>
-  <p>Every token counts. Together, we are building a transparent and everlasting humanitarian system.</p>
+  <div class="cards">
+    <div class="card">🏥 5 patients received medicines in week 1 <div class="counter">5</div></div>
+    <div class="card">🏠 3 poor families supported <div class="counter">3</div></div>
+    <div class="card">💧 Water project funded <div class="counter">1</div></div>
+    <div class="card">🎓 Educational support for 2 children <div class="counter">2</div></div>
+  </div>
 </section>
 
-<!-- TOKENOMICS -->
+<!-- Tokenomics -->
 <section id="tokenomics">
   <h2>💰 Tokenomics</h2>
-  <ul>
-    <li>Total Supply: 500 Billion B2H</li>
-    <li>Transaction Tax: 10% (4% burn, 4% charity, 2% operations)</li>
-    <li>Affordable for all, even poor investors</li>
-    <li>Blockchain: Solana (low fees, sustainable launch)</li>
-  </ul>
+  <div class="cards">
+    <div class="card">Total Supply: 500 Billion B2H</div>
+    <div class="card">Transaction Tax: 10% (4% burn, 4% charity, 2% operations)</div>
+    <div class="card">Affordable for all investors</div>
+    <div class="card">Blockchain: Solana (low fees, sustainable launch)</div>
+  </div>
 </section>
 
-<!-- ROADMAP -->
+<!-- Roadmap -->
 <section id="roadmap">
   <h2>🗺️ Roadmap</h2>
-  <ul>
-    <li>Phase 1: Token launch, charity wallet setup, first donations</li>
-    <li>Phase 2: Community expansion, partnerships with NGOs and philanthropists</li>
-    <li>Phase 3: Global awareness campaigns, media coverage, celebrity endorsements</li>
-    <li>Phase 4: Expansion, live impact tracker, scaling charity contributions</li>
-  </ul>
+  <div class="cards">
+    <div class="card">Phase 1: Token launch, charity wallet setup, first donations</div>
+    <div class="card">Phase 2: Community expansion, NGO partnerships</div>
+    <div class="card">Phase 3: Global awareness campaigns, media & celebrity endorsements</div>
+    <div class="card">Phase 4: Expansion, live impact tracker, scaling contributions</div>
+  </div>
 </section>
 
-<!-- TRANSPARENCY & PROTECTION -->
+<!-- Transparency & Protection -->
 <section id="transparency">
   <h2>🛡️ Transparency & Protection</h2>
-  <p>B2H is built to be fully transparent and secure. Every transaction is traceable, and all charitable contributions are visible to the public.</p>
-  <ul>
-    <li>🔒 Smart contracts prevent unauthorized control</li>
-    <li>📊 Charity wallet is public and auditable</li>
-    <li>🌐 No single person can hijack the mission</li>
-    <li>🤝 Investors can watch their impact grow in real-time</li>
-  </ul>
-  <p>With B2H, your investment is safe, your impact is real, and the humanitarian mission continues forever.</p>
+  <div class="cards">
+    <div class="card">🔒 Smart contracts prevent unauthorized control</div>
+    <div class="card">📊 Charity wallet is public and auditable</div>
+    <div class="card">🌐 No single person can hijack the mission</div>
+    <div class="card">🤝 Investors can watch impact grow in real-time</div>
+  </div>
 </section>
+
+<!-- Footer -->
+<footer>
+  <img src="A_logo_for_&quot;B2H&quot;features_the_text&quot;Born_for_Humanity.png" alt="B2H Logo">
+  <p>Contact: arabindogroup@gmail.com | WhatsApp: +628112699883</p>
+  <p>&copy; 2025 B2H – Born for Humanity. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
