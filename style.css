@@ -1,4 +1,4 @@
-/* Reset */
+/* Reset some defaults */
 * {
     margin: 0;
     padding: 0;
@@ -7,9 +7,9 @@
 }
 
 body {
-    background-color: #f7f9fc;
+    background-color: #f9f9f9;
     color: #333;
-    line-height: 1.7;
+    line-height: 1.6;
 }
 
 /* Header */
@@ -17,7 +17,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 18px 50px;
+    padding: 20px 50px;
     background-color: #004aad;
     color: #fff;
     position: sticky;
@@ -26,14 +26,15 @@ header {
 }
 
 header img {
-    height: 48px;
+    height: 50px;
 }
 
 header nav a {
     color: #fff;
-    margin-left: 18px;
+    margin-left: 20px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
 header nav a:hover {
@@ -42,32 +43,46 @@ header nav a:hover {
 
 /* Hero Section */
 #hero {
-    background:
-      linear-gradient(rgba(0,74,173,0.5), rgba(0,74,173,0.5)),
-      url('images/hero-bg.jpg') center/cover no-repeat;
+    position: relative;
+    background: url('images/hero-bg.jpg') center/cover no-repeat;
     color: #fff;
     text-align: center;
-    padding: 140px 20px;
+    padding: 120px 20px;
+}
+
+#hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 74, 173, 0.6); /* Adjust overlay */
+    z-index: 0;
+}
+
+#hero h1, #hero p, #hero .cta-buttons {
+    position: relative;
+    z-index: 1;
 }
 
 #hero h1 {
-    font-size: 3.2rem;
+    font-size: 3rem;
     margin-bottom: 20px;
 }
 
 #hero p {
-    font-size: 1.4rem;
-    max-width: 800px;
-    margin: 0 auto 35px;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
 }
 
-/* Buttons */
 .cta-buttons .btn {
-    padding: 14px 28px;
-    margin: 6px;
-    border-radius: 30px;
+    padding: 15px 30px;
+    margin: 5px;
+    border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
+    transition: all 0.3s;
     display: inline-block;
 }
 
@@ -76,57 +91,49 @@ header nav a:hover {
     color: #004aad;
 }
 
+.btn-primary:hover {
+    background-color: #ffc107;
+}
+
 .btn-secondary {
-    background-color: transparent;
-    border: 2px solid #fff;
-    color: #fff;
+    background-color: #fff;
+    color: #004aad;
+}
+
+.btn-secondary:hover {
+    background-color: #e0e0e0;
 }
 
 /* Sections */
 section {
-    padding: 90px 60px;
-}
-
-section:nth-child(even) {
-    background-color: #ffffff;
-}
-
-section:nth-child(odd) {
-    background-color: #f2f6fb;
+    padding: 80px 50px;
 }
 
 section h2 {
     text-align: center;
-    font-size: 2.4rem;
-    margin-bottom: 15px;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
     color: #004aad;
-}
-
-section h2::after {
-    content: '';
-    display: block;
-    width: 70px;
-    height: 4px;
-    background: #ffd700;
-    margin: 15px auto 35px;
 }
 
 section p, section li {
     font-size: 1.1rem;
+    margin-bottom: 15px;
 }
 
-/* Split section */
+/* Split layout for How B2H Helps */
 .split {
     display: flex;
-    gap: 50px;
     align-items: center;
+    gap: 50px;
     flex-wrap: wrap;
 }
 
 .split img {
-    width: 480px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    width: 500px;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 .split .text {
@@ -135,65 +142,39 @@ section p, section li {
 
 /* Lists */
 ul {
-    max-width: 900px;
-    margin: auto;
+    list-style-type: disc;
     padding-left: 20px;
 }
 
-/* Charity Cards */
+/* Cards for Charity, Connect, Donate */
 .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
-    max-width: 1100px;
-    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .card {
-    background: #ffffff;
-    padding: 30px 20px;
-    border-radius: 15px;
+    background-color: #004aad;
+    color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    flex: 1 1 250px;
     text-align: center;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-    color: #004aad;
     font-weight: bold;
-}
-
-/* Connect & Donate Sections */
-#connect, #donate {
-    padding: 80px 50px;
-}
-
-#connect h2, #donate h2 {
-    color: #004aad;
-    margin-bottom: 20px;
-}
-
-#connect p, #donate p {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 40px;
     font-size: 1.2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
 }
 
-/* Reuse .cards and .card styling for uniformity */
-#connect .card, #donate .card {
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-#connect .card:hover, #donate .card:hover {
+.card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
 }
 
-#donate .btn-primary {
-    width: 100%;
-    display: inline-block;
-}
-
+/* Counter numbers */
 .counter {
-    font-size: 2.6rem;
-    margin-top: 10px;
+    font-size: 2.5rem;
+    margin-top: 15px;
     color: #ffd700;
 }
 
@@ -201,13 +182,13 @@ ul {
 footer {
     background-color: #004aad;
     color: #fff;
-    padding: 45px 30px;
+    padding: 40px 50px;
     text-align: center;
 }
 
 footer img {
-    height: 45px;
-    margin-bottom: 15px;
+    height: 50px;
+    margin-bottom: 20px;
 }
 
 /* Responsive */
@@ -221,11 +202,19 @@ footer img {
         margin-top: 10px;
     }
 
-    #hero h1 {
-        font-size: 2.4rem;
-    }
-
     .split {
         flex-direction: column;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    #hero h1 {
+        font-size: 2rem;
+    }
+
+    #hero p {
+        font-size: 1.2rem;
     }
 }
