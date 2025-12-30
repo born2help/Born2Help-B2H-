@@ -69,10 +69,11 @@ body {
 }
 
 /* Heading */
-.hero-title {
-  font-size: 56px;
-  margin-bottom: 15px;
-  color: #ffffff;
+.hero h1 {
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 1px;
 }
 
 .hero-title span {
