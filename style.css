@@ -415,3 +415,81 @@ footer {
 .hero {
   background-color: #0b1a2b;
 }
+
+/* ================= BRAND POWER – LOGO & IDENTITY ================= */
+
+/* Brand container */
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  margin-bottom: 26px;
+  flex-wrap: wrap;
+}
+
+/* MAIN LOGO – stronger presence */
+.main-logo {
+  width: 140px;       /* increased */
+  height: auto;
+  filter: drop-shadow(0 6px 18px rgba(0,0,0,0.45));
+}
+
+/* "Born to Help" text */
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+/* Born to */
+.brand-text span {
+  font-size: 22px;
+  font-weight: 500;
+  color: #e6e6e6;
+  letter-spacing: 1px;
+}
+
+/* Help */
+.brand-text strong {
+  font-size: 42px;
+  font-weight: 800;
+  color: #d4af37; /* gold */
+  letter-spacing: 1.2px;
+  text-shadow:
+    0 2px 6px rgba(0,0,0,0.5),
+    0 0 12px rgba(212,175,55,0.35);
+}
+
+/* HERO DESCRIPTION – readability boost */
+.hero-desc {
+  font-size: 20px;
+  line-height: 1.7;
+  max-width: 820px;
+  margin: 22px auto 30px;
+  color: #f1f1f1;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.35);
+}
+
+/* RESPONSIVE SAFETY */
+@media (max-width: 768px) {
+  .main-logo {
+    width: 110px;
+  }
+
+  .brand-text strong {
+    font-size: 34px;
+  }
+
+  .brand-text span {
+    font-size: 18px;
+  }
+
+  .hero-title {
+    font-size: 46px;
+  }
+
+  .hero-desc {
+    font-size: 18px;
+  }
+}
