@@ -1,248 +1,207 @@
-/* Reset */
+/* ===============================
+   GLOBAL RESET
+================================ */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
 }
 
 body {
-    background-color: #f9f9f9;
-    color: #333;
-    line-height: 1.6;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    line-height: 1.7;
+    color: #222;
+    background: #f5f7fb;
 }
 
-/* Header */
+/* ===============================
+   HEADER
+================================ */
 header {
+    background: linear-gradient(90deg, #0a2a66, #123d9c);
+    padding: 15px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
-    background-color: #004aad;
-    color: #fff;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-header img {
+header .logo img {
+    width: 60px;
     height: 60px;
+    border-radius: 50%;
+    background: #fff;
+    padding: 6px;
 }
 
-header nav a {
+nav a {
     color: #fff;
-    margin-left: 25px;
+    margin-left: 22px;
     text-decoration: none;
-    font-weight: bold;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: all 0.3s;
+    font-weight: 500;
 }
 
-header nav a:hover {
-    background-color: #ffd700;
-    color: #004aad;
+nav a:hover {
+    text-decoration: underline;
 }
 
-/* Hero Section */
+/* ===============================
+   HERO SECTION
+================================ */
 #hero {
-    position: relative;
-    background: url('images/hero-bg.jpg') center/cover no-repeat;
+    min-height: 90vh;
+    background: url("images/hero-bg.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 0 70px;
+}
+
+.hero-content {
+    max-width: 650px;
+    background: rgba(0, 0, 0, 0.35);
+    padding: 45px;
+    border-radius: 14px;
     color: #fff;
-    text-align: center;
-    padding: 120px 20px;
-    overflow: hidden;
 }
 
-/* Subtle blue overlay */
-#hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 74, 173, 0.35); /* subtle overlay */
-    z-index: 1;
-}
-
-/* Hero text positioned above overlay */
-#hero h1,
-#hero p,
-#hero .cta-buttons {
-    position: relative;
-    z-index: 2;
-}
-
-/* Hero Heading */
-#hero h1 {
-    font-size: 3rem;
+.hero-content h1 {
+    font-size: 52px;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
 }
 
-/* Hero Paragraph */
-#hero p {
-    font-size: 1.5rem;
+.hero-content p {
+    font-size: 20px;
     margin-bottom: 30px;
-    text-shadow: 1px 1px 6px rgba(0,0,0,0.4);
 }
 
-/* Hero Buttons */
-.cta-buttons .btn {
-    padding: 15px 30px;
-    margin: 5px;
-    border-radius: 5px;
+.cta-buttons a {
+    padding: 14px 28px;
+    margin-right: 15px;
+    border-radius: 30px;
     text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    font-weight: 600;
 }
 
 .btn-primary {
-    background-color: #ffd700;
-    color: #004aad;
-}
-
-.btn-primary:hover {
-    background-color: #ffc107;
-    transform: scale(1.05);
+    background: #ff9800;
+    color: #fff;
 }
 
 .btn-secondary {
-    background-color: #fff;
-    color: #004aad;
+    background: #fff;
+    color: #0a2a66;
 }
 
-.btn-secondary:hover {
-    background-color: #e0e0e0;
-    transform: scale(1.05);
-}
-
-/* Sections */
+/* ===============================
+   SECTIONS
+================================ */
 section {
-    padding: 80px 50px;
+    padding: 80px 70px;
+    background: #fff;
+}
+
+section:nth-child(even) {
+    background: #f0f3fa;
 }
 
 section h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    color: #004aad;
+    font-size: 38px;
+    margin-bottom: 20px;
+    color: #0a2a66;
 }
 
-section p, section li {
-    font-size: 1.1rem;
-    margin-bottom: 15px;
+section p {
+    font-size: 18px;
+    max-width: 800px;
 }
 
-/* Split layout for How B2H Helps */
+/* ===============================
+   HELP SECTION
+================================ */
 .split {
     display: flex;
-    align-items: center;
     gap: 50px;
-    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 40px;
 }
 
 .split img {
-    width: 500px;
-    max-width: 100%;
-    border-radius: 10px;
+    width: 45%;
+    border-radius: 18px;
 }
 
-.split .text {
-    flex: 1;
+.split ul li {
+    font-size: 18px;
+    margin-bottom: 12px;
 }
 
-/* Lists */
-ul {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-
-/* Charity Cards */
+/* ===============================
+   CHARITY CARDS
+================================ */
 .cards {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
     gap: 30px;
+    margin-top: 40px;
 }
 
 .card {
-    background: linear-gradient(135deg, #004aad, #1a75ff);
+    flex: 1;
+    background: #0a2a66;
     color: #fff;
-    padding: 40px 20px;
-    border-radius: 15px;
-    flex: 1 1 220px;
+    padding: 35px;
+    border-radius: 18px;
     text-align: center;
-    font-weight: bold;
-    font-size: 1.3rem;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 25px rgba(0,0,0,0.4);
 }
 
 .counter {
-    font-size: 3rem;
-    margin-top: 15px;
-    color: #ffd700;
+    font-size: 34px;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
-/* Footer */
-footer {
-    background-color: #004aad;
-    color: #fff;
-    padding: 40px 50px;
+/* ===============================
+   FOUNDER SECTION
+================================ */
+#connect {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+#connect::before {
+    content: "";
+    width: 220px;
+    height: 220px;
+    background: url("images/founder.jpg") center/cover no-repeat;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/* ===============================
+   DONATE
+================================ */
+#donate {
     text-align: center;
 }
 
+#donate .btn-primary {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+/* ===============================
+   FOOTER
+================================ */
+footer {
+    background: #0a2a66;
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+}
+
 footer img {
-    height: 50px;
-    margin-bottom: 20px;
-}
-
-/* Fade-in Animation */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 1s forwards;
-}
-
-.fade-in.delay-1 { animation-delay: 0.5s; }
-.fade-in.delay-2 { animation-delay: 1s; }
-.fade-in.delay-3 { animation-delay: 1.5s; }
-.fade-in.delay-4 { animation-delay: 2s; }
-.fade-in.delay-5 { animation-delay: 2.5s; }
-.fade-in.delay-6 { animation-delay: 3s; }
-
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    header nav {
-        margin-top: 10px;
-    }
-
-    .split {
-        flex-direction: column;
-    }
-
-    .cards {
-        flex-direction: column;
-    }
+    width: 55px;
+    border-radius: 50%;
+    background: #fff;
+    padding: 6px;
+    margin-bottom: 10px;
 }
