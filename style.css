@@ -377,7 +377,7 @@ footer {
 /* ================= HERO HEADING GOLDEN ================= */
 
 .hero-title {
-  color: #d4af37; /* classic gold */
+  color: linear-gradient(90deg, #f5c16c, #d4af37, #b8962e);
   font-size: 72px;
   font-weight: 800;
   letter-spacing: 1px;
