@@ -2,165 +2,150 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 
 body {
   color: #222;
-  background: #f9f9f9;
+  background: #fff;
 }
 
 /* ================= HERO ================= */
 .hero {
   position: relative;
   min-height: 100vh;
-  background: linear-gradient(
-        rgba(0,0,0,0.25),
-        rgba(0,0,0,0.15)
-    );
+  background: url("images/hero.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
-  padding: 0 80px;
+  padding: 80px;
 }
 
-/* Content container */
-.hero-content {
-  max-width: 650px;
-  background: rgba(255, 255, 255, 0.12); /* soft readability */
-  padding: 40px 45px;
-  border-radius: 14px;
-  backdrop-filter: blur(3px);
-  z-index: 2;
+.hero-inner {
+  max-width: 700px;
 }
 
-/* Burn Logo */
 .burn-logo {
   position: absolute;
   right: 1.5in;
   top: 50%;
   transform: translateY(-50%);
-  width: 280px;
-  max-width: 18vw;
-  z-index: 3;
-  opacity: 0.95;
+  width: 220px; /* 🔥 increase here */
 }
 
-/* Logo row */
-.logo-wrap {
+.brand {
   display: flex;
   align-items: center;
-  margin-bottom: 22px;
+  gap: 14px;
+  margin-bottom: 20px;
 }
 
-.hero-logo {
-  width: 95px;
-  margin-right: 14px;
+.main-logo {
+  width: 80px;
 }
 
-.logo-text span {
-  display: block;
-  font-size: 15px;
-  color: #ffd166;
+.brand-text span {
+  font-size: 14px;
+  color: #555;
 }
 
-.logo-text strong {
-  font-size: 30px;
-  color: #fb8500;
+.brand-text strong {
+  font-size: 22px;
+  color: #e67e22;
 }
 
-/* Heading */
-.hero h1 {
-    font-size: clamp(3rem, 5vw, 4.5rem);
-    font-weight: 800;
-    color: #ffffff;
-    letter-spacing: 1px;
+.hero-title {
+  font-size: 56px;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
 .hero-title span {
-  color: #ffb703;
+  color: #e67e22;
 }
 
-/* Description */
-.hero-description {
+.hero-desc {
   font-size: 18px;
-  color: #f1f1f1;
-  line-height: 1.7;
-  margin-bottom: 32px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  max-width: 600px;
 }
 
-/* Buttons */
-.hero-buttons {
+.hero-actions {
   display: flex;
   gap: 15px;
 }
 
-.hero-buttons .btn {
-  padding: 14px 32px;
-  border-radius: 6px;
+.btn {
+  padding: 14px 28px;
+  border-radius: 30px;
   text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
+  font-weight: 600;
 }
 
 .btn.primary {
-  background: #fb8500;
+  background: #e67e22;
   color: #fff;
 }
 
 .btn.secondary {
-  border: 2px solid #fb8500;
-  color: #fb8500;
+  border: 2px solid #e67e22;
+  color: #e67e22;
 }
 
 /* ================= SECTIONS ================= */
 .section {
-  padding: 90px 70px;
-  text-align: center;
-}
-
-.section.light {
-  background: #ffffff;
-}
-
-.section.dark {
-  background: #0b1c2d;
-  color: #fff;
+  padding: 80px;
 }
 
 .section h2 {
   font-size: 36px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
-/* Founder */
-.founder img {
-  width: 160px;
-  border-radius: 50%;
-  margin: 20px 0;
+.light {
+  background: #f7f7f7;
 }
 
-/* Footer */
-footer {
-  background: #0b1c2d;
+.dark {
+  background: #222;
   color: #fff;
-  text-align: center;
-  padding: 30px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .hero {
-    padding: 40px;
-    text-align: center;
-  }
+/* ================= TOKENOMICS ================= */
+.token-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
 
-  .burn-logo {
-    position: static;
-    transform: none;
-    margin-bottom: 30px;
-  }
+.token-box {
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
 
-  .logo-wrap {
-    justify-content: center;
-  }
+/* ================= SPLIT ================= */
+.split {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.split img {
+  width: 45%;
+  border-radius: 14px;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  padding: 30px;
+  text-align: center;
+  background: #111;
+  color: #aaa;
 }
