@@ -22,6 +22,8 @@ body {
 
 .hero-inner {
   max-width: 700px;
+  z-index: 2;
+  position: relative;
 }
 
 .burn-logo {
@@ -29,7 +31,9 @@ body {
   right: 1.5in;
   top: 50%;
   transform: translateY(-50%);
-  width: 260px; /* 🔥 increase here */
+  width: 320px; /* increased 4x approx */
+  height: auto;
+  z-index: 3;
 }
 
 .brand {
@@ -41,6 +45,7 @@ body {
 
 .main-logo {
   width: 80px;
+  height: auto;
 }
 
 .brand-text span {
@@ -57,6 +62,7 @@ body {
   font-size: 56px;
   font-weight: 700;
   margin-bottom: 20px;
+  color: #004aad;
 }
 
 .hero-title span {
@@ -68,6 +74,7 @@ body {
   line-height: 1.6;
   margin-bottom: 30px;
   max-width: 600px;
+  color: #333;
 }
 
 .hero-actions {
@@ -80,6 +87,7 @@ body {
   border-radius: 30px;
   text-decoration: none;
   font-weight: 600;
+  transition: all 0.3s;
 }
 
 .btn.primary {
@@ -87,9 +95,18 @@ body {
   color: #fff;
 }
 
+.btn.primary:hover {
+  background: #ff9500;
+}
+
 .btn.secondary {
   border: 2px solid #e67e22;
   color: #e67e22;
+}
+
+.btn.secondary:hover {
+  background: #e67e22;
+  color: #fff;
 }
 
 /* ================= SECTIONS ================= */
@@ -100,6 +117,7 @@ body {
 .section h2 {
   font-size: 36px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .light {
@@ -112,90 +130,6 @@ body {
 }
 
 /* ================= TOKENOMICS ================= */
-.token-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-}
-
-.token-box {
-  padding: 30px;
-  background: #fff;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-}
-
-.tokenomics-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.token-card {
-  background-color: #ffd700;
-  color: #004aad;
-  padding: 25px;
-  border-radius: 10px;
-  flex: 1 1 220px;
-  text-align: center;
-  font-weight: bold;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  transition: transform 0.3s;
-}
-
-.token-card:hover {
-  transform: translateY(-5px);
-}
-
-.roadmap-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 20px;
-}
-
-.roadmap-card {
-  background-color: #004aad;
-  color: #fff;
-  padding: 25px;
-  border-radius: 10px;
-  flex: 1 1 200px;
-  text-align: center;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  transition: transform 0.3s;
-}
-
-.roadmap-card:hover {
-  transform: translateY(-5px);
-}
-
-/* ================= SPLIT ================= */
-.split {
-  display: flex;
-  gap: 40px;
-  align-items: center;
-}
-
-.split img {
-  width: 45%;
-  border-radius: 14px;
-}
-
-.reverse {
-  flex-direction: row-reverse;
-}
-
-/* ================= FOOTER ================= */
-footer {
-  padding: 30px;
-  text-align: center;
-  background: #111;
-  color: #aaa;
-}
-
-/* ================= TOKENOMICS CARDS ================= */
 .tokenomics-cards {
   display: flex;
   flex-wrap: wrap;
@@ -225,7 +159,7 @@ footer {
   font-size: 1.5rem;
 }
 
-/* ================= ROADMAP CARDS ================= */
+/* ================= ROADMAP ================= */
 .roadmap-cards {
   display: flex;
   flex-wrap: wrap;
@@ -254,24 +188,23 @@ footer {
   font-size: 1.4rem;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .tokenomics-cards, .roadmap-cards {
-    flex-direction: column;
-    align-items: center;
-  }
+/* ================= SPLIT ================= */
+.split {
+  display: flex;
+  gap: 40px;
+  align-items: center;
 }
 
-/* ================= GOVERNANCE, CONSTITUTION, WHY B2H ================= */
-.section p {
-  font-size: 1.15rem;
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.6;
+.split img {
+  width: 45%;
+  border-radius: 14px;
 }
 
-/* ================= CHARITY & BURN CARDS ================= */
+.reverse {
+  flex-direction: row-reverse;
+}
+
+/* ================= CHARITY / BURN ================= */
 .charity-burn-cards {
   display: flex;
   flex-wrap: wrap;
@@ -305,14 +238,6 @@ footer {
 .charity-burn-card h3 {
   margin-bottom: 10px;
   font-size: 1.4rem;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .charity-burn-cards {
-    flex-direction: column;
-    align-items: center;
-  }
 }
 
 /* ================= FOUNDER ================= */
@@ -395,14 +320,50 @@ footer {
   line-height: 1.5;
 }
 
-/* Responsive */
+/* ================= FOOTER ================= */
+footer {
+  padding: 30px;
+  text-align: center;
+  background: #111;
+  color: #aaa;
+}
+
+/* ================= OTHER SECTIONS ================= */
+.section p {
+  font-size: 1.15rem;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
-  .founder-container {
+  .founder-container, .hero-inner {
     flex-direction: column;
+    text-align: center;
   }
 
-  .airdrop-steps {
+  .burn-logo {
+    width: 220px;
+    right: 1rem;
+    top: 40%;
+  }
+
+  .hero-title {
+    font-size: 42px;
+  }
+
+  .hero-desc {
+    font-size: 16px;
+  }
+
+  .tokenomics-cards, .roadmap-cards, .charity-burn-cards, .airdrop-steps {
     flex-direction: column;
     align-items: center;
+  }
+
+  .split img {
+    width: 100%;
   }
 }
