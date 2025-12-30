@@ -373,3 +373,15 @@ footer {
     width: 100%;
   }
 }
+
+/* ================= HERO HEADING GOLDEN ================= */
+
+.hero-title {
+  color: #d4af37; /* classic gold */
+  font-size: 72px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-shadow: 
+    0 2px 8px rgba(0,0,0,0.35),
+    0 0 20px rgba(212,175,55,0.25);
+}
