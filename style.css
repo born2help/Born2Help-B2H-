@@ -180,6 +180,24 @@ body {
   text-align: center;
 }
 
+.section-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #ff7a18;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
 /* Light / Dark sections */
 .light { background: #f7f7f7; color: #222; }
 .dark { background: #222; color: #fff; }
