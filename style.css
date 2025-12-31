@@ -297,3 +297,25 @@ footer {
   font-weight: 800;
   text-shadow: 0 3px 8px rgba(0,0,0,0.35);
 }
+
+/* ================= STEP 5 — TEXT SIZE & READABILITY ================= */
+
+#why p,
+#tokenomics p,
+#roadmap p,
+#governance p,
+#constitution p,
+#founder-message p {
+  font-size: 18px;
+  line-height: 1.8;
+  max-width: 780px;
+  margin: 20px auto;
+  color: #333; /* dark enough for readability */
+  text-align: center;
+}
+
+/* Airdrop steps text */
+.airdrop-steps .step p {
+  font-size: 16px;
+  line-height: 1.7;
+}
