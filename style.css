@@ -655,3 +655,55 @@ footer {
     justify-content: center;
   }
 }
+
+/* ================= STEP 4.2 – HERO TYPOGRAPHY AUTHORITY ================= */
+
+/* HERO TITLE – strong but respectful */
+.hero-title {
+  font-size: 60px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #1c1c1c; /* deep neutral black */
+}
+
+/* B2H emphasis inside title */
+.hero-title span,
+.hero-title strong {
+  color: #e67e22; /* controlled accent, not gold */
+}
+
+/* HERO DESCRIPTION – readable & calm */
+.hero-desc {
+  font-size: 19px;
+  font-weight: 400;
+  color: #333;
+}
+
+/* BRAND TEXT – subtle but visible */
+.brand-text span {
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  color: #666;
+}
+
+.brand-text strong {
+  font-size: 26px;
+  font-weight: 700;
+  color: #e67e22;
+}
+
+/* MOBILE TYPOGRAPHY CONTROL */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 42px;
+    letter-spacing: -0.3px;
+  }
+
+  .hero-desc {
+    font-size: 17px;
+  }
+
+  .brand-text strong {
+    font-size: 22px;
+  }
+}
