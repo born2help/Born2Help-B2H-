@@ -889,3 +889,57 @@ footer {
   box-shadow: 0 25px 50px rgba(0,0,0,0.35);
 }
 
+/* ================= STEP 5 – TOKENOMICS VISUAL UPGRADE ================= */
+
+/* Section title */
+#tokenomics h2 {
+  font-size: 38px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #ffd700; /* golden highlight for title */
+  text-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
+/* Cards container */
+.tokenomics-cards {
+  gap: 30px;
+  justify-content: center;
+}
+
+/* Base card upgrade */
+.token-card {
+  background: linear-gradient(145deg, #ffd700, #ffcf40);
+  color: #004aad;
+  padding: 30px 25px;
+  border-radius: 16px;
+  text-align: center;
+  font-weight: 700;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+/* Card title */
+.token-card h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+/* Card text */
+.token-card p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Hover effect */
+.token-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+}
+
+/* Make it responsive */
+@media (max-width: 768px) {
+  .token-card {
+    flex: 1 1 90%;
+  }
+}
