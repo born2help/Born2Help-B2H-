@@ -319,3 +319,67 @@ footer {
   font-size: 16px;
   line-height: 1.7;
 }
+
+/* ================= STEP 6 — FOUNDER & CHARITY IMAGE RESIZING ================= */
+
+.founder-img {
+  width: 180px; /* reduced from full width */
+  height: 180px;
+  border-radius: 50%;
+  border: 4px solid #ffd700;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+}
+
+.charity-burn-card img {
+  width: 120px; /* smaller & uniform */
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Social Media section */
+#social-media {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+#social-media h2 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #004aad;
+}
+
+#social-media p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.media-logos a img {
+  width: 80px;
+  height: auto;
+  margin: 0 15px;
+  transition: transform 0.3s, filter 0.3s;
+  filter: grayscale(100%);
+}
+
+.media-logos a img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .founder-img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .charity-burn-card img {
+    width: 100px;
+  }
+
+  .media-logos a img {
+    width: 60px;
+    margin: 10px;
+  }
+}
