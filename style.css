@@ -357,20 +357,73 @@ p {
 }
 
 /* ================= ROADMAP ================= */
+#roadmap {
+  padding: 80px 20px;
+  background-color: #0f1230; /* slightly lighter than pure black for contrast */
+  text-align: center;
+}
+
 #roadmap h2 {
-  color: #ff8c00;
+  color: #e67e22; /* hero orange */
+  font-weight: 800;
+  font-size: 42px;
+  margin-bottom: 40px;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.35);
 }
 
 .roadmap-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 25px;
+  justify-items: center;
 }
 
 .roadmap-card {
   background: #111b3d;
+  color: #fff;
   padding: 25px;
   border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  max-width: 300px;
+}
+
+.roadmap-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+}
+
+.roadmap-card h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #e67e22;
+}
+
+.roadmap-card p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #f1f1f1;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 992px) {
+  .roadmap-card {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  #roadmap h2 {
+    font-size: 34px;
+  }
+
+  .roadmap-card h3 {
+    font-size: 20px;
+  }
+
+  .roadmap-card p {
+    font-size: 15px;
+  }
 }
 
 /* ================= GOVERNANCE / CONSTITUTION ================= */
@@ -498,14 +551,6 @@ footer {
   .brand {
     flex-direction: column;
   }
-}
-
-/* ================= STEP 4 — ROADMAP HEADING FIX ================= */
-
-#roadmap h2 {
-  color: #e67e22; /* hero orange */
-  font-weight: 800;
-  text-shadow: 0 3px 8px rgba(0,0,0,0.35);
 }
 
 /* ================= STEP 5 — TEXT SIZE & READABILITY ================= */
