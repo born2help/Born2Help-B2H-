@@ -383,3 +383,110 @@ footer {
     margin: 10px;
   }
 }
+
+/* ================= STEP 7 — FINAL POLISH ================= */
+
+/* Hero heading gradient & shadow */
+.hero-title {
+  font-size: 64px;
+  font-weight: 900;
+  text-align: center;
+  line-height: 1.1;
+  background: linear-gradient(90deg, #f9e29c 0%, #d4af37 50%, #ff8c00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 3px 12px rgba(0,0,0,0.35);
+}
+
+/* Hero subtext — B2H description */
+.brand-text span {
+  font-size: 22px;
+  color: #f3efe6;
+}
+
+.brand-text strong {
+  font-size: 36px;
+  color: #e67e22; /* prominent orange */
+  display: block;
+  line-height: 1.2;
+}
+
+/* Hero description readability */
+.hero-desc {
+  font-size: 20px;
+  line-height: 1.75;
+  max-width: 720px;
+  margin: 20px auto 30px;
+  color: #f1f1f1;
+  text-align: center;
+}
+
+/* Connect & Donate buttons positioning */
+#connect-donate {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 50px 0 80px;
+}
+
+#connect-donate .btn {
+  padding: 16px 36px;
+  font-size: 16px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.btn.primary {
+  background-color: #004aad;
+  color: #fff;
+}
+
+.btn.primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+.btn.donate {
+  background-color: #e67e22;
+  color: #fff;
+}
+
+.btn.donate:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+/* Description sections readability */
+section p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto 30px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 46px;
+  }
+
+  .hero-desc {
+    font-size: 17px;
+  }
+
+  .brand-text strong {
+    font-size: 28px;
+  }
+
+  #connect-donate {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #connect-donate .btn {
+    width: 70%;
+    text-align: center;
+  }
+}
