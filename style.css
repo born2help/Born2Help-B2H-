@@ -359,7 +359,7 @@ p {
 /* ================= ROADMAP ================= */
 #roadmap {
   padding: 80px 20px;
-  background-color: #0f1230; /* slightly lighter than pure black for contrast */
+  background-color: #0f1230; /* slightly lighter than pure black */
   text-align: center;
 }
 
@@ -379,11 +379,11 @@ p {
 }
 
 .roadmap-card {
-  background: #111b3d;
+  background: #1a1f4b; /* slightly lighter than before for contrast */
   color: #fff;
   padding: 25px;
   border-radius: 14px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
   transition: transform 0.3s, box-shadow 0.3s;
   max-width: 300px;
 }
@@ -395,27 +395,20 @@ p {
 
 .roadmap-card h3 {
   display: inline-block;
-  background: rgba(255, 140, 0, 0.15); /* light orange highlight */
-  padding: 4px 8px;
+  background: rgba(255, 140, 0, 0.3); /* stronger highlight for contrast */
+  padding: 6px 12px;
   border-radius: 6px;
   font-size: 24px;
-  color: #ff8c00;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  color: #ffb84d; /* brighter orange */
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6); /* stronger shadow for readability */
   font-weight: 700;
-}
-
-.roadmap-card h3 {
-  font-size: 24px;           /* slightly bigger for emphasis */
   margin-bottom: 12px;
-  color: #ff8c00;            /* bright orange */
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* subtle shadow for contrast */
-  font-weight: 700;
 }
 
 .roadmap-card p {
   font-size: 16px;
-  line-height: 1.7;
-  color: #f1f1f1;
+  line-height: 1.8;
+  color: #f8f8f8; /* slightly brighter for better readability */
 }
 
 /* ================= RESPONSIVE ================= */
@@ -432,6 +425,7 @@ p {
 
   .roadmap-card h3 {
     font-size: 20px;
+    padding: 4px 8px;
   }
 
   .roadmap-card p {
