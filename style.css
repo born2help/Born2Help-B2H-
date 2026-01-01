@@ -1654,3 +1654,56 @@ Css
     font-size: 15px;
   }
 }
+
+/* ================= SOCIAL MEDIA SECTION ================= */
+#social-media {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+#social-media h2 {
+  font-size: 42px;
+  font-weight: 800;
+  color: #e67e22; /* hero orange */
+  margin-bottom: 20px;
+}
+
+#social-media p {
+  font-size: 18px;
+  max-width: 750px;
+  margin: 0 auto 40px;
+  color: #333;
+  line-height: 1.8;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.social-icons a {
+  font-size: 28px;
+  color: #111b3d;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #e67e22; /* hero orange on hover */
+  transform: scale(1.2);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  #social-media h2 {
+    font-size: 36px;
+  }
+
+  .social-icons a {
+    font-size: 24px;
+    margin: 10px;
+  }
+}
