@@ -2609,3 +2609,53 @@ header, .hero-inner {
     justify-content: center;
   }
 }
+
+/* ================= FOUNDER SECTION ================= */
+#founder {
+  background-color: #f0f0f0;
+  padding: 60px 20px; /* reduced from 80px */
+  text-align: center;
+}
+
+.founder-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start; /* align images and text properly */
+  justify-content: center;
+  gap: 40px;
+}
+
+.founder-message {
+  flex: 2 1 400px;
+  max-width: 600px;
+  text-align: left;
+  opacity: 1; /* ensure text is visible */
+}
+
+/* ================= FOOTER ================= */
+#footer {
+  padding: 40px 20px; /* reduced height */
+  color: #fff;
+  text-align: center;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto 30px;
+}
+
+.footer-nav {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer-copy {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #ccc;
+}
