@@ -1579,7 +1579,7 @@ section p {
 #airdrop {
   padding: 80px 20px;
   text-align: center;
-  background-color: #f9f9f9;
+  background-color: #f9f9f9; /* keep light */
 }
 
 #airdrop h2 {
@@ -1594,10 +1594,10 @@ section p {
   max-width: 800px;
   margin: 0 auto 50px;
   line-height: 1.8;
-  color: #333;
+  color: #333; /* dark enough for readability */
 }
 
-/* AIRDROP CARDS */
+/* ================= AIRDROP CARDS ================= */
 .airdrop-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -1606,39 +1606,40 @@ section p {
 }
 
 .airdrop-card {
-  background-color: #ffffff;
+  background-color: #1b2450; /* dark card for contrast */
   padding: 30px 20px;
   border-radius: 14px;
-  box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.25); /* stronger shadow */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
+  color: #f1f1f1; /* all text readable inside card */
 }
 
 .airdrop-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 16px 36px rgba(0,0,0,0.18);
+  box-shadow: 0 16px 36px rgba(0,0,0,0.35);
 }
 
 .airdrop-card i {
   font-size: 36px;
-  color: #e67e22;
+  color: #ff8c00; /* orange icon */
   margin-bottom: 15px;
 }
 
 .airdrop-card h3 {
   font-size: 22px;
   margin-bottom: 12px;
-  color: #0f1230;
+  color: #ff8c00; /* bright heading */
   font-weight: 700;
 }
 
 .airdrop-card p {
   font-size: 16px;
   line-height: 1.7;
-  color: #555;
+  color: #f1f1f1; /* readable paragraph */
 }
 
-/* RESPONSIVE */
+/* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
   #airdrop h2 {
     font-size: 36px;
