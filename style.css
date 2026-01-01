@@ -1800,3 +1800,40 @@ section p {
     font-size: 15px;
   }
 }
+
+<!-- ================= AIRDROP / LAUNCH SECTION ================= -->
+<section id="airdrop" class="section light">
+  <h2>Airdrop / Launch</h2>
+  <p>
+    Participate in the B2H airdrop to be part of a humanitarian-driven blockchain ecosystem. 
+    Eligible users will receive tokens, support charity initiatives, and engage in our growing community.
+  </p>
+
+  <!-- Airdrop Cards -->
+  <div class="airdrop-cards">
+    <div class="airdrop-card">
+      <i class="fas fa-user-check"></i>
+      <h3>Eligibility</h3>
+      <p>
+        Open to all crypto enthusiasts, community members, and early supporters. 
+        Verification is simple and transparent.
+      </p>
+    </div>
+
+    <div class="airdrop-card">
+      <i class="fas fa-gift"></i>
+      <h3>Rewards</h3>
+      <p>
+        Tokens distributed fairly to participants. Each transaction continues to contribute to charity and token burn for sustainable value.
+      </p>
+    </div>
+
+    <div class="airdrop-card">
+      <i class="fas fa-calendar-alt"></i>
+      <h3>Timeline</h3>
+      <p>
+        Airdrop starts immediately after launch and continues in scheduled phases. Stay updated through our social channels.
+      </p>
+    </div>
+  </div>
+</section>
