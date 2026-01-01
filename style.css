@@ -2214,3 +2214,34 @@ section p {
     font-size: 16px;
   }
 }
+
+/* ===== FIX: CONNECT / DONATE VISIBILITY OVERRIDE ===== */
+
+#connect-donate.section.dark {
+  background: linear-gradient(135deg, #0f1230, #111b3d) !important;
+}
+
+#connect-donate.section.dark p,
+#connect-donate.section.dark h2,
+#connect-donate.section.dark h3 {
+  color: #ffffff !important;
+}
+
+/* Card background fix */
+#connect-donate .connect-donate-cards > div {
+  background: #ffffff !important;
+}
+
+/* Card text fix */
+#connect-donate .connect-donate-cards h3 {
+  color: #0f1230 !important;
+}
+
+#connect-donate .connect-donate-cards p {
+  color: #444 !important;
+}
+
+/* Icons fix */
+#connect-donate .connect-donate-cards i {
+  color: #e67e22 !important;
+}
