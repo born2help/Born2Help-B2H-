@@ -23,3 +23,21 @@ document.addEventListener("DOMContentLoaded", function() {
   window.addEventListener("scroll", revealOnScroll);
   revealOnScroll(); // Run on page load
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  const elements = document.querySelectorAll('.founder-image-wrapper, .founder-message');
+
+  function revealOnScroll() {
+    const triggerBottom = window.innerHeight * 0.85;
+
+    elements.forEach(el => {
+      const boxTop = el.getBoundingClientRect().top;
+      if (boxTop < triggerBottom) {
+        el.classList.add('founder-visible');
+      }
+    });
+  }
+
+  window.addEventListener("scroll", revealOnScroll);
+  revealOnScroll(); // Run once on page load
+});
