@@ -1103,3 +1103,54 @@ Css
     font-size: 16px;
   }
 }
+
+Css
+
+/* ================= WHY B2H (READABILITY FIX + MODERN STYLE) ================= */
+
+.why-b2h {
+  background: #f9fafc; /* clean light background */
+}
+
+.why-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.why-b2h h2 {
+  font-size: 42px;
+  font-weight: 800;
+  color: #1b2559; /* deep blue, matches professional tone */
+  margin-bottom: 30px;
+}
+
+.why-text {
+  font-size: 18px;
+  line-height: 1.9;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.why-highlight {
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #e67e22; /* hero orange */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .why-b2h h2 {
+    font-size: 32px;
+  }
+
+  .why-text {
+    font-size: 16px;
+  }
+
+  .why-highlight {
+    font-size: 18px;
+  }
+}
