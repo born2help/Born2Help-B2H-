@@ -1460,3 +1460,31 @@ section p {
     max-width: 90%;
   }
 }
+
+/* ================= FOUNDER SMALL ROUND AVATAR ================= */
+
+.founder-avatar {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 18px;
+}
+
+.founder-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #e67e22; /* hero orange */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+/* Align avatar nicely on desktop */
+@media (min-width: 768px) {
+  .founder-message {
+    position: relative;
+  }
+
+  .founder-avatar {
+    margin-bottom: 20px;
+  }
+}
