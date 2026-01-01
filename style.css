@@ -1342,3 +1342,121 @@ section p {
   line-height: 1.8;
   color: #333; /* dark text to be visible */
 }
+
+/* ================= FOUNDER SECTION ================= */
+#founder {
+  background-color: #f0f0f0;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+#founder h2 {
+  color: #e67e22;
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 60px;
+}
+
+/* Container for image + message */
+.founder-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+
+/* Founder Image */
+.founder-image-wrapper {
+  flex: 1 1 400px;
+  max-width: 550px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.founder-image-wrapper:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.4);
+}
+
+.founder-image {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  display: block;
+  object-fit: cover;
+}
+
+/* Founder Message */
+.founder-message {
+  flex: 1 1 450px;
+  max-width: 600px;
+  text-align: left;
+  position: relative;
+}
+
+/* Small round logo above message */
+.founder-logo {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.founder-logo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 3px solid #e67e22;
+}
+
+/* Message text */
+.founder-message p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* ================= FOUNDER FADE-IN ================= */
+.founder-image-wrapper,
+.founder-message {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.founder-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 992px) {
+  .founder-container {
+    flex-direction: column;
+  }
+
+  #founder h2 {
+    font-size: 38px;
+  }
+
+  .founder-message {
+    text-align: center;
+  }
+
+  .founder-logo {
+    margin: 0 auto 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  #founder h2 {
+    font-size: 32px;
+  }
+
+  .founder-message p {
+    font-size: 16px;
+  }
+
+  .founder-image-wrapper {
+    max-width: 90%;
+  }
+}
