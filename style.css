@@ -1535,3 +1535,42 @@ section p {
   line-height: 1.7;
   color: #444;
 }
+
+/* ================= V3 LOGO SECTION ================= */
+
+.v3-section {
+  padding: 80px 20px;
+  text-align: center;
+  background: #f8f9fc;
+}
+
+.v3-section img {
+  width: 350px;        /* MAIN CONTROL */
+  max-width: 90%;
+  height: auto;
+  margin: 0 auto 25px;
+  display: block;
+}
+
+.v3-section h3 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #0f1230;
+}
+
+/* ================= CHARITY IMAGES ================= */
+
+.charity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.charity-grid img {
+  width: 100%;
+  height: 300px;          /* CONTROL HEIGHT */
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.18);
+}
