@@ -2465,3 +2465,10 @@ header, .hero-inner {
 .founder-section div {
   color: #e6efff;
 }
+
+.founder-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
