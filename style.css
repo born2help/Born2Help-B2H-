@@ -2449,3 +2449,19 @@ header, .hero-inner {
   font-size: 14px;
   color: #ccc;
 }
+
+/* FORCE FIX — Founder Content Visibility */
+.founder-section * {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.founder-section {
+  background: linear-gradient(135deg, #061a3a, #0a2a5e);
+}
+
+.founder-section p,
+.founder-section span,
+.founder-section div {
+  color: #e6efff;
+}
