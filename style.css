@@ -59,177 +59,6 @@ p {
   color: #fff;
 }
 
-/* ================= HERO SECTION STYLING ================= */
-.hero {
-  position: relative;
-  min-height: 100vh;
-  background-color: #0b1a2b; /* dark hero background */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 80px 30px;
-  overflow: hidden;
-}
-
-/* Burn logo – dominant and right aligned */
-.burn-logo {
-  position: absolute;
-  top: 50%;
-  right: 6%;
-  transform: translateY(-50%);
-  width: 280px;
-  max-width: 45vw;
-  opacity: 0.95;
-  z-index: 1;
-  filter: drop-shadow(0 10px 28px rgba(0,0,0,0.6));
-  pointer-events: none;
-}
-
-/* Hero inner content – above burn logo */
-.hero-inner {
-  position: relative;
-  z-index: 2;
-  max-width: 760px;
-  text-align: center;
-}
-
-/* Brand section */
-.brand {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 30px;
-}
-
-.main-logo {
-  width: 120px;
-  filter: drop-shadow(0 6px 18px rgba(0,0,0,0.45));
-}
-
-.brand-text span {
-  font-size: 18px;
-  color: #f3efe6; /* soft ivory */
-  font-weight: 500;
-}
-
-.brand-text strong {
-  font-size: 28px;
-  color: #e67e22; /* bright orange */
-  font-weight: 800;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.5);
-}
-
-/* Hero heading */
-.hero-title {
-  margin-bottom: 25px;
-  line-height: 1.2;
-}
-
-/* Main line – bigger & bold */
-.hero-title .main-line {
-  display: block;
-  font-size: 60px;
-  font-weight: 900;
-  color: #e67e22; /* orange/gold main */
-  text-shadow: 0 4px 14px rgba(0,0,0,0.65);
-}
-
-/* Sub-line – smaller & secondary */
-.hero-title .sub-line {
-  display: block;
-  font-size: 32px;
-  font-weight: 600;
-  color: #f3efe6; /* soft ivory */
-  margin-top: 6px;
-}
-
-/* Hero description */
-.hero-desc {
-  font-size: 19px;
-  line-height: 1.75;
-  color: #e8e8e8;
-  max-width: 640px;
-  margin: 20px auto 35px;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.35);
-}
-
-/* Hero buttons */
-.hero-actions {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.btn {
-  padding: 16px 34px;
-  border-radius: 30px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s;
-}
-
-.btn.primary {
-  background-color: #e67e22;
-  color: #fff;
-}
-
-.btn.primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-  background-color: #cf6d17;
-}
-
-.btn.secondary {
-  background-color: transparent;
-  border: 2px solid rgba(230,126,34,0.8);
-  color: #fff;
-}
-
-.btn.secondary:hover {
-  background-color: rgba(230,126,34,0.08);
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 992px) {
-  .burn-logo {
-    position: relative;
-    width: 220px;
-    margin: 40px auto 0;
-  }
-  
-  .hero-title .main-line {
-    font-size: 46px;
-  }
-  
-  .hero-title .sub-line {
-    font-size: 24px;
-  }
-  
-  .hero-desc {
-    font-size: 17px;
-  }
-  
-  .btn {
-    padding: 14px 28px;
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 600px) {
-  .hero-title .main-line {
-    font-size: 36px;
-  }
-  
-  .hero-title .sub-line {
-    font-size: 20px;
-  }
-  
-  .hero-desc {
-    font-size: 16px;
-  }
-}
-
 /* ================= TOKENOMICS ================= */
 #tokenomics {
   padding: 80px 20px;
@@ -434,168 +263,6 @@ p {
   .roadmap-card p {
     font-size: 15px;
   }
-}
-
-/* ================= GOVERNANCE & CONSTITUTION ================= */
-
-/* Section headings */
-#governance h2,
-#constitution h2 {
-  font-size: 42px;
-  font-weight: 800;
-  margin-bottom: 40px;
-  text-align: center;
-  color: #e67e22; /* hero orange */
-  text-shadow: 0 3px 8px rgba(0,0,0,0.35);
-}
-
-/* Card common styles */
-.governance-card,
-.constitution-card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 30px 25px;
-  border-radius: 16px;
-  max-width: 900px;
-  margin: 0 auto 40px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  line-height: 1.8;
-  font-size: 18px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-}
-
-/* Light and dark background fixes */
-.governance-card {
-  background-color: #f5f5f5;
-  color: #111; /* ensure dark text */
-}
-
-.constitution-card {
-  background-color: #111b3d;
-  color: #f1f1f1; /* ensure bright text */
-}
-
-/* Card icons */
-.card-icon {
-  width: 70px;
-  height: 70px;
-  margin-bottom: 20px;
-}
-
-.card-icon img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-/* Paragraph styling */
-#governance p,
-#constitution p {
-  margin: 0;
-  max-width: 850px;
-  font-size: 18px;
-  line-height: 1.8;
-  color: inherit; /* ensures it uses correct card color */
-}
-
-/* Highlight strong text */
-#governance strong,
-#constitution strong {
-  color: #e67e22; /* orange highlight */
-}
-
-/* ================= HOVER ANIMATION ================= */
-.governance-card:hover,
-.constitution-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 18px 35px rgba(0,0,0,0.25);
-  background: linear-gradient(135deg, #e67e22, #ffb347); /* subtle gradient on hover */
-}
-
-.governance-card:hover p,
-.constitution-card:hover p {
-  color: #fff; /* ensure text remains readable */
-}
-
-/* Small icon accents inside text (optional) */
-#governance p::before,
-#constitution p::before {
-  content: "⚡"; /* tiny icon */
-  display: inline-block;
-  margin-right: 8px;
-  color: #e67e22;
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 992px) {
-  #governance h2,
-  #constitution h2 {
-    font-size: 36px;
-  }
-
-  .governance-card,
-  .constitution-card {
-    padding: 25px;
-  }
-
-  #governance p,
-  #constitution p {
-    font-size: 16px;
-  }
-
-  .card-icon {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 15px;
-  }
-}
-
-@media (max-width: 600px) {
-  #governance h2,
-  #constitution h2 {
-    font-size: 28px;
-  }
-
-  .governance-card,
-  .constitution-card {
-    padding: 20px;
-  }
-
-  #governance p,
-  #constitution p {
-    font-size: 15px;
-  }
-
-  .card-icon {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 12px;
-  }
-}
-
-/* ================= FOUNDER MESSAGE ================= */
-.founder-container {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.founder-img {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.founder-text {
-  max-width: 550px;
-  font-size: 1.1rem;
-}
 
 /* ================= CHARITY ================= */
 .charity-burn-cards {
@@ -625,22 +292,6 @@ p {
   padding: 0 15px 20px;
 }
 
-/* ================= V3 ================= */
-.v3-logo-container {
-  text-align: center;
-}
-
-.v3-logo-container img {
-  width: 180px;
-}
-
-/* ================= SOCIAL ================= */
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-}
-
 .social-icons img {
   width: 36px;
 }
@@ -651,20 +302,6 @@ p {
   text-align: center;
   margin-top: 30px;
 }
-
-/* ================= FOOTER ================= */
-footer {
-  padding: 30px;
-  text-align: center;
-  background: #050816;
-  font-size: 0.9rem;
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 2.4rem;
-  }
 
   .burn-logo {
     position: static;
@@ -940,69 +577,6 @@ section p {
   }
 }
 
-/* ================= GOVERNANCE & CONSTITUTION CARDS ================= */
-.governance-card, .constitution-card {
-  background-color: #ffffff; /* light card for contrast */
-  color: #111;               /* dark text */
-  padding: 25px;
-  border-radius: 14px;
-  text-align: center;
-  max-width: 800px;
-  margin: 20px auto;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.governance-card:hover, .constitution-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
-}
-
-.card-icon {
-  font-size: 70px;
-  color: #e67e22; /* orange color matching hero */
-  margin-bottom: 15px;
-}
-
-/* Section text */
-#governance p, #constitution p {
-  font-size: 18px;
-  line-height: 1.8;
-  color: #333; /* dark for readability */
-}
-
-/* Dark section adjustments */
-#constitution {
-  background-color: #111b3d;
-}
-
-#constitution p {
-  color: #f1f1f1; /* light text for dark background */
-}
-
-/* Headings */
-#governance h2, #constitution h2 {
-  font-size: 42px;
-  font-weight: 800;
-  margin-bottom: 30px;
-  text-shadow: 0 3px 8px rgba(0,0,0,0.3);
-}
-
-/* Responsive */
-@media (max-width: 992px) {
-  .card-icon {
-    font-size: 55px;
-  }
-
-  #governance h2, #constitution h2 {
-    font-size: 34px;
-  }
-
-  #governance p, #constitution p {
-    font-size: 16px;
-  }
-}
-
 /* ================= GOVERNANCE & CONSTITUTION FIX ================= */
 
 #governance-constitution {
@@ -1213,279 +787,6 @@ section p {
 
   .why-text {
     font-size: 16px;
-  }
-}
-
-/* ================= FOUNDER SCROLL ANIMATION ================= */
-.founder-image-wrapper,
-.founder-message {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.founder-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ================= FOUNDER IMAGE HOVER EFFECT ================= */
-.founder-image-wrapper {
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-}
-
-.founder-image-wrapper:hover {
-  transform: scale(1.05) translateY(-5px);
-  box-shadow: 0 12px 36px rgba(0,0,0,0.4);
-}
-
-/* ================= FOUNDER SECTION ================= */
-#founder {
-  background-color: #f0f0f0; /* light gray to make content visible */
-  padding: 80px 20px;
-  text-align: center;
-}
-
-#founder h2 {
-  color: #e67e22; /* hero orange */
-  font-size: 42px;
-  font-weight: 800;
-  margin-bottom: 50px;
-}
-
-.founder-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-}
-
-.founder-image-wrapper {
-  flex: 1 1 300px;
-  max-width: 450px;
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-}
-
-.founder-image-wrapper:hover {
-  transform: scale(1.05) translateY(-5px);
-  box-shadow: 0 12px 36px rgba(0,0,0,0.4);
-}
-
-.founder-image {
-  width: 100%;
-  height: auto;
-  border-radius: 14px;
-  display: block;
-}
-
-.founder-message {
-  flex: 2 1 400px;
-  max-width: 600px;
-  text-align: left;
-}
-
-.founder-message p {
-  font-size: 18px;
-  line-height: 1.8;
-  color: #333; /* dark text to be visible */
-}
-
-/* ================= FOUNDER SECTION ================= */
-#founder {
-  background-color: #f0f0f0; /* light gray to make content visible */
-  padding: 80px 20px;
-  text-align: center;
-}
-
-#founder h2 {
-  color: #e67e22; /* hero orange */
-  font-size: 42px;
-  font-weight: 800;
-  margin-bottom: 50px;
-}
-
-.founder-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-}
-
-.founder-image-wrapper {
-  flex: 1 1 300px;
-  max-width: 450px;
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-}
-
-.founder-image-wrapper:hover {
-  transform: scale(1.05) translateY(-5px);
-  box-shadow: 0 12px 36px rgba(0,0,0,0.4);
-}
-
-.founder-image {
-  width: 100%;
-  height: auto;
-  border-radius: 14px;
-  display: block;
-}
-
-.founder-message {
-  flex: 2 1 400px;
-  max-width: 600px;
-  text-align: left;
-}
-
-.founder-message p {
-  font-size: 18px;
-  line-height: 1.8;
-  color: #333; /* dark text to be visible */
-}
-
-/* ================= FOUNDER SECTION ================= */
-#founder {
-  background-color: #f0f0f0;
-  padding: 100px 20px;
-  text-align: center;
-}
-
-#founder h2 {
-  color: #e67e22;
-  font-size: 48px;
-  font-weight: 800;
-  margin-bottom: 60px;
-}
-
-/* Container for image + message */
-.founder-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 60px;
-}
-
-/* Founder Image */
-.founder-image-wrapper {
-  flex: 1 1 400px;
-  max-width: 550px;
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-}
-
-.founder-image-wrapper:hover {
-  transform: scale(1.05) translateY(-5px);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.4);
-}
-
-.founder-image {
-  width: 100%;
-  height: auto;
-  border-radius: 16px;
-  display: block;
-  object-fit: cover;
-}
-
-/* Founder Message */
-.founder-message {
-  flex: 1 1 450px;
-  max-width: 600px;
-  text-align: left;
-  position: relative;
-}
-
-/* Small round logo above message */
-.founder-logo {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 20px;
-}
-
-.founder-logo img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  border: 3px solid #e67e22;
-}
-
-/* Message text */
-.founder-message p {
-  font-size: 18px;
-  line-height: 1.8;
-  color: #333;
-}
-
-/* ================= FOUNDER FADE-IN ================= */
-.founder-image-wrapper,
-.founder-message {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.founder-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 992px) {
-  .founder-container {
-    flex-direction: column;
-  }
-
-  #founder h2 {
-    font-size: 38px;
-  }
-
-  .founder-message {
-    text-align: center;
-  }
-
-  .founder-logo {
-    margin: 0 auto 20px;
-  }
-}
-
-@media (max-width: 600px) {
-  #founder h2 {
-    font-size: 32px;
-  }
-
-  .founder-message p {
-    font-size: 16px;
-  }
-
-  .founder-image-wrapper {
-    max-width: 90%;
-  }
-}
-
-/* ================= FOUNDER SMALL ROUND AVATAR ================= */
-
-.founder-avatar {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 18px;
-}
-
-.founder-avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid #e67e22; /* hero orange */
-  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-}
-
-/* Align avatar nicely on desktop */
-@media (min-width: 768px) {
-  .founder-message {
-    position: relative;
-  }
-
-  .founder-avatar {
-    margin-bottom: 20px;
   }
 }
 
@@ -1963,5 +1264,132 @@ section p {
 @media (max-width: 768px) {
   #connect-donate p, .connect-card p, .donate-card p, .social-card p {
     font-size: 15px;
+  }
+}
+
+/* ================= HERO ================= */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background-color: #0b1a2b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 30px;
+  overflow: hidden;
+}
+
+.hero-title {
+  font-size: 64px;
+  font-weight: 900;
+  text-align: center;
+  line-height: 1.1;
+  background: linear-gradient(90deg, #f9e29c 0%, #d4af37 50%, #ff8c00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 3px 12px rgba(0,0,0,0.35);
+}
+
+.hero-desc {
+  font-size: 20px;
+  line-height: 1.75;
+  max-width: 720px;
+  margin: 20px auto 30px;
+  color: #f1f1f1;
+  text-align: center;
+}
+
+/* ================= FOUNDER ================= */
+#founder {
+  background-color: #f0f0f0;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.founder-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+
+.founder-image-wrapper {
+  flex: 1 1 400px;
+  max-width: 550px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.founder-image-wrapper:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.4);
+}
+
+.founder-image {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.founder-message {
+  flex: 1 1 450px;
+  max-width: 600px;
+  text-align: left;
+}
+
+.founder-message p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* ================= V3 SECTION ================= */
+.v3-section {
+  padding: 80px 20px;
+  text-align: center;
+  background: #f8f9fc;
+}
+
+.v3-section img {
+  width: 350px;
+  max-width: 90%;
+  height: auto;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 992px) {
+  .founder-container {
+    flex-direction: column;
+  }
+
+  #founder h2 {
+    font-size: 38px;
+  }
+
+  .founder-message {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  #founder h2 {
+    font-size: 32px;
+  }
+
+  .founder-message p {
+    font-size: 16px;
+  }
+
+  .founder-image-wrapper {
+    max-width: 90%;
+  }
+
+  .hero-title {
+    font-size: 46px;
+  }
+
+  .hero-desc {
+    font-size: 17px;
   }
 }
