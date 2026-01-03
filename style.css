@@ -1965,3 +1965,11 @@ section p {
     font-size: 15px;
   }
 }
+
+/* 🔧 DEBUG FORCE VISIBILITY */
+#founder,
+#founder * {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+}
