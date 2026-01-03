@@ -260,3 +260,15 @@ footer {
   0% { opacity: 0; transform: translateY(30px); }
   100% { opacity: 1; transform: translateY(0); }
 }
+
+/* Scroll Reveal Animation */
+.reveal {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: all 1s ease-out;
+}
+
+.hero-inner, .why-card, .roadmap-card, .gc-card, .founder-container, .v3-box {
+  opacity: 0;
+  transform: translateY(30px);
+}
