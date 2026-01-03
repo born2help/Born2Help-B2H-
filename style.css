@@ -1,274 +1,105 @@
 /* ===============================
    B2H GLOBAL FOUNDATION MODERN CSS
-   =============================== */
-
-/* ----------------- Reset & Base ----------------- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+=============================== */
 
 body {
+  margin: 0;
   font-family: 'Montserrat', sans-serif;
+  color: #333;
   line-height: 1.6;
-  background: #fefefe;
-  color: #222;
+  scroll-behavior: smooth;
 }
 
-section {
-  padding: 60px 20px;
+/* ---------- Buttons ---------- */
+.btn {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: 0.3s ease;
+  display: inline-block;
+  font-weight: 600;
 }
+.btn.primary { background: #004aad; color: #fff; }
+.btn.primary:hover { background: #003680; }
+.btn.donate { background: #e67e22; color: #fff; }
+.btn.donate:hover { background: #cf6b17; }
 
-h2 {
-  font-size: 2.2rem;
-  text-align: center;
-  margin-bottom: 20px;
-  font-weight: 800;
-  color: #004aad;
+/* ---------- Sections ---------- */
+.section {
+  padding: 80px 20px;
 }
+.section.light { background: #f9f9f9; color: #333; }
+.section.dark { background: #0b0b0b; color: #fff; }
 
-/* ----------------- HERO ----------------- */
+/* ---------- Hero ---------- */
 .hero {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 90vh;
-  background: linear-gradient(to right, #004aad, #00c896);
-  color: #fff;
-  overflow: hidden;
   text-align: center;
+  background: #cce7ff;
+  padding: 120px 20px;
 }
+.burn-logo { width: 80px; position: absolute; top: 20px; left: 20px; }
+.hero-inner { max-width: 900px; margin: auto; }
+.hero-title { font-size: 2.5rem; margin: 20px 0; }
+.sub-line { display: block; font-weight: 400; font-size: 1.2rem; }
 
-.burn-logo {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 120px;
-  opacity: 0.3;
-  animation: float 6s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
-}
-
-.hero-inner {
-  max-width: 900px;
-  animation: fadeInUp 1.5s ease forwards;
-}
-
-.hero-title {
-  font-size: 3rem;
-  margin: 20px 0;
-}
-
-.main-line {
-  display: block;
-  font-weight: 800;
-}
-
-.sub-line {
-  display: block;
-  font-weight: 400;
-  font-size: 1.5rem;
-  margin-top: 10px;
-  color: #f0f0f0;
-}
-
-.hero-desc {
-  font-size: 1.1rem;
-  margin: 20px 0;
-}
-
-.hero-actions .btn {
-  text-decoration: none;
-  padding: 12px 30px;
-  margin: 10px;
-  border-radius: 30px;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.btn.primary {
-  background: #004aad;
-  color: #fff;
-}
-
-.btn.primary:hover {
-  background: #002d72;
-}
-
-.btn.donate {
-  background: #00c896;
-  color: #fff;
-}
-
-.btn.donate:hover {
-  background: #009e6b;
-}
-
-/* ----------------- WHY B2H ----------------- */
-.why-cards {
+/* ---------- Cards ---------- */
+.why-cards, .roadmap-cards, .tokenomics-cards, .v3-charity-grid {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  gap: 30px;
-  margin-top: 40px;
+  gap: 20px;
+  justify-content: center;
 }
-
-.why-card {
+.why-card, .roadmap-card, .gc-card, .token-card, .v3-box {
   background: #fff;
-  border-radius: 12px;
-  padding: 30px;
-  text-align: center;
-  width: 280px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  transition: 0.3s;
+  padding: 20px;
+  border-radius: 15px;
+  flex: 1 1 250px;
+  max-width: 300px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.why-card:hover, .roadmap-card:hover, .gc-card:hover, .v3-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-.why-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-}
-
-.why-card i {
-  font-size: 2.5rem;
-  color: #004aad;
-  margin-bottom: 15px;
-}
-
-/* ----------------- FOUNDER ----------------- */
+/* ---------- Founder ---------- */
 .founder-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
-  justify-content: center;
   align-items: center;
-}
-
-.founder-image-wrapper {
-  flex: 1 1 300px;
-  text-align: center;
-}
-
-.founder-image {
-  width: 100%;
-  max-width: 320px;
-  border-radius: 50%;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-  transition: 0.3s;
-}
-
-.founder-image:hover {
-  transform: scale(1.05);
-}
-
-.founder-message {
-  flex: 1 1 400px;
-}
-
-.founder-logo img {
-  width: 100px;
-  margin-bottom: 15px;
-}
-
-/* ----------------- CHARITY & V3 ----------------- */
-.v3-charity-grid {
-  display: flex;
-  flex-wrap: wrap;
+  gap: 20px;
   justify-content: center;
-  gap: 25px;
-  margin-top: 30px;
 }
+.founder-image { width: 250px; border-radius: 50%; }
 
-.v3-box {
-  width: 260px;
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-  text-align: center;
-}
-
-.v3-box img {
-  width: 100%;
-  display: block;
-  transition: transform 0.3s;
-}
-
-.v3-box:hover img {
-  transform: scale(1.08);
-}
-
-.v3-box:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-}
-
-.v3-box h3 {
-  margin: 15px 0 10px;
-  color: #004aad;
-}
-
-/* ----------------- TOKENOMICS ----------------- */
-.tokenomics-visual {
-  max-width: 800px;
-  margin: 40px auto 0 auto;
-}
-
+/* ---------- Tokenomics Bars ---------- */
 .token-bar {
-  margin-bottom: 20px;
+  margin: 15px 0;
 }
-
-.token-bar .bar {
-  height: 20px;
-  width: 100%;
-  background: #e0e0e0;
+.bar {
+  background: #ddd;
   border-radius: 20px;
   overflow: hidden;
+  height: 20px;
+  margin: 5px 0;
 }
+.fill { width: 0; height: 100%; border-radius: 20px; }
 
-.token-bar .fill {
-  height: 100%;
-  width: 0;
-  border-radius: 20px;
-  transition: width 1.5s ease-in-out;
-}
+/* ---------- Scroll Reveal ---------- */
+.reveal { opacity: 1 !important; transform: translateY(0) !important; transition: all 1s ease-out; }
+.hero-inner, .why-card, .roadmap-card, .gc-card, .founder-container, .v3-box { opacity: 0; transform: translateY(30px); }
 
-/* Animate bars on load */
-window.addEventListener('load', () => {
-  const fills = document.querySelectorAll('.fill');
-  fills.forEach(fill => {
-    fill.style.width = fill.dataset.percentage;
-  });
-});
-
-/* ----------------- FOOTER ----------------- */
+/* ---------- Footer ---------- */
 footer {
   text-align: center;
-  padding: 25px 0;
+  padding: 20px;
   background: #004aad;
   color: #fff;
 }
 
-/* ----------------- ANIMATIONS ----------------- */
-@keyframes fadeInUp {
-  0% { opacity: 0; transform: translateY(30px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-/* Scroll Reveal Animation */
-.reveal {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
-  transition: all 1s ease-out;
-}
-
-.hero-inner, .why-card, .roadmap-card, .gc-card, .founder-container, .v3-box {
-  opacity: 0;
-  transform: translateY(30px);
+/* ---------- Responsive ---------- */
+@media(max-width: 768px){
+  .founder-container { flex-direction: column; }
 }
