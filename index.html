@@ -1,3 +1,7 @@
+Html
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,137 +17,30 @@
 </head>
 <body>
 
- /* ================= HERO ================= */
-.hero {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem;
-  color: #fff;
-
-  /* Strong background image with gradient overlay */
-  background: linear-gradient(
-      rgba(0, 0, 0, 0.5), 
-      rgba(0, 0, 0, 0.5)
-    ), 
-    url('images/hero-bg.jpg') no-repeat center center/cover;
-  overflow: hidden;
-}
-
-/* Burn logo top-left */
-.burn-logo {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 80px;
-  height: auto;
-  z-index: 2;
-}
-
-/* Hero content container */
-.hero-inner {
-  max-width: 900px;
-  z-index: 2;
-  animation: fadeInUp 1.2s ease forwards;
-}
-
-/* Brand section */
-.brand {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-
-.brand .main-logo {
-  width: 60px;
-  height: auto;
-}
-
-.brand-text span {
-  display: block;
-  font-weight: 400;
-  font-size: 1rem;
-}
-
-.brand-text strong {
-  font-size: 1.5rem;
-}
-
-/* Hero title animations */
-.hero-title .main-line,
-.hero-title .sub-line {
-  display: block;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1s ease forwards;
-}
-
-.hero-title .main-line {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  animation-delay: 0.5s;
-}
-
-.hero-title .sub-line {
-  font-size: 1.5rem;
-  color: #ddd;
-  animation-delay: 1s;
-}
-
-/* Hero description */
-.hero-desc {
-  margin: 1.5rem 0;
-  font-size: 1.1rem;
-  color: #eee;
-  opacity: 0;
-  animation: fadeInUp 1s ease forwards;
-  animation-delay: 1.5s;
-}
-
-/* Hero buttons */
-.hero-actions a {
-  display: inline-block;
-  margin: 0.5rem;
-  padding: 0.7rem 1.8rem;
-  border-radius: 50px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.hero-actions .primary {
-  background: #004aad;
-  color: #fff;
-}
-
-.hero-actions .primary:hover {
-  background: #002f70;
-}
-
-.hero-actions .donate {
-  background: #e67e22;
-  color: #fff;
-}
-
-.hero-actions .donate:hover {
-  background: #c76a1a;
-}
-
-/* ================= ANIMATION KEYFRAMES ================= */
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <img src="images/burn.png" alt="Burn Logo" class="burn-logo">
+    <div class="hero-inner">
+      <div class="brand">
+        <img src="images/logo.png" alt="B2H Logo" class="main-logo">
+        <div class="brand-text">
+          <span>Born for Humanity</span>
+          <strong>B2H Foundation</strong>
+        </div>
+      </div>
+      <h1 class="hero-title">
+        <span class="main-line">Helping Hands</span>
+        <span class="sub-line">Change the World</span>
+      </h1>
+      <p class="hero-desc">
+        We strive to create a meaningful impact through education, charity, and social empowerment. Join us in making the world a better place.
+      </p>
+      <div id="connect-donate" class="hero-actions">
+        <a href="#why" class="btn primary">Connect</a>
+        <a href="#donate" class="btn donate">Donate</a>
+      </div>
+    </div>
+  </section>
 
   <!-- ================= WHY B2H ================= -->
   <section class="why-b2h section light" id="why">
@@ -180,22 +77,22 @@
     <div class="tokenomics-visual">
       <div class="token-bar">
         <span>Marketing</span>
-        <div class="bar"><div class="fill" data-percentage="70%"></div></div>
+        <div class="bar"><div class="fill" data-percentage="70%" style="background-color:#e67e22;"></div></div>
         <strong>70%</strong>
       </div>
       <div class="token-bar">
         <span>Charity</span>
-        <div class="bar"><div class="fill" data-percentage="25%"></div></div>
+        <div class="bar"><div class="fill" data-percentage="25%" style="background:#004aad;"></div></div>
         <strong>25%</strong>
       </div>
       <div class="token-bar">
         <span>Team</span>
-        <div class="bar"><div class="fill" data-percentage="20%"></div></div>
+        <div class="bar"><div class="fill" data-percentage="20%" style="background:#ff8c00;"></div></div>
         <strong>20%</strong>
       </div>
       <div class="token-bar">
         <span>Development</span>
-        <div class="bar"><div class="fill" data-percentage="15%"></div></div>
+        <div class="bar"><div class="fill" data-percentage="15%" style="background:#00c896;"></div></div>
         <strong>15%</strong>
       </div>
     </div>
@@ -220,7 +117,7 @@
     </div>
   </section>
 
-  <!-- ================= FOUNDER ================= -->
+  <!-- ================= FOUNDER SECTION ================= -->
   <section id="founder" class="section light">
     <h2>Meet Our Founder</h2>
     <div class="founder-container">
@@ -232,7 +129,7 @@
           <img src="images/small-founder.jpg" alt="B2H Logo">
         </div>
         <p>
-          Our founder is dedicated to creating real impact through education, charity, and social empowerment. Every initiative is crafted with transparency, compassion, and innovation.
+          Our founder is dedicated to creating real impact through education, charity, and social empowerment. With a vision to uplift communities, every initiative is crafted with transparency, compassion, and innovation.
         </p>
       </div>
     </div>
@@ -257,18 +154,6 @@
         <h3>Environment</h3>
         <p>Tree plantations and green initiatives for a better planet.</p>
       </div>
-    </div>
-  </section>
-
-  <!-- ================= SOCIAL MEDIA ================= -->
-  <section id="social-media" class="section light">
-    <h2>Follow Us</h2>
-    <p>Stay connected with our updates on social media.</p>
-    <div class="media-logos social-icons">
-      <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
-      <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
-      <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
-      <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
     </div>
   </section>
 
