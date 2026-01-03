@@ -2028,3 +2028,38 @@ section p {
     font-size: 16px;
   }
 }
+
+/* ================= FOOTER HEIGHT FIX ================= */
+.site-footer {
+  background: linear-gradient(135deg, #050816, #0b132b);
+  padding: 20px 15px !important;   /* FORCE small height */
+  margin: 0 !important;
+}
+
+.site-footer * {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  line-height: 1.4;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.site-footer p {
+  color: #eaeaea !important;
+  font-size: 13px;
+  margin-bottom: 10px !important;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.footer-social a {
+  color: #ff8c00;
+  font-size: 16px;
+}
