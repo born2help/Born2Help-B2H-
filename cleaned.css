@@ -1,7 +1,3 @@
-Cleaned css
-
-
-
 /* ===============================
    B2H GLOBAL FOUNDATION STYLE
    Modernized, responsive, cleaned
@@ -309,4 +305,12 @@ footer {
     flex-direction: column;
     align-items: center;
   }
+}
+
+/* 🔧 DEBUG FORCE VISIBILITY */
+#founder,
+#founder * {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
 }
