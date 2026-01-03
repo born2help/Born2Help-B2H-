@@ -307,3 +307,11 @@ footer {
   margin: 25px auto 0;
   line-height: 1.8;
 }
+
+.founder-container,
+.v3-charity-grid {
+  position: relative;
+  z-index: 2;
+}
+
+
