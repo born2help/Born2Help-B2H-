@@ -1,105 +1,230 @@
 /* ===============================
    B2H GLOBAL FOUNDATION MODERN CSS
-=============================== */
+   Place in style.css in the same folder as index.html
+================================ */
+
+/* ---------------- Global Styles ---------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
 
 body {
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  color: #333;
+  background-color: #f4f6f8;
+  color: #222;
   line-height: 1.6;
-  scroll-behavior: smooth;
 }
 
-/* ---------- Buttons ---------- */
-.btn {
+h1, h2, h3 {
+  font-weight: 800;
+  color: #222;
+}
+
+p {
+  font-weight: 400;
+  color: #333;
+}
+
+a {
   text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 30px;
-  transition: 0.3s ease;
-  display: inline-block;
+}
+
+/* ---------------- Hero Section ---------------- */
+.hero {
+  background: linear-gradient(to right, #004aad, #00c896);
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+}
+
+.hero img.burn-logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 80px;
+}
+
+.hero .brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.hero .brand img.main-logo {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+.hero .hero-title {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero .sub-line {
+  font-size: 28px;
+  display: block;
   font-weight: 600;
 }
-.btn.primary { background: #004aad; color: #fff; }
-.btn.primary:hover { background: #003680; }
-.btn.donate { background: #e67e22; color: #fff; }
-.btn.donate:hover { background: #cf6b17; }
 
-/* ---------- Sections ---------- */
+.hero .hero-desc {
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+}
+
+.hero-actions .btn {
+  padding: 12px 30px;
+  margin: 0 10px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn.primary {
+  background-color: #ff8c00;
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background-color: #e67e22;
+}
+
+.btn.donate {
+  background-color: #004aad;
+  color: #fff;
+}
+
+.btn.donate:hover {
+  background-color: #003080;
+}
+
+/* ---------------- Sections ---------------- */
 .section {
   padding: 80px 20px;
 }
-.section.light { background: #f9f9f9; color: #333; }
-.section.dark { background: #0b0b0b; color: #fff; }
 
-/* ---------- Hero ---------- */
-.hero {
-  position: relative;
+.section.light {
+  background-color: #f4f6f8;
+}
+
+.section.dark {
+  background-color: #222;
+  color: #fff;
+}
+
+.section h2 {
   text-align: center;
-  background: #cce7ff;
-  padding: 120px 20px;
+  margin-bottom: 40px;
+  font-size: 36px;
 }
-.burn-logo { width: 80px; position: absolute; top: 20px; left: 20px; }
-.hero-inner { max-width: 900px; margin: auto; }
-.hero-title { font-size: 2.5rem; margin: 20px 0; }
-.sub-line { display: block; font-weight: 400; font-size: 1.2rem; }
 
-/* ---------- Cards ---------- */
-.why-cards, .roadmap-cards, .tokenomics-cards, .v3-charity-grid {
+/* ---------------- Why B2H ---------------- */
+.why-cards {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
   justify-content: center;
-}
-.why-card, .roadmap-card, .gc-card, .token-card, .v3-box {
-  background: #fff;
-  padding: 20px;
-  border-radius: 15px;
-  flex: 1 1 250px;
-  max-width: 300px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.why-card:hover, .roadmap-card:hover, .gc-card:hover, .v3-box:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-/* ---------- Founder ---------- */
+.why-card {
+  background-color: #fff;
+  color: #222;
+  flex: 1 1 250px;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.why-card i {
+  font-size: 40px;
+  color: #004aad;
+  margin-bottom: 15px;
+}
+
+/* ---------------- Founder Section ---------------- */
 .founder-container {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.founder-image-wrapper img.founder-image {
+  width: 250px;
+  border-radius: 50%;
+  border: 5px solid #004aad;
+}
+
+.founder-message {
+  max-width: 500px;
+}
+
+.founder-logo img {
+  width: 80px;
+  margin-bottom: 15px;
+}
+
+/* ---------------- V3 Charity ---------------- */
+.v3-charity-grid {
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
 }
-.founder-image { width: 250px; border-radius: 50%; }
 
-/* ---------- Tokenomics Bars ---------- */
-.token-bar {
-  margin: 15px 0;
+.v3-box {
+  background-color: #fff;
+  flex: 1 1 250px;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.bar {
-  background: #ddd;
-  border-radius: 20px;
-  overflow: hidden;
-  height: 20px;
-  margin: 5px 0;
+
+.v3-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
-.fill { width: 0; height: 100%; border-radius: 20px; }
 
-/* ---------- Scroll Reveal ---------- */
-.reveal { opacity: 1 !important; transform: translateY(0) !important; transition: all 1s ease-out; }
-.hero-inner, .why-card, .roadmap-card, .gc-card, .founder-container, .v3-box { opacity: 0; transform: translateY(30px); }
+.v3-box img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
 
-/* ---------- Footer ---------- */
+/* ---------------- Footer ---------------- */
 footer {
   text-align: center;
   padding: 20px;
-  background: #004aad;
+  background-color: #004aad;
   color: #fff;
 }
 
-/* ---------- Responsive ---------- */
-@media(max-width: 768px){
-  .founder-container { flex-direction: column; }
+/* ---------------- Responsive ---------------- */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero .sub-line {
+    font-size: 20px;
+  }
+
+  .why-cards, .v3-charity-grid, .founder-container {
+    flex-direction: column;
+  }
 }
