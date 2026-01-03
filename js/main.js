@@ -1,45 +1,50 @@
-<!-- MAIN.JS -->
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const revealElements = document.querySelectorAll(".section, .founder-image-wrapper, .founder-message, .roadmap-card");
+/* ===============================
+   B2H GLOBAL FOUNDATION MAIN JS
+=============================== */
 
-  function revealOnScroll() {
-    const triggerBottom = window.innerHeight * 0.85;
-    revealElements.forEach(el => {
-      const boxTop = el.getBoundingClientRect().top;
-      if(boxTop < triggerBottom){
-        el.classList.add("founder-visible");
-        // Animate token bars
-        if(el.classList.contains("section") && el.id==="tokenomics"){
-          el.querySelectorAll(".fill").forEach(bar=>{
-            bar.style.width = bar.dataset.percent+"%";
-          });
-        }
+document.addEventListener('DOMContentLoaded', () => {
+
+  /* ===== Smooth Scroll for Anchor Links ===== */
+  const links = document.querySelectorAll('a[href^="#"]');
+  links.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute('href'));
+      if(target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     });
-  }
+  });
 
-  window.addEventListener("scroll", revealOnScroll);
-  revealOnScroll();
+  /* ===== Fade-In on Scroll ===== */
+  const faders = document.querySelectorAll('.fade-in, .why-card, .token-card, .roadmap-card, .gc-card, .v3-box, .founder-message, .founder-image');
 
-  // IntersectionObserver for smooth fade in
-  const observer = new IntersectionObserver((entries)=>{
-    entries.forEach(entry=>{
-      if(entry.isIntersecting){
-        entry.target.style.opacity =1;
-        entry.target.style.transform="translateY(0)";
+  const appearOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px"
+  };
+
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        entry.target.classList.add('appear');
         observer.unobserve(entry.target);
       }
     });
-  }, {threshold:0.1});
-  document.querySelectorAll(".section").forEach(section => {
-  if (!section.classList.contains("no-reveal")) {
-    section.style.opacity = 0;
-    section.style.transform = "translateY(50px)";
-    observer.observe(section);
-  }
-});
-</script>
+  }, appearOptions);
 
-</body>
-</html>
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+
+  /* ===== Token Bar Animation ===== */
+  const tokenFills = document.querySelectorAll('.token-bar .fill');
+  tokenFills.forEach(fill => {
+    const width = fill.dataset.percentage || fill.style.width || '0%';
+    fill.style.width = '0%';
+    setTimeout(() => {
+      fill.style.width = width;
+    }, 500);
+  });
+
+});
