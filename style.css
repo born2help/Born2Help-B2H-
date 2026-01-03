@@ -1,40 +1,23 @@
-/* ================= GLOBAL STYLES ================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
-}
+Css
 
-body {
-  background: #fefefe;
-  color: #111;
-  line-height: 1.6;
-}
 
-h1, h2, h3, strong {
-  font-weight: 800;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
 
 /* ================= HERO ================= */
 .hero {
   position: relative;
+  width: 100%;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
   background: url('images/hero-bg.jpg') no-repeat center center/cover;
-  overflow: hidden;
-  padding: 2rem;
+  color: #fff;
+  text-align: center;
+  padding: 50px 20px;
+  box-sizing: border-box;
 }
 
-.burn-logo {
+.hero .burn-logo {
   position: absolute;
   top: 20px;
   left: 20px;
@@ -43,275 +26,173 @@ a {
 }
 
 .hero-inner {
-  max-width: 900px;
-  z-index: 2;
+  max-width: 1200px;
 }
 
-.brand {
+.hero .brand {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
+  gap: 15px;
+  margin-bottom: 20px;
 }
 
-.brand .main-logo {
-  width: 60px;
+.hero .brand .main-logo {
+  width: 80px;
   height: auto;
 }
 
-.brand-text span {
-  display: block;
-  font-weight: 400;
-  font-size: 1rem;
-}
-
-.brand-text strong {
-  font-size: 1.5rem;
-}
-
-.hero-title .main-line,
-.hero-title .sub-line {
-  display: block;
-  opacity: 0;
-  transform: translateY(-20px);
+.hero .brand .brand-text {
+  text-align: left;
 }
 
 .hero-title .main-line {
   font-size: 3rem;
-  margin-bottom: 1rem;
+  font-weight: 800;
 }
 
 .hero-title .sub-line {
   font-size: 1.5rem;
-  color: #555;
+  display: block;
+  margin-top: 10px;
+  font-weight: 400;
 }
 
 .hero-desc {
-  margin: 1.5rem 0;
+  margin: 20px 0;
   font-size: 1.1rem;
-  color: #222;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.hero-actions a {
-  display: inline-block;
-  margin: 0.5rem;
-  padding: 0.7rem 1.8rem;
+.hero-actions .btn {
+  padding: 12px 30px;
   border-radius: 50px;
+  margin: 10px;
+  display: inline-block;
+  text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
 }
 
-.hero-actions .primary {
-  background: #004aad;
+.hero-actions .btn.primary {
+  background-color: #ff8c00;
   color: #fff;
 }
 
-.hero-actions .primary:hover {
-  background: #002f70;
+.hero-actions .btn.primary:hover {
+  background-color: #e67e22;
 }
 
-.hero-actions .donate {
-  background: #e67e22;
+.hero-actions .btn.donate {
+  background-color: #004aad;
   color: #fff;
 }
 
-.hero-actions .donate:hover {
-  background: #c76a1a;
+.hero-actions .btn.donate:hover {
+  background-color: #003080;
 }
 
-/* ================= SECTIONS ================= */
+/* ================= GENERAL ================= */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* Sections */
 .section {
-  padding: 5rem 2rem;
+  padding: 60px 20px;
 }
 
-.section.light {
-  background: #fefefe;
-  color: #111;
-}
-
-.section.dark {
-  background: #111;
-  color: #fefefe;
-}
-
-/* ================= WHY B2H ================= */
-.why-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.why-card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 2rem;
-  width: 250px;
+.section h2 {
   text-align: center;
-  transition: all 0.3s ease;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
-.why-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
-}
-
-.why-card i {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #004aad;
-}
-
-/* ================= TOKENOMICS ================= */
-.tokenomics-visual {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.token-bar {
-  flex: 1;
-  min-width: 180px;
-}
-
-.token-bar .bar {
-  background: #ddd;
-  height: 20px;
-  border-radius: 10px;
-  overflow: hidden;
-  margin: 0.5rem 0;
-}
-
-.token-bar .fill {
-  height: 100%;
-  width: 0;
-  border-radius: 10px;
-}
-
-/* ================= ROADMAP ================= */
-.roadmap-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.roadmap-card {
-  background: #222;
-  color: #fff;
-  padding: 2rem;
-  border-radius: 12px;
-  flex: 1;
-  min-width: 220px;
-  transition: all 0.3s ease;
-}
-
-.roadmap-card:hover {
-  transform: translateY(-5px);
-}
-
-/* ================= FOUNDER ================= */
+/* Founder */
 .founder-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
   align-items: center;
   justify-content: center;
+  gap: 30px;
 }
 
 .founder-image-wrapper {
-  flex: 1;
-  min-width: 250px;
+  flex: 1 1 300px;
+  text-align: center;
 }
 
-.founder-image-wrapper img {
-  width: 100%;
-  max-width: 350px;
-  border-radius: 12px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.founder-image-wrapper img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+.founder-image {
+  width: 250px;
+  max-width: 100%;
+  border-radius: 15px;
 }
 
 .founder-message {
-  flex: 1;
-  min-width: 250px;
+  flex: 1 1 400px;
+  max-width: 500px;
 }
 
-/* ================= CHARITY & V3 ================= */
+.founder-logo img {
+  width: 80px;
+  margin-bottom: 15px;
+}
+
+/* Charity Grid */
 .v3-charity-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 30px;
   justify-content: center;
-  margin-top: 2rem;
 }
 
 .v3-box {
-  flex: 1;
-  min-width: 220px;
-  max-width: 300px;
-  text-align: center;
-  border-radius: 12px;
+  flex: 1 1 250px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.v3-box img {
-  width: 100%;
-  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease;
 }
 
 .v3-box:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
 }
 
-/* ================= SOCIAL ================= */
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
+.v3-box img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
 }
 
-.social-icons img {
-  width: 40px;
-  transition: transform 0.3s ease;
-}
-
-.social-icons img:hover {
-  transform: scale(1.2);
-}
-
-/* ================= FOOTER ================= */
+/* Footer */
 footer {
   text-align: center;
-  padding: 2rem;
+  padding: 30px;
   background: #004aad;
   color: #fff;
 }
 
-/* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
+/* Responsive */
+@media(max-width: 768px){
   .hero-title .main-line {
     font-size: 2rem;
   }
   .hero-title .sub-line {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   .founder-container {
     flex-direction: column;
   }
-  .why-cards, .tokenomics-visual, .roadmap-cards, .v3-charity-grid {
-    flex-direction: column;
-    align-items: center;
+  .v3-box img {
+    height: 150px;
   }
 }
