@@ -343,3 +343,51 @@ footer {
   font-size: 0.95rem;
   color: #555;
 }
+
+/* ===== TOKENOMICS SECTION ===== */
+#tokenomics {
+  text-align: center;
+}
+
+.tokenomics-visual {
+  max-width: 900px;
+  margin: 40px auto 0;
+}
+
+.token-bar {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.token-bar span {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+  color: #222;
+}
+
+.token-bar strong {
+  float: right;
+  margin-top: -24px;
+  color: #444;
+}
+
+.bar {
+  background: #eaeaea;
+  height: 14px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  width: 0;
+  border-radius: 20px;
+  animation: fillBar 1.8s ease forwards;
+}
+
+/* Animation */
+@keyframes fillBar {
+  from { width: 0; }
+  to { width: var(--fill-width); }
+}
