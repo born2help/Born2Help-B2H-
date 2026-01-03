@@ -1,297 +1,172 @@
+Html new
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>B2H – Born for Humanity</title>
-  
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B2H Global Foundation</title>
   <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="cleaned.css">
-  <script src="mainjs.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script defer src="main.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-
-<body>
-  
-   <!-- ================= MODERNIZED CSS ================= -->
-<style>
-/* ================= RESET ================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: #0b132b;
-  color: #fff;
-  line-height: 1.7;
-}
-
-/* ================= COMMON ================= */
-.section {
-  padding: 80px 10%;
-  position: relative;
-}
-.section.light { background: #f8f9fb; color: #111; }
-.section.dark { background: #0b132b; color: #fff; }
-h2 {
-  font-size: 2.6rem;
-  margin-bottom: 25px;
-  text-align: center;
-  color: #ff8c00;
-}
-p { font-size: 1.05rem; max-width: 900px; margin: auto; opacity: 0.9; }
-
-/* ================= BUTTONS ================= */
-.btn {
-  padding: 14px 34px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 600;
-  display: inline-block;
-  transition: all 0.3s;
-}
-.btn.primary { background: #004aad; color: #fff; }
-.btn.primary:hover { transform: translateY(-3px); box-shadow: 0 6px 18px rgba(0,0,0,0.25); }
-.btn.donate { background: #e67e22; color: #fff; }
-.btn.donate:hover { transform: translateY(-3px); box-shadow: 0 6px 18px rgba(0,0,0,0.25); }
-
-/* ================= HERO ================= */
-.hero {
-  position: relative;
-  min-height: 100vh;
-  background: #0b1a2b;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 80px 30px;
-  overflow: hidden;
-}
-.burn-logo {
-  position: absolute; top: 50%; right: 6%;
-  transform: translateY(-50%);
-  width: 280px; max-width: 45vw;
-  opacity: 0.95; z-index: 1;
-  filter: drop-shadow(0 10px 28px rgba(0,0,0,0.6));
-  pointer-events: none;
-}
-.hero-inner { position: relative; z-index: 2; max-width: 760px; text-align: center; }
-.brand { display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 30px; }
-.main-logo { width: 120px; filter: drop-shadow(0 6px 18px rgba(0,0,0,0.45)); }
-.brand-text span { font-size: 22px; color: #f3efe6; }
-.brand-text strong { font-size: 36px; color: #e67e22; font-weight: 800; display: block; line-height: 1.2; }
-
-.hero-title { font-size: 64px; font-weight: 900; line-height: 1.1; text-align: center;
-  background: linear-gradient(90deg, #f9e29c 0%, #d4af37 50%, #ff8c00 100%);
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-  text-shadow: 0 3px 12px rgba(0,0,0,0.35);
-}
-.hero-title .sub-line { display: block; font-size: 32px; font-weight: 600; color: #f3efe6; margin-top: 6px; }
-.hero-desc { font-size: 20px; line-height: 1.75; max-width: 720px; margin: 20px auto 30px; color: #f1f1f1; text-align: center; }
-.hero-actions { display: flex; justify-content: center; gap: 20px; }
-
-/* ================= TOKENOMICS ================= */
-#tokenomics { padding: 80px 20px; background-color: #f9f9f9; text-align: center; }
-#tokenomics h2 { font-size: 42px; color: #e67e22; margin-bottom: 20px; font-weight: 800; }
-#tokenomics p { font-size: 18px; line-height: 1.8; max-width: 780px; margin: 20px auto 50px; color: #333; }
-.tokenomics-visual { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-bottom: 50px; }
-.token-bar { width: 200px; text-align: left; }
-.token-bar span { display: block; margin-bottom: 6px; font-weight: 600; color: #111; }
-.token-bar .bar { width: 100%; height: 18px; background: #ddd; border-radius: 12px; overflow: hidden; margin-bottom: 6px; }
-.token-bar .fill { height: 100%; border-radius: 12px; background: #e67e22; }
-.token-bar strong { display: block; text-align: right; font-size: 16px; color: #111; }
-.tokenomics-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; }
-.token-card { background: #ffffff; color: #111; padding: 25px; border-radius: 14px; text-align: center; box-shadow: 0 6px 18px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s; }
-.token-card:hover { transform: translateY(-6px); box-shadow: 0 10px 24px rgba(0,0,0,0.15); }
-.token-card h3 { font-size: 20px; margin-bottom: 12px; color: #e67e22; }
-.token-card p { font-size: 16px; line-height: 1.7; color: #555; }
-
-/* ================= ROADMAP ================= */
-#roadmap { padding: 100px 20px; background-color: #0f1230; text-align: center; }
-#roadmap h2 { color: #ff8c00; font-weight: 800; font-size: 46px; margin-bottom: 60px; text-shadow: 0 3px 10px rgba(0,0,0,0.4); }
-.roadmap-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; justify-items: center; }
-.roadmap-card { background-color: #1a1d4a; padding: 35px 25px; border-radius: 18px; box-shadow: 0 8px 24px rgba(0,0,0,0.35); transition: transform 0.3s, box-shadow 0.3s; max-width: 320px; display: flex; flex-direction: column; align-items: center; }
-.roadmap-card h3 { color: #ff8c00; font-weight: 800; margin-bottom: 16px; font-size: 24px; }
-.roadmap-card p { color: #fff; font-size: 16px; line-height: 1.8; text-align: center; margin: 0; }
-.roadmap-card:hover { transform: translateY(-6px); box-shadow: 0 12px 28px rgba(0,0,0,0.45); }
-
-/* ================= FOUNDER ================= */
-#founder { background-color: #f0f0f0; padding: 100px 20px; text-align: center; }
-#founder h2 { color: #e67e22; font-size: 48px; font-weight: 800; margin-bottom: 60px; }
-.founder-container { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 60px; }
-.founder-image-wrapper { flex: 1 1 400px; max-width: 550px; transition: transform 0.5s ease, box-shadow 0.5s ease; opacity:0; transform:translateY(40px); }
-.founder-image-wrapper:hover { transform: scale(1.05) translateY(-5px); box-shadow: 0 16px 40px rgba(0,0,0,0.4); }
-.founder-image { width: 100%; height: auto; border-radius: 16px; display: block; object-fit: cover; }
-.founder-message { flex: 1 1 450px; max-width: 600px; text-align: left; position: relative; opacity:0; transform:translateY(40px); }
-.founder-message p { font-size: 18px; line-height: 1.8; color: #333; }
-.founder-visible { opacity: 1 !important; transform: translateY(0) !important; transition: all 0.8s ease-out; }
-
-/* ================= CHARITY ================= */
-.charity-burn-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 25px; }
-.charity-burn-card { background: #111b3d; border-radius: 14px; overflow: hidden; }
-.charity-burn-card img { width: 100%; height: 180px; object-fit: cover; }
-.charity-burn-card h3 { padding: 15px; color: #ff8c00; }
-.charity-burn-card p { padding: 0 15px 20px; }
-
-/* ================= SOCIAL ================= */
-.social-icons { display: flex; justify-content: center; gap: 25px; }
-.social-icons img { width: 36px; }
-
-/* ================= FOOTER ================= */
-footer { padding: 30px; text-align: center; background: #050816; font-size: 0.9rem; }
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 992px) { .hero-title { font-size: 46px; } .founder-container { flex-direction: column; } }
-@media (max-width: 600px) { .hero-title { font-size: 36px; } .founder-message { text-align: center; } }
-</style>
-</head>
-
 <body>
 
-<!-- ================= HERO ================= -->
-<section class="hero section" data-reveal>
-  <img src="https://via.placeholder.com/280x280?text=Burn+Logo" class="burn-logo" alt="Burn Logo">
-  <div class="hero-inner">
-    <div class="brand">
-      <img src="https://via.placeholder.com/120x120?text=Logo" class="main-logo" alt="Logo">
-      <div class="brand-text">
-        <span>Born for Humanity</span>
-        <strong>B2H Global Foundation</strong>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <img src="burn-logo.png" alt="Burn Logo" class="burn-logo">
+    <div class="hero-inner">
+      <div class="brand">
+        <img src="main-logo.png" alt="B2H Logo" class="main-logo">
+        <div class="brand-text">
+          <span>Born for Humanity</span>
+          <strong>B2H Foundation</strong>
+        </div>
+      </div>
+      <h1 class="hero-title">
+        <span class="main-line">Empowering Lives</span>
+        <span class="sub-line">One Step at a Time</span>
+      </h1>
+      <p class="hero-desc">We are committed to bringing positive change to communities around the world through education, charity, and sustainable development projects.</p>
+      <div id="connect-donate">
+        <a href="#" class="btn primary">Connect</a>
+        <a href="#" class="btn donate">Donate</a>
       </div>
     </div>
-    <h1 class="hero-title">
-      <span class="main-line">Helping Communities</span>
-      <span class="sub-line">Change Lives Together</span>
-    </h1>
-    <p class="hero-desc">We aim to empower individuals, support charities, and create sustainable impact worldwide through education, health, and social programs.</p>
-    <div class="hero-actions">
-      <a href="#" class="btn primary">Connect</a>
-      <a href="#" class="btn donate">Donate</a>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- ================= TOKENOMICS ================= -->
-<section id="tokenomics" class="section light" data-reveal>
-  <h2>Tokenomics</h2>
-  <p>Our tokenomics are designed to support sustainable growth, reward community participation, and ensure long-term stability.</p>
-  <div class="tokenomics-visual">
-    <div class="token-bar">
-      <span>Community</span>
-      <div class="bar"><div class="fill" style="width:35%"></div></div>
-      <strong>35%</strong>
+  <!-- WHY B2H SECTION -->
+  <section id="why" class="section why-b2h" data-reveal>
+    <div class="why-inner">
+      <h2>Why B2H?</h2>
+      <p class="why-text">B2H believes in empowering communities with resources and knowledge. Every initiative is designed to create a long-lasting impact and a brighter future.</p>
+      <div class="why-cards">
+        <div class="why-card">
+          <i class="fa-solid fa-book-open"></i>
+          <h3>Education</h3>
+          <p>Providing quality education to underprivileged children.</p>
+        </div>
+        <div class="why-card">
+          <i class="fa-solid fa-hand-holding-heart"></i>
+          <h3>Charity</h3>
+          <p>Supporting communities through sustainable charity projects.</p>
+        </div>
+        <div class="why-card">
+          <i class="fa-solid fa-leaf"></i>
+          <h3>Environment</h3>
+          <p>Promoting eco-friendly initiatives and environmental awareness.</p>
+        </div>
+      </div>
+      <div class="why-highlight">Together, we can make a difference.</div>
     </div>
-    <div class="token-bar">
-      <span>Team</span>
-      <div class="bar"><div class="fill" style="width:25%"></div></div>
-      <strong>25%</strong>
-    </div>
-    <div class="token-bar">
-      <span>Marketing</span>
-      <div class="bar"><div class="fill" style="width:20%"></div></div>
-      <strong>20%</strong>
-    </div>
-    <div class="token-bar">
-      <span>Reserve</span>
-      <div class="bar"><div class="fill" style="width:20%"></div></div>
-      <strong>20%</strong>
-    </div>
-  </div>
-  <div class="tokenomics-cards">
-    <div class="token-card"><h3>Community Reward</h3><p>Incentivizing holders for active participation.</p></div>
-    <div class="token-card"><h3>Team Allocation</h3><p>Securing long-term development and innovation.</p></div>
-    <div class="token-card"><h3>Marketing</h3><p>Promoting project growth and awareness.</p></div>
-  </div>
-</section>
+  </section>
 
-<!-- ================= ROADMAP ================= -->
-<section id="roadmap" class="section dark" data-reveal>
-  <h2>Roadmap</h2>
-  <div class="roadmap-cards">
-    <div class="roadmap-card"><h3>Phase 1</h3><p>Foundation launch, early community engagement, charity partnerships.</p></div>
-    <div class="roadmap-card"><h3>Phase 2</h3><p>Token launch, marketing campaigns, global outreach.</p></div>
-    <div class="roadmap-card"><h3>Phase 3</h3><p>Platform development, airdrops, ecosystem expansion.</p></div>
-  </div>
-</section>
-
-<!-- ================= FOUNDER ================= -->
-<section id="founder" class="section light" data-reveal>
-  <h2>Founder Message</h2>
-  <div class="founder-container">
-    <div class="founder-image-wrapper">
-      <img src="https://via.placeholder.com/550x350?text=Founder" class="founder-image" alt="Founder">
+  <!-- FOUNDER SECTION -->
+  <section id="founder" class="section" data-reveal>
+    <h2>Message from Our Founder</h2>
+    <div class="founder-container">
+      <div class="founder-image-wrapper">
+        <img src="founder.jpg" alt="Founder" class="founder-image">
+      </div>
+      <div class="founder-message">
+        <div class="founder-logo">
+          <img src="small-logo.png" alt="B2H Logo">
+        </div>
+        <p>Our vision is to create a world where everyone has equal opportunities to grow and thrive. Through dedication, collaboration, and innovative initiatives, we strive to bring lasting positive change.</p>
+      </div>
     </div>
-    <div class="founder-message">
-      <p>Our mission is to empower communities by providing education, healthcare, and humanitarian support globally. Every initiative is backed by transparency, integrity, and impact-focused strategies.</p>
+  </section>
+
+  <!-- TOKENOMICS SECTION -->
+  <section id="tokenomics" class="section" data-reveal>
+    <h2>Tokenomics</h2>
+    <p>Our token allocation is designed to support sustainable growth and community engagement.</p>
+    <div class="tokenomics-visual">
+      <div class="token-bar">
+        <span>Development</span>
+        <div class="bar"><div class="fill" style="width:40%; background:#e67e22;"></div></div>
+        <strong>40%</strong>
+      </div>
+      <div class="token-bar">
+        <span>Marketing</span>
+        <div class="bar"><div class="fill" style="width:30%; background:#004aad;"></div></div>
+        <strong>30%</strong>
+      </div>
+      <div class="token-bar">
+        <span>Community</span>
+        <div class="bar"><div class="fill" style="width:20%; background:#ff8c00;"></div></div>
+        <strong>20%</strong>
+      </div>
+      <div class="token-bar">
+        <span>Reserve</span>
+        <div class="bar"><div class="fill" style="width:10%; background:#1b2559;"></div></div>
+        <strong>10%</strong>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ================= CHARITY ================= -->
-<section id="charity" class="section dark" data-reveal>
-  <h2>Charity Projects</h2>
-  <div class="charity-burn-cards">
-    <div class="charity-burn-card">
-      <img src="https://via.placeholder.com/300x180?text=Charity+1" alt="Charity 1">
-      <h3>Education Fund</h3>
-      <p>Providing education to underprivileged children globally.</p>
+  <!-- ROADMAP SECTION -->
+  <section id="roadmap" class="section" data-reveal>
+    <h2>Roadmap</h2>
+    <div class="roadmap-cards">
+      <div class="roadmap-card">
+        <h3>Phase 1</h3>
+        <p>Foundation setup and team building.</p>
+      </div>
+      <div class="roadmap-card">
+        <h3>Phase 2</h3>
+        <p>Initial projects and community outreach.</p>
+      </div>
+      <div class="roadmap-card">
+        <h3>Phase 3</h3>
+        <p>Global expansion and strategic partnerships.</p>
+      </div>
     </div>
-    <div class="charity-burn-card">
-      <img src="https://via.placeholder.com/300x180?text=Charity+2" alt="Charity 2">
-      <h3>Health Programs</h3>
-      <p>Healthcare initiatives and medical aid for communities in need.</p>
+  </section>
+
+  <!-- GOVERNANCE & CONSTITUTION -->
+  <section id="governance-constitution" class="section" data-reveal>
+    <div class="gc-wrapper">
+      <div class="gc-card">
+        <div class="gc-icon"><i class="fa-solid fa-gavel"></i></div>
+        <h2>Governance</h2>
+        <p>Transparent governance with community participation to ensure fairness and accountability.</p>
+      </div>
+      <div class="gc-card">
+        <div class="gc-icon"><i class="fa-solid fa-book"></i></div>
+        <h2>Constitution</h2>
+        <p>Our constitution outlines the mission, vision, and core values that guide all our actions.</p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ================= SOCIAL ================= -->
-<section id="social-media" class="section light" data-reveal>
-  <h2>Follow Us</h2>
-  <div class="social-icons">
-    <img src="https://via.placeholder.com/36?text=FB" alt="Facebook">
-    <img src="https://via.placeholder.com/36?text=TW" alt="Twitter">
-    <img src="https://via.placeholder.com/36?text=IG" alt="Instagram">
-  </div>
-</section>
+  <!-- CHARITY / V3 SECTION -->
+  <section id="v3-charity" class="section" data-reveal>
+    <h2>Charity & V3 Initiatives</h2>
+    <div class="v3-charity-grid">
+      <div class="v3-box">
+        <img src="charity1.png" alt="Charity 1">
+        <h3>Education Support</h3>
+        <p>Supporting education for underprivileged children.</p>
+      </div>
+      <div class="v3-box">
+        <img src="charity2.png" alt="Charity 2">
+        <h3>Healthcare</h3>
+        <p>Providing healthcare resources and assistance.</p>
+      </div>
+      <div class="v3-box">
+        <img src="charity3.png" alt="Charity 3">
+        <h3>Environment</h3>
+        <p>Planting trees and promoting eco-friendly initiatives.</p>
+      </div>
+    </div>
+  </section>
 
-<!-- ================= FOOTER ================= -->
-<footer>
-  &copy; 2026 B2H Global Foundation. All Rights Reserved.
-</footer>
-
-<!-- ================= MAIN.JS ================= -->
-<script>
-// Unified fade-in / scroll reveal
-document.addEventListener("DOMContentLoaded", function() {
-  const revealElements = document.querySelectorAll(".founder-image-wrapper, .founder-message, .section[data-reveal]");
-  function revealOnScroll() {
-    const triggerBottom = window.innerHeight * 0.85;
-    revealElements.forEach(el => {
-      const boxTop = el.getBoundingClientRect().top;
-      if (boxTop < triggerBottom) { el.classList.add("founder-visible"); }
-    });
-  }
-  revealOnScroll();
-  window.addEventListener("scroll", revealOnScroll);
-
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = 1;
-        entry.target.style.transform = "translateY(0)";
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-  document.querySelectorAll(".section").forEach(section => {
-    section.style.opacity = 0;
-    section.style.transform = "translateY(50px)";
-    observer.observe(section);
-  });
-});
-</script>
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 B2H Global Foundation. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
