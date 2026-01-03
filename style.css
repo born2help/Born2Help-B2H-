@@ -228,3 +228,44 @@ footer {
     flex-direction: column;
   }
 }
+
+/* ===============================
+   HERO SECTION – STRONG BACKGROUND
+   =============================== */
+
+.hero,
+#hero {
+  min-height: 100vh;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.55)
+    ),
+    url("assets/images/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  padding: 120px 20px;
+}
+
+/* Hero text */
+.hero h1,
+#hero h1 {
+  color: #ffffff;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.hero p,
+#hero p {
+  color: #f1f1f1;
+  font-size: 1.2rem;
+  max-width: 720px;
+  margin: 20px auto 0;
+}
