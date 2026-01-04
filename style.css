@@ -1,6 +1,6 @@
 /* ===============================
-   B2H GLOBAL FOUNDATION - CLEANED CSS
-   All duplicates removed, sections stable
+   B2H GLOBAL FOUNDATION - FINAL CSS
+   CLEAN • STABLE • NO DUPLICATES
 =============================== */
 
 /* ===== GLOBAL RESET ===== */
@@ -10,9 +10,7 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -21,7 +19,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Sections */
+/* ===== SECTIONS ===== */
 .section {
   padding: 60px 20px;
 }
@@ -42,22 +40,26 @@ body {
   color: #ffffff;
 }
 
-/* ===== HERO SECTION ===== */
+/* ================= HERO SECTION ================= */
 .hero {
   position: relative;
-  width: 100%;
   min-height: 100vh;
+  padding: 50px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: left;
-  padding: 50px 20px;
   overflow: hidden;
-  background: linear-gradient(135deg, #0d6efd, #00ff99);
-  color: #222;
+  background: linear-gradient(135deg, #0abde3, #00ff99);
 }
 
-/* Hero content */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.08);
+  z-index: 1;
+}
+
 .hero-inner {
   position: relative;
   z-index: 3;
@@ -65,157 +67,116 @@ body {
   color: #222;
 }
 
-/* Burn logo: glowing + rotating */
-.hero .burn-logo {
-  position: absolute;
-  top: 1.5in;
-  right: 1.5in;
-  width: 400px;
-  max-width: 30vw;
-  z-index: 2;
-  animation: burnGlowRotate 12s linear infinite;
-}
-
 /* Brand */
-.hero .brand {
+.brand {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 10px;
   margin-bottom: 20px;
 }
 
-.hero .main-logo { width: 120px; height: auto; }
-
-.hero .brand-text {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #222;
+.main-logo {
+  width: 120px;
 }
 
-/* Hero Titles */
+.brand-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Titles */
 .hero-title .main-line {
   font-size: 3.5rem;
   font-weight: 800;
-  color: #ff6600;
+  color: #ff6a00;
 }
 
 .hero-title .sub-line {
+  display: block;
   font-size: 1.5rem;
   margin-top: 10px;
   font-weight: 600;
-  color: #222;
 }
 
-/* Hero description */
 .hero-desc {
   max-width: 700px;
   margin: 20px 0;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   line-height: 1.6;
-  color: #222;
 }
 
-/* Buttons with glowing inner effect */
+/* Buttons */
 .hero-actions .btn {
   padding: 14px 36px;
   border-radius: 50px;
-  margin: 10px;
+  margin: 10px 10px 0 0;
   display: inline-block;
-  text-decoration: none;
   font-weight: 600;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  transition: all 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-.hero-actions .btn.primary {
+.btn.primary {
   background: #ff8c00;
   color: #fff;
-  box-shadow: 0 0 15px #ff8c00, 0 0 30px #ffae42;
+  box-shadow: 0 0 15px #ff8c00;
 }
 
-.hero-actions .btn.primary::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(255,200,100,0.2);
-  filter: blur(10px);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  border-radius: 50px;
-  z-index: -1;
+.btn.primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #ffb347;
 }
 
-.hero-actions .btn.primary:hover::after { opacity: 1; }
-.hero-actions .btn.primary:hover { background: #e67e22; transform: scale(1.05); }
-
-.hero-actions .btn.donate {
+.btn.donate {
   background: #00c896;
   color: #fff;
-  box-shadow: 0 0 15px #00c896, 0 0 30px #00fff0;
+  box-shadow: 0 0 15px #00c896;
 }
 
-.hero-actions .btn.donate::after {
-  content: "";
+.btn.donate:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #00fff0;
+}
+
+/* Burn Logo */
+.burn-logo {
   position: absolute;
-  inset: 0;
-  background: rgba(0,255,255,0.2);
-  filter: blur(10px);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  border-radius: 50px;
-  z-index: -1;
+  top: 1.5in;
+  right: 1.5in;
+  width: 400px;
+  max-width: 35vw;
+  z-index: 4;
+  animation: burnRotate 14s linear infinite;
 }
 
-.hero-actions .btn.donate:hover::after { opacity: 1; }
-.hero-actions .btn.donate:hover { background: #00a37a; transform: scale(1.05); }
+@keyframes burnRotate {
+  0% { transform: rotate(0deg); filter: drop-shadow(0 0 15px #ff8c00); }
+  50% { transform: rotate(12deg); filter: drop-shadow(0 0 30px #ffb347); }
+  100% { transform: rotate(0deg); filter: drop-shadow(0 0 15px #ff8c00); }
+}
 
-/* ===== Energy Particles ===== */
+/* ===== HERO PARTICLES ===== */
 .particles {
   position: absolute;
   inset: 0;
-  z-index: 1;
-  overflow: visible;
+  z-index: 2;
   pointer-events: none;
 }
 
 .particles span {
   position: absolute;
-  display: block;
-  width: 12px;
-  height: 12px;
-  background: rgba(255,255,255,0.8);
   border-radius: 50%;
-  animation: floatBurn 8s linear infinite;
+  background: rgba(255,255,255,0.4);
+  animation: floatParticle linear infinite;
 }
 
-/* Particle floating animation */
-@keyframes floatBurn {
-  0%,100% { transform: translateY(0) scale(0.5); opacity: 0.3; }
-  50% { transform: translateY(-50px) scale(1); opacity: 0.8; }
+@keyframes floatParticle {
+  0% { transform: translateY(0) scale(0.6); opacity: 0.2; }
+  50% { opacity: 0.7; }
+  100% { transform: translateY(-120px) scale(1.2); opacity: 0; }
 }
 
-/* Burn logo animation */
-@keyframes burnGlowRotate {
-  0%   { transform: rotate(0deg); filter: drop-shadow(0 0 15px #ff8c00); }
-  50%  { transform: rotate(15deg); filter: drop-shadow(0 0 30px #ffae42); }
-  100% { transform: rotate(0deg); filter: drop-shadow(0 0 15px #ff8c00); }
-}
-
-/* Responsive */
-@media(max-width: 768px){
-  .hero-title .main-line { font-size: 2.5rem; }
-  .hero-title .sub-line { font-size: 1.2rem; }
-  .hero-desc { font-size: 1rem; }
-  .hero .main-logo { width: 100px; }
-  .hero .burn-logo { width: 250px; top: 80px; right: 20px; }
-  .hero-inner { text-align: center; }
-  .hero-actions { justify-content: center; }
-}
-
-/* ===== FOUNDER SECTION ===== */
+/* ================= FOUNDER ================= */
 .founder-container {
   max-width: 1100px;
   margin: auto;
@@ -225,63 +186,39 @@ body {
   align-items: center;
 }
 
-.founder-image-wrapper {
-  text-align: center;
-}
-
 .founder-image {
   width: 260px;
   height: 260px;
-  object-fit: cover;
   border-radius: 50%;
-  border: 6px solid #e67e22;
+  object-fit: cover;
+  border: 6px solid #ff8c00;
 }
 
 .founder-message {
   background: rgba(0,0,0,0.04);
   padding: 30px;
   border-radius: 16px;
-  line-height: 1.7;
-  font-size: 1rem;
 }
 
-.founder-logo img {
-  width: 80px;
-  margin-bottom: 15px;
-}
-
-@media (max-width: 900px) {
-  .founder-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-  .founder-message {
-    margin-top: 20px;
-  }
-}
-
-/* ===== CHARITY / V3 SECTION ===== */
+/* ================= CHARITY ================= */
 .v3-charity-grid {
   max-width: 1200px;
-  margin: 50px auto 0;
+  margin: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
   gap: 30px;
 }
 
 .v3-box {
-  background: #ffffff;
+  background: #fff;
   border-radius: 18px;
-  overflow: hidden;
   box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  overflow: hidden;
   text-align: center;
+  transition: transform .3s ease;
 }
 
-.v3-box:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 30px 60px rgba(0,0,0,0.15);
-}
+.v3-box:hover { transform: translateY(-8px); }
 
 .v3-box img {
   width: 100%;
@@ -289,128 +226,51 @@ body {
   object-fit: cover;
 }
 
-.v3-box h3 {
-  margin: 20px 0 10px;
-  font-size: 1.2rem;
-  color: #222;
-}
-
-.v3-box p {
-  padding: 0 20px 25px;
-  font-size: 0.95rem;
-  color: #555;
-}
-
-/* ===== TOKENOMICS ===== */
-#tokenomics {
-  text-align: center;
-}
-
+/* ================= TOKENOMICS ================= */
 .tokenomics-visual {
   max-width: 900px;
-  margin: 40px auto 0;
+  margin: auto;
 }
 
-.token-bar {
-  margin-bottom: 25px;
-  text-align: left;
-}
+.token-bar { margin-bottom: 25px; }
 
 .token-bar span {
   font-weight: 600;
   display: block;
   margin-bottom: 6px;
-  color: #222;
-}
-
-.token-bar strong {
-  float: right;
-  margin-top: -24px;
-  color: #444;
 }
 
 .bar {
-  background: #eaeaea;
   height: 14px;
+  background: #eaeaea;
   border-radius: 20px;
   overflow: hidden;
 }
 
 .fill {
   height: 100%;
-  width: 0;
+  width: var(--fill-width);
   border-radius: 20px;
-  animation: fillBar 1.8s ease forwards;
 }
 
-@keyframes fillBar {
-  from { width: 0; }
-  to { width: var(--fill-width); }
-}
-
-/* ===== GOVERNANCE & CONSTITUTION ===== */
-.gc-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-  margin-top: 40px;
-}
-
-.gc-card {
-  background: #fefefe;
-  border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  padding: 30px 25px;
-  max-width: 320px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gc-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
-}
-
-.gc-icon {
-  font-size: 50px;
-  color: #004aad;
-  margin-bottom: 20px;
-}
-
-.gc-card h2 {
-  font-size: 1.5rem;
-  margin-bottom: 12px;
-  color: #222;
-}
-
-.gc-card p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #555;
-}
-
-/* ===== ROADMAP SECTION ===== */
+/* ================= ROADMAP ================= */
 .roadmap-section {
   background: linear-gradient(135deg, #0d1b2a, #1b263b);
-  color: #ffffff;
   padding: 60px 20px;
+  color: #fff;
 }
 
 .roadmap-section h2 {
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 50px;
   color: #00c896;
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+  margin-bottom: 50px;
 }
 
-/* Timeline container */
 .timeline {
   position: relative;
-  padding-left: 60px;
   max-width: 800px;
-  margin: 0 auto;
+  margin: auto;
+  padding-left: 60px;
 }
 
 .timeline-line {
@@ -420,30 +280,25 @@ body {
   width: 4px;
   height: 0;
   background: linear-gradient(to bottom, #00c896, #00fff0);
-  border-radius: 2px;
-  transition: height 1s ease-out;
-  box-shadow: 0 0 10px #00c896;
+  box-shadow: 0 0 12px #00c896;
 }
 
 .timeline-item {
-  position: relative;
   margin-bottom: 50px;
   padding: 20px 30px;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255,255,255,0.05);
   border-left: 4px solid #00c896;
   border-radius: 8px;
   opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.6s ease-out;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
 }
 
-.timeline-item:hover {
-  background: rgba(0, 200, 150, 0.2);
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* Circle markers */
 .timeline-item::before {
   content: attr(data-phase);
   position: absolute;
@@ -451,223 +306,35 @@ body {
   top: 20px;
   width: 28px;
   height: 28px;
+  border-radius: 50%;
   background: #00c896;
   color: #fff;
-  font-weight: bold;
-  font-size: 0.9rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  border: 2px solid #fff;
-  box-shadow: 0 0 10px #00c896;
-  transition: all 0.3s ease;
+  box-shadow: 0 0 12px #00c896;
 }
 
-/* Active marker glow */
-.timeline-item.visible::before {
-  transform: scale(1.2);
-  box-shadow: 0 0 20px #00fff0, 0 0 30px #00c896;
-}
-
-/* Timeline items visible */
-.timeline-item.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ===== FOOTER ===== */
+/* ================= FOOTER ================= */
 footer {
   text-align: center;
   padding: 30px;
-  background: #004aad;
+  background: linear-gradient(135deg, #003a8f, #004aad);
   color: #fff;
+  font-size: 0.9rem;
 }
 
-/* ===== RESPONSIVE ===== */
-@media(max-width: 768px){
-  .hero-title .main-line {
-    font-size: 2rem;
-  }
-  .hero-title .sub-line {
-    font-size: 1rem;
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .hero-title .main-line { font-size: 2.2rem; }
+  .hero-title .sub-line { font-size: 1.1rem; }
+  .burn-logo {
+    width: 220px;
+    top: 80px;
+    right: 20px;
   }
   .founder-container {
     grid-template-columns: 1fr;
     text-align: center;
   }
-  .founder-message {
-    margin-top: 20px;
-  }
-  .v3-box img {
-    height: 150px;
-  }
-  .timeline-item {
-    width: 100%;
-    left: 0 !important;
-    text-align: left !important;
-    padding-left: 70px;
-    padding-right: 20px;
-    margin-bottom: 40px;
-  }
-  .timeline-item::before {
-    left: 20px !important;
-    right: auto !important;
-  }
-  .timeline-line {
-    left: 30px !important;
-  }
-}
-
-/* ===== FADE-IN FIX ===== */
-.fade-in {
-  opacity: 1 !important;
-  transform: none !important;
-}
-
-/* ===== HERO PARTICLES ===== */
-.hero {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 50px 20px;
-  box-sizing: border-box;
-  overflow: hidden;
-  background: linear-gradient(135deg, #0abde3, #00ff99); /* blue to light green */
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.1); /* subtle overlay for contrast */
-  z-index: 1;
-}
-
-.hero-inner {
-  position: relative;
-  z-index: 3; /* above particles */
-  color: #222; /* text black/orange as you wanted */
-}
-
-/* ===== BURN LOGO ===== */
-.burn-logo {
-  position: absolute;
-  top: 1.5in;
-  right: 1.5in;
-  width: 160px; /* adjust size for 5x original */
-  height: auto;
-  z-index: 4;
-  animation: rotateBurn 15s linear infinite;
-}
-
-/* Rotate Burn logo slowly */
-@keyframes rotateBurn {
-  0% { transform: rotate(0deg); }
-  50% { transform: rotate(3deg); }
-  100% { transform: rotate(0deg); }
-}
-
-/* ===== PARTICLES CONTAINER ===== */
-.particles {
-  position: absolute;
-  inset: 0;
-  z-index: 2; /* below hero-inner but above background */
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.particles span {
-  position: absolute;
-  display: block;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.8);
-  box-shadow: 0 0 8px rgba(255,255,255,0.6);
-  animation: floatParticles linear infinite;
-  opacity: 0.8;
-}
-
-/* Particle floating + slight rotation animation */
-@keyframes floatParticles {
-  0% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
-  50% { transform: translateY(-30px) rotate(180deg); opacity: 1; }
-  100% { transform: translateY(0) rotate(360deg); opacity: 0.8; }
-}
-
-/* ===== BUTTONS GLOW ===== */
-.hero-actions .btn {
-  padding: 12px 30px;
-  border-radius: 50px;
-  margin: 10px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-.hero-actions .btn.primary {
-  background-color: #ff8c00;
-  color: #fff;
-  box-shadow: 0 0 10px #ff8c00, 0 0 20px #ffb84d;
-}
-
-.hero-actions .btn.primary:hover {
-  box-shadow: 0 0 20px #ff8c00, 0 0 30px #ffb84d;
-}
-
-.hero-actions .btn.donate {
-  background-color: #004aad;
-  color: #fff;
-  box-shadow: 0 0 10px #004aad, 0 0 20px #4d79ff;
-}
-
-.hero-actions .btn.donate:hover {
-  box-shadow: 0 0 20px #004aad, 0 0 30px #4d79ff;
-}
-
-/* ================= PARTICLES ================= */
-
-.hero {
-  position: relative;
-  overflow: hidden;
-}
-
-.particles {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.particles span {
-  position: absolute;
-  background: rgba(255, 255, 255, 0.35);
-  border-radius: 50%;
-  animation: floatParticle linear infinite;
-}
-
-/* Particle animation */
-@keyframes floatParticle {
-  0% {
-    transform: translateY(0) scale(1);
-    opacity: 0.2;
-  }
-  50% {
-    opacity: 0.6;
-  }
-  100% {
-    transform: translateY(-120px) scale(1.3);
-    opacity: 0;
-  }
-}
-
-/* Keep hero content above particles */
-.hero-inner,
-.burn-logo {
-  position: relative;
-  z-index: 3;
 }
