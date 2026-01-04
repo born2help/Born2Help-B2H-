@@ -22,29 +22,28 @@ document.addEventListener("DOMContentLoaded", () => {
   onScroll();
 
  // ===== Hero particles =====
-const particlesContainer = document.querySelector(".particles");
-const numParticles = 50;
+document.addEventListener("DOMContentLoaded", () => {
 
-for (let i = 0; i < numParticles; i++) {
-  const span = document.createElement("span");
-  span.style.left = Math.random() * 100 + "%";
-  span.style.top = Math.random() * 100 + "%";
-  span.style.width = 5 + Math.random() * 12 + "px";
-  span.style.height = span.style.width;
-  span.style.animationDuration = 4 + Math.random() * 6 + "s";
-  span.style.animationDelay = Math.random() * 5 + "s";
-  particlesContainer.appendChild(span);
-}
+  const particlesContainer = document.querySelector(".particles");
+  if (!particlesContainer) return;
 
-// Cursor-reactive particles
-document.addEventListener("mousemove", (e) => {
-  const particles = document.querySelectorAll(".particles span");
-  const centerX = window.innerWidth / 2;
-  const centerY = window.innerHeight / 2;
+  const particleCount = 60;
 
-  particles.forEach((p, i) => {
-    const offsetX = (e.clientX - centerX) * 0.02 * (i + 1);
-    const offsetY = (e.clientY - centerY) * 0.02 * (i + 1);
-    p.style.transform = translate(${offsetX}px, ${offsetY}px);
-  });
+  for (let i = 0; i < particleCount; i++) {
+    const p = document.createElement("span");
+
+    const size = Math.random() * 10 + 4;
+    p.style.width = size + "px";
+    p.style.height = size + "px";
+
+    p.style.left = Math.random() * 100 + "%";
+    p.style.top = Math.random() * 100 + "%";
+
+    p.style.animationDuration = 6 + Math.random() * 8 + "s";
+    p.style.animationDelay = Math.random() * 5 + "s";
+
+    particlesContainer.appendChild(p);
+  }
+
 });
+                          
