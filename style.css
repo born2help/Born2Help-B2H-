@@ -53,18 +53,8 @@ body {
   text-align: center;
   padding: 50px 20px;
   overflow: hidden;
-
-  background: linear-gradient(135deg, #0d1b2a, #1b263b);
-  color: #fff;
-}
-
-/* Dark overlay reduced opacity */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.1);
-  z-index: 1;
+  background: linear-gradient(135deg, #0d6efd, #00ff99);
+  color: #222;
 }
 
 /* Hero content */
@@ -73,18 +63,18 @@ body {
   z-index: 3;
   max-width: 1200px;
   text-align: left;
+  color: #222;
 }
 
 /* Burn logo: glowing + rotating */
 .hero .burn-logo {
   position: absolute;
-  top: 144px;
-  right: 144px;
+  top: 1.5in;
+  right: 1.5in;
   width: 400px;
   max-width: 30vw;
-  opacity: 1;
   z-index: 2;
-  animation: burnGlowRotate 10s linear infinite;
+  animation: burnGlowRotate 12s linear infinite;
 }
 
 /* Brand */
@@ -99,21 +89,24 @@ body {
 
 .hero .main-logo { width: 120px; height: auto; }
 
-.hero .brand-text { font-size: 1.1rem; font-weight: 600; color: #fff; }
+.hero .brand-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #222;
+}
 
 /* Hero Titles */
 .hero-title .main-line {
   font-size: 3.5rem;
   font-weight: 800;
-  text-shadow: 0 4px 25px rgba(0,0,0,0.7);
+  color: #ff6600;
 }
 
 .hero-title .sub-line {
   font-size: 1.5rem;
   margin-top: 10px;
-  font-weight: 400;
-  color: #f1f1f1;
-  text-shadow: 0 2px 15px rgba(0,0,0,0.6);
+  font-weight: 600;
+  color: #222;
 }
 
 /* Hero description */
@@ -122,7 +115,7 @@ body {
   margin: 20px 0;
   font-size: 1.2rem;
   line-height: 1.6;
-  color: #eaeaea;
+  color: #222;
 }
 
 /* Buttons with glowing inner effect */
@@ -139,7 +132,6 @@ body {
   transition: all 0.3s ease, transform 0.3s ease;
 }
 
-/* Primary button */
 .hero-actions .btn.primary {
   background: #ff8c00;
   color: #fff;
@@ -158,16 +150,9 @@ body {
   z-index: -1;
 }
 
-.hero-actions .btn.primary:hover::after {
-  opacity: 1;
-}
+.hero-actions .btn.primary:hover::after { opacity: 1; }
+.hero-actions .btn.primary:hover { background: #e67e22; transform: scale(1.05); }
 
-.hero-actions .btn.primary:hover {
-  background: #e67e22;
-  transform: scale(1.05);
-}
-
-/* Donate button */
 .hero-actions .btn.donate {
   background: #00c896;
   color: #fff;
@@ -186,21 +171,15 @@ body {
   z-index: -1;
 }
 
-.hero-actions .btn.donate:hover::after {
-  opacity: 1;
-}
+.hero-actions .btn.donate:hover::after { opacity: 1; }
+.hero-actions .btn.donate:hover { background: #00a37a; transform: scale(1.05); }
 
-.hero-actions .btn.donate:hover {
-  background: #00a37a;
-  transform: scale(1.05);
-}
-
-/* Particles */
+/* ===== Energy Particles ===== */
 .particles {
   position: absolute;
   inset: 0;
-  z-index: 0;
-  overflow: hidden;
+  z-index: 1;
+  overflow: visible;
 }
 
 .particles span {
@@ -208,22 +187,22 @@ body {
   display: block;
   width: 12px;
   height: 12px;
-  background: rgba(0,255,255,0.5);
+  background: rgba(255,255,255,0.8);
   border-radius: 50%;
-  animation: float 10s linear infinite;
+  pointer-events: none;
+  animation: floatBurn 10s linear infinite;
+  --x: 0; --y: 0;
 }
 
-/* Particle animation */
-@keyframes float {
-  0% { transform: translateY(100vh) scale(0.5); opacity: 0.5; }
-  50% { opacity: 0.8; }
-  100% { transform: translateY(-20vh) scale(1); opacity: 0; }
+@keyframes floatBurn {
+  0%, 100% { transform: translate(var(--x), var(--y)) scale(0.5); opacity: 0.3; }
+  50% { transform: translate(calc(var(--x) + 50px), calc(var(--y) - 50px)) scale(1); opacity: 0.8; }
 }
 
 /* Burn logo animation */
 @keyframes burnGlowRotate {
-  0% { transform: rotate(0deg); filter: drop-shadow(0 0 15px #ff8c00); }
-  50% { transform: rotate(10deg); filter: drop-shadow(0 0 25px #ffae42); }
+  0%   { transform: rotate(0deg); filter: drop-shadow(0 0 15px #ff8c00); }
+  50%  { transform: rotate(15deg); filter: drop-shadow(0 0 30px #ffae42); }
   100% { transform: rotate(0deg); filter: drop-shadow(0 0 15px #ff8c00); }
 }
 
