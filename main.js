@@ -40,3 +40,23 @@ document.addEventListener("DOMContentLoaded", () => {
     container.appendChild(p);
   }
 });
+
+// ================= COUNT-UP NUMBERS =================
+const counters = document.querySelectorAll('#impact .impact-card span');
+counters.forEach(counter => {
+  const updateCount = () => {
+    const target = +counter.innerText.replace(/\D/g,'');
+    let count = 0;
+    const increment = Math.ceil(target / 200); // adjust speed
+    const timer = setInterval(() => {
+      count += increment;
+      if(count >= target) {
+        counter.innerText = target + '+';
+        clearInterval(timer);
+      } else {
+        counter.innerText = count + '+';
+      }
+    }, 10);
+  };
+  updateCount();
+});
