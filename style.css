@@ -50,28 +50,27 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url('images/hero-bg.jpg') no-repeat center center/cover;
   text-align: center;
   padding: 50px 20px;
-  box-sizing: border-box;
   overflow: hidden;
+
+  /* Background Gradient + Overlay for strong look */
+  background: linear-gradient(135deg, #0d1b2a, #1b263b);
+  color: #fff;
 }
 
-/* DARK OVERLAY */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0,0,0,0.5); /* Dark overlay for readability */
   z-index: 1;
 }
 
-/* Hero inner content above overlay */
 .hero-inner {
   position: relative;
   z-index: 2;
   max-width: 1200px;
-  color: #ffffff;
 }
 
 .hero .burn-logo {
@@ -84,44 +83,51 @@ body {
 
 .hero .brand {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 15px;
+  gap: 10px;
   margin-bottom: 20px;
 }
 
-.hero .brand .main-logo {
-  width: 80px;
+.hero .main-logo {
+  width: 120px;
   height: auto;
 }
 
-.hero .brand .brand-text {
-  text-align: left;
+.hero .brand-text {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
 .hero-title .main-line {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 800;
-  text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+  text-shadow: 0 4px 20px rgba(0,0,0,0.7);
 }
 
 .hero-title .sub-line {
   font-size: 1.5rem;
-  display: block;
   margin-top: 10px;
   font-weight: 400;
   color: #f1f1f1;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.6);
 }
 
 .hero-desc {
-  color: #eaeaea;
-  font-size: 1.1rem;
   max-width: 700px;
   margin: 20px auto;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #eaeaea;
+}
+
+.hero-actions {
+  margin-top: 30px;
 }
 
 .hero-actions .btn {
-  padding: 12px 30px;
+  padding: 14px 36px;
   border-radius: 50px;
   margin: 10px;
   display: inline-block;
@@ -131,21 +137,37 @@ body {
 }
 
 .hero-actions .btn.primary {
-  background-color: #ff8c00;
+  background: #ff8c00;
   color: #fff;
 }
 
 .hero-actions .btn.primary:hover {
-  background-color: #e67e22;
+  background: #e67e22;
 }
 
 .hero-actions .btn.donate {
-  background-color: #004aad;
+  background: #00c896;
   color: #fff;
 }
 
 .hero-actions .btn.donate:hover {
-  background-color: #003080;
+  background: #00a37a;
+}
+
+/* Responsive */
+@media(max-width: 768px){
+  .hero-title .main-line {
+    font-size: 2.5rem;
+  }
+  .hero-title .sub-line {
+    font-size: 1.2rem;
+  }
+  .hero-desc {
+    font-size: 1rem;
+  }
+  .hero .main-logo {
+    width: 100px;
+  }
 }
 
 /* ===== FOUNDER SECTION ===== */
