@@ -50,3 +50,7 @@ document.addEventListener("DOMContentLoaded", function() {
   window.addEventListener('scroll', animateTimeline);
   animateTimeline(); // initial trigger
 });
+
+/*
+ALL CODE TEMPORARILY DISABLED
+*/
