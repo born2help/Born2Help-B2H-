@@ -51,6 +51,3 @@ document.addEventListener("DOMContentLoaded", function() {
   animateTimeline(); // initial trigger
 });
 
-/*
-ALL CODE TEMPORARILY DISABLED
-*/
