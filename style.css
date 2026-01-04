@@ -513,3 +513,92 @@ footer {
 
   </div>
 </section>
+
+/* ================= GOVERNANCE SAFE ENHANCEMENTS ================= */
+
+#governance.governance-section {
+  background: linear-gradient(135deg, #f8fafc, #e6f7f2);
+}
+
+#governance .governance-intro {
+  max-width: 780px;
+  margin: 0 auto 45px;
+  text-align: center;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #334155;
+}
+
+#governance .governance-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+#governance .governance-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 32px 26px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+#governance .governance-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 55px rgba(0, 200, 150, 0.3);
+}
+
+#governance .gov-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+#governance h3 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: #004aad;
+}
+
+#governance p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #475569;
+}
+
+/* ===== Governance Buttons ===== */
+#governance .governance-actions {
+  margin-top: 45px;
+  text-align: center;
+}
+
+#governance .governance-btn {
+  margin: 10px;
+  padding: 14px 34px;
+  border-radius: 40px;
+  background: #00c896;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 0 18px rgba(0,200,150,0.5);
+  transition: all 0.3s ease;
+}
+
+#governance .governance-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 28px rgba(0,255,200,0.7);
+}
+
+#governance .governance-btn.outline {
+  background: transparent;
+  border: 2px solid #00c896;
+  color: #00c896;
+  box-shadow: none;
+}
+
+#governance .governance-btn.outline:hover {
+  background: #00c896;
+  color: #ffffff;
+}
