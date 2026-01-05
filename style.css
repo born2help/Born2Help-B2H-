@@ -1242,3 +1242,34 @@ footer {
   font-size: 0.85rem;
   padding: 8px 15px;
 }
+
+/* ===== Image Fallback & Enhancement ===== */
+.img-placeholder {
+  background: linear-gradient(135deg, #e0e0e0, #f7f7f7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Board / Team Images */
+.board-card img,
+.team-card img,
+.partner-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  background: #eee;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.board-card img:hover,
+.team-card img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
