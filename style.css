@@ -1167,3 +1167,16 @@ footer {
     font-size: 1rem;
   }
 }
+
+/* ===== Glowing Animation for Governance Icons ===== */
+@keyframes glow {
+  0% { text-shadow: 0 0 5px #0d3b66, 0 0 10px #0077b6, 0 0 15px #00b4d8; }
+  50% { text-shadow: 0 0 15px #0d3b66, 0 0 25px #0077b6, 0 0 35px #00b4d8; }
+  100% { text-shadow: 0 0 5px #0d3b66, 0 0 10px #0077b6, 0 0 15px #00b4d8; }
+}
+
+.gov-icon {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+  animation: glow 2.5s ease-in-out infinite;
+}
