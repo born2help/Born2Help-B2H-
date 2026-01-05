@@ -1273,3 +1273,15 @@ footer {
   transform: scale(1.03);
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
+
+.partner-logo {
+  height: 120px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f1f1f1, #fafafa);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
