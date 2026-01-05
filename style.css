@@ -989,161 +989,181 @@ footer {
   color: #555;
 }
 
-/* ================= GOVERNANCE BUTTONS ================= */
+/* ===== Governance Section ===== */
+.governance-section {
+  background: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
 
+.governance-section h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  color: #1a1a1a;
+  text-transform: uppercase;
+}
+
+.governance-section .governance-intro {
+  font-size: 1.1rem;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto 50px auto;
+  line-height: 1.7;
+  text-shadow: 0 0 3px rgba(0,0,0,0.05);
+}
+
+/* ===== Board Members Row ===== */
+.board-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.board-card {
+  background: #fff;
+  padding: 20px;
+  width: 250px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.board-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.board-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.board-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+}
+
+.board-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* ===== Governance Cards Row ===== */
+.governance-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.governance-card {
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  border-radius: 15px;
+  padding: 25px 20px;
+  width: 230px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.4s ease;
+}
+
+.governance-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+  background: linear-gradient(145deg, #e0f7ff, #d0f0ff);
+}
+
+.gov-icon {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+}
+
+.governance-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #0d3b66;
+}
+
+.governance-card p {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* ===== Governance Actions Buttons ===== */
 .governance-actions {
+  margin-top: 20px;
   display: flex;
   justify-content: center;
   gap: 20px;
-  flex-wrap: wrap;
-  margin-top: 40px;
 }
 
 .governance-btn {
-  padding: 12px 26px;
-  border-radius: 30px;
+  padding: 12px 25px;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #0d3b66, #0077b6);
+  color: #fff;
   font-weight: 600;
   transition: all 0.3s ease;
 }
 
 .governance-btn:hover {
-  box-shadow: 0 0 25px rgba(255, 122, 0, 0.6);
+  background: linear-gradient(90deg, #0077b6, #00b4d8);
+  transform: translateY(-3px);
 }
 
-/* ================= GOVERNANCE CARDS HORIZONTAL ADJUSTMENT ================= */
-
-/* Top row: Board Members already horizontal in .board-grid */
-.board-members {
-  margin-bottom: 50px;
+.governance-btn.outline {
+  background: none;
+  color: #0d3b66;
+  border: 2px solid #0d3b66;
 }
 
-/* Bottom governance cards in a single row */
-.governance-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px;
-}
-
-/* Each card adjusts to same height and width for horizontal row */
-.governance-card {
-  flex: 1 1 250px; /* flexible, min width 250px */
-  max-width: 280px;
-  text-align: center;
-  margin-bottom: 0; /* remove extra spacing */
-}
-
-/* ================= MODERN GOVERNANCE HOVER & GLOW ================= */
-
-/* Top Row: Board of Trustees */
-.board-members {
-  margin-bottom: 40px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.board-card {
-  flex: 1 1 220px;
-  max-width: 240px;
-  text-align: center;
-  background: linear-gradient(145deg, #ffffff, #e6f7f2);
-  border-radius: 16px;
-  padding: 15px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-  transition: all 0.4s ease;
-}
-
-.board-card:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 25px 50px rgba(0,200,150,0.35);
-  border: 2px solid #00c896;
-}
-
-/* Bottom Row: Governance Cards Horizontal */
-.governance-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px;
-  margin-top: 20px;
-}
-
-.governance-card {
-  flex: 1 1 220px;
-  max-width: 260px;
-  text-align: center;
-  padding: 25px 18px;
-  background: linear-gradient(135deg, #0f172a, #020617);
+.governance-btn.outline:hover {
+  background: #0d3b66;
   color: #fff;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0,200,150,0.3);
-  transition: all 0.4s ease;
+  transform: translateY(-3px);
 }
 
-.governance-card:hover {
-  transform: translateY(-6px) scale(1.03);
-  box-shadow: 0 25px 45px rgba(0,255,200,0.5);
-}
+/* ===== RESPONSIVE MEDIA QUERIES ===== */
 
-/* Governance Icons */
-.gov-icon {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
-  color: #00c896;
-  text-shadow: 0 0 12px #00fff0, 0 0 25px #00c896;
-}
+/* Tablet: 768px and below */
+@media (max-width: 768px) {
+  .board-members, .governance-grid {
+    gap: 20px;
+  }
 
-/* Headings */
-#governance h2 {
-  color: #004aad;
-  margin-bottom: 25px;
-}
-
-/* Intro text */
-#governance .governance-intro {
-  max-width: 750px;
-  margin: 0 auto 40px;
-  color: #d1d5db;
-  font-size: 1.05rem;
-  line-height: 1.6;
-}
-
-/* Buttons */
-#governance .governance-btn {
-  margin: 12px;
-  padding: 14px 36px;
-  border-radius: 40px;
-  background: #00c896;
-  color: #fff;
-  font-weight: 600;
-  text-decoration: none;
-  box-shadow: 0 0 18px rgba(0,200,150,0.5);
-  transition: all 0.3s ease;
-}
-
-#governance .governance-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 28px rgba(0,255,200,0.7);
-}
-
-#governance .governance-btn.outline {
-  background: transparent;
-  border: 2px solid #00c896;
-  color: #00c896;
-  box-shadow: none;
-}
-
-#governance .governance-btn.outline:hover {
-  background: #00c896;
-  color: #fff;
-}
-
-/* ===== RESPONSIVE ===== */
-@media(max-width: 768px){
   .board-card, .governance-card {
-    flex: 1 1 90%;
-    max-width: 95%;
+    width: 45%;
+  }
+}
+
+/* Mobile: 480px and below */
+@media (max-width: 480px) {
+  .board-members, .governance-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .board-card, .governance-card {
+    width: 100%;
+  }
+
+  .governance-section h2 {
+    font-size: 2rem;
+  }
+
+  .governance-section .governance-intro {
+    font-size: 1rem;
+  }
+
+  .governance-card h3 {
+    font-size: 1rem;
   }
 }
