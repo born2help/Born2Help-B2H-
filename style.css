@@ -1,7 +1,6 @@
-/* ===============================
-   B2H GLOBAL FOUNDATION - CLEANED CSS
-   NO DUPLICATES • FULL SECTIONS
-=============================== */
+/* =========================
+   B2H GLOBAL FOUNDATION - MODERN CSS
+========================= */
 
 /* ===== GLOBAL RESET ===== */
 * {
@@ -15,41 +14,20 @@ html { scroll-behavior: smooth; }
 body {
   font-family: 'Montserrat', sans-serif;
   background: #f9f9f9;
-  color: #333;
+  color: #222;
   overflow-x: hidden;
 }
 
-/* ===== SECTIONS ===== */
-.section {
-  padding: 60px 20px;
-}
-
-.section h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-}
-
-.section.light {
-  background: #ffffff;
-  color: #222;
-}
-
-.section.dark {
-  background: #0f172a;
-  color: #ffffff;
-}
-
-/* ================= HERO SECTION ================= */
+/* ===== HERO SECTION ===== */
 .hero {
   position: relative;
   min-height: 100vh;
-  padding: 50px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  padding: 50px 20px;
   background: linear-gradient(135deg, #0abde3, #00ff99);
+  overflow: hidden;
 }
 
 .hero::before {
@@ -60,31 +38,34 @@ body {
   z-index: 1;
 }
 
+/* Hero inner */
 .hero-inner {
   position: relative;
   z-index: 3;
   max-width: 1200px;
-  color: #222;
+  text-align: center;
+  color: #fff;
 }
 
 /* Brand */
 .brand {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  align-items: center;
   margin-bottom: 20px;
+  gap: 10px;
 }
 
-.main-logo {
-  width: 120px;
-}
+.main-logo { width: 120px; }
 
 .brand-text {
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
 }
 
-/* Titles */
+/* Hero Title */
 .hero-title .main-line {
   font-size: 3.5rem;
   font-weight: 800;
@@ -96,16 +77,18 @@ body {
   font-size: 1.5rem;
   margin-top: 10px;
   font-weight: 600;
+  color: #fff;
 }
 
 .hero-desc {
   max-width: 700px;
-  margin: 20px 0;
-  font-size: 1.15rem;
+  margin: 20px auto;
+  font-size: 1.2rem;
   line-height: 1.6;
+  color: #f3f3f3;
 }
 
-/* Buttons */
+/* Hero Buttons */
 .hero-actions .btn {
   padding: 14px 36px;
   border-radius: 50px;
@@ -127,24 +110,24 @@ body {
   box-shadow: 0 0 30px #ffb347;
 }
 
-.btn.donate {
+.btn.secondary {
   background: #00c896;
   color: #fff;
   box-shadow: 0 0 15px #00c896;
 }
 
-.btn.donate:hover {
+.btn.secondary:hover {
   transform: scale(1.05);
   box-shadow: 0 0 30px #00fff0;
 }
 
-/* Burn Logo */
+/* Burn Logo Animation */
 .burn-logo {
   position: absolute;
-  top: 1.5in;
-  right: 1.5in;
-  width: 400px;
-  max-width: 35vw;
+  top: 100px;
+  right: 80px;
+  width: 300px;
+  max-width: 30vw;
   z-index: 4;
   animation: burnRotate 14s linear infinite;
 }
@@ -155,7 +138,7 @@ body {
   100% { transform: rotate(0deg); filter: drop-shadow(0 0 15px #ff8c00); }
 }
 
-/* ===== HERO PARTICLES ===== */
+/* Hero Particles */
 .particles {
   position: absolute;
   inset: 0;
@@ -176,18 +159,35 @@ body {
   100% { transform: translateY(-120px) scale(1.2); opacity: 0; }
 }
 
-/* ================= FOUNDER MESSAGE / VISION ================= */
+/* ================= FOUNDER SECTION ================= */
 .founder-section {
   background: linear-gradient(180deg, #111827, #1f2937);
-  color: #ffffff;
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
 }
 
+.founder-section h2 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #22c55e;
+}
+
+.founder-intro {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #cbd5e1;
+}
+
+/* Founder Content Flex */
 .founder-content {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 40px;
-  margin-top: 50px;
 }
 
 .founder-image img {
@@ -205,8 +205,8 @@ body {
 }
 
 .founder-text {
-  flex: 1;
-  min-width: 300px;
+  max-width: 600px;
+  text-align: left;
 }
 
 .founder-text p {
@@ -223,433 +223,7 @@ body {
   margin-top: 15px;
 }
 
-/* ================= CHARITY ================= */
-.charity-section {
-  background: linear-gradient(135deg, #0f172a, #020617);
-}
-
-.charity-intro {
-  max-width: 750px;
-  margin: 0 auto 40px;
-  text-align: center;
-  font-size: 1.05rem;
-  color: #d1d5db;
-  line-height: 1.6;
-}
-
-.charity-grid {
-  max-width: 1200px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-}
-
-.charity-card {
-  background: rgba(255,255,255,0.05);
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.charity-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 30px 60px rgba(0, 200, 150, 0.35);
-}
-
-.charity-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.charity-content {
-  padding: 25px;
-  text-align: center;
-}
-
-.charity-content h3 {
-  font-size: 1.4rem;
-  margin-bottom: 12px;
-  color: #00c896;
-}
-
-.charity-content p {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: #e5e7eb;
-}
-
-/* ================= TOKENOMICS ================= */
-.tokenomics-section {
-  background: linear-gradient(180deg, #0b0f1a, #111827);
-  color: #ffffff;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 2.6rem;
-  margin-bottom: 10px;
-}
-
-.section-subtitle {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto 50px;
-  color: #cbd5e1;
-  line-height: 1.7;
-}
-
-.token-info-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  margin-bottom: 60px;
-}
-
-.token-card {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
-  padding: 25px;
-  border-radius: 16px;
-  text-align: center;
-  transition: 0.3s ease;
-}
-
-.token-card:hover {
-  transform: translateY(-5px);
-  border-color: #22c55e;
-}
-
-.token-card span {
-  display: block;
-  font-size: 0.9rem;
-  color: #9ca3af;
-  margin-bottom: 8px;
-}
-
-.token-card strong {
-  font-size: 1.1rem;
-}
-
-.tokenomics-bars {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.token-bar {
-  margin-bottom: 25px;
-}
-
-.bar-label {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 6px;
-  font-size: 0.95rem;
-}
-
-.bar {
-  width: 100%;
-  height: 12px;
-  background: rgba(255,255,255,0.1);
-  border-radius: 50px;
-  overflow: hidden;
-}
-
-.bar .fill {
-  height: 100%;
-  background: linear-gradient(90deg, #22c55e, #16a34a);
-  border-radius: 50px;
-}
-
-/* ================= DONATION & INVESTMENT MODEL ================= */
-.donation-section {
-  background: linear-gradient(135deg, #f0fdfa, #e0f2fe);
-  color: #111827;
-}
-
-.donation-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 28px;
-  margin-top: 40px;
-}
-
-.donation-card {
-  background: #ffffff;
-  border-radius: 18px;
-  padding: 28px 24px;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.donation-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 18px 45px rgba(0,0,0,0.15);
-}
-
-.donation-card i {
-  font-size: 2.5rem;
-  color: #22c55e;
-  margin-bottom: 14px;
-  animation: pulse-glow 2.5s infinite ease-in-out;
-}
-
-.donation-card h3 {
-  margin-bottom: 12px;
-  font-weight: 700;
-  font-size: 1.2rem;
-  color: #111827;
-}
-
-.donation-card p {
-  color: #374151;
-  font-size: 0.95rem;
-  line-height: 1.65;
-}
-
-/* optional pulse-glow animation for icons */
-@keyframes pulse-glow {
-  0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.1); opacity: 0.75; }
-}
-
-/* ================= ROADMAP ================= */
-.roadmap-section {
-  background: linear-gradient(135deg, #0d1b2a, #1b263b);
-  padding: 60px 20px;
-  color: #fff;
-}
-
-.roadmap-section h2 {
-  text-align: center;
-  color: #00c896;
-  margin-bottom: 50px;
-}
-
-.timeline {
-  position: relative;
-  max-width: 800px;
-  margin: auto;
-  padding-left: 60px;
-}
-
-.timeline-line {
-  position: absolute;
-  left: 30px;
-  top: 0;
-  width: 4px;
-  height: 0;
-  background: linear-gradient(to bottom, #00c896, #00fff0);
-  box-shadow: 0 0 12px #00c896;
-}
-
-.timeline-item {
-  margin-bottom: 50px;
-  padding: 20px 30px;
-  background: rgba(255,255,255,0.05);
-  border-left: 4px solid #00c896;
-  border-radius: 8px;
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.6s ease;
-}
-
-.timeline-item.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.timeline-item::before {
-  content: attr(data-phase);
-  position: absolute;
-  left: -45px;
-  top: 20px;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: #00c896;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 12px #00c896;
-}
-
-/* ================= GOVERNANCE ================= */
-.governance-section {
-  background: #f9f9f9;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.governance-section h2 {
-  font-size: 2.5rem;
-  font-weight: 800;
-  margin-bottom: 15px;
-  color: #1a1a1a;
-  text-transform: uppercase;
-}
-
-.governance-intro {
-  max-width: 800px;
-  margin: 0 auto 50px;
-  font-size: 1.1rem;
-  color: #333;
-  line-height: 1.7;
-  text-shadow: 0 0 3px rgba(0,0,0,0.05);
-}
-
-.governance-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px;
-  margin-bottom: 40px;
-}
-
-.governance-card {
-  background: linear-gradient(145deg, #ffffff, #f0f0f0);
-  border-radius: 15px;
-  padding: 25px 20px;
-  width: 230px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.4s ease;
-}
-
-.governance-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.12);
-  background: linear-gradient(145deg, #e0f7ff, #d0f0ff);
-}
-
-.gov-icon {
-  font-size: 2.2rem;
-  margin-bottom: 12px;
-  animation: glow 2.5s ease-in-out infinite;
-}
-
-.governance-card h3 {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-  color: #0d3b66;
-}
-
-.governance-card p {
-  font-size: 0.95rem;
-  color: #333;
-  line-height: 1.5;
-}
-
-.governance-actions {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.governance-btn {
-  padding: 12px 25px;
-  border-radius: 50px;
-  background: linear-gradient(90deg, #0d3b66, #0077b6);
-  color: #fff;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.governance-btn:hover {
-  background: linear-gradient(90deg, #0077b6, #00b4d8);
-  transform: translateY(-3px);
-}
-
-.governance-btn.outline {
-  background: none;
-  color: #0d3b66;
-  border: 2px solid #0d3b66;
-}
-
-.governance-btn.outline:hover {
-  background: #0d3b66;
-  color: #fff;
-  transform: translateY(-3px);
-}
-
-@keyframes glow {
-  0% { text-shadow: 0 0 5px #0d3b66, 0 0 10px #0077b6, 0 0 15px #00b4d8; }
-  50% { text-shadow: 0 0 15px #0d3b66, 0 0 25px #0077b6, 0 0 35px #00b4d8; }
-  100% { text-shadow: 0 0 5px #0d3b66, 0 0 10px #0077b6, 0 0 15px #00b4d8; }
-}
-
-/* ===== BOARD MEMBERS ===== */
-.board-members {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin-bottom: 40px;
-}
-
-.board-card {
-  background: #fff;
-  padding: 20px;
-  width: 250px;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.board-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-}
-
-.board-card img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 15px;
-}
-
-.board-card h4 {
-  font-size: 1.1rem;
-  margin-bottom: 8px;
-  color: #1a1a1a;
-}
-
-.board-card p {
-  font-size: 0.95rem;
-  color: #555;
-  line-height: 1.4;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  .hero-title .main-line { font-size: 2.2rem; }
-  .hero-title .sub-line { font-size: 1.1rem; }
-  .burn-logo {
-    width: 220px;
-    top: 80px;
-    right: 20px;
-  }
-
-  .founder-container { grid-template-columns: 1fr; text-align: center; }
-
-  .board-members, .governance-grid { gap: 20px; }
-  .board-card, .governance-card { width: 45%; }
-}
-
-@media (max-width: 480px) {
-  .board-members, .governance-grid { flex-direction: column; gap: 20px; }
-  .board-card, .governance-card { width: 100%; }
-  .governance-section h2 { font-size: 2rem; }
-  .governance-section .governance-intro { font-size: 1rem; }
-  .governance-card h3 { font-size: 1rem; }
-}
-
-/* ===== FOOTER ===== */
+/* ================= FOOTER ================= */
 footer {
   text-align: center;
   padding: 30px;
@@ -658,385 +232,17 @@ footer {
   font-size: 0.9rem;
 }
 
-/* ===== TRANSPARENCY / AUDIT REPORTS ===== */
-.audit-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
-  max-width: 1000px;
-  margin: 30px auto 0;
-  text-align: center;
-}
-
-.audit-card {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.audit-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 35px rgba(0,0,0,0.12);
-}
-
-.audit-icon {
-  font-size: 36px;
-  color: #00c896;
-  margin-bottom: 12px;
-}
-
-.audit-card h4 {
-  font-size: 1.2rem;
-  margin-bottom: 8px;
-  color: #222;
-}
-
-.audit-card p {
-  font-size: 0.9rem;
-  color: #475569;
-  line-height: 1.4;
-  margin-bottom: 12px;
-}
-
-.audit-card .btn.small {
-  padding: 8px 20px;
-  font-size: 0.85rem;
-}
-
-/* ===== RESPONSIVE ===== */
-@media(max-width: 768px){
-  .audit-card h4 {
-    font-size: 1rem;
-  }
-  .audit-card p {
-    font-size: 0.85rem;
-  }
-}
-
-/* ================= SOCIAL IMPACT ================= */
-.impact-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
-  margin-top: 40px;
-}
-
-.impact-card {
-  background: #ffffff;
-  padding: 25px;
-  border-radius: 16px;
-  text-align: center;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease;
-}
-
-.impact-card:hover {
-  transform: translateY(-6px);
-}
-
-.impact-card i {
-  font-size: 2.2rem;
-  color: #22c55e;
-  margin-bottom: 12px;
-}
-
-.impact-card span {
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #111827;
-}
-
-/* ================= HERO SECTION ================= */
-.hero {
-  position: relative;
-  min-height: 100vh;
-  padding: 50px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  background: linear-gradient(135deg, #0abde3, #00ff99);
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.08);
-  z-index: 1;
-}
-
-.hero-inner {
-  position: relative;
-  z-index: 5; /* above logo */
-  max-width: 1200px;
-  color: #fff;
-  text-align: center;
-}
-
-/* Brand */
-.brand {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 20px;
-  align-items: center;
-}
-
-.main-logo {
-  width: 120px;
-}
-
-.brand-text {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #fff;
-}
-
-/* Titles */
-.hero-title .main-line {
-  font-size: 3rem;
-  font-weight: 800;
-  color: #ff6a00;
-}
-
-.hero-title .sub-line {
-  display: block;
-  font-size: 1.5rem;
-  margin-top: 10px;
-  font-weight: 600;
-  color: #fff;
-}
-
-.hero-desc {
-  max-width: 700px;
-  margin: 20px auto;
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: #e0f7fa;
-}
-
-/* Buttons */
-.hero-actions .btn {
-  padding: 14px 36px;
-  border-radius: 50px;
-  margin: 10px 10px 0 0;
-  display: inline-block;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.btn.primary {
-  background: #ff8c00;
-  color: #fff;
-  box-shadow: 0 0 15px #ff8c00;
-}
-
-.btn.primary:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 30px #ffb347;
-}
-
-.btn.donate {
-  background: #00c896;
-  color: #fff;
-  box-shadow: 0 0 15px #00c896;
-}
-
-.btn.donate:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 30px #00fff0;
-}
-
-/* Burn Logo */
-.burn-logo {
-  position: absolute;
-  top: 1.5in;
-  right: 1.5in;
-  width: 400px;
-  max-width: 35vw;
-  z-index: 4;
-  animation: burnRotate 14s linear infinite;
-}
-
-@keyframes burnRotate {
-  0% { transform: rotate(0deg) scale(1); filter: drop-shadow(0 0 15px #ff8c00); }
-  50% { transform: rotate(12deg) scale(1.05); filter: drop-shadow(0 0 30px #ffb347); }
-  100% { transform: rotate(0deg) scale(1); filter: drop-shadow(0 0 15px #ff8c00); }
-}
-
-/* ================= HERO PARTICLES ================= */
-.particles {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  pointer-events: none;
-}
-
-.particles span {
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.6);
-  animation: floatParticle linear infinite;
-}
-
-.particles span:nth-child(1) { left: 10%; animation-duration: 6s; }
-.particles span:nth-child(2) { left: 25%; animation-duration: 8s; }
-.particles span:nth-child(3) { left: 40%; animation-duration: 7s; }
-.particles span:nth-child(4) { left: 55%; animation-duration: 9s; }
-.particles span:nth-child(5) { left: 70%; animation-duration: 6s; }
-.particles span:nth-child(6) { left: 85%; animation-duration: 10s; }
-
-@keyframes floatParticle {
-  0% {
-    transform: translateY(0) scale(0.6);
-    opacity: 0.3;
-  }
-  50% {
-    opacity: 0.8;
-  }
-  100% {
-    transform: translateY(-300px) scale(1.2);
-    opacity: 0;
-  }
-}
-
-/* ================= HERO PARTICLES MODERN ================= */
-.particles {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-/* Common particle style */
-.particles span {
-  position: absolute;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.7);
-  animation: floatParticle linear infinite;
-  opacity: 0;
-}
-
-/* Random sizes and positions for more natural look */
-.particles span:nth-child(1)  { width: 8px; height: 8px; left: 5%;   animation-duration: 6s; animation-delay: 0s; }
-.particles span:nth-child(2)  { width: 12px; height: 12px; left: 15%;  animation-duration: 8s; animation-delay: 2s; }
-.particles span:nth-child(3)  { width: 6px; height: 6px; left: 25%;  animation-duration: 7s; animation-delay: 1s; }
-.particles span:nth-child(4)  { width: 10px; height: 10px; left: 35%; animation-duration: 9s; animation-delay: 3s; }
-.particles span:nth-child(5)  { width: 14px; height: 14px; left: 50%; animation-duration: 10s; animation-delay: 2.5s; }
-.particles span:nth-child(6)  { width: 7px; height: 7px; left: 60%;  animation-duration: 6.5s; animation-delay: 1.2s; }
-.particles span:nth-child(7)  { width: 9px; height: 9px; left: 70%;  animation-duration: 8.5s; animation-delay: 2.8s; }
-.particles span:nth-child(8)  { width: 11px; height: 11px; left: 80%; animation-duration: 9.5s; animation-delay: 1.5s; }
-.particles span:nth-child(9)  { width: 5px; height: 5px; left: 90%; animation-duration: 7s; animation-delay: 0.7s; }
-.particles span:nth-child(10) { width: 12px; height: 12px; left: 95%; animation-duration: 8.2s; animation-delay: 3.2s; }
-
-/* Particle floating animation */
-@keyframes floatParticle {
-  0% {
-    transform: translateY(100%) scale(0.5);
-    opacity: 0;
-  }
-  25% {
-    opacity: 0.6;
-  }
-  50% {
-    transform: translateY(50%) scale(1);
-    opacity: 0.8;
-  }
-  75% {
-    opacity: 0.4;
-  }
-  100% {
-    transform: translateY(-150%) scale(0.8);
-    opacity: 0;
-  }
-}
-
-/* ===== HERO FIXES ===== */
-.hero {
-  position: relative;
-  min-height: 100vh;
-  padding: 50px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  background: linear-gradient(135deg, #0abde3, #00ff99);
-}
-
-.hero-inner.container {
-  position: relative;
-  z-index: 3;
-  max-width: 1200px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Burn logo responsive */
-.burn-logo {
-  position: absolute;
-  top: 10%;
-  right: 5%;
-  width: 25vw;
-  max-width: 250px;
-  z-index: 4;
-  animation: burnRotate 14s linear infinite;
-}
-
-/* ===== GLOBAL CONTAINER ===== */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* ===== GRIDS FIX ===== */
-.airdrop-grid,
-.donation-grid,
-.charity-grid,
-.impact-grid,
-.board-members,
-.governance-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-}
-
-/* ===== FOUNDER SECTION ===== */
-.founder-content {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 50px;
-}
-
-.founder-image img {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-/* ===== MEDIA QUERIES ===== */
-@media (max-width: 768px) {
+/* ================= RESPONSIVE ================= */
+@media(max-width: 768px) {
   .hero-title .main-line { font-size: 2.5rem; }
-  .hero-title .sub-line { font-size: 1.3rem; }
-  .burn-logo { width: 40vw; top: 5%; right: 5%; }
+  .hero-title .sub-line { font-size: 1.2rem; }
+  .burn-logo { width: 180px; top: 60px; right: 20px; }
 
-  .founder-image img { width: 180px; height: 180px; }
+  .founder-content { flex-direction: column; text-align: center; }
+  .founder-text { text-align: center; }
 }
 
-@media (max-width: 480px) {
+@media(max-width: 480px) {
   .hero-title .main-line { font-size: 2rem; }
   .hero-title .sub-line { font-size: 1rem; }
-  .burn-logo { width: 60vw; top: 5%; right: 5%; }
-  .founder-content { flex-direction: column; text-align: center; }
 }
