@@ -26,7 +26,10 @@ body {
   align-items: center;
   justify-content: center;
   padding: 50px 20px;
-  background: linear-gradient(135deg, #0abde3, #00ff99);
+  background: radial-gradient(circle at top,
+  #0b1a2d 0%,
+  #060f1c 45%,
+  #02060d 100%);
   overflow: hidden;
 }
 
