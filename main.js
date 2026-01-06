@@ -1,3 +1,44 @@
+document.addEventListener("DOMContentLoaded", () => {
+
+  /* ===== TIMELINE SCROLL ANIMATION ===== */
+  const items = document.querySelectorAll(".timeline-item");
+  const line = document.querySelector(".timeline-line");
+
+  function animateTimeline() {
+    let count = 0;
+    const trigger = window.innerHeight * 0.85;
+
+    items.forEach(item => {
+      if (item.getBoundingClientRect().top < trigger) {
+        item.classList.add("visible");
+        count++;
+      }
+    });
+
+    if (line) {
+      line.style.height = count * 120 + "px";
+    }
+  }
+
+  window.addEventListener("scroll", animateTimeline);
+  animateTimeline();
+
+  /* ===== PARTNERS SCROLL ANIMATION ===== */
+  const partnerCards = document.querySelectorAll(".partner-card[data-animate]");
+
+  function animatePartners() {
+    const trigger = window.innerHeight * 0.85;
+    partnerCards.forEach(card => {
+      if (card.getBoundingClientRect().top < trigger) {
+        card.classList.add("visible");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", animatePartners);
+  animatePartners(); // trigger once on load
+
+
 /* ===============================
    B2H GLOBAL FOUNDATION - HERO & FOUNDER ANIMATIONS
 =============================== */
