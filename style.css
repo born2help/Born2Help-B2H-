@@ -957,3 +957,86 @@ footer {
     opacity: 0;
   }
 }
+
+/* ===== HERO FIXES ===== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  padding: 50px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0abde3, #00ff99);
+}
+
+.hero-inner.container {
+  position: relative;
+  z-index: 3;
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Burn logo responsive */
+.burn-logo {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  width: 25vw;
+  max-width: 250px;
+  z-index: 4;
+  animation: burnRotate 14s linear infinite;
+}
+
+/* ===== GLOBAL CONTAINER ===== */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===== GRIDS FIX ===== */
+.airdrop-grid,
+.donation-grid,
+.charity-grid,
+.impact-grid,
+.board-members,
+.governance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+/* ===== FOUNDER SECTION ===== */
+.founder-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.founder-image img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ===== MEDIA QUERIES ===== */
+@media (max-width: 768px) {
+  .hero-title .main-line { font-size: 2.5rem; }
+  .hero-title .sub-line { font-size: 1.3rem; }
+  .burn-logo { width: 40vw; top: 5%; right: 5%; }
+
+  .founder-image img { width: 180px; height: 180px; }
+}
+
+@media (max-width: 480px) {
+  .hero-title .main-line { font-size: 2rem; }
+  .hero-title .sub-line { font-size: 1rem; }
+  .burn-logo { width: 60vw; top: 5%; right: 5%; }
+  .founder-content { flex-direction: column; text-align: center; }
+}
