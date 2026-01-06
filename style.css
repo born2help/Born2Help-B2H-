@@ -747,3 +747,161 @@ footer {
   font-weight: 700;
   color: #111827;
 }
+
+/* ================= HERO SECTION ================= */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  padding: 50px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0abde3, #00ff99);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.08);
+  z-index: 1;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 5; /* above logo */
+  max-width: 1200px;
+  color: #fff;
+  text-align: center;
+}
+
+/* Brand */
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.main-logo {
+  width: 120px;
+}
+
+.brand-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Titles */
+.hero-title .main-line {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #ff6a00;
+}
+
+.hero-title .sub-line {
+  display: block;
+  font-size: 1.5rem;
+  margin-top: 10px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.hero-desc {
+  max-width: 700px;
+  margin: 20px auto;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #e0f7fa;
+}
+
+/* Buttons */
+.hero-actions .btn {
+  padding: 14px 36px;
+  border-radius: 50px;
+  margin: 10px 10px 0 0;
+  display: inline-block;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn.primary {
+  background: #ff8c00;
+  color: #fff;
+  box-shadow: 0 0 15px #ff8c00;
+}
+
+.btn.primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #ffb347;
+}
+
+.btn.donate {
+  background: #00c896;
+  color: #fff;
+  box-shadow: 0 0 15px #00c896;
+}
+
+.btn.donate:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #00fff0;
+}
+
+/* Burn Logo */
+.burn-logo {
+  position: absolute;
+  top: 1.5in;
+  right: 1.5in;
+  width: 400px;
+  max-width: 35vw;
+  z-index: 4;
+  animation: burnRotate 14s linear infinite;
+}
+
+@keyframes burnRotate {
+  0% { transform: rotate(0deg) scale(1); filter: drop-shadow(0 0 15px #ff8c00); }
+  50% { transform: rotate(12deg) scale(1.05); filter: drop-shadow(0 0 30px #ffb347); }
+  100% { transform: rotate(0deg) scale(1); filter: drop-shadow(0 0 15px #ff8c00); }
+}
+
+/* ================= HERO PARTICLES ================= */
+.particles {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.particles span {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.6);
+  animation: floatParticle linear infinite;
+}
+
+.particles span:nth-child(1) { left: 10%; animation-duration: 6s; }
+.particles span:nth-child(2) { left: 25%; animation-duration: 8s; }
+.particles span:nth-child(3) { left: 40%; animation-duration: 7s; }
+.particles span:nth-child(4) { left: 55%; animation-duration: 9s; }
+.particles span:nth-child(5) { left: 70%; animation-duration: 6s; }
+.particles span:nth-child(6) { left: 85%; animation-duration: 10s; }
+
+@keyframes floatParticle {
+  0% {
+    transform: translateY(0) scale(0.6);
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-300px) scale(1.2);
+    opacity: 0;
+  }
+}
