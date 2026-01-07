@@ -132,3 +132,8 @@ hero.addEventListener('mousemove', e => {
     layer.style.transform = `translate(${x * depth}px, ${y * depth}px)`;
   });
 });
+
+// ===== HERO TEXT DELAY =====
+document.querySelectorAll('.hero-content .line').forEach((line, i) => {
+  line.style.animationDelay = `${i * 0.3}s`;
+});
