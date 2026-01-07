@@ -44,7 +44,7 @@ animation: gradientMove 18s ease infinite;
 .btn.outline:hover { background: #00c896; color: #fff; }
 
 /* Burn Logo */
-.burn-logo { position: fixed; top: 1.5in; right: 1in; width: 360px; z-index: 4; opacity: 0.95; }
+.burn-logo { position: fixed; top: 1.5in; right: 0.5in; width: 360px; z-index: 4; opacity: 0.95; }
 
 /* Main Hero Logo */
 .main-logo-hero { position: absolute; top: 40px; left: 40px; width: 140px; z-index: 5; }
