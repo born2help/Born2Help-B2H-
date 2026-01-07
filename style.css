@@ -1044,50 +1044,50 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
   margin-top: 15px;
 }
 
-/* ================= HERO OVAL BLOCKS – FINAL ================= */
+/* ================= HERO BLOCKS – FINAL FIX ================= */
 
 .hero {
   position: relative;
 }
 
-/* Container */
+/* Container placement */
 .hero-blocks {
   position: absolute;
-  left: 0.3in;
-  bottom: 0.3in;
+  left: 24px;          /* moved away from wall */
+  bottom: 24px;        /* bottom spacing */
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
   z-index: 3;
 }
 
-/* SAME SIZE FOR ALL */
+/* All blocks SAME */
 .hero-block {
-  width: 78px;
-  height: 24px;
-  border-radius: 40px;       /* true oval */
+  width: 96px;         /* slightly bigger */
+  height: 28px;
+  border-radius: 50px; /* perfect oval */
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.6rem;
+  font-size: 0.65rem;
   font-weight: 600;
-  font-family: 'Montserrat', sans-serif;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.5px;
   color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.35);
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.35);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* COLORS */
-.hero-block.donate { background: #1e90ff; }
-.hero-block.tokenomics { background: #ff3b30; }
-.hero-block.mission { background: #2ecc71; }
-.hero-block.governance { background: #f1c40f; color: #111; }
-.hero-block.contact { background: #000000; }
+/* Colors – balanced & serious */
+.hero-block.donate { background: #1e88e5; }
+.hero-block.tokenomics { background: #e53935; }
+.hero-block.mission { background: #2e7d32; }
+.hero-block.governance { background: #f9a825; color: #111; }
+.hero-block.contact { background: #111111; }
 
-/* SUBTLE HOVER */
+/* Subtle interaction */
 .hero-block:hover {
-  transform: translateX(4px) scale(1.05);
-  box-shadow: 0 0 10px rgba(255,255,255,0.6);
+  transform: translateX(3px);
+  box-shadow: 0 0 12px rgba(255,255,255,0.45);
 }
