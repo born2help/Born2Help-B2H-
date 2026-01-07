@@ -312,3 +312,10 @@ footer {
   50% { transform: translateY(-25px); }
   100% { transform: translateY(0); }
 }
+
+.hero h1,
+.hero h2 {
+  animation: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
