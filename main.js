@@ -18,6 +18,32 @@ document.querySelectorAll('.hero-content .line').forEach((line, index) => {
   line.classList.add('slide-in');
 });
 
+// Add 3D depth float to hero content
+const heroContent = document.querySelector('.hero-content');
+heroContent.classList.add('depth-float');
+
+// Optional: you can combine with mouse parallax for extra 3D feel
+hero.addEventListener('mousemove', e => {
+  const centerX = window.innerWidth / 2;
+  const centerY = window.innerHeight / 2;
+  const moveX = (e.clientX - centerX) / centerX;
+  const moveY = (e.clientY - centerY) / centerY;
+
+  // Parallax for layers
+  parallaxLayers.forEach(layer => {
+    const depth = parseFloat(layer.className.match(/depth-(\w+)/)[1] || 1);
+    let multiplier = 0;
+    switch(depth){
+      case 'bg': multiplier = 5; break;
+      case 'mid': multiplier = 15; break;
+      case 'logo': multiplier = 8; break;
+      case 'front': multiplier = 12; break; // increase for content
+      default: multiplier = 10;
+    }
+    layer.style.transform = `translate(${moveX * multiplier}px, ${moveY * multiplier}px)`;
+  });
+});
+
 // ================== MOUSE FOLLOWING PARTICLES ==================
 const mouseParticles = [];
 for (let i = 0; i < 15; i++) {
