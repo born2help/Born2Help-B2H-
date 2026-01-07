@@ -83,3 +83,14 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
   .founder-content { flex-direction: column; }
   .founder-text { text-align: center; }
 }
+
+/* ================= MOUSE FOLLOW PARTICLES ================= */
+.mouse-particle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.45);
+  pointer-events: none;
+  z-index: 2;
+  transition: transform 0.15s linear;
+  mix-blend-mode: screen;
+}
