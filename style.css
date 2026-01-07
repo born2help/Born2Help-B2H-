@@ -1015,12 +1015,12 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
 /* Container placement */
 .hero-blocks {
   position: absolute;
-  left: 30px;          /* moved away from wall */
-  bottom: 30px;        /* bottom spacing */
+  left: 35px;          /* moved away from wall */
+  bottom: 35px;        /* bottom spacing */
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  z-index: 3;
+  gap: 8px;
+  z-index: 2;
 }
 
 /* All blocks SAME */
