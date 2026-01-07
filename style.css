@@ -240,3 +240,23 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
   bottom: -20px;
   animation: floatUp linear infinite;
 }
+
+/* Mouse-following small particles */
+.mouse-particle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  background: rgba(255,255,255,0.35);
+  z-index: 2;
+}
+
+/* Hero line slide-in animation */
+.slide-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: lineFadeUp 0.8s forwards;
+}
+
+@keyframes lineFadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
