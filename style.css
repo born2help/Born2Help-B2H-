@@ -515,3 +515,248 @@ ul.readable-text li {
   .tokenomics-grid { flex-direction: column; gap: 20px; }
   .token-box { max-width: 100%; }
 }
+
+/* ================= HUMANITARIAN FLOW ================= */
+.humanitarian-flow {
+  position: relative;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #102c3d, #1a4a5f, #276b81);
+  color: #e0f7fa;
+  text-align: center;
+  overflow: hidden;
+}
+
+.humanitarian-flow .section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #00ffd5;
+  text-shadow: 0 0 20px rgba(0, 255, 213, 0.6);
+}
+
+.humanitarian-flow .readable-text {
+  font-size: 1.15rem;
+  max-width: 700px;
+  margin: 0 auto 50px;
+  line-height: 1.6;
+  text-shadow: 0 0 10px rgba(176, 224, 230, 0.3);
+}
+
+.flow-list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.flow-list li {
+  background: rgba(0, 255, 213, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 15px;
+  padding: 20px 25px;
+  font-weight: 600;
+  color: #b0f2e6;
+  box-shadow: 0 0 20px rgba(0, 255, 213, 0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.flow-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 35px rgba(0, 255, 213, 0.6), 0 0 50px rgba(0, 255, 213, 0.3) inset;
+}
+
+/* ================= DONATIONS & REAL ASSETS ================= */
+.assets {
+  position: relative;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #0a1f28, #144655, #1e6077);
+  color: #e0f7fa;
+  text-align: center;
+  overflow: hidden;
+}
+
+.assets .section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #00ffcc;
+  text-shadow: 0 0 20px rgba(0, 255, 204, 0.6);
+}
+
+.assets .readable-text {
+  font-size: 1.15rem;
+  max-width: 750px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+  text-shadow: 0 0 10px rgba(176, 224, 230, 0.3);
+}
+
+/* Asset list */
+.assets ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.assets ul li {
+  background: rgba(0, 255, 204, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 15px;
+  padding: 15px 20px;
+  font-weight: 600;
+  color: #b0e0e6;
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.assets ul li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 35px rgba(0, 255, 204, 0.6), 0 0 50px rgba(0, 255, 204, 0.3) inset;
+}
+
+/* ================= MISSION & VISION ================= */
+.mission {
+  position: relative;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #0f2734, #1a4459, #215d77);
+  color: #e0f7fa;
+  text-align: center;
+  overflow: hidden;
+}
+
+.mission .section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #00ffcc;
+  text-shadow: 0 0 20px rgba(0, 255, 204, 0.6);
+}
+
+.mission .readable-text {
+  font-size: 1.15rem;
+  max-width: 750px;
+  margin: 0 auto 20px;
+  line-height: 1.6;
+  text-shadow: 0 0 10px rgba(176, 224, 230, 0.3);
+}
+
+/* ================= ROADMAP ================= */
+.roadmap {
+  position: relative;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #081821, #0f3a50, #1a5670);
+  color: #e0f7fa;
+  text-align: center;
+  overflow: hidden;
+}
+
+.roadmap .section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #00ffcc;
+  text-shadow: 0 0 20px rgba(0, 255, 204, 0.6);
+}
+
+.roadmap-list {
+  list-style: none;
+  padding-left: 0;
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+}
+
+.roadmap-list li {
+  background: rgba(0, 255, 204, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 15px;
+  padding: 15px 20px;
+  font-weight: 600;
+  color: #b0e0e6;
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.roadmap-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 35px rgba(0, 255, 204, 0.6), 0 0 50px rgba(0, 255, 204, 0.3) inset;
+}
+
+/* ================= COMMUNITY / SOCIAL LINKS ================= */
+.community {
+  position: relative;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #0a1d26, #11394e, #1a5670);
+  color: #e0f7fa;
+  text-align: center;
+  overflow: hidden;
+}
+
+.community .section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #00ffcc;
+  text-shadow: 0 0 20px rgba(0, 255, 204, 0.6);
+}
+
+.community .readable-text {
+  font-size: 1.15rem;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+  text-shadow: 0 0 10px rgba(176, 224, 230, 0.3);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  z-index: 1;
+  position: relative;
+}
+
+.social-links a {
+  display: inline-block;
+  font-weight: 700;
+  color: #00ffcc;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border-radius: 15px;
+  background: rgba(0, 255, 204, 0.1);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  transform: translateY(-5px);
+  background: rgba(0, 255, 204, 0.2);
+  box-shadow: 0 0 35px rgba(0, 255, 204, 0.6), 0 0 50px rgba(0, 255, 204, 0.3) inset;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #081219, #112e45, #1a4260);
+  color: #b0f2e6;
+  text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-shadow: 0 0 5px rgba(176, 224, 230, 0.3);
+}
