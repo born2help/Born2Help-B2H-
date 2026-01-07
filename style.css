@@ -132,34 +132,35 @@ body {
   opacity: 0.95;
 }
 
-/* Particles */
+/* ================= PARTICLES ================= */
 .particles {
   position: absolute;
   inset: 0;
   z-index: 1;
+  pointer-events: none;
 }
 
 .particles span {
   position: absolute;
-  width: 6px;
-  height: 6px;
-  background: rgba(255,255,255,0.5);
+  bottom: -20px;
+  background: rgba(255, 255, 255, 0.25);
   border-radius: 50%;
-  animation: floatUp 18s linear infinite;
-}
-
-.particles span:nth-child(n) {
-  left: calc(5% * var(--i));
+  animation-name: floatUp;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 @keyframes floatUp {
   from {
-    transform: translateY(110vh);
+    transform: translateY(0);
     opacity: 0;
   }
-  to {
-    transform: translateY(-20vh);
+  10% {
     opacity: 1;
+  }
+  to {
+    transform: translateY(-120vh);
+    opacity: 0;
   }
 }
 
