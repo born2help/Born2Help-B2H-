@@ -1,10 +1,13 @@
 // ================= FLOATING PARTICLES =================
 const particles = document.querySelectorAll(".particles span");
 particles.forEach(p => {
-  p.style.left = Math.random() * window.innerWidth + "px";
-  p.style.animationDuration = 8 + Math.random() * 6 + "s";
-  p.style.width = 5 + Math.random() * 6 + "px";
-  p.style.height = p.style.width;
+  p.style.left = Math.random() * 100 + "vw";
+  p.style.top = Math.random() * 100 + "vh";   // ✅ THIS WAS MISSING
+  const size = 3 + Math.random() * 5;
+  p.style.width = size + "px";
+  p.style.height = size + "px";
+  p.style.animationDuration = 10 + Math.random() * 10 + "s";
+  p.style.opacity = 0.6;
 });
 
 // ================= HERO TEXT LINE ANIMATION =================
