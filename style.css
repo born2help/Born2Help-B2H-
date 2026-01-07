@@ -154,3 +154,16 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
   50% { transform: translate(-80px, -60px); }
   100% { transform: translate(0,0); }
 }
+
+/* ===== CUSTOM CURSOR HALO ===== */
+.cursor-halo {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(0,255,200,0.4), transparent 60%);
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: transform 0.05s linear;
+}
