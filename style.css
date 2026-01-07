@@ -218,3 +218,25 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
   20% { opacity: 1; }
   to { transform: translateY(-120vh); opacity: 0; }
 }
+
+/* Parallax layer stacking */
+.parallax-layer.depth-bg { z-index: 1; }
+.parallax-layer.depth-mid { z-index: 3; }
+.parallax-layer.depth-logo { z-index: 4; }
+.parallax-layer.depth-front { z-index: 10; }
+
+/* Optional: subtle parallax transition */
+.parallax-layer {
+  transition: transform 0.2s ease-out;
+}
+
+/* Make sure hero spans are visible */
+.particles span {
+  width: 6px;
+  height: 6px;
+  background: rgba(255,255,255,0.35);
+  border-radius: 50%;
+  position: absolute;
+  bottom: -20px;
+  animation: floatUp linear infinite;
+}
