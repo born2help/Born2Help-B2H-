@@ -33,10 +33,10 @@ body {
 
 .hero::before {
   content: "";
-  position: absolute;
+  position: relative;
   inset: 0;
   background: rgba(0,0,0,0.08);
-  z-index: 1;
+  z-index: 2;
 }
 
 .hero-inner {
@@ -136,6 +136,8 @@ body {
 
 .particles span {
   position: absolute;
+ inset: 0;
+ z-index: 1;
   width: 6px;
   height: 6px;
   background: rgba(255,255,255,0.4);
