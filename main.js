@@ -44,9 +44,18 @@ for(let i=0; i<20; i++){
   mouseParticles.push(p);
 }
 
-hero.addEventListener('mousemove', e => {
-  mouseParticles.forEach((p, idx) => {
-    const offset = idx * 5;
-    p.style.transform = `translate(${e.clientX + offset}px, ${e.clientY + offset}px)`;
-  });
+let mouseX = 0, mouseY = 0;
+
+hero.addEventListener('mousemove', (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
+
+mouseParticles.forEach((p, i) => {
+  let x = 0, y = 0;
+  setInterval(() => {
+    x += (mouseX - x) * (0.05 + i * 0.002);
+    y += (mouseY - y) * (0.05 + i * 0.002);
+    p.style.transform = `translate(${x}px, ${y}px)`;
+  }, 16);
 });
