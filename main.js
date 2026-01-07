@@ -16,17 +16,6 @@ document.querySelectorAll('.hero-content .line').forEach((line, index) => {
   line.style.animationDelay = (index * 0.3) + 's';
 });
 
-// ================= FOUNDER TEXT SLIDE =================
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add("show");
-    }
-  });
-}, { threshold: 0.5 });
-
-document.querySelectorAll(".founder-text").forEach(el => observer.observe(el));
-
 // ================= MOUSE FOLLOWING PARTICLES =================
 const hero = document.querySelector('.hero');
 const mouseParticles = [];
