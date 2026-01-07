@@ -1016,3 +1016,67 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
   transform: scale(1.2);
   box-shadow: 0 0 25px rgba(255,255,255,0.8);
 }
+
+/* ================= HERO BACKGROUND ================= */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  padding: 50px 30px;
+  background: linear-gradient(135deg, #1e3c72, #2a5298, #00c6ff, #00ffb7); /* blue-green gradient */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff; /* default text color */
+}
+
+/* ================= HERO HEADING & TEXT ================= */
+.hero-title {
+  font-size: 3rem;
+  line-height: 1.2;
+  color: #fffb00; /* bright, eye-catching */
+  text-shadow: 1px 1px 15px rgba(0,0,0,0.5);
+}
+
+.hero-subtitle, .hero-subtext {
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.9);
+  margin-top: 15px;
+}
+
+/* ================= HERO BLOCKS ================= */
+.hero-blocks {
+  position: absolute;
+  bottom: 40px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 5;
+}
+
+.hero-block {
+  width: 140px;
+  height: 50px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hero-block.donate { background: #1e90ff; }      /* Blue */
+.hero-block.tokenomics { background: #ff4500; } /* Red */
+.hero-block.mission { background: #32cd32; }    /* Green */
+.hero-block.governance { background: #ffd700; } /* Yellow */
+.hero-block.contact { background: #000; }       /* Black */
+
+.hero-block:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(255,255,255,0.8);
+}
