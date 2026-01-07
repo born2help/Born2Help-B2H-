@@ -707,3 +707,167 @@ footer.footer a:hover {
     transform: translateY(0);
   }
 }
+
+/* ================= GOVERNANCE, CONSTITUTION & TRUSTEE ================= */
+.governance-section, .constitution-section, .trustee-section {
+  padding: 80px 20px;
+  background: #0f1f2f; /* dark modern gradient background can be added */
+  color: #e0e7ff;
+  text-align: center;
+  position: relative;
+}
+
+.governance-section h2,
+.constitution-section h2,
+.trustee-section h2 {
+  font-size: 2.8rem;
+  color: #22c55e; /* highlight green */
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px rgba(34,197,94,0.7);
+}
+
+.governance-intro,
+.constitution-intro {
+  font-size: 1.2rem;
+  max-width: 900px;
+  margin: 0 auto 50px;
+  line-height: 1.6;
+  color: #cbd5e1;
+}
+
+/* ===== Board Members / Trustees ===== */
+.board-members, .trustee-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.board-card, .trustee-card {
+  background: #1a2a3f;
+  border-radius: 15px;
+  overflow: hidden;
+  max-width: 260px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(34,197,94,0.4);
+}
+
+.board-card:hover, .trustee-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 30px rgba(34,197,94,0.7);
+}
+
+.board-card img, .trustee-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-bottom: 4px solid #22c55e;
+  border-radius: 0;
+  transition: all 0.3s ease;
+}
+
+.board-card:hover img, .trustee-card:hover img {
+  transform: scale(1.05);
+}
+
+.board-card h4, .trustee-card h4 {
+  font-size: 1.2rem;
+  margin: 15px 0 8px;
+  color: #fff;
+}
+
+.board-card p, .trustee-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #cbd5e1;
+  padding: 0 15px 20px;
+}
+
+/* ===== Governance / Constitution Cards ===== */
+.governance-grid, .constitution-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.governance-card, .constitution-card {
+  background: #1a2a3f;
+  border-radius: 15px;
+  padding: 25px;
+  flex: 1 1 220px;
+  max-width: 250px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(34,197,94,0.3);
+}
+
+.governance-card:hover, .constitution-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(34,197,94,0.6);
+}
+
+.gov-icon, .const-icon {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #22c55e;
+}
+
+/* ===== Governance Actions / Download / Inquiry ===== */
+.governance-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.governance-btn {
+  background: #22c55e;
+  color: #fff;
+  padding: 14px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 0 18px rgba(34,197,94,0.5);
+  transition: all 0.3s ease;
+}
+
+.governance-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(34,197,94,0.8);
+}
+
+.governance-btn.outline {
+  background: transparent;
+  color: #22c55e;
+  border: 2px solid #22c55e;
+}
+
+.governance-btn.outline:hover {
+  background: #22c55e;
+  color: #fff;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .board-members, .trustee-members, .governance-grid, .constitution-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .governance-section, .constitution-section, .trustee-section {
+    padding: 60px 15px;
+  }
+
+  .governance-section h2, .constitution-section h2, .trustee-section h2 {
+    font-size: 2.2rem;
+  }
+
+  .board-card img, .trustee-card img {
+    height: 220px;
+  }
+}
