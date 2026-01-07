@@ -1,7 +1,18 @@
-/* ===== GLOBAL RESET ===== */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { font-family: 'Montserrat', sans-serif; background: #f9f9f9; color: #222; overflow-x: hidden; }
+/* ================= GLOBAL RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #0f1f2f;
+  color: #e0e7ff;
+  overflow-x: hidden;
+}
 
 /* ================= HERO SECTION ================= */
 .hero {
@@ -13,375 +24,42 @@ body { font-family: 'Montserrat', sans-serif; background: #f9f9f9; color: #222; 
   align-items: center;
   justify-content: center;
   padding: 80px 20px;
- background:
-  linear-gradient(120deg, #0f766e, #0369a1, #0d9488, #0891b2);
-background-size: 400% 400%;
-animation: gradientMove 18s ease infinite;
+  background: linear-gradient(120deg, #0f766e, #0369a1, #0d9488, #0891b2);
+  background-size: 400% 400%;
+  animation: gradientMove 18s ease infinite;
   overflow: hidden;
   color: #fff;
-  }
-
+}
 @keyframes gradientMove {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
-
-.hero-content { position: relative; z-index: 3; max-width: 820px; text-align: center; }
-
-.hero h1 { font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.2; font-weight: 800; color: #ff9f1c; }
-.hero h1 span { display: block; font-size: 0.6em; font-weight: 400; opacity: 0.9; margin-top: 10px; }
-
-.hero-subtitle { font-size: 1.2rem; margin-top: 25px; color: #eafdfb; line-height: 1.6; }
-.hero-subtext { margin-top: 15px; font-size: 1.05rem; opacity: 0.9; }
-
-.hero-buttons { margin-top: 30px; }
-.btn { display: inline-block; padding: 14px 36px; border-radius: 50px; font-weight: 600; text-decoration: none; margin: 10px; transition: all 0.3s ease; }
-.btn.primary { background: #ff8c00; color: #fff; box-shadow: 0 0 18px rgba(255,140,0,0.6); }
-.btn.primary:hover { transform: translateY(-5px); }
-.btn.outline { border: 2px solid #00c896; color: #00c896; background: transparent; }
-.btn.outline:hover { background: #00c896; color: #fff; }
-
-/* Burn Logo */
-.burn-logo { position: fixed; top: 1.5in; right: 0.5in; width: 360px; z-index: 4; opacity: 0.95; }
-
-/* Main Hero Logo */
-.main-logo-hero { position: absolute; top: 40px; left: 40px; width: 140px; z-index: 5; }
-
-/* ================= PARTICLES ================= */
-.particles { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
-@keyframes floatUp { 0% { transform: translateY(0); opacity: 0; } 20% { opacity: 1; } 100% { transform: translateY(-120vh); opacity: 0; } }
-
-/* ================= HERO TEXT LINE-BY-LINE ANIMATION ================= */
-.line { display: block; opacity: 0; transform: translateY(20px); animation: lineFadeUp 0.8s forwards; }
-@keyframes lineFadeUp { to { opacity: 1; transform: translateY(0); } }
-
-/* ===== BUTTON GLOW ===== */
-.btn.glow { position: relative; transition: all 0.3s ease-in-out; }
-.btn.glow::after {
-  content: '';
-  position: absolute; inset: 0;
-  border-radius: 50px;
-  box-shadow: 0 0 15px rgba(255,140,0,0.6), 0 0 30px rgba(255,140,0,0.4), 0 0 45px rgba(255,140,0,0.2);
-  opacity: 0; transition: opacity 0.3s ease-in-out; z-index: -1;
-}
-.btn.glow:hover::after { opacity: 1; transform: scale(1.1); }
-
-/* ================= FOUNDER SECTION ================= */
-.founder-section { background: linear-gradient(180deg, #111827, #1f2937); color: #fff; padding: 90px 20px; }
-.container { max-width: 1100px; margin: auto; text-align: center; }
-.founder-section h2 { font-size: 2.8rem; color: #22c55e; margin-bottom: 20px; }
-.founder-intro { max-width: 800px; margin: 0 auto 50px; font-size: 1.2rem; color: #cbd5e1; line-height: 1.7; }
-
-.founder-content { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 50px; }
-.founder-image img { width: 260px; height: 260px; border-radius: 50%; border: 4px solid #22c55e; object-fit: cover; }
-.founder-text {
-  max-width: 600px;
-  text-align: left;
-  opacity: 1;
-  transform: none;
-}
-.founder-text.show { opacity: 1; transform: translateX(0); }
-.founder-text p { margin-bottom: 18px; line-height: 1.7; color: #d1d5db; }
-.signature { margin-top: 20px; color: #22c55e; font-weight: 700; }
-
-/* ================= FOOTER ================= */
-footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; text-align: center; padding: 30px; }
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
-  .hero h1 { font-size: 2.4rem; }
-  .hero h1 span { font-size: 1.2rem; }
-  .burn-logo { width: 180px; top: 1in; right: 1in; }
-  .founder-content { flex-direction: column; }
-  .founder-text { text-align: center; }
-}
-
-/* ================= MOUSE FOLLOW PARTICLES ================= */
-.mouse-particle {
-  position: absolute;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.45);
-  pointer-events: none;
-  z-index: 2;
-  transition: transform 0.15s linear;
-  mix-blend-mode: screen;
-}
-
-/* ================= 3D PARALLAX LAYERS ================= */
-.parallax-layer {
-  transform-style: preserve-3d;
-  transition: transform 0.12s ease-out;
-}
-
-/* Depth levels */
-.depth-bg { transform: translateZ(-80px) scale(1.15); }
-.depth-mid { transform: translateZ(0); }
-.depth-front { transform: translateZ(60px); }
-.depth-logo { transform: translateZ(100px); }
-
-@media (max-width: 768px) {
-  .parallax-layer {
-    transform: none !important;
-    transition: none;
-  }
-}
-
-/* ===== SCROLL PARALLAX ===== */
-.hero {
-  will-change: transform;
-}
-
-.scroll-bg {
-  transform: translateY(var(--scroll-bg, 0));
-}
-
-.scroll-text {
-  transform: translateY(var(--scroll-text, 0));
-}
-
-/* ===== HERO LIGHT RAYS ===== */
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: -40%;
-  background:
-    radial-gradient(circle at 30% 30%, rgba(0,255,200,0.15), transparent 60%),
-    radial-gradient(circle at 70% 60%, rgba(0,180,255,0.12), transparent 60%);
-  animation: lightMove 12s linear infinite;
-  z-index: 0;
-}
-
-@keyframes lightMove {
-  0% { transform: translate(0,0); }
-  50% { transform: translate(-80px, -60px); }
-  100% { transform: translate(0,0); }
-}
-
-/* ===== CUSTOM CURSOR HALO ===== */
-.cursor-halo {
-  position: fixed;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  pointer-events: none;
-  background: radial-gradient(circle, rgba(0,255,200,0.4), transparent 60%);
-  transform: translate(-50%, -50%);
-  z-index: 9999;
-  transition: transform 0.05s linear;
-}
-
-/* ===== MOUSE PARALLAX ===== */
-.parallax-layer {
-  transition: transform 0.1s linear;
-}
-
-/* ===== HERO TEXT ANIMATION ===== */
-.hero-content .line {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: heroFade 0.8s forwards;
-}
-
-@keyframes heroFade {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ===== BUTTON GLOW UPGRADE ===== */
-.btn.glow {
-  box-shadow:
-    0 0 15px rgba(255,140,0,0.6),
-    0 0 30px rgba(255,140,0,0.3);
-}
-
-.btn.glow:hover {
-  box-shadow:
-    0 0 25px rgba(255,140,0,0.9),
-    0 0 50px rgba(255,140,0,0.5);
-}
-
-.particles span {
-  position: absolute;
-  bottom: -20px;
-  width: 6px;
-  height: 6px;
-  background: rgba(255,255,255,0.5);
-  border-radius: 50%;
-  animation: floatUp linear infinite;
-}
-
-@keyframes floatUp {
-  from { transform: translateY(0); opacity: 0; }
-  20% { opacity: 1; }
-  to { transform: translateY(-120vh); opacity: 0; }
-}
-
-/* Parallax layer stacking */
-.parallax-layer.depth-bg { z-index: 1; }
-.parallax-layer.depth-mid { z-index: 3; }
-.parallax-layer.depth-logo { z-index: 4; }
-.parallax-layer.depth-front { z-index: 10; }
-
-/* Optional: subtle parallax transition */
-.parallax-layer {
-  transition: transform 0.2s ease-out;
-}
-
-/* Make sure hero spans are visible */
-.particles span {
-  width: 6px;
-  height: 6px;
-  background: rgba(255,255,255,0.35);
-  border-radius: 50%;
-  position: absolute;
-  bottom: -20px;
-  animation: floatUp linear infinite;
-}
-
-/* Mouse-following small particles */
-.mouse-particle {
-  position: absolute;
-  border-radius: 50%;
-  pointer-events: none;
-  background: rgba(255,255,255,0.35);
-  z-index: 2;
-}
-
-/* Hero line slide-in animation */
-.slide-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: lineFadeUp 0.8s forwards;
-}
-
-@keyframes lineFadeUp {
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Hero content bold */
 .hero-content {
   position: relative;
   z-index: 3;
   max-width: 820px;
   text-align: center;
-  font-weight: 700; /* Make text bold */
+  font-weight: 700;
   color: #ffffff;
   text-shadow: 0 2px 8px rgba(0,0,0,0.3);
-  transform-style: preserve-3d; /* Needed for 3D transform */
+  transform-style: preserve-3d;
 }
-
-/* Hero title stronger bold & slight glow */
 .hero-title {
   font-weight: 900;
-  text-shadow: 0 2px 10px rgba(255, 160, 0, 0.6);
-}
-
-/* Hero subtitle & subtext glow */
-.hero-subtitle, .hero-subtext {
-  font-weight: 600;
-  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
-}
-
-/* Depth float animation */
-@keyframes depthFloat {
-  0% { transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg); }
-  25% { transform: translate3d(2px, -2px, 1px) rotateX(1deg) rotateY(-1deg); }
-  50% { transform: translate3d(-2px, 2px, -1px) rotateX(-1deg) rotateY(1deg); }
-  75% { transform: translate3d(1px, -1px, 1px) rotateX(0.5deg) rotateY(-0.5deg); }
-  100% { transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg); }
-}
-
-/* Apply depth float to hero content */
-.hero-content.depth-float {
-  animation: depthFloat 6s ease-in-out infinite;
-}
-
-/* ===== HERO HEADING BOLD & GLOW ===== */
-.hero-title {
-  font-weight: 900; /* extra bold */
-  color: #ffb347; /* brighter orange for visibility */
-  text-shadow: 
-    0 0 10px rgba(255, 180, 71, 0.8),
-    0 0 20px rgba(255, 180, 71, 0.6),
-    0 0 30px rgba(255, 180, 71, 0.4),
-    0 0 40px rgba(255, 180, 71, 0.2);
-}
-
-/* Optional: subtitle glow */
-.hero-subtitle {
-  text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
-}
-
-/* Optional: subtext glow */
-.hero-subtext {
-  text-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
-}
-
-/* ===== HERO HEADING PULSE GLOW ===== */
-@keyframes glowPulse {
-  0% {
-    text-shadow: 
-      0 0 10px rgba(255, 180, 71, 0.8),
-      0 0 20px rgba(255, 180, 71, 0.6),
-      0 0 30px rgba(255, 180, 71, 0.4),
-      0 0 40px rgba(255, 180, 71, 0.2);
-  }
-  50% {
-    text-shadow: 
-      0 0 20px rgba(255, 180, 71, 1),
-      0 0 40px rgba(255, 180, 71, 0.8),
-      0 0 60px rgba(255, 180, 71, 0.6),
-      0 0 80px rgba(255, 180, 71, 0.4);
-  }
-  100% {
-    text-shadow: 
-      0 0 10px rgba(255, 180, 71, 0.8),
-      0 0 20px rgba(255, 180, 71, 0.6),
-      0 0 30px rgba(255, 180, 71, 0.4),
-      0 0 40px rgba(255, 180, 71, 0.2);
-  }
-}
-
-/* Apply pulse animation to hero title */
-.hero-title {
-  font-weight: 900;
+  font-size: clamp(2.5rem, 5vw, 4rem);
   color: #ffb347;
   animation: glowPulse 2.5s ease-in-out infinite;
+  text-shadow: 0 0 10px rgba(255,180,71,0.8),
+               0 0 20px rgba(255,180,71,0.6),
+               0 0 30px rgba(255,180,71,0.4),
+               0 0 40px rgba(255,180,71,0.2);
 }
-
-/* ===== HERO HEADING LINE-BY-LINE PULSE GLOW ===== */
-@keyframes lineGlowPulse {
-  0% {
-    text-shadow:
-      0 0 8px rgba(255, 180, 71, 0.7),
-      0 0 16px rgba(255, 180, 71, 0.5),
-      0 0 24px rgba(255, 180, 71, 0.3);
-  }
-  50% {
-    text-shadow:
-      0 0 18px rgba(255, 180, 71, 1),
-      0 0 36px rgba(255, 180, 71, 0.8),
-      0 0 54px rgba(255, 180, 71, 0.6);
-  }
-  100% {
-    text-shadow:
-      0 0 8px rgba(255, 180, 71, 0.7),
-      0 0 16px rgba(255, 180, 71, 0.5),
-      0 0 24px rgba(255, 180, 71, 0.3);
-  }
-}
-
-/* Apply animation to each line */
 .hero-title .line {
-  font-weight: 900;
-  color: #ffb347;
+  display: block;
+  opacity: 1 !important;
   animation: lineGlowPulse 2.5s ease-in-out infinite;
 }
-
-/* Add slight delay to each line for staggered effect */
 .hero-title .line:nth-child(1) { animation-delay: 0s; }
 .hero-title .line:nth-child(2) { animation-delay: 0.5s; }
 .hero-title .line:nth-child(3) { animation-delay: 1s; }
@@ -389,1106 +67,118 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
 .hero-title .line:nth-child(5) { animation-delay: 2s; }
 .hero-title .line:nth-child(6) { animation-delay: 2.5s; }
 
-/* ===== HERO HEADING LINE-BY-LINE GLOW ===== */
-.hero-title .line {
-  font-weight: 900;
-  color: #ffb347;
-  opacity: 1 !important; /* ensures visibility */
-  animation: lineGlowPulse 2.5s ease-in-out infinite;
-  text-shadow:
-    0 0 8px rgba(255, 180, 71, 0.7),
-    0 0 16px rgba(255, 180, 71, 0.5),
-    0 0 24px rgba(255, 180, 71, 0.3);
+.hero-subtitle, .hero-subtext {
+  font-weight: 600;
+  text-shadow: 0 0 6px rgba(255,255,255,0.4);
+  margin-top: 15px;
 }
+.hero-buttons { margin-top: 30px; }
+.btn {
+  display: inline-block;
+  padding: 14px 36px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  margin: 10px;
+  transition: all 0.3s ease;
+}
+.btn.primary {
+  background: #ff8c00;
+  color: #fff;
+  box-shadow: 0 0 18px rgba(255,140,0,0.6);
+}
+.btn.primary:hover { transform: translateY(-5px); }
+.btn.outline {
+  border: 2px solid #00c896;
+  color: #00c896;
+  background: transparent;
+}
+.btn.outline:hover {
+  background: #00c896;
+  color: #fff;
+}
+.btn.glow::after {
+  content: '';
+  position: absolute; inset: 0;
+  border-radius: 50px;
+  box-shadow: 0 0 15px rgba(255,140,0,0.6),
+              0 0 30px rgba(255,140,0,0.4),
+              0 0 45px rgba(255,140,0,0.2);
+  opacity: 0; transition: opacity 0.3s ease-in-out; z-index: -1;
+}
+.btn.glow:hover::after { opacity: 1; transform: scale(1.1); }
 
-/* Staggered glow delay */
-.hero-title .line:nth-child(1) { animation-delay: 0s; }
-.hero-title .line:nth-child(2) { animation-delay: 0.5s; }
-.hero-title .line:nth-child(3) { animation-delay: 1s; }
-.hero-title .line:nth-child(4) { animation-delay: 1.5s; }
-.hero-title .line:nth-child(5) { animation-delay: 2s; }
-.hero-title .line:nth-child(6) { animation-delay: 2.5s; }
-
-/* Glow animation keyframes */
+/* Hero animations */
+@keyframes glowPulse {
+  0%, 100% { text-shadow: 0 0 10px rgba(255,180,71,0.8), 0 0 20px rgba(255,180,71,0.6), 0 0 30px rgba(255,180,71,0.4), 0 0 40px rgba(255,180,71,0.2);}
+  50% { text-shadow: 0 0 20px rgba(255,180,71,1), 0 0 40px rgba(255,180,71,0.8), 0 0 60px rgba(255,180,71,0.6), 0 0 80px rgba(255,180,71,0.4);}
+}
 @keyframes lineGlowPulse {
-  0%, 100% {
-    text-shadow:
-      0 0 8px rgba(255,180,71,0.7),
-      0 0 16px rgba(255,180,71,0.5),
-      0 0 24px rgba(255,180,71,0.3);
-  }
-  50% {
-    text-shadow:
-      0 0 18px rgba(255,180,71,1),
-      0 0 36px rgba(255,180,71,0.8),
-      0 0 54px rgba(255,180,71,0.6);
-  }
+  0%,100% { text-shadow:0 0 8px rgba(255,180,71,0.7),0 0 16px rgba(255,180,71,0.5),0 0 24px rgba(255,180,71,0.3);}
+  50% { text-shadow:0 0 18px rgba(255,180,71,1),0 0 36px rgba(255,180,71,0.8),0 0 54px rgba(255,180,71,0.6);}
 }
 
-/* ===== FOUNDER IMAGE GLOW & HOVER ===== */
-.founder-image img {
-  transition: all 0.4s ease;
-  box-shadow: 0 0 20px rgba(34, 197, 94, 0.6),
-              0 0 40px rgba(34, 197, 94, 0.4),
-              0 0 60px rgba(34, 197, 94, 0.2);
-  border-radius: 50%;
-}
-
-/* Hover effect: lift + stronger glow */
-.founder-image img:hover {
-  transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 0 30px rgba(34, 197, 94, 0.8),
-              0 0 60px rgba(34, 197, 94, 0.6),
-              0 0 90px rgba(34, 197, 94, 0.4);
-}
-
-/* ===== FOUNDER PARTICLE AURA ===== */
-.founder-image {
-  position: relative; /* required for aura positioning */
-}
-
-.founder-aura {
+/* Hero light rays */
+.hero::before {
+  content: '';
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 300px;   /* slightly bigger than image */
-  height: 300px;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
+  inset: -40%;
+  background: radial-gradient(circle at 30% 30%, rgba(0,255,200,0.15), transparent 60%),
+              radial-gradient(circle at 70% 60%, rgba(0,180,255,0.12), transparent 60%);
+  animation: lightMove 12s linear infinite;
   z-index: 0;
 }
+@keyframes lightMove { 0%{transform:translate(0,0);} 50%{transform:translate(-80px,-60px);} 100%{transform:translate(0,0);} }
 
-.founder-aura span {
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  background: rgba(34, 197, 94, 0.6);
-  border-radius: 50%;
-  animation: auraFloat 4s linear infinite;
+/* ================= FOUNDER SECTION ================= */
+.founder-section { background: linear-gradient(180deg,#111827,#1f2937); color:#fff; padding:90px 20px; }
+.founder-section h2 { font-size:2.8rem; color:#22c55e; margin-bottom:20px; }
+.founder-intro { max-width:800px; margin:0 auto 50px; font-size:1.2rem; color:#cbd5e1; line-height:1.7; }
+.founder-content { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:50px; }
+.founder-image img { width:260px;height:260px;border-radius:50%;border:4px solid #22c55e;object-fit:cover;transition: all 0.4s ease; }
+.founder-image img:hover { transform: translateY(-10px) scale(1.05); box-shadow: 0 0 30px rgba(34,197,94,0.8),0 0 60px rgba(34,197,94,0.6),0 0 90px rgba(34,197,94,0.4); }
+.founder-text { max-width:600px; text-align:left; opacity:1; transform:none; }
+.founder-text p { margin-bottom:18px; line-height:1.7; color:#d1d5db; }
+.signature { margin-top:20px; color:#22c55e; font-weight:700; }
+
+/* ================= GOVERNANCE, CONSTITUTION & TRUSTEE ================= */
+.governance-section,.constitution-section,.trustee-section {
+  padding:80px 20px; background:#0f1f2f; color:#e0e7ff; text-align:center; position:relative;
 }
-
-@keyframes auraFloat {
-  0% { transform: translate(0, 0) scale(0.5); opacity: 0.4; }
-  50% { transform: translate(var(--x), var(--y)) scale(1); opacity: 0.8; }
-  100% { transform: translate(0, 0) scale(0.5); opacity: 0.4; }
+.governance-section h2,.constitution-section h2,.trustee-section h2 { font-size:2.8rem; color:#22c55e; margin-bottom:30px; text-shadow:0 0 10px rgba(34,197,94,0.7);}
+.board-members,.trustee-members,.governance-grid,.constitution-grid { display:flex; flex-wrap:wrap; justify-content:center; gap:40px; margin-bottom:50px; }
+.board-card,.trustee-card,.governance-card,.constitution-card {
+  background:#1a2a3f; border-radius:16px; padding:25px; transition:all 0.3s ease; box-shadow:0 0 20px rgba(34,197,94,0.4); position:relative;
 }
+.board-card:hover,.trustee-card:hover,.governance-card:hover,.constitution-card:hover { transform:translateY(-8px); box-shadow:0 0 30px rgba(34,197,94,0.7); }
+.board-card img,.trustee-card img { width:150px;height:150px;border-radius:50%;border:3px solid #22c55e;margin-bottom:15px;transition:all 0.3s ease; }
+.board-card:hover img,.trustee-card:hover img { transform:scale(1.05); box-shadow:0 0 25px rgba(34,197,94,0.7);}
+.board-card h4,.trustee-card h4 { font-size:1.2rem;margin:15px 0 8px;color:#fff; }
+.board-card p,.trustee-card p { font-size:0.95rem; line-height:1.5; color:#cbd5e1; padding:0 15px 20px; }
+.governance-card h3,.constitution-card h3 { font-size:1.5rem;color:#22c55e;margin-bottom:12px; font-weight:700; }
+.governance-card p,.constitution-card p { font-size:1rem; color:#cbd5e1; }
 
-/* ================= TOKENOMICS & HUMANITARIAN SECTIONS ================= */
-.section.tokenomics,
-.section.humanitarian-flow,
-.section.assets,
-.section.governance,
-.section.mission,
-.section.roadmap,
-.section.community {
-  padding: 80px 20px;
-  text-align: center;
-  background: #f9f9f9;
-  position: relative;
-}
-
-.section-title {
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: #1a1a1a;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  text-shadow: 0 0 15px rgba(0, 150, 136, 0.4);
-}
-
-.section-intro {
-  font-size: 1.1rem;
-  color: #333;
-  max-width: 800px;
-  margin: 0 auto 40px auto;
-  line-height: 1.6;
-}
-
-/* ================= TOKENOMICS GRID ================= */
-.tokenomics-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.token-box {
-  background: #ffffff;
-  padding: 30px 20px;
-  border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.token-box:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-}
-
-.token-box h3 {
-  font-size: 1.5rem;
-  color: #009688;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-}
-
-.token-box p, .token-box ul {
-  font-size: 1rem;
-  color: #444;
-  line-height: 1.6;
-  margin-bottom: 10px;
-}
-
-.token-box ul li {
-  margin-bottom: 8px;
-  text-align: left;
-  padding-left: 20px;
-  position: relative;
-}
-
-.token-box ul li::before {
-  content: '•';
-  position: absolute;
-  left: 0;
-  color: #009688;
-  font-weight: bold;
-}
-
-/* ================= HUMANITARIAN FLOW ================= */
-.flow-list {
-  max-width: 700px;
-  margin: 0 auto;
-  text-align: left;
-  padding-left: 30px;
-}
-
-.flow-list li {
-  margin-bottom: 15px;
-  font-size: 1rem;
-  color: #333;
-  line-height: 1.6;
-  position: relative;
-}
-
-.flow-list li::before {
-  content: "✔";
-  color: #009688;
-  font-weight: bold;
-  margin-right: 10px;
-  position: absolute;
-  left: -25px;
-  top: 0;
-}
-
-/* ================= DONATIONS & ASSETS ================= */
-.section.assets p,
-.section.assets ul {
-  max-width: 800px;
-  margin: 0 auto 20px auto;
-  font-size: 1rem;
-  color: #333;
-  line-height: 1.6;
-}
-
-.section.assets ul li {
-  margin-bottom: 12px;
-  list-style: inside disc;
-}
-
-/* ================= SOCIAL MEDIA LINKS ================= */
-.social-links {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 25px;
-  margin-top: 20px;
-}
-
-.social-links a {
-  display: inline-block;
-  padding: 12px 18px;
-  border-radius: 50px;
-  background: #009688;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 15px rgba(0, 150, 136, 0.3);
-}
-
-.social-links a:hover {
-  background: #00796b;
-  transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 10px 25px rgba(0, 150, 136, 0.4);
-}
-
-/* ================= ROADMAP LIST ================= */
-.roadmap-list {
-  max-width: 700px;
-  margin: 0 auto;
-  text-align: left;
-  padding-left: 25px;
-}
-
-.roadmap-list li {
-  margin-bottom: 15px;
-  font-size: 1rem;
-  color: #333;
-  line-height: 1.6;
-  position: relative;
-}
-
-.roadmap-list li::before {
-  content: "⦿";
-  color: #009688;
-  font-weight: bold;
-  margin-right: 10px;
-  position: absolute;
-  left: -25px;
-  top: 0;
+/* ================= RESPONSIVE ================= */
+@media (max-width:1024px){ .board-members,.trustee-members,.governance-grid,.constitution-grid{flex-direction:column; align-items:center;} }
+@media (max-width:768px){
+  .governance-section,.constitution-section,.trustee-section{padding:60px 15px;}
+  .governance-section h2,.constitution-section h2,.trustee-section h2{font-size:2.2rem;}
+  .board-card img,.trustee-card img{height:220px;}
+  .founder-content{flex-direction:column;}
+  .founder-text{text-align:center;}
 }
 
 /* ================= FOOTER ================= */
-footer.footer {
-  padding: 60px 20px;
-  background: #1a1a1a;
-  color: #fff;
-  text-align: center;
-}
+footer.footer { padding:60px 20px; background:#111827; color:#fff; text-align:center; }
+footer.footer p { font-size:0.95rem; margin-bottom:10px; }
+footer.footer a { color:#00bfa5; text-decoration:none; margin:0 8px; transition:color 0.3s ease; }
+footer.footer a:hover { color:#ffffff; }
 
-footer.footer p {
-  font-size: 0.95rem;
-  margin-bottom: 10px;
-}
-
-footer.footer a {
-  color: #00bfa5;
-  text-decoration: none;
-  margin: 0 8px;
-  transition: color 0.3s ease;
-}
-
-footer.footer a:hover {
-  color: #ffffff;
-}
+/* ================= SOCIAL LINKS ================= */
+.social-links { display:flex; justify-content:center; flex-wrap:wrap; gap:25px; margin-top:20px; }
+.social-links a { display:inline-block; padding:12px 18px; border-radius:50px; background:#009688; color:#fff; font-weight:600; text-decoration:none; transition:all 0.3s ease; box-shadow:0 0 15px rgba(0,150,136,0.3); }
+.social-links a:hover { background:#00796b; transform:translateY(-5px) scale(1.05); box-shadow:0 10px 25px rgba(0,150,136,0.4); }
 
 /* ================= SMALL ANIMATIONS ================= */
-.token-box, .flow-list li, .roadmap-list li, .social-links a {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 0.8s ease forwards;
-}
-
-.token-box:nth-child(1) { animation-delay: 0.1s; }
-.token-box:nth-child(2) { animation-delay: 0.3s; }
-.token-box:nth-child(3) { animation-delay: 0.5s; }
-
-.flow-list li:nth-child(1) { animation-delay: 0.2s; }
-.flow-list li:nth-child(2) { animation-delay: 0.4s; }
-.flow-list li:nth-child(3) { animation-delay: 0.6s; }
-.flow-list li:nth-child(4) { animation-delay: 0.8s; }
-.flow-list li:nth-child(5) { animation-delay: 1s; }
-
-.roadmap-list li:nth-child(1) { animation-delay: 0.2s; }
-.roadmap-list li:nth-child(2) { animation-delay: 0.4s; }
-.roadmap-list li:nth-child(3) { animation-delay: 0.6s; }
-.roadmap-list li:nth-child(4) { animation-delay: 0.8s; }
-.roadmap-list li:nth-child(5) { animation-delay: 1s; }
-
-.social-links a:nth-child(1) { animation-delay: 0.2s; }
-.social-links a:nth-child(2) { animation-delay: 0.4s; }
-.social-links a:nth-child(3) { animation-delay: 0.6s; }
-.social-links a:nth-child(4) { animation-delay: 0.8s; }
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ================= GOVERNANCE, CONSTITUTION & TRUSTEE ================= */
-.governance-section, .constitution-section, .trustee-section {
-  padding: 80px 20px;
-  background: #0f1f2f; /* dark modern gradient background can be added */
-  color: #e0e7ff;
-  text-align: center;
-  position: relative;
-}
-
-.governance-section h2,
-.constitution-section h2,
-.trustee-section h2 {
-  font-size: 2.8rem;
-  color: #22c55e; /* highlight green */
-  margin-bottom: 30px;
-  text-shadow: 0 0 10px rgba(34,197,94,0.7);
-}
-
-.governance-intro,
-.constitution-intro {
-  font-size: 1.2rem;
-  max-width: 900px;
-  margin: 0 auto 50px;
-  line-height: 1.6;
-  color: #cbd5e1;
-}
-
-/* ===== Board Members / Trustees ===== */
-.board-members, .trustee-members {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-  margin-bottom: 50px;
-}
-
-.board-card, .trustee-card {
-  background: #1a2a3f;
-  border-radius: 15px;
-  overflow: hidden;
-  max-width: 260px;
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
-  box-shadow: 0 0 20px rgba(34,197,94,0.4);
-}
-
-.board-card:hover, .trustee-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 30px rgba(34,197,94,0.7);
-}
-
-.board-card img, .trustee-card img {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-  border-bottom: 4px solid #22c55e;
-  border-radius: 0;
-  transition: all 0.3s ease;
-}
-
-.board-card:hover img, .trustee-card:hover img {
-  transform: scale(1.05);
-}
-
-.board-card h4, .trustee-card h4 {
-  font-size: 1.2rem;
-  margin: 15px 0 8px;
-  color: #fff;
-}
-
-.board-card p, .trustee-card p {
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: #cbd5e1;
-  padding: 0 15px 20px;
-}
-
-/* ===== Governance / Constitution Cards ===== */
-.governance-grid, .constitution-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin-bottom: 50px;
-}
-
-.governance-card, .constitution-card {
-  background: #1a2a3f;
-  border-radius: 15px;
-  padding: 25px;
-  flex: 1 1 220px;
-  max-width: 250px;
-  text-align: center;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 15px rgba(34,197,94,0.3);
-}
-
-.governance-card:hover, .constitution-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 25px rgba(34,197,94,0.6);
-}
-
-.gov-icon, .const-icon {
-  font-size: 2rem;
-  margin-bottom: 15px;
-  color: #22c55e;
-}
-
-/* ===== Governance Actions / Download / Inquiry ===== */
-.governance-actions {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.governance-btn {
-  background: #22c55e;
-  color: #fff;
-  padding: 14px 30px;
-  border-radius: 50px;
-  font-weight: 600;
-  text-decoration: none;
-  box-shadow: 0 0 18px rgba(34,197,94,0.5);
-  transition: all 0.3s ease;
-}
-
-.governance-btn:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 30px rgba(34,197,94,0.8);
-}
-
-.governance-btn.outline {
-  background: transparent;
-  color: #22c55e;
-  border: 2px solid #22c55e;
-}
-
-.governance-btn.outline:hover {
-  background: #22c55e;
-  color: #fff;
-}
-
-/* ===== Responsive ===== */
-@media (max-width: 1024px) {
-  .board-members, .trustee-members, .governance-grid, .constitution-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-@media (max-width: 768px) {
-  .governance-section, .constitution-section, .trustee-section {
-    padding: 60px 15px;
-  }
-
-  .governance-section h2, .constitution-section h2, .trustee-section h2 {
-    font-size: 2.2rem;
-  }
-
-  .board-card img, .trustee-card img {
-    height: 220px;
-  }
-}
-
-/* ================= CARD FLOATING GLOW ================= */
-.card-glow {
-  position: absolute;
-  border-radius: 50%;
-  background: rgba(34,197,94,0.25); /* greenish glow */
-  pointer-events: none;
-  filter: blur(12px);
-  animation: floatCardGlow linear infinite;
-  z-index: 0;
-}
-
-@keyframes floatCardGlow {
-  0% { transform: translate(0, 0) scale(1); opacity: 0.4; }
-  50% { transform: translate(20px, -30px) scale(1.2); opacity: 0.7; }
-  100% { transform: translate(0, 0) scale(1); opacity: 0.4; }
-}
-
-/* Ensure cards are above glow */
-.board-card, .trustee-card, .governance-card, .constitution-card {
-  position: relative;
-  z-index: 1;
-}
-
-/* ================= SECTION HEADINGS ================= */
-.section h2 {
-  font-size: 2.6rem;
-  font-weight: 800;
-  color: #22c55e; /* fresh green */
-  margin-bottom: 20px;
-  text-align: center;
-  position: relative;
-}
-
-.section h2::after {
-  content: '';
-  display: block;
-  width: 80px;
-  height: 4px;
-  background: linear-gradient(90deg, #22c55e, #0fffc3);
-  margin: 10px auto 0;
-  border-radius: 2px;
-}
-
-/* ================= SECTION PARAGRAPHS ================= */
-.section p, .section ul li {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: #cbd5e1; /* soft gray-white for readability */
-  max-width: 850px;
-  margin: 15px auto;
-  text-align: center;
-}
-
-/* ================= TRUSTEE CARDS ================= */
-.trustee-section .trustee-card,
-.board-members .board-card {
-  background: #111827; /* dark card background */
-  border-radius: 16px;
-  padding: 25px 20px;
-  margin: 15px;
-  text-align: center;
-  box-shadow: 0 8px 20px rgba(0, 255, 150, 0.15);
-  transition: all 0.4s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.board-card img, .trustee-card img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 3px solid #22c55e;
-  margin-bottom: 15px;
-  transition: all 0.3s ease;
-}
-
-.board-card:hover img, .trustee-card:hover img {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(34,197,94,0.7);
-}
-
-.board-card:hover, .trustee-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(34,197,94,0.4);
-}
-
-/* ================= GOVERNANCE & CONSTITUTION CARDS ================= */
-.governance-card, .constitution-card {
-  background: #0f172a;
-  border-radius: 16px;
-  padding: 22px 18px;
-  text-align: center;
-  margin: 15px;
-  transition: all 0.3s ease;
-  box-shadow: 0 6px 18px rgba(34,197,94,0.15);
-  position: relative;
-}
-
-.governance-card:hover, .constitution-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(34,197,94,0.35);
-}
-
-.governance-card h3, .constitution-card h3 {
-  font-size: 1.5rem;
-  color: #22c55e;
-  margin-bottom: 12px;
-  font-weight: 700;
-}
-
-.governance-card p, .constitution-card p {
-  font-size: 1rem;
-  color: #cbd5e1;
-}
-
-/* ================= TOKENOMICS CARDS ================= */
-.tokenomics-card {
-  background: linear-gradient(135deg, #0f172a, #111827);
-  border-radius: 16px;
-  padding: 20px 18px;
-  text-align: center;
-  margin: 15px;
-  box-shadow: 0 8px 25px rgba(34,197,94,0.2);
-  transition: all 0.4s ease;
-}
-
-.tokenomics-card h3 {
-  font-size: 1.6rem;
-  font-weight: 800;
-  color: #22c55e;
-  margin-bottom: 12px;
-}
-
-.tokenomics-card p {
-  font-size: 1.05rem;
-  color: #cbd5e1;
-}
-
-.tokenomics-card:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 12px 30px rgba(34,197,94,0.35);
-}
-
-/* ===== TOKENOMICS SECTION ===== */
-.tokenomics-section {
-  background: linear-gradient(135deg, #0a4b55, #062a2f);
-  color: #e0f7f4;
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.tokenomics-section h2 {
-  font-size: 2.8rem;
-  color: #22c55e; /* vibrant green */
-  margin-bottom: 30px;
-  font-weight: 800;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-}
-
-.tokenomics-section p {
-  font-size: 1.15rem;
-  line-height: 1.7;
-  color: #ccefe3; /* lighter but readable */
-  max-width: 900px;
-  margin: 0 auto 20px;
-}
-
-.tokenomics-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-  margin-top: 50px;
-}
-
-.tokenomics-card {
-  background: linear-gradient(145deg, #0f6f7d, #1aa6a6);
-  color: #e0f7f4;
-  padding: 30px 25px;
-  border-radius: 20px;
-  width: 280px;
-  transition: all 0.4s ease;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
-}
-
-.tokenomics-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  font-weight: 700;
-  color: #22c55e; /* keep headings vibrant */
-}
-
-.tokenomics-card p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #e0f7f4; /* readable description */
-}
-
-.tokenomics-card:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
-}
-
-/* ===== TOKENOMICS SECTION ===== */
-.tokenomics-section {
-  background: linear-gradient(135deg, #0a4b55, #062a2f);
-  color: #e0f7f4; /* default text color */
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.tokenomics-section h2 {
-  font-size: 3rem;
-  color: #22c55e; /* vibrant green */
-  margin-bottom: 40px;
-  font-weight: 800;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-}
-
-.tokenomics-section p {
-  font-size: 1.15rem;
-  line-height: 1.7;
-  color: #ccefe3; /* readable light color */
-  max-width: 900px;
-  margin: 0 auto 20px;
-}
-
-/* ===== TOKENOMICS CARDS ===== */
-.tokenomics-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-  margin-top: 50px;
-}
-
-.tokenomics-card {
-  background: linear-gradient(145deg, #0f6f7d, #1aa6a6);
-  color: #e0f7f4;
-  padding: 30px 25px;
-  border-radius: 20px;
-  width: 280px;
-  transition: all 0.4s ease;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
-  position: relative;
-}
-
-.tokenomics-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  font-weight: 700;
-  color: #22c55e;
-  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
-}
-
-/* Glow effect for numbers/percentages inside card */
-.tokenomics-card span.number {
-  font-weight: 800;
-  font-size: 1.8rem;
-  color: #fff;
-  text-shadow: 0 0 8px #22c55e, 0 0 15px #22c55e, 0 0 25px #00ffcc;
-  display: inline-block;
-  margin-bottom: 10px;
-}
-
-.tokenomics-card p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #e0f7f4;
-}
-
-/* Card hover effect */
-.tokenomics-card:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
-}
-
-/* ================= GENERAL READABILITY Latest ================= */
-.readable-text {
-  color: #e0e0e0; /* light gray for readability on dark background */
-  font-size: 1.05rem;
-  line-height: 1.7;
-  margin-bottom: 1rem;
-}
-
-/* ================= HEADINGS ================= */
-.section-title {
-  color: #00ff99; /* vibrant green */
-  font-size: 2.5rem;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 1rem;
-  text-shadow: 0 0 15px rgba(0, 255, 153, 0.5);
-}
-
-/* Glow effect for headings */
-.green-glow {
-  color: #00ff99;
-  text-shadow: 0 0 5px #00ff99, 0 0 15px #00ff99, 0 0 30px #00ff99;
-}
-
-/* Section intro paragraphs */
-.section-intro {
-  color: #cccccc;
-  font-size: 1.1rem;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-/* ================= TOKENOMICS GRID ================= */
-.tokenomics-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.8rem;
-  margin-top: 2rem;
-}
-
-.token-box {
-  background: rgba(0, 0, 0, 0.45);
-  padding: 1.8rem 1.5rem;
-  border-radius: 15px;
-  border: 1px solid rgba(0, 255, 153, 0.3);
-  box-shadow: 0 0 25px rgba(0, 255, 153, 0.25);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.token-box h3 {
-  color: #00ff99;
-  font-size: 1.5rem;
-  margin-bottom: 0.7rem;
-  text-shadow: 0 0 8px rgba(0, 255, 153, 0.5);
-}
-
-.token-box p,
-.token-box ul li {
-  color: #f0f0f0;
-  font-size: 1rem;
-  margin-bottom: 0.6rem;
-}
-
-.token-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 35px rgba(0, 255, 153, 0.35);
-}
-
-/* ================= HUMANITARIAN FLOW ================= */
-.flow-list {
-  list-style-position: inside;
-  color: #f0f0f0;
-  font-size: 1.05rem;
-  line-height: 1.7;
-}
-
-.flow-list li {
-  margin-bottom: 0.8rem;
-  position: relative;
-  padding-left: 1.2rem;
-}
-
-.flow-list li::before {
-  content: "✔";
-  color: #00ff99;
-  position: absolute;
-  left: 0;
-}
-
-/* ================= DONATIONS & ASSETS ================= */
-.assets ul {
-  list-style-type: disc;
-  padding-left: 1.5rem;
-  color: #f0f0f0;
-  margin-bottom: 1rem;
-}
-
-/* ================= ROADMAP ================= */
-.roadmap-list {
-  list-style-type: decimal;
-  padding-left: 1.5rem;
-  color: #f0f0f0;
-  margin-bottom: 1rem;
-}
-
-/* ================= SOCIAL MEDIA ================= */
-.social-links {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  margin-top: 1.5rem;
-}
-
-.social-links a {
-  color: #00ff99;
-  font-weight: 600;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
-  background: rgba(0, 0, 0, 0.35);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.social-links a:hover {
-  transform: scale(1.15);
-  box-shadow: 0 10px 25px rgba(0, 255, 153, 0.5);
-}
-
-/* ================= FADE ON SCROLL EFFECT ================= */
-.fade-on-scroll {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-.fade-on-scroll.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .token-box {
-    padding: 1.4rem 1rem;
-  }
-
-  .social-links {
-    flex-direction: column;
-  }
-}
-
-/* ================= TOKENOMICS PARTICLES ================= */
-.tokenomics-particles {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 0;
-}
-
-.tokenomics-particles span {
-  position: absolute;
-  display: block;
-  width: 10px;
-  height: 10px;
-  background: rgba(0, 255, 153, 0.3);
-  border-radius: 50%;
-  animation: float 12s infinite;
-}
-
-.tokenomics-particles span:nth-child(1){ left: 10%; animation-delay: 0s; }
-.tokenomics-particles span:nth-child(2){ left: 20%; animation-delay: 2s; }
-.tokenomics-particles span:nth-child(3){ left: 30%; animation-delay: 4s; }
-.tokenomics-particles span:nth-child(4){ left: 40%; animation-delay: 6s; }
-.tokenomics-particles span:nth-child(5){ left: 50%; animation-delay: 8s; }
-.tokenomics-particles span:nth-child(6){ left: 60%; animation-delay: 1s; }
-.tokenomics-particles span:nth-child(7){ left: 70%; animation-delay: 3s; }
-.tokenomics-particles span:nth-child(8){ left: 80%; animation-delay: 5s; }
-.tokenomics-particles span:nth-child(9){ left: 90%; animation-delay: 7s; }
-.tokenomics-particles span:nth-child(10){ left: 95%; animation-delay: 9s; }
-
-@keyframes float {
-  0% { transform: translateY(0px) scale(1); opacity: 0.3; }
-  50% { transform: translateY(-20px) scale(1.2); opacity: 0.6; }
-  100% { transform: translateY(0px) scale(1); opacity: 0.3; }
-}
-
-/* ================= TOKENOMICS BOX MODERN GRADIENT ================= */
-.token-box {
-  position: relative;
-  background: linear-gradient(135deg, rgba(0,255,153,0.25), rgba(0,255,153,0.05));
-  border: 1px solid rgba(0,255,153,0.35);
-  box-shadow: 0 0 25px rgba(0,255,153,0.15);
-  border-radius: 15px;
-  padding: 2rem;
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-  z-index: 1; /* ensure above particles */
-}
-
-.token-box:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 50px rgba(0,255,153,0.35);
-}
-
-/* ================= SCROLL FADE-IN ================= */
-.token-box, .section-title, .section-intro, .flow-list li, .roadmap-list li {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-.token-box.active, .section-title.active, .section-intro.active,
-.flow-list li.active, .roadmap-list li.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
-  .token-box { padding: 1.5rem; }
-  .tokenomics-grid { gap: 1.2rem; }
-}
-
-/* ================= TOKENOMICS SECTION ================= */
-.tokenomics {
-  position: relative;
-  padding: 6rem 0 4rem;
-  background-color: #0a0a0a; /* dark background like rest of page */
-  color: #e0e0e0; /* neutral readable text */
-  overflow: hidden;
-}
-
-.tokenomics .section-title {
-  color: #00ffc1; /* subtle bright color for headings */
-  font-size: 2.5rem;
-  font-weight: 700;
-  text-align: center;
-  text-shadow: 0 0 10px rgba(0,255,193,0.5);
-  margin-bottom: 1rem;
-}
-
-.tokenomics .section-intro {
-  color: #d0d0d0; /* lighter gray for readability */
-  font-size: 1.1rem;
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-/* ================= TOKEN BOXES ================= */
-.tokenomics-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  z-index: 1;
-  position: relative;
-}
-
-.token-box {
-  background: linear-gradient(135deg, rgba(0,255,193,0.15), rgba(0,255,193,0.05));
-  border-radius: 15px;
-  padding: 2rem;
-  border: 1px solid rgba(0,255,193,0.25);
-  box-shadow: 0 0 25px rgba(0,255,193,0.15);
-  transition: all 0.5s ease;
-  color: #ffffff; /* make text readable */
-}
-
-.token-box h3 {
-  color: #00ffc1; /* headings consistent with section title */
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.token-box p, .token-box li {
-  color: #e0e0e0; /* readable text */
-  line-height: 1.6;
-}
-
-.token-box ul li {
-  margin-bottom: 0.6rem;
-}
-
-/* Hover glow effect */
-.token-box:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 50px rgba(0,255,193,0.35);
-}
-
-/* ================= HUMANITARIAN FLOW ================= */
-.humanitarian-flow {
-  background-color: #0a0a0a;
-  color: #e0e0e0;
-  padding: 5rem 0;
-}
-
-.humanitarian-flow .section-title {
-  color: #00ffc1;
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.humanitarian-flow .section-intro {
-  text-align: center;
-  color: #d0d0d0;
-  margin-bottom: 3rem;
-}
-
-.flow-list li {
-  margin-bottom: 1rem;
-  padding-left: 1.2rem;
-  position: relative;
-  color: #e0e0e0;
-}
-
-/* ================= DONATIONS & ASSETS ================= */
-.assets {
-  background-color: #0a0a0a;
-  color: #e0e0e0;
-  padding: 5rem 0;
-}
-
-.assets .section-title {
-  color: #00ffc1;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-/* ================= GENERAL READABILITY ================= */
-section p, section li {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #e0e0e0; /* consistent readable text */
-}
-
-section h2, section h3 {
-  text-shadow: 0 0 10px rgba(0,255,193,0.3);
-}
+.token-box,.flow-list li,.roadmap-list li,.social-links a { opacity:0; transform:translateY(20px); animation:fadeUp 0.8s ease forwards; }
+@keyframes fadeUp{to{opacity:1; transform:translateY(0);}}
