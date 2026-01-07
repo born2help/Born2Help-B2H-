@@ -260,3 +260,41 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
 @keyframes lineFadeUp {
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* Hero content bold */
+.hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 820px;
+  text-align: center;
+  font-weight: 700; /* Make text bold */
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  transform-style: preserve-3d; /* Needed for 3D transform */
+}
+
+/* Hero title stronger bold & slight glow */
+.hero-title {
+  font-weight: 900;
+  text-shadow: 0 2px 10px rgba(255, 160, 0, 0.6);
+}
+
+/* Hero subtitle & subtext glow */
+.hero-subtitle, .hero-subtext {
+  font-weight: 600;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Depth float animation */
+@keyframes depthFloat {
+  0% { transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg); }
+  25% { transform: translate3d(2px, -2px, 1px) rotateX(1deg) rotateY(-1deg); }
+  50% { transform: translate3d(-2px, 2px, -1px) rotateX(-1deg) rotateY(1deg); }
+  75% { transform: translate3d(1px, -1px, 1px) rotateX(0.5deg) rotateY(-0.5deg); }
+  100% { transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg); }
+}
+
+/* Apply depth float to hero content */
+.hero-content.depth-float {
+  animation: depthFloat 6s ease-in-out infinite;
+}
