@@ -1303,3 +1303,77 @@ footer.footer a:hover {
     flex-direction: column;
   }
 }
+
+/* ================= TOKENOMICS PARTICLES ================= */
+.tokenomics-particles {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.tokenomics-particles span {
+  position: absolute;
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: rgba(0, 255, 153, 0.3);
+  border-radius: 50%;
+  animation: float 12s infinite;
+}
+
+.tokenomics-particles span:nth-child(1){ left: 10%; animation-delay: 0s; }
+.tokenomics-particles span:nth-child(2){ left: 20%; animation-delay: 2s; }
+.tokenomics-particles span:nth-child(3){ left: 30%; animation-delay: 4s; }
+.tokenomics-particles span:nth-child(4){ left: 40%; animation-delay: 6s; }
+.tokenomics-particles span:nth-child(5){ left: 50%; animation-delay: 8s; }
+.tokenomics-particles span:nth-child(6){ left: 60%; animation-delay: 1s; }
+.tokenomics-particles span:nth-child(7){ left: 70%; animation-delay: 3s; }
+.tokenomics-particles span:nth-child(8){ left: 80%; animation-delay: 5s; }
+.tokenomics-particles span:nth-child(9){ left: 90%; animation-delay: 7s; }
+.tokenomics-particles span:nth-child(10){ left: 95%; animation-delay: 9s; }
+
+@keyframes float {
+  0% { transform: translateY(0px) scale(1); opacity: 0.3; }
+  50% { transform: translateY(-20px) scale(1.2); opacity: 0.6; }
+  100% { transform: translateY(0px) scale(1); opacity: 0.3; }
+}
+
+/* ================= TOKENOMICS BOX MODERN GRADIENT ================= */
+.token-box {
+  position: relative;
+  background: linear-gradient(135deg, rgba(0,255,153,0.25), rgba(0,255,153,0.05));
+  border: 1px solid rgba(0,255,153,0.35);
+  box-shadow: 0 0 25px rgba(0,255,153,0.15);
+  border-radius: 15px;
+  padding: 2rem;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  z-index: 1; /* ensure above particles */
+}
+
+.token-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 50px rgba(0,255,153,0.35);
+}
+
+/* ================= SCROLL FADE-IN ================= */
+.token-box, .section-title, .section-intro, .flow-list li, .roadmap-list li {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.token-box.active, .section-title.active, .section-intro.active,
+.flow-list li.active, .roadmap-list li.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .token-box { padding: 1.5rem; }
+  .tokenomics-grid { gap: 1.2rem; }
+}
