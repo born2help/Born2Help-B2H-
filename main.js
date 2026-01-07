@@ -118,3 +118,17 @@ document.querySelectorAll('.particles span').forEach(p => {
   p.style.left = Math.random() * window.innerWidth + 'px';
   p.style.bottom = (-Math.random() * 200) + 'px';
 });
+
+// ===== MOUSE PARALLAX EFFECT =====
+const hero = document.querySelector('.hero');
+const layers = document.querySelectorAll('.parallax-layer');
+
+hero.addEventListener('mousemove', e => {
+  const x = (window.innerWidth / 2 - e.clientX) / 30;
+  const y = (window.innerHeight / 2 - e.clientY) / 30;
+
+  layers.forEach(layer => {
+    const depth = layer.classList.contains('depth-front') ? 1 : 0.5;
+    layer.style.transform = `translate(${x * depth}px, ${y * depth}px)`;
+  });
+});
