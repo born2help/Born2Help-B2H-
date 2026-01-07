@@ -119,13 +119,20 @@ body {
 }
 
 .burn-logo {
-  position: absolute;
-  top: 100px;
-  right: 80px;
-  width: 300px;
-  max-width: 30vw;
-  z-index: 4;
-  animation: burnRotate 14s linear infinite;
+  width: 300px; /* 4–5x bigger */
+  top: 1.5in;
+  right: 1.5in;
+  position: fixed;
+  z-index: 999;
+  opacity: 0.95;
+}
+
+@media (max-width: 768px) {
+  .burn-logo {
+    width: 160px;
+    top: 1in;
+    right: 1in;
+  }
 }
 
 @keyframes burnRotate {
