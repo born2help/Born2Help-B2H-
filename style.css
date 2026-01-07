@@ -1081,3 +1081,44 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
   transform: scale(1.1);
   box-shadow: 0 0 20px rgba(255,255,255,0.8);
 }
+
+/* ================= ULTRA SMALL HERO BLOCKS ================= */
+.hero-blocks {
+  position: absolute;
+  bottom: 35px;
+  left: 6px;              /* more left – safe from logo */
+  display: flex;
+  flex-direction: column;
+  gap: 8px;               /* tighter spacing */
+  z-index: 4;
+}
+
+.hero-block {
+  width: 70px;            /* VERY small */
+  height: 22px;           /* slim oval */
+  border-radius: 30px;    /* perfect oval */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 0.6rem;      /* small but readable */
+  letter-spacing: 0.4px;
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(0,0,0,0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Colors */
+.hero-block.donate { background: #1e90ff; }      
+.hero-block.tokenomics { background: #ff3b30; } 
+.hero-block.mission { background: #2ecc71; }    
+.hero-block.governance { background: #f1c40f; color:#111; } 
+.hero-block.contact { background: #000000; }
+
+/* Hover */
+.hero-block:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 12px rgba(255,255,255,0.6);
+}
