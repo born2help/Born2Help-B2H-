@@ -72,3 +72,61 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
   .founder-content { flex-direction: column; }
   .founder-text { text-align: center; }
 }
+
+/* ===== HERO MAIN LOGO ===== */
+.main-logo-hero {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  width: 140px;
+  z-index: 5;
+}
+
+/* ===== HERO TEXT SLIDE ANIMATION ===== */
+.slide-in {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: heroSlide 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes heroSlide {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== BUTTON PROFESSIONAL GLOW ===== */
+.btn.glow {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn.glow::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50px;
+  box-shadow: 0 0 15px rgba(255,140,0,0.6), 0 0 30px rgba(255,140,0,0.4), 0 0 45px rgba(255,140,0,0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.btn.glow:hover::after {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* ===== MOUSE FOLLOWING PARTICLES ===== */
+.particles span {
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  pointer-events: none;
+  animation: floatUp 12s linear infinite;
+}
+
+.hero {
+  cursor: none; /* optional: hide default cursor */
+}
