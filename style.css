@@ -107,3 +107,10 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
 .depth-mid { transform: translateZ(0); }
 .depth-front { transform: translateZ(60px); }
 .depth-logo { transform: translateZ(100px); }
+
+@media (max-width: 768px) {
+  .parallax-layer {
+    transform: none !important;
+    transition: none;
+  }
+}
