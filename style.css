@@ -127,3 +127,21 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
 .scroll-text {
   transform: translateY(var(--scroll-text, 0));
 }
+
+/* ===== HERO LIGHT RAYS ===== */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: -40%;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(0,255,200,0.15), transparent 60%),
+    radial-gradient(circle at 70% 60%, rgba(0,180,255,0.12), transparent 60%);
+  animation: lightMove 12s linear infinite;
+  z-index: 0;
+}
+
+@keyframes lightMove {
+  0% { transform: translate(0,0); }
+  50% { transform: translate(-80px, -60px); }
+  100% { transform: translate(0,0); }
+}
