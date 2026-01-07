@@ -95,3 +95,15 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
   transition: transform 0.15s linear;
   mix-blend-mode: screen;
 }
+
+/* ================= 3D PARALLAX LAYERS ================= */
+.parallax-layer {
+  transform-style: preserve-3d;
+  transition: transform 0.12s ease-out;
+}
+
+/* Depth levels */
+.depth-bg { transform: translateZ(-80px) scale(1.15); }
+.depth-mid { transform: translateZ(0); }
+.depth-front { transform: translateZ(60px); }
+.depth-logo { transform: translateZ(100px); }
