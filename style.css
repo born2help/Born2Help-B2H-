@@ -1377,3 +1377,118 @@ footer.footer a:hover {
   .token-box { padding: 1.5rem; }
   .tokenomics-grid { gap: 1.2rem; }
 }
+
+/* ================= TOKENOMICS SECTION ================= */
+.tokenomics {
+  position: relative;
+  padding: 6rem 0 4rem;
+  background-color: #0a0a0a; /* dark background like rest of page */
+  color: #e0e0e0; /* neutral readable text */
+  overflow: hidden;
+}
+
+.tokenomics .section-title {
+  color: #00ffc1; /* subtle bright color for headings */
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(0,255,193,0.5);
+  margin-bottom: 1rem;
+}
+
+.tokenomics .section-intro {
+  color: #d0d0d0; /* lighter gray for readability */
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* ================= TOKEN BOXES ================= */
+.tokenomics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  z-index: 1;
+  position: relative;
+}
+
+.token-box {
+  background: linear-gradient(135deg, rgba(0,255,193,0.15), rgba(0,255,193,0.05));
+  border-radius: 15px;
+  padding: 2rem;
+  border: 1px solid rgba(0,255,193,0.25);
+  box-shadow: 0 0 25px rgba(0,255,193,0.15);
+  transition: all 0.5s ease;
+  color: #ffffff; /* make text readable */
+}
+
+.token-box h3 {
+  color: #00ffc1; /* headings consistent with section title */
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.token-box p, .token-box li {
+  color: #e0e0e0; /* readable text */
+  line-height: 1.6;
+}
+
+.token-box ul li {
+  margin-bottom: 0.6rem;
+}
+
+/* Hover glow effect */
+.token-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0,255,193,0.35);
+}
+
+/* ================= HUMANITARIAN FLOW ================= */
+.humanitarian-flow {
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+  padding: 5rem 0;
+}
+
+.humanitarian-flow .section-title {
+  color: #00ffc1;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.humanitarian-flow .section-intro {
+  text-align: center;
+  color: #d0d0d0;
+  margin-bottom: 3rem;
+}
+
+.flow-list li {
+  margin-bottom: 1rem;
+  padding-left: 1.2rem;
+  position: relative;
+  color: #e0e0e0;
+}
+
+/* ================= DONATIONS & ASSETS ================= */
+.assets {
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+  padding: 5rem 0;
+}
+
+.assets .section-title {
+  color: #00ffc1;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* ================= GENERAL READABILITY ================= */
+section p, section li {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e0e0e0; /* consistent readable text */
+}
+
+section h2, section h3 {
+  text-shadow: 0 0 10px rgba(0,255,193,0.3);
+}
