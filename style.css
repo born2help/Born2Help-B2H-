@@ -114,3 +114,16 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
     transition: none;
   }
 }
+
+/* ===== SCROLL PARALLAX ===== */
+.hero {
+  will-change: transform;
+}
+
+.scroll-bg {
+  transform: translateY(var(--scroll-bg, 0));
+}
+
+.scroll-text {
+  transform: translateY(var(--scroll-text, 0));
+}
