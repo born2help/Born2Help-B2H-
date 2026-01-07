@@ -195,3 +195,8 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
   opacity: 0.8;
   animation-duration: 9s;
 }
+
+/* ===== MOUSE PARALLAX ===== */
+.parallax-layer {
+  transition: transform 0.1s linear;
+}
