@@ -143,3 +143,29 @@ function createCardGlows(sectionClass, numGlows = 8) {
 createCardGlows('.governance-section', 10);
 createCardGlows('.constitution-section', 10);
 createCardGlows('.trustee-section', 10);
+
+/* ================= TOKENOMICS PARTICLE PARALLAX ================= */
+const tokenParticles = document.querySelectorAll('.tokenomics-particles span');
+document.addEventListener('mousemove', e => {
+  const x = (e.clientX / window.innerWidth) - 0.5;
+  const y = (e.clientY / window.innerHeight) - 0.5;
+  tokenParticles.forEach((particle, index) => {
+    const speed = (index + 1) * 5;
+    particle.style.transform = `translate(${x*speed}px, ${y*speed - 20}px)`;
+  });
+});
+
+/* ================= FADE-IN ON SCROLL ================= */
+const fadeElements = document.querySelectorAll('.token-box, .section-title, .section-intro, .flow-list li, .roadmap-list li');
+
+const fadeOnScroll = () => {
+  const triggerBottom = window.innerHeight / 5 * 4;
+  fadeElements.forEach(el => {
+    const elTop = el.getBoundingClientRect().top;
+    if(elTop < triggerBottom) el.classList.add('active');
+    else el.classList.remove('active');
+  });
+};
+
+window.addEventListener('scroll', fadeOnScroll);
+fadeOnScroll();
