@@ -1415,3 +1415,98 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
     grid-column: span 1;
   }
 }
+
+/* =====================================================
+   TOKENOMICS – PREMIUM BALANCED (SAFE REDESIGN)
+   ===================================================== */
+
+.tokenomics {
+  background: linear-gradient(
+    180deg,
+    #0b1f1a 0%,
+    #0e2a24 50%,
+    #0b0f14 100%
+  );
+  padding: 100px 0;
+  position: relative;
+}
+
+.tokenomics .section-title {
+  color: #e8f5f0;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+
+.tokenomics .section-intro {
+  color: #b7cfc6;
+  max-width: 720px;
+  margin: 0 auto 60px auto;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* GRID */
+.tokenomics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+}
+
+/* CARD STYLE */
+.tokenomics .token-box {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(120, 200, 180, 0.18);
+  border-radius: 18px;
+  padding: 28px 26px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tokenomics .token-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.5);
+}
+
+/* CARD HEADINGS */
+.tokenomics .token-box h3 {
+  color: #e4fbf3;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* HIGHLIGHT TEXT (NUMBERS) */
+.tokenomics .token-box .highlight {
+  color: #7ff0c8;
+  font-size: 17px;
+  margin-bottom: 12px;
+}
+
+/* BODY TEXT */
+.tokenomics .token-box p,
+.tokenomics .token-box li {
+  color: #c8d9d3;
+  font-size: 14.5px;
+  line-height: 1.7;
+}
+
+/* LIST INSIDE CARD */
+.tokenomics .token-box ul {
+  padding-left: 18px;
+  margin: 10px 0 0 0;
+}
+
+.tokenomics .token-box li {
+  margin-bottom: 8px;
+}
+
+/* REMOVE EXCESS GLOW FROM OLD CLASSES */
+.tokenomics .green-glow {
+  text-shadow: none;
+}
+
+.tokenomics .glow-card {
+  box-shadow: none;
+}
