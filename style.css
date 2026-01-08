@@ -1161,3 +1161,73 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
   line-height: 1.6;
   color: #e5e7eb;
 }
+
+/* ================= HERO BLOCK MENU – FINAL OVERRIDE ================= */
+
+.hero {
+  position: relative;
+}
+
+/* Container */
+.hero .hero-blocks {
+  position: absolute !important;
+  left: 32px !important;      /* away from wall */
+  bottom: 32px !important;    /* above bottom */
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 12px !important;
+  z-index: 30 !important;
+}
+
+/* ALL blocks – force SAME SIZE */
+.hero .hero-blocks .hero-block {
+  all: unset;                /* 🔴 clears all inherited junk */
+  width: 130px !important;
+  height: 34px !important;
+  border-radius: 999px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.3px;
+
+  color: #ffffff !important;
+  cursor: pointer;
+
+  box-shadow: 0 6px 14px rgba(0,0,0,0.28);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover */
+.hero .hero-blocks .hero-block:hover {
+  transform: translateX(6px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+}
+
+/* ================= COLORS ================= */
+
+.hero-block.donate {
+  background: linear-gradient(135deg, #1e90ff, #00bfff);
+}
+
+.hero-block.tokenomics {
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+}
+
+.hero-block.mission {
+  background: linear-gradient(135deg, #f1c40f, #f39c12);
+  color: #000 !important;
+}
+
+.hero-block.governance {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+.hero-block.contact {
+  background: linear-gradient(135deg, #111, #000);
+}
