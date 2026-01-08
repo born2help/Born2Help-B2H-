@@ -1510,3 +1510,58 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
 .tokenomics .glow-card {
   box-shadow: none;
 }
+
+/* =====================================================
+   TOKENOMICS – STRUCTURED LAYOUT IMPROVEMENT
+   ===================================================== */
+
+/* Center the whole grid */
+.tokenomics-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "left center right"
+    "left center right";
+  gap: 32px;
+  align-items: stretch;
+}
+
+/* Default card */
+.tokenomics .token-box {
+  text-align: left;
+}
+
+/* CENTER FEATURE CARD */
+.tokenomics .token-box:nth-child(1) {
+  grid-area: center;
+  transform: scale(1.05);
+  background: rgba(120, 200, 180, 0.08);
+  border: 1px solid rgba(120, 240, 210, 0.35);
+}
+
+/* LEFT SUPPORT CARD */
+.tokenomics .token-box:nth-child(2) {
+  grid-area: left;
+}
+
+/* RIGHT SUPPORT CARD */
+.tokenomics .token-box:nth-child(3) {
+  grid-area: right;
+}
+
+/* Mobile fallback */
+@media (max-width: 900px) {
+  .tokenomics-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "center"
+      "left"
+      "right";
+  }
+
+  .tokenomics .token-box:nth-child(1) {
+    transform: none;
+  }
+}
