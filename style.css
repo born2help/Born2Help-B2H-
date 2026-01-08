@@ -1345,59 +1345,73 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
   border: 3px solid #00ffd5;
 }
 
+/* ================= TOKENOMICS SECTION ================= */
+
 .tokenomics-section {
-  background-color: #1c1f29; /* dark calm background */
-  color: #dbe2ef; /* soft light text */
-  padding: 80px 20px;
-  font-family: 'Inter', sans-serif;
+  background: linear-gradient(180deg, #0b1f2a, #07141c);
+  padding: 90px 20px;
+}
+
+.tokenomics-section .container {
+  max-width: 1200px;
+  margin: auto;
 }
 
 .tokenomics-section .section-title {
-  font-size: 2.8rem;
-  color: #5bc0be; /* muted turquoise */
   text-align: center;
-  margin-bottom: 20px;
+  font-size: 2.6rem;
+  color: #e6faff;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
 }
 
-.tokenomics-section .section-desc {
-  font-size: 1.1rem;
+.tokenomics-section .section-intro {
   text-align: center;
-  color: #cfd8dc;
-  margin-bottom: 50px;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 760px;
+  margin: 0 auto 60px;
+  color: #b9dbe6;
+  font-size: 1.05rem;
+  line-height: 1.7;
 }
 
-.tokenomics-section .token-stats {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
+.tokenomics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
 }
 
-.tokenomics-section .stat-card {
-  background-color: #262b3c;
-  border-radius: 12px;
-  padding: 30px 20px;
-  width: 250px;
-  text-align: center;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+.token-card {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 18px;
+  padding: 28px 26px;
+  border: 1px solid rgba(0, 255, 180, 0.15);
+  backdrop-filter: blur(6px);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.tokenomics-section .stat-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+.token-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0, 255, 180, 0.15);
 }
 
-.tokenomics-section .stat-card h3 {
-  color: #5bc0be;
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+.token-card h3 {
+  color: #7fffd4;
+  font-size: 1.2rem;
+  margin-bottom: 12px;
 }
 
-.tokenomics-section .stat-card p {
-  color: #cfd8dc;
-  font-size: 1rem;
+.token-card p {
+  color: #e0f2f7;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.token-card.wide {
+  grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+  .token-card.wide {
+    grid-column: span 1;
+  }
 }
