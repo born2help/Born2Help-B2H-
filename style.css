@@ -1598,3 +1598,84 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
   font-size: 0.85rem;
   color: #cbd5f5;
 }
+
+/* ================= TRANSPARENCY PAGE ================= */
+
+.dark-page {
+  background: #020617;
+  color: #e5e7eb;
+}
+
+.transparency-hero {
+  padding: 100px 20px 70px;
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+}
+
+.transparency-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 18px;
+  color: #00f0b5;
+}
+
+.transparency-hero p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #cbd5f5;
+}
+
+.transparency-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 55px 20px;
+}
+
+.transparency-section.soft {
+  background: rgba(255,255,255,0.03);
+  border-radius: 18px;
+}
+
+.transparency-section h3 {
+  font-size: 1.6rem;
+  margin-bottom: 18px;
+  color: #38bdf8;
+}
+
+.transparency-section p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #d1d5db;
+}
+
+.transparency-section ul {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+.transparency-section li {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.back-home {
+  text-align: center;
+  margin: 70px 0;
+}
+
+.back-home a {
+  color: #00f0b5;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.back-home a:hover {
+  text-decoration: underline;
+}
+
+.simple-footer {
+  text-align: center;
+  padding: 25px;
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
