@@ -1795,3 +1795,118 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
   transform: scale(1.2);
   filter: brightness(2.2) drop-shadow(0 0 8px rgba(0,255,204,0.8));
 }
+
+/* ================= GOVERNANCE SECTION ================= */
+.governance-section {
+  background: linear-gradient(135deg, #0b1220, #0f1f2f);
+  color: #e5f3ef;
+}
+
+.governance-intro {
+  max-width: 900px;
+  margin: 0 auto 60px;
+  font-size: 1.15rem;
+  color: #cbd5e1;
+  line-height: 1.7;
+}
+
+/* ===== BLOCKS ===== */
+.governance-block {
+  margin-bottom: 70px;
+}
+
+.governance-block h3 {
+  font-size: 1.9rem;
+  color: #22c55e;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* ===== CONSTITUTION LIST ===== */
+.constitution-list {
+  list-style: none;
+  padding: 0;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.constitution-list li {
+  background: rgba(34,197,94,0.08);
+  border-left: 4px solid #22c55e;
+  padding: 16px 20px;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  color: #d1fae5;
+}
+
+/* ===== GOVERNANCE FLOW ===== */
+.governance-flow {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.governance-node {
+  background: #111827;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.governance-node h4 {
+  color: #22c55e;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.governance-node p {
+  color: #cbd5e1;
+  font-size: 1rem;
+}
+
+.governance-arrow {
+  font-size: 28px;
+  color: #22c55e;
+  margin: 18px 0;
+}
+
+/* ===== TRUSTEE CARDS ===== */
+.board-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 35px;
+}
+
+.board-card {
+  background: #0f172a;
+  border-radius: 18px;
+  padding: 28px 22px;
+  max-width: 260px;
+  text-align: center;
+  transition: all 0.35s ease;
+  box-shadow: 0 10px 25px rgba(34,197,94,0.25);
+}
+
+.board-card img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 3px solid #22c55e;
+  margin-bottom: 15px;
+}
+
+.board-card h4 {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.board-card p {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+}
+
+.board-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 35px rgba(34,197,94,0.45);
+}
