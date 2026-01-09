@@ -1440,3 +1440,93 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
   z-index: 1;
   margin-top: 120px;
 }
+
+/* ================= DONATIONS & REAL ASSETS (MODERN) ================= */
+
+.assets-section {
+  position: relative;
+  padding: 110px 20px;
+  background: linear-gradient(180deg, #0c1f26, #0f2a33);
+  color: #dbeef3;
+  text-align: center;
+}
+
+.assets-header h2 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: #e8fffb;
+  letter-spacing: 1px;
+}
+
+.assets-underline {
+  width: 110px;
+  height: 4px;
+  margin: 16px auto 26px;
+  background: linear-gradient(90deg, #00e6c3, #00bfa6);
+  border-radius: 3px;
+}
+
+.assets-intro {
+  max-width: 760px;
+  margin: 0 auto 70px;
+  font-size: 1.15rem;
+  color: #b9dcd6;
+  line-height: 1.7;
+}
+
+/* Asset cards grid */
+.assets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto 60px;
+}
+
+.asset-card {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  border-radius: 22px;
+  padding: 32px 26px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.asset-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.5);
+}
+
+.asset-card h3 {
+  font-size: 1.35rem;
+  color: #eafffb;
+  margin-bottom: 14px;
+  font-weight: 700;
+}
+
+.asset-card p {
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: #c7e3de;
+}
+
+/* Highlight card (Sadaqah Jariyah) */
+.asset-card.highlight {
+  border: 1px solid rgba(0, 255, 200, 0.35);
+  box-shadow: 0 0 25px rgba(0, 255, 200, 0.25);
+}
+
+.assets-footer-text {
+  max-width: 780px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  color: #b0d8d1;
+  line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .assets-header h2 {
+    font-size: 2.2rem;
+  }
+}
