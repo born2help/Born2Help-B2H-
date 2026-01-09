@@ -457,285 +457,6 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
   line-height: 1.6;
 }
 
-/* ================= GOVERNANCE, CONSTITUTION & TRUSTEE ================= */
-.governance-section, .constitution-section, .trustee-section {
-  padding: 80px 20px;
-  background: #0f1f2f; /* dark modern gradient background can be added */
-  color: #e0e7ff;
-  text-align: center;
-  position: relative;
-}
-
-.governance-section h2,
-.constitution-section h2,
-.trustee-section h2 {
-  font-size: 2.8rem;
-  color: #22c55e; /* highlight green */
-  margin-bottom: 30px;
-  text-shadow: 0 0 10px rgba(34,197,94,0.7);
-}
-
-.governance-intro,
-.constitution-intro {
-  font-size: 1.2rem;
-  max-width: 900px;
-  margin: 0 auto 50px;
-  line-height: 1.6;
-  color: #cbd5e1;
-}
-
-/* ===== Board Members / Trustees ===== */
-.board-members, .trustee-members {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-  margin-bottom: 50px;
-}
-
-.board-card, .trustee-card {
-  background: #1a2a3f;
-  border-radius: 15px;
-  overflow: hidden;
-  max-width: 260px;
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
-  box-shadow: 0 0 20px rgba(34,197,94,0.4);
-}
-
-.board-card:hover, .trustee-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 30px rgba(34,197,94,0.7);
-}
-
-.board-card img, .trustee-card img {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-  border-bottom: 4px solid #22c55e;
-  border-radius: 0;
-  transition: all 0.3s ease;
-}
-
-.board-card:hover img, .trustee-card:hover img {
-  transform: scale(1.05);
-}
-
-.board-card h4, .trustee-card h4 {
-  font-size: 1.2rem;
-  margin: 15px 0 8px;
-  color: #fff;
-}
-
-.board-card p, .trustee-card p {
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: #cbd5e1;
-  padding: 0 15px 20px;
-}
-
-/* ===== Governance / Constitution Cards ===== */
-.governance-grid, .constitution-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin-bottom: 50px;
-}
-
-.governance-card, .constitution-card {
-  background: #1a2a3f;
-  border-radius: 15px;
-  padding: 25px;
-  flex: 1 1 220px;
-  max-width: 250px;
-  text-align: center;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 15px rgba(34,197,94,0.3);
-}
-
-.governance-card:hover, .constitution-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 25px rgba(34,197,94,0.6);
-}
-
-.gov-icon, .const-icon {
-  font-size: 2rem;
-  margin-bottom: 15px;
-  color: #22c55e;
-}
-
-/* ===== Governance Actions / Download / Inquiry ===== */
-.governance-actions {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.governance-btn {
-  background: #22c55e;
-  color: #fff;
-  padding: 14px 30px;
-  border-radius: 50px;
-  font-weight: 600;
-  text-decoration: none;
-  box-shadow: 0 0 18px rgba(34,197,94,0.5);
-  transition: all 0.3s ease;
-}
-
-.governance-btn:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 30px rgba(34,197,94,0.8);
-}
-
-.governance-btn.outline {
-  background: transparent;
-  color: #22c55e;
-  border: 2px solid #22c55e;
-}
-
-.governance-btn.outline:hover {
-  background: #22c55e;
-  color: #fff;
-}
-
-/* ===== Responsive ===== */
-@media (max-width: 1024px) {
-  .board-members, .trustee-members, .governance-grid, .constitution-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-@media (max-width: 768px) {
-  .governance-section, .constitution-section, .trustee-section {
-    padding: 60px 15px;
-  }
-
-  .governance-section h2, .constitution-section h2, .trustee-section h2 {
-    font-size: 2.2rem;
-  }
-
-  .board-card img, .trustee-card img {
-    height: 220px;
-  }
-}
-
-/* ================= CARD FLOATING GLOW ================= */
-.card-glow {
-  position: absolute;
-  border-radius: 50%;
-  background: rgba(34,197,94,0.25); /* greenish glow */
-  pointer-events: none;
-  filter: blur(12px);
-  animation: floatCardGlow linear infinite;
-  z-index: 0;
-}
-
-@keyframes floatCardGlow {
-  0% { transform: translate(0, 0) scale(1); opacity: 0.4; }
-  50% { transform: translate(20px, -30px) scale(1.2); opacity: 0.7; }
-  100% { transform: translate(0, 0) scale(1); opacity: 0.4; }
-}
-
-/* Ensure cards are above glow */
-.board-card, .trustee-card, .governance-card, .constitution-card {
-  position: relative;
-  z-index: 1;
-}
-
-/* ================= SECTION HEADINGS ================= */
-.section h2 {
-  font-size: 2.6rem;
-  font-weight: 800;
-  color: #22c55e; /* fresh green */
-  margin-bottom: 20px;
-  text-align: center;
-  position: relative;
-}
-
-.section h2::after {
-  content: '';
-  display: block;
-  width: 80px;
-  height: 4px;
-  background: linear-gradient(90deg, #22c55e, #0fffc3);
-  margin: 10px auto 0;
-  border-radius: 2px;
-}
-
-/* ================= SECTION PARAGRAPHS ================= */
-.section p, .section ul li {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: #cbd5e1; /* soft gray-white for readability */
-  max-width: 850px;
-  margin: 15px auto;
-  text-align: center;
-}
-
-/* ================= TRUSTEE CARDS ================= */
-.trustee-section .trustee-card,
-.board-members .board-card {
-  background: #111827; /* dark card background */
-  border-radius: 16px;
-  padding: 25px 20px;
-  margin: 15px;
-  text-align: center;
-  box-shadow: 0 8px 20px rgba(0, 255, 150, 0.15);
-  transition: all 0.4s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.board-card img, .trustee-card img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 3px solid #22c55e;
-  margin-bottom: 15px;
-  transition: all 0.3s ease;
-}
-
-.board-card:hover img, .trustee-card:hover img {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(34,197,94,0.7);
-}
-
-.board-card:hover, .trustee-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(34,197,94,0.4);
-}
-
-/* ================= GOVERNANCE & CONSTITUTION CARDS ================= */
-.governance-card, .constitution-card {
-  background: #0f172a;
-  border-radius: 16px;
-  padding: 22px 18px;
-  text-align: center;
-  margin: 15px;
-  transition: all 0.3s ease;
-  box-shadow: 0 6px 18px rgba(34,197,94,0.15);
-  position: relative;
-}
-
-.governance-card:hover, .constitution-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(34,197,94,0.35);
-}
-
-.governance-card h3, .constitution-card h3 {
-  font-size: 1.5rem;
-  color: #22c55e;
-  margin-bottom: 12px;
-  font-weight: 700;
-}
-
-.governance-card p, .constitution-card p {
-  font-size: 1rem;
-  color: #cbd5e1;
-}
-
 /* ================= HERO SECTION ================= */
 .hero {
   position: relative;
@@ -964,189 +685,6 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
   font-size: 0.95rem;
   line-height: 1.6;
   color: #e5e7eb;
-}
-
-/* ================= HERO BLOCK MENU – FINAL OVERRIDE ================= */
-
-.hero {
-  position: relative;
-}
-
-/* Container */
-.hero .hero-blocks {
-  position: absolute !important;
-  left: 32px !important;      /* away from wall */
-  bottom: 32px !important;    /* above bottom */
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  gap: 12px !important;
-  z-index: 30 !important;
-}
-
-/* ALL blocks – force SAME SIZE */
-.hero .hero-blocks .hero-block {
-  all: unset;                /* 🔴 clears all inherited junk */
-  width: 130px !important;
-  height: 34px !important;
-  border-radius: 999px !important;
-
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px !important;
-  font-weight: 600 !important;
-  letter-spacing: 0.3px;
-
-  color: #ffffff !important;
-  cursor: pointer;
-
-  box-shadow: 0 6px 14px rgba(0,0,0,0.28);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-/* Hover */
-.hero .hero-blocks .hero-block:hover {
-  transform: translateX(6px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.35);
-}
-
-/* ================= COLORS ================= */
-
-.hero-block.donate {
-  background: linear-gradient(135deg, #1e90ff, #00bfff);
-}
-
-.hero-block.tokenomics {
-  background: linear-gradient(135deg, #2ecc71, #27ae60);
-}
-
-.hero-block.mission {
-  background: linear-gradient(135deg, #f1c40f, #f39c12);
-  color: #000 !important;
-}
-
-.hero-block.governance {
-  background: linear-gradient(135deg, #e74c3c, #c0392b);
-}
-
-.hero-block.contact {
-  background: linear-gradient(135deg, #111, #000);
-}
-
-.governance-section {
-  padding: 100px 20px;
-  background: linear-gradient(135deg, #0f2027, #1f3a43, #255468); /* darker turquoise-blue gradient */
-  color: #d0f0e6; /* soft turquoise text */
-  text-align: center;
-}
-
-.governance-section h2 {
-  font-size: 2.8rem;
-  font-weight: 800;
-  color: #00ffd5; /* soft bright turquoise */
-  margin-bottom: 25px;
-  text-shadow: 0 0 15px rgba(0, 255, 213, 0.4);
-}
-
-.governance-intro {
-  max-width: 800px;
-  margin: 0 auto 50px;
-  font-size: 1.2rem;
-  color: #b0f2e6; /* softer cyan */
-  line-height: 1.8;
-}
-
-/* Constitution List Modern Look */
-.constitution-list {
-  list-style: none;
-  padding-left: 0;
-  max-width: 750px;
-  margin: 0 auto 50px;
-  text-align: left;
-}
-
-.constitution-list li {
-  margin: 15px 0;
-  font-size: 1.05rem;
-  position: relative;
-  padding-left: 30px;
-  color: #e0f7fa;
-  line-height: 1.7;
-}
-
-.constitution-list li::before {
-  content: "✔"; /* modern check mark instead of bullet */
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #00ffd5; 
-  font-size: 1.2rem;
-}
-
-/* Governance Flow Boxes */
-.governance-flow {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 25px;
-  margin-top: 50px;
-}
-
-.governance-node {
-  background: rgba(0, 255, 213, 0.08);
-  border: 1px solid rgba(0, 255, 213, 0.25);
-  border-radius: 20px;
-  padding: 25px 20px;
-  max-width: 400px;
-  box-shadow: 0 0 20px rgba(0, 255, 213, 0.2);
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.governance-node:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 35px rgba(0, 255, 213, 0.4), 0 0 50px rgba(0, 255, 213, 0.2) inset;
-}
-
-.governance-arrow {
-  font-size: 2rem;
-  color: #00ffd5;
-  margin: 0;
-}
-
-/* Board Cards */
-.board-members {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.board-card {
-  background: rgba(0, 255, 204, 0.08);
-  border-radius: 20px;
-  padding: 20px;
-  width: 250px;
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.board-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 35px rgba(0, 255, 204, 0.4), 0 0 50px rgba(0, 255, 204, 0.2) inset;
-}
-
-.board-card img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  margin-bottom: 15px;
-  object-fit: cover;
-  border: 3px solid #00ffd5;
 }
 
 /* Tokenomics Section */
@@ -1791,122 +1329,148 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
+/* ===== GLOWING LINES & NODES ===== */
+.governance-flow-container {
+  position: relative;
+  padding: 40px 0;
+}
+
+.glow-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(to bottom, #22c55e, #0fffc3, #22c55e);
+  border-radius: 3px;
+  filter: blur(6px);
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.governance-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.glow-node {
+  background: #1a2a3f;
+  border-radius: 18px;
+  padding: 25px 20px;
+  max-width: 320px;
+  box-shadow: 0 0 25px rgba(34,197,94,0.3);
+  transition: all 0.3s ease;
+}
+
+.glow-node:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 35px rgba(34,197,94,0.5), 0 0 50px rgba(0,255,195,0.2) inset;
+}
+
+.glow-arrow {
+  font-size: 32px;
+  color: #22c55e;
+  text-shadow: 0 0 15px rgba(0,255,195,0.7);
+  animation: arrowPulse 1.5s infinite;
+}
+
+@keyframes arrowPulse {
+  0%, 100% { transform: translateY(0); opacity: 0.7; }
+  50% { transform: translateY(6px); opacity: 1; }
+}
+
+/* ===== BOARD / TRUSTEE CARDS GLOW ===== */
+.glow-card {
+  box-shadow: 0 10px 25px rgba(34,197,94,0.4);
+  transition: all 0.4s ease;
+}
+
+.glow-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(34,197,94,0.6), 0 0 25px rgba(0,255,195,0.3) inset;
+}
+
+/* FLOATING SOFT GLOWS */
+.card-glow {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(0,255,195,0.15);
+  pointer-events: none;
+  filter: blur(12px);
+  animation: floatCardGlow 12s ease-in-out infinite;
+  z-index: 0;
+}
+
+@keyframes floatCardGlow {
+  0% { transform: translate(0,0) scale(1); opacity: 0.4; }
+  50% { transform: translate(25px,-25px) scale(1.2); opacity: 0.7; }
+  100% { transform: translate(0,0) scale(1); opacity: 0.4; }
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .governance-flow-container { padding: 20px 0; }
+  .glow-line { left: 50%; width: 4px; }
+  .glow-node { max-width: 280px; }
+}
+
+@media (max-width: 768px) {
+  .glow-node { padding: 20px 15px; }
+  .board-card img { height: 140px; width: 140px; }
+}
+
+.governance-section {
+  background: linear-gradient(135deg, #0a1b2e, #0f2a45, #12385a);
+  position: relative;
+  overflow: hidden;
+}
+
+.governance-section::before,
+.governance-section::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.governance-section::before {
+  background: rgba(34,197,94,0.2);
+  top: 10%;
+  left: 5%;
+  animation: floatCardGlow 18s ease-in-out infinite;
+}
+
+.governance-section::after {
+  background: rgba(0,255,195,0.15);
+  bottom: 10%;
+  right: 10%;
+  animation: floatCardGlow 22s ease-in-out infinite;
+}
 .footer-social a:hover img {
   transform: scale(1.2);
   filter: brightness(2.2) drop-shadow(0 0 8px rgba(0,255,204,0.8));
 }
 
-/* ================= GOVERNANCE SECTION ================= */
-.governance-section {
-  background: linear-gradient(135deg, #0b1220, #0f1f2f);
-  color: #e5f3ef;
-}
-
-.governance-intro {
-  max-width: 900px;
-  margin: 0 auto 60px;
-  font-size: 1.15rem;
-  color: #cbd5e1;
-  line-height: 1.7;
-}
-
-/* ===== BLOCKS ===== */
-.governance-block {
-  margin-bottom: 70px;
-}
-
-.governance-block h3 {
-  font-size: 1.9rem;
-  color: #22c55e;
-  margin-bottom: 25px;
-  text-align: center;
-}
-
-/* ===== CONSTITUTION LIST ===== */
-.constitution-list {
-  list-style: none;
-  padding: 0;
-  max-width: 850px;
-  margin: 0 auto;
-}
-
-.constitution-list li {
-  background: rgba(34,197,94,0.08);
-  border-left: 4px solid #22c55e;
-  padding: 16px 20px;
-  margin-bottom: 14px;
-  border-radius: 10px;
-  color: #d1fae5;
-}
-
-/* ===== GOVERNANCE FLOW ===== */
-.governance-flow {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.governance-node {
-  background: #111827;
-  border-radius: 16px;
-  padding: 25px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-}
-
-.governance-node h4 {
-  color: #22c55e;
-  font-size: 1.3rem;
-  margin-bottom: 10px;
-}
-
-.governance-node p {
-  color: #cbd5e1;
-  font-size: 1rem;
-}
-
-.governance-arrow {
-  font-size: 28px;
-  color: #22c55e;
-  margin: 18px 0;
-}
-
-/* ===== TRUSTEE CARDS ===== */
-.board-members {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 35px;
-}
-
+.glow-node,
 .board-card {
-  background: #0f172a;
-  border-radius: 18px;
-  padding: 28px 22px;
-  max-width: 260px;
-  text-align: center;
-  transition: all 0.35s ease;
-  box-shadow: 0 10px 25px rgba(34,197,94,0.25);
+  position: relative;
+  z-index: 1;
 }
 
-.board-card img {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  border: 3px solid #22c55e;
-  margin-bottom: 15px;
+.transparency-link {
+  color: #0fffc3;
+  text-decoration: underline;
+  transition: color 0.3s;
 }
 
-.board-card h4 {
-  color: #ffffff;
-  font-size: 1.2rem;
-  margin-bottom: 8px;
-}
-
-.board-card p {
-  color: #cbd5e1;
-  font-size: 0.95rem;
-}
-
-.board-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 16px 35px rgba(34,197,94,0.45);
+.transparency-link:hover {
+  color: #22c55e;
 }
