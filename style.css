@@ -49,22 +49,27 @@ p, li {
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
 }
 
-/* Hero Particles */
-.hero .particles span {
+/* ===== HERO PARTICLES ===== */
+.particles {
   position: absolute;
-  display: block;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.particles span {
+  position: absolute;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.15);
-  width: 6px;
-  height: 6px;
-  animation: float 12s infinite ease-in-out;
+  background: rgba(255,255,255,0.4);
+  animation: floatParticle linear infinite;
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0); opacity: 0.3; }
-  50% { transform: translateY(-20px); opacity: 0.7; }
+@keyframes floatParticle {
+  0% { transform: translateY(0) scale(0.6); opacity: 0.2; }
+  50% { opacity: 0.7; }
+  100% { transform: translateY(-120px) scale(1.2); opacity: 0; }
 }
-
+  
 /* Burn Logo */
 .hero img.burn-logo {
   position: absolute;
