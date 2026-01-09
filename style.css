@@ -1533,3 +1533,54 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
     height: 120px;
   }
 }
+
+/* ================= GLOWING VERTICAL LINE ================= */
+.governance-flow-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.glow-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(180deg, #22c55e, #0fffc3, #22c55e);
+  border-radius: 3px;
+  z-index: 0;
+  animation: glowLineAnim 2s linear infinite alternate;
+  box-shadow: 0 0 25px rgba(34,197,94,0.5), 0 0 40px rgba(0,255,195,0.3) inset;
+}
+
+@keyframes glowLineAnim {
+  0% { background-position: 0 0; box-shadow: 0 0 20px rgba(34,197,94,0.4); }
+  50% { background-position: 0 50%; box-shadow: 0 0 35px rgba(34,197,94,0.7); }
+  100% { background-position: 0 100%; box-shadow: 0 0 20px rgba(34,197,94,0.4); }
+}
+
+/* Ensure nodes appear above the line */
+.governance-node {
+  position: relative;
+  z-index: 1;
+}
+
+/* Optional: small glowing circle on the line for each node */
+.governance-node::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -10px;
+  width: 14px;
+  height: 14px;
+  background: #22c55e;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(34,197,94,0.7);
+  z-index: 2;
+}
