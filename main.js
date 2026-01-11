@@ -10,6 +10,7 @@ bgParticles.forEach(p => {
   p.style.width = 4 + Math.random() * 6 + 'px';
   p.style.height = p.style.width;
   p.style.animationDuration = 8 + Math.random() * 6 + 's';
+  p.style.animationDelay = Math.random() * 5 + 's';
 });
 
 // Hero lines animation
