@@ -57,6 +57,19 @@
     </div>
   </section>
 
+  <script>
+  const heroNav = document.querySelector('.hero-nav');
+  const heroHeight = document.querySelector('.hero').offsetHeight;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > heroHeight - 80) { // when scrolled past hero
+      heroNav.classList.add('sticky');
+    } else {
+      heroNav.classList.remove('sticky');
+    }
+  });
+</script>
+
   <!-- ================= ABOUT B2H ================= -->
   <section class="section about-b2h">
     <h2>About B2H</h2>
