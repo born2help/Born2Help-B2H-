@@ -2043,15 +2043,20 @@ p, li {
 }
 
 /* ===============================
-   PARTICLES BACKGROUND LAYER
+   PARTICLES BACKGROUND FIX
 ================================ */
 
 #particles-js {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
-  background: #000;
+  z-index: 0;
+  background: radial-gradient(circle at top, #0a0a0a, #000000);
+}
+
+/* Ensure content stays above particles */
+body > *:not(#particles-js) {
+  position: relative;
+  z-index: 2;
 }
