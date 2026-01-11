@@ -22,23 +22,21 @@ document.querySelectorAll('.hero-content .line').forEach((line, index) => {
 const heroContent = document.querySelector('.hero-content');
 heroContent.classList.add('depth-float');
 
-// Optional: you can combine with mouse parallax for extra 3D feel
+// ================== HERO MOUSE PARALLAX ==================
 hero.addEventListener('mousemove', e => {
   const centerX = window.innerWidth / 2;
   const centerY = window.innerHeight / 2;
   const moveX = (e.clientX - centerX) / centerX;
   const moveY = (e.clientY - centerY) / centerY;
 
-  // Parallax for layers
   parallaxLayers.forEach(layer => {
-    const depth = parseFloat(layer.className.match(/depth-(\w+)/)[1] || 1);
-    let multiplier = 0;
+    const depth = layer.className.match(/depth-(\w+)/)[1] || '1';
+    let multiplier = 10;
     switch(depth){
       case 'bg': multiplier = 5; break;
       case 'mid': multiplier = 15; break;
       case 'logo': multiplier = 8; break;
-      case 'front': multiplier = 12; break; // increase for content
-      default: multiplier = 10;
+      case 'front': multiplier = 12; break;
     }
     layer.style.transform = `translate(${moveX * multiplier}px, ${moveY * multiplier}px)`;
   });
@@ -66,27 +64,6 @@ hero.addEventListener('mousemove', e => {
   });
 });
 
-// ================== PARALLAX MOVEMENT ON MOUSE ==================
-hero.addEventListener('mousemove', e => {
-  const centerX = window.innerWidth / 2;
-  const centerY = window.innerHeight / 2;
-  const moveX = (e.clientX - centerX) / centerX;
-  const moveY = (e.clientY - centerY) / centerY;
-
-  parallaxLayers.forEach(layer => {
-    const depth = parseFloat(layer.className.match(/depth-(\w+)/)[1] || 1);
-    let multiplier = 0;
-    switch(depth){
-      case 'bg': multiplier = 5; break;
-      case 'mid': multiplier = 15; break;
-      case 'logo': multiplier = 8; break;
-      case 'front': multiplier = 10; break;
-      default: multiplier = 10;
-    }
-    layer.style.transform = `translate(${moveX * multiplier}px, ${moveY * multiplier}px)`;
-  });
-});
-
 // ================== FOUNDER TEXT SLIDE IN ON VIEW ==================
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -98,32 +75,27 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll(".founder-text").forEach(el => observer.observe(el));
 
-// ===== FOUNDER PARTICLE AURA =====
+// ================== FOUNDER PARTICLE AURA ==================
 const founderImage = document.querySelector('.founder-image');
 
 if (founderImage) {
   const auraContainer = document.createElement('div');
   auraContainer.classList.add('founder-aura');
 
-  for (let i = 0; i < 15; i++) { // 15 small floating particles
+  for (let i = 0; i < 15; i++) {
     const particle = document.createElement('span');
-
-    // Random position around the image
     const angle = Math.random() * 2 * Math.PI;
-    const radius = 60 + Math.random() * 40; // distance from center
+    const radius = 60 + Math.random() * 40;
     particle.style.setProperty('--x', `${radius * Math.cos(angle)}px`);
     particle.style.setProperty('--y', `${radius * Math.sin(angle)}px`);
-
-    // Random animation delay
     particle.style.animationDelay = `${Math.random() * 2}s`;
-
     auraContainer.appendChild(particle);
   }
 
   founderImage.appendChild(auraContainer);
 }
 
-// ================= FLOATING GLOW BEHIND CARDS =================
+// ================== FLOATING GLOW BEHIND CARDS ==================
 function createCardGlows(sectionClass, numGlows = 8) {
   const section = document.querySelector(sectionClass);
   if (!section) return;
@@ -139,12 +111,11 @@ function createCardGlows(sectionClass, numGlows = 8) {
   }
 }
 
-// Apply to Governance, Constitution, and Trustee sections
 createCardGlows('.governance-section', 10);
 createCardGlows('.constitution-section', 10);
 createCardGlows('.trustee-section', 10);
 
-/* ================= TOKENOMICS PARTICLE PARALLAX ================= */
+// ================== TOKENOMICS PARTICLE PARALLAX ==================
 const tokenParticles = document.querySelectorAll('.tokenomics-particles span');
 document.addEventListener('mousemove', e => {
   const x = (e.clientX / window.innerWidth) - 0.5;
@@ -155,7 +126,7 @@ document.addEventListener('mousemove', e => {
   });
 });
 
-/* ================= FADE-IN ON SCROLL ================= */
+// ================== FADE-IN ON SCROLL ==================
 const fadeElements = document.querySelectorAll('.token-box, .section-title, .section-intro, .flow-list li, .roadmap-list li');
 
 const fadeOnScroll = () => {
@@ -169,3 +140,28 @@ const fadeOnScroll = () => {
 
 window.addEventListener('scroll', fadeOnScroll);
 fadeOnScroll();
+
+// ================== STICKY HERO NAVIGATION & SMOOTH SCROLL ==================
+const heroNav = document.querySelector('.hero-nav'); // added hero nav inside hero
+const navOffset = heroNav ? heroNav.offsetTop : 0;
+
+window.addEventListener('scroll', () => {
+  if (!heroNav) return;
+  if (window.scrollY > navOffset) heroNav.classList.add('sticky');
+  else heroNav.classList.remove('sticky');
+});
+
+// Smooth scrolling for hero nav links
+document.querySelectorAll('.hero-nav a').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const targetId = link.getAttribute('href');
+    const target = document.querySelector(targetId);
+    if (target) {
+      window.scrollTo({
+        top: target.offsetTop - 80,
+        behavior: 'smooth'
+      });
+    }
+  });
+});
