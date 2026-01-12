@@ -1678,3 +1678,20 @@ p, li {
     opacity: 0;
   }
 }
+
+/* ================= PARTICLES – BRIGHTER PREMIUM GLOW ================= */
+
+.bg-particles span {
+  background: radial-gradient(
+    circle,
+    rgba(255,255,255,1) 0%,
+    rgba(255,255,255,0.75) 30%,
+    rgba(255,255,255,0.35) 55%,
+    transparent 70%
+  );
+  box-shadow:
+    0 0 8px rgba(255,255,255,0.9),
+    0 0 16px rgba(255,255,255,0.55),
+    0 0 28px rgba(255,255,255,0.35);
+  opacity: 0.85;
+}
