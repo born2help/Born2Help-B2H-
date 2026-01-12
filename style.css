@@ -253,11 +253,6 @@ p, li {
   font-size: 0.95rem;
 }
 
-/* ===============================
-   B2H GLOBAL FOUNDATION CSS
-   FULL EXTENDED & OPTIMIZED
-   =============================== */
-
 /* ================= FOUNDER SECTION ================= */
 .founder-section {
   background: linear-gradient(180deg, #111827, #1f2937);
@@ -453,54 +448,6 @@ p, li {
   font-size: 22px;
   margin-bottom: 15px;
   color: #00ffc6;
-}
-
-/* ================= JOIN / CTA ================= */
-.join-section {
-  padding: 100px 20px;
-  background: linear-gradient(135deg, #00d084, #00ffc6);
-  color: #111;
-  text-align: center;
-}
-
-.join-section h2 {
-  font-size: 2.8rem;
-  margin-bottom: 20px;
-}
-
-.join-section p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-}
-
-.join-section .btn {
-  background: #111827;
-  color: #00ffc6;
-  padding: 15px 35px;
-  border-radius: 50px;
-  font-weight: 700;
-  font-size: 1rem;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.join-section .btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px #00ffc6aa;
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 1024px) {
-  .mission-vision-cards, .charity-cards, .assets-cards { flex-direction: column; align-items: center; }
-  .roadmap-step { width: 100%; left: 0; text-align: left; padding-left: 60px; margin-bottom: 30px; }
-  .roadmap-step.right { padding-left: 60px; }
-}
-
-@media (max-width: 768px) {
-  .hero-title { font-size: 2.4rem; }
-  .hero-subtitle, .hero-subtext { font-size: 1rem; }
-  .burn-logo { width: 180px; top: 1in; right: 1in; }
-  .founder-content { flex-direction: column; }
-  .founder-text { text-align: center; }
 }
 
 /* ================= HUMANITARIAN FLOW ================= */
