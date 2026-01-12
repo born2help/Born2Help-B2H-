@@ -342,51 +342,6 @@ p, li {
   100% { transform: translate(0, 0) scale(0.5); opacity: 0.4; }
 }
 
-/* ================= CHARITY & ASSETS ================= */
-.charity-section, .assets-section {
-  padding: 80px 20px;
-  background: #111827;
-  color: #fff;
-  text-align: center;
-}
-
-.charity-section h2, .assets-section h2 {
-  font-size: 2.4rem;
-  margin-bottom: 20px;
-  background: linear-gradient(90deg, #00d084, #00ffc6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.charity-cards, .assets-cards {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.charity-card, .assets-card {
-  background: rgba(0, 255, 198, 0.05);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  padding: 30px 20px;
-  flex: 1 1 280px;
-  max-width: 300px;
-  box-shadow: 0 10px 20px rgba(0,255,198,0.3);
-  transition: transform 0.4s, box-shadow 0.4s;
-}
-
-.charity-card:hover, .assets-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0,255,198,0.5);
-}
-
-.charity-card h3, .assets-card h3 {
-  font-size: 22px;
-  margin-bottom: 15px;
-  color: #00ffc6;
-}
-
 /* ================= HUMANITARIAN FLOW ================= */
 .humanitarian-flow {
   position: relative;
