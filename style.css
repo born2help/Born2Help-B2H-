@@ -1789,3 +1789,32 @@ p, li {
   opacity: 1;
   transform: translateX(-6px);
 }
+
+/* White Paper Glass Enhancements */
+.whitepaper-page .lead {
+  font-size: 1.25rem;
+  text-align: center;
+  opacity: 0.95;
+}
+
+.whitepaper-page .sub-lead {
+  text-align: center;
+  opacity: 0.8;
+  margin-bottom: 30px;
+}
+
+.whitepaper-page .note {
+  font-style: italic;
+  opacity: 0.8;
+}
+
+.whitepaper-page .impact {
+  font-size: 1.1rem;
+  font-weight: 600;
+  opacity: 0.95;
+}
+
+.whitepaper-page .disclaimer {
+  font-size: 0.95rem;
+  opacity: 0.75;
+}
