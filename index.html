@@ -17,6 +17,8 @@
 <body>
 
    <!-- ================= HERO SECTION ================= -->
+<div id="particles-js" class="particles-container"></div>
+  
  <section class="hero">
     <div class="bg-particles">
       <span></span><span></span><span></span><span></span><span></span>
@@ -56,10 +58,9 @@
     </p>
 
     <div class="hero-buttons">
-      <a href="#donate" class="btn primary glow">Donate with Purpose</a>
-      <a href="#tokenomics" class="btn outline glow">Explore Tokenomics</a>
-    </div>
-  </div>
+  <a href="donate.html" class="btn primary glow">Donate with Purpose</a>
+  <a href="tokenomics.html" class="btn outline glow">Explore Tokenomics</a>
+</div>
 
 </section>
 
@@ -540,6 +541,33 @@ window.addEventListener('scroll', () => {
       </div>
     </div>
   </footer>
+
+  <script>
+  particlesJS('particles-js',
+  {
+    "particles": {
+      "number": {"value": 40},
+      "color": {"value": "#14b8a6"},
+      "shape": {"type": "circle"},
+      "opacity": {"value": 0.4},
+      "size": {"value": 3},
+      "line_linked": {"enable": true, "distance": 120, "color": "#14b8a6", "opacity": 0.2, "width": 1},
+      "move": {"enable": true, "speed": 1}
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": {"enable": true, "mode": "grab"},
+        "onclick": {"enable": true, "mode": "push"}
+      },
+      "modes": {
+        "grab": {"distance": 140, "line_linked": {"opacity": 0.5}},
+        "push": {"particles_nb": 4}
+      }
+    },
+    "retina_detect": true
+  });
+</script>
 
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 <script src="main.js"></script>
