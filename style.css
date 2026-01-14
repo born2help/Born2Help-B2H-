@@ -2078,3 +2078,50 @@ a:hover::after {
   line-height: 1.4;
   color: #ccc;
 }
+
+/* ===== Compact Roadmap ===== */
+.roadmap.compact-roadmap {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.compact-roadmap .section-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.compact-roadmap .underline {
+  width: 80px;
+  height: 3px;
+  background: #14b8a6;
+  margin: 10px auto 30px;
+  border-radius: 2px;
+}
+
+.compact-roadmap-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.compact-roadmap-list li {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #ddd;
+  text-align: left;
+}
+
+.compact-roadmap-list .step-circle {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
