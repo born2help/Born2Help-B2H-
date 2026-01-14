@@ -2112,16 +2112,16 @@ a:hover::after {
   font-size: 0.95rem;
   line-height: 1.5;
   color: #ddd;
-  text-align: centre;
+  text-align:right;
 }
 
 .compact-roadmap-list .step-circle {
   position: absolute;
-  left: -1;
+  left: -3;
   top: 50%;
   transform: translateY(-50%);
   display: inline-block;
-  width: 18px;
+  width: 20px;
   height: 18px;
   border-radius: 50%;
 }
