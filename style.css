@@ -2040,3 +2040,56 @@ a:hover {
   transform: translateY(-2px);
   box-shadow: 0 0 12px #00ffd5, 0 0 25px #00cfff;
 }
+
+/* ================= Animations ================= */
+
+/* ---------------- Fade In Headings ---------------- */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+h1, h2 {
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
+  animation-delay: 0.3s;
+}
+
+/* ---------------- Slide Up Sections ---------------- */
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.section {
+  opacity: 0;
+  animation: slideUp 1s forwards;
+  animation-delay: 0.5s;
+}
+
+/* ---------------- Button Glow Animation ---------------- */
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 10px rgba(0,255,213,0.6), 0 0 20px rgba(0,255,213,0.3); }
+  50% { box-shadow: 0 0 20px rgba(0,255,213,0.8), 0 0 30px rgba(0,255,213,0.5); }
+}
+
+.btn-primary, .btn-secondary {
+  animation: glowPulse 2s infinite alternate;
+}
+
+/* ---------------- Glass Back Button Glow ---------------- */
+.glass-back {
+  animation: glowPulse 2.5s infinite alternate;
+}
+
+/* ---------------- Scroll Fade In (Optional for Sections) ---------------- */
+.section, .wp-section, .page-hero {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.section.visible, .wp-section.visible, .page-hero.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
