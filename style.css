@@ -625,155 +625,6 @@ p, li {
   }
 }
 
-/* ================= ROADMAP – COMPACT & COLORFUL ================= */
-.roadmap {
-  position: relative;
-  padding: 60px 20px;
-  background: linear-gradient(135deg, #081821, #0f3a50, #1a5670);
-  color: #e0f7fa;
-  text-align: center;
-  overflow: hidden;
-}
-
-.roadmap .section-title {
-  font-size: 2.2rem;
-  font-weight: 800;
-  margin-bottom: 15px;
-  color: #00ffcc;
-  text-shadow: 0 0 20px rgba(0, 255, 204, 0.6);
-}
-
-.roadmap-list {
-  list-style: none;
-  padding-left: 0;
-  max-width: 700px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  text-align: left;
-}
-
-.roadmap-list li {
-  background: rgba(0, 255, 204, 0.1);
-  backdrop-filter: blur(8px);
-  border-radius: 15px;
-  padding: 12px 18px;
-  font-weight: 600;
-  color: #b0e0e6;
-  box-shadow: 0 0 18px rgba(0, 255, 204, 0.3);
-  transition: transform 0.3s, box-shadow 0.3s;
-  display: flex;
-  align-items: center;
-}
-
-.roadmap-list li:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 0 30px rgba(0, 255, 204, 0.6), 0 0 45px rgba(0, 255, 204, 0.3) inset;
-}
-
-.step-circle {
-  width: 18px;
-  height: 18px;
-  display: inline-block;
-  border-radius: 50%;
-  margin-right: 12px;
-  flex-shrink: 0;
-}
-
-/* ================= ROADMAP – COLORFUL TIMELINE ================= */
-.roadmap {
-  position: relative;
-  padding: 60px 20px;
-  background: linear-gradient(135deg, #081821, #0f3a50, #1a5670);
-  color: #e0f7fa;
-  text-align: center;
-  overflow: hidden;
-}
-
-.roadmap .section-title {
-  font-size: 2.2rem;
-  font-weight: 800;
-  margin-bottom: 25px;
-  color: #00ffcc;
-  text-shadow: 0 0 20px rgba(0, 255, 204, 0.6);
-}
-
-.roadmap-list {
-  list-style: none;
-  padding-left: 0;
-  max-width: 700px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  text-align: left;
-  position: relative;
-}
-
-/* Vertical Line */
-.roadmap-list::before {
-  content: '';
-  position: absolute;
-  left: 18px; /* aligns with circle center */
-  top: 0;
-  bottom: 0;
-  width: 4px;
-  background: linear-gradient(to bottom, #14b8a6, #f59e0b, #3b82f6, #ef4444, #10b981);
-  border-radius: 2px;
-  z-index: 0;
-}
-
-.roadmap-list li {
-  background: rgba(0, 255, 204, 0.1);
-  backdrop-filter: blur(8px);
-  border-radius: 15px;
-  padding: 12px 18px 12px 50px; /* space for circle + line */
-  font-weight: 600;
-  color: #b0e0e6;
-  box-shadow: 0 0 18px rgba(0, 255, 204, 0.3);
-  transition: transform 0.3s, box-shadow 0.3s;
-  display: flex;
-  align-items: center;
-  position: relative;
-  z-index: 1;
-}
-
-.roadmap-list li:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 0 30px rgba(0, 255, 204, 0.6), 0 0 45px rgba(0, 255, 204, 0.3) inset;
-}
-
-.step-circle {
-  width: 18px;
-  height: 18px;
-  display: inline-block;
-  border-radius: 50%;
-  margin-right: 12px;
-  flex-shrink: 0;
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: box-shadow 0.3s, transform 0.3s;
-}
-
-/* Glow effect on hover */
-.roadmap-list li:hover .step-circle {
-  box-shadow: 0 0 15px #fff, 0 0 25px currentColor, 0 0 40px currentColor;
-  transform: translateY(-50%) scale(1.3);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .roadmap-list::before {
-    left: 10px;
-  }
-  .roadmap-list li {
-    padding-left: 40px;
-  }
-}
-
 /* ================= JOIN THE MOVEMENT ================= */
 .join-movement {
   position: relative;
@@ -2079,60 +1930,32 @@ a:hover::after {
   color: #ccc;
 }
 
-/* ===== Compact Roadmap ===== */
-.roadmap.compact-roadmap {
-  padding: 50px 20px;
-  text-align: center;
-}
+<!-- ================= ROADMAP ================= -->
+<section id="roadmap" class="section roadmap dark-section">
+  <div class="container">
+    <h2 class="section-title green-glow">Roadmap</h2>
 
-.compact-roadmap .section-title {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.compact-roadmap .underline {
-  width: 80px;
-  height: 3px;
-  background: #14b8a6;
-  margin: 10px auto 30px;
-  border-radius: 2px;
-}
-
-.compact-roadmap-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  max-width: 700px;
-}
-
-.compact-roadmap-list li {
-  position: relative;
-  padding-left:50px;
-  margin-bottom: 20px;
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: #ddd;
-  text-align:right;
-}
-
-.compact-roadmap-list .step-circle {
-  position: absolute;
-  left: -3;
-  top: 50%;
-  transform: translateY(-50%);
-  display: inline-block;
-  width: 20px;
-  height: 18px;
-  border-radius: 50%;
-}
-
-/* Adjust roadmap text spacing */
-.compact-roadmap-list li {
-  position: relative;
-  padding-left: 75px; /* increased from 40px to 75px */
-  margin-bottom: 20px;
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: #ddd;
-  text-align: left;
-}
+    <ul class="roadmap-list">
+      <li>
+        <span class="step-circle"></span>
+        Foundation formation & legal structure
+      </li>
+      <li>
+        <span class="step-circle"></span>
+        Token launch on accessible blockchain
+      </li>
+      <li>
+        <span class="step-circle"></span>
+        Initial humanitarian deployments
+      </li>
+      <li>
+        <span class="step-circle"></span>
+        Real asset acquisition
+      </li>
+      <li>
+        <span class="step-circle"></span>
+        Global partnerships & long-term expansion
+      </li>
+    </ul>
+  </div>
+</section>
