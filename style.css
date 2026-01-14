@@ -1867,8 +1867,36 @@ a:hover::after {
   top: 20px;
 }
 
-.burn-logo { left: 20px; }
-.main-logo-hero { right: 20px; }
+/* Burn logo – dominant and right aligned */
+.burn-logo {
+  position: absolute;
+  top: 50%;
+  right: 6%;
+  transform: translateY(-50%);
+  width: 280px;
+  max-width: 45vw;
+  opacity: 0.95;
+  z-index: 1;
+  filter: drop-shadow(0 10px 28px rgba(0,0,0,0.6));
+  pointer-events: none;
+}
+
+/* Hero inner content – above burn logo */
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+  text-align: center;
+}
+
+/* Brand section */
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
 
 /* Particle Styling */
 .bg-particles span {
