@@ -601,5 +601,43 @@ window.addEventListener('scroll', () => {
 
 <script src="main.js"></script>
 
+  <script>
+  const tocLinks = document.querySelectorAll('.toc a');
+  const sections = document.querySelectorAll('.wp-section');
+
+  // Smooth scrolling with offset
+  tocLinks.forEach(link => {
+    link.addEventListener('click', function(e){
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      const offset = 100; // px from top
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const targetRect = target.getBoundingClientRect().top;
+      const scrollPos = targetRect - bodyRect - offset;
+      window.scrollTo({
+        top: scrollPos,
+        behavior: 'smooth'
+      });
+    });
+  });
+
+  // Scroll-aware active link
+  function updateTOC() {
+    let index = sections.length - 1;
+    for (let i = 0; i < sections.length; i++) {
+      const top = sections[i].getBoundingClientRect().top;
+      if (top > 120) {
+        index = i - 1;
+        break;
+      }
+    }
+    tocLinks.forEach(link => link.classList.remove('active'));
+    if(index >= 0 && tocLinks[index]) tocLinks[index].classList.add('active');
+  }
+
+  window.addEventListener('scroll', updateTOC);
+  updateTOC(); // initial highlight
+</script>
+
 </body>
 </html>
