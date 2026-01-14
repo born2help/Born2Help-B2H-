@@ -8,45 +8,36 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-  <script>
-  const sections = document.querySelectorAll('.section, .wp-section, .page-hero');
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.2 });
-
-  sections.forEach(section => observer.observe(section));
-</script>
-  
 <body class="dark-page glass-page">
-  <section class="white-paper-section">
-    <div class="container">
 
-      <!-- ================= HERO ================= -->
-      <h1 class="wp-title green-glow">White Paper — B2H Global Foundation</h1>
-      <p class="subtitle">
-        Built for Humanity · Driven by Purpose · Guided by Ethics
-      </p>
+  <section class="glass-container">
+
+    <!-- ================= HERO ================= -->
+    <section class="page-hero">
+      <h1 class="green-glow">White Paper — B2H Global Foundation</h1>
+      <p class="subtitle">Built for Humanity · Driven by Purpose · Guided by Ethics</p>
+      <div class="hero-buttons">
+        <a href="donate.html" class="btn-primary">Donate Now</a>
+        <a href="tokenomics.html" class="btn-secondary">Explore Tokenomics</a>
+      </div>
       <hr class="section-divider">
+    </section>
 
-      <!-- ================= OVERVIEW ================= -->
+    <!-- ================= CONTENT ================= -->
+    <section class="section">
+
       <div class="wp-section">
         <h2 class="section-title">Overview</h2>
         <p>
           <strong>B2H (Burn to Help | Born for Humanity)</strong> is a humanitarian-first initiative
           designed to transform participation into lasting benefit for humanity.
           <br><br>
-          It is built on <strong>patience, transparency, ethical restraint, and long-term responsibility</strong> — not speculation.
-          B2H proves that technology can serve people, protect dignity, and create sustainable impact without exploitation.
+          Built on <strong>patience, transparency, ethical restraint, and long-term responsibility</strong> — not speculation,
+          B2H proves that technology can serve people, protect dignity, and create sustainable impact.
         </p>
-        <hr class="section-divider">
       </div>
+      <hr class="section-divider">
 
-      <!-- ================= PURPOSE & VALUES ================= -->
       <div class="wp-section">
         <h2 class="section-title">Purpose & Core Values</h2>
         <ul>
@@ -57,12 +48,10 @@
         </ul>
         <p>
           <strong>Core Values:</strong> Integrity over speed · Trust over hype · Patience over pressure · Humanity over profit.
-          <br>Every decision within B2H is filtered through these principles.
         </p>
-        <hr class="section-divider">
       </div>
+      <hr class="section-divider">
 
-      <!-- ================= TOKENOVERVIEW ================= -->
       <div class="wp-section">
         <h2 class="section-title">Token Overview</h2>
         <ul>
@@ -70,26 +59,21 @@
           <li><strong>Total Supply:</strong> 500,000,000,000 B2H</li>
           <li><strong>Supply Type:</strong> Fixed — no inflation, no future minting</li>
         </ul>
-        <p>
-          Fixed supply ensures discipline, fairness, and protection from dilution.
-        </p>
-        <hr class="section-divider">
+        <p>Fixed supply ensures discipline, fairness, and protection from dilution.</p>
       </div>
+      <hr class="section-divider">
 
-      <!-- ================= BURN-TO-HELP ================= -->
       <div class="wp-section">
         <h2 class="section-title">Burn-to-Help Mechanism</h2>
         <p>
           Defined burn events permanently reduce the circulating supply while activating humanitarian allocations
           and ensuring long-term operational sustainability.
           <br><br>
-          <strong>Important:</strong> Burns are not designed to drive speculation.
-          They exist to align participation with responsibility and real-world impact.
+          <strong>Important:</strong> Burns are not designed to drive speculation. They align participation with responsibility and real-world impact.
         </p>
-        <hr class="section-divider">
       </div>
+      <hr class="section-divider">
 
-      <!-- ================= TRANSPARENCY & ETHICS ================= -->
       <div class="wp-section">
         <h2 class="section-title">Transparency & Ethics</h2>
         <ul>
@@ -98,13 +82,10 @@
           <li>Clear separation between charity, operations, and treasury</li>
           <li>Founder stewardship without ownership or personal gain</li>
         </ul>
-        <p>
-          Transparency exists to protect trust, not to invite misuse.
-        </p>
-        <hr class="section-divider">
+        <p>Transparency exists to protect trust, not to invite misuse.</p>
       </div>
+      <hr class="section-divider">
 
-      <!-- ================= VISION & MISSION ================= -->
       <div class="wp-section">
         <h2 class="section-title">Vision & Mission</h2>
         <p>
@@ -112,13 +93,12 @@
           and opportunities for all, irrespective of wealth or geography.
         </p>
         <p>
-          <strong>Mission:</strong> To transform contributions into sustainable, income-generating assets that continuously
+          <strong>Mission:</strong> Transform contributions into sustainable, income-generating assets that continuously
           serve humanity, creating a true Sadaqah Jariyah for participants.
         </p>
-        <hr class="section-divider">
       </div>
+      <hr class="section-divider">
 
-      <!-- ================= ETHICAL FRAMEWORK ================= -->
       <div class="wp-section">
         <h2 class="section-title">Ethical Framework</h2>
         <ul>
@@ -127,34 +107,28 @@
           <li>Faith-aligned financial practices (no interest, no Riba)</li>
           <li>Continuous oversight by a rotating ethical council</li>
         </ul>
-        <hr class="section-divider">
       </div>
+      <hr class="section-divider">
 
-      <!-- ================= LONG-TERM IMPACT ================= -->
       <div class="wp-section">
         <h2 class="section-title">Long-Term Impact</h2>
         <p>
-          Contributions to B2H are transformed into permanent assets that generate continuous
-          support for the poor and vulnerable.
+          Contributions to B2H are transformed into permanent assets generating continuous support for the poor and vulnerable.
           <br><br>
           Every action—from token burns to project execution—delivers measurable, traceable humanitarian impact.
         </p>
-        <hr class="section-divider">
       </div>
+      <hr class="section-divider">
 
-      <!-- ================= PARTICIPATION ================= -->
       <div class="wp-section">
         <h2 class="section-title">How to Participate</h2>
         <p>
-          Participation in B2H is voluntary, transparent, and open to all.
-          There are no guarantees of financial return.
-          Instead, contributors gain the satisfaction of knowing their engagement creates a living system of good—
-          an impact that persists across generations.
+          Participation is voluntary, transparent, and open to all. Contributors gain satisfaction in knowing their engagement creates
+          a living system of good—an impact that persists across generations.
         </p>
-        <hr class="section-divider">
       </div>
+      <hr class="section-divider">
 
-      <!-- ================= CLOSING ================= -->
       <div class="wp-section highlight">
         <h2 class="section-title green-glow">Our Commitment</h2>
         <p>
@@ -166,7 +140,8 @@
       </div>
 
       <a href="index.html" class="glass-back">← Back Home</a>
-    </div>
+
+    </section>
   </section>
 
   <!-- ================= FOOTER ================= -->
@@ -185,6 +160,19 @@
       </div>
     </div>
   </footer>
+
+  <!-- ================= SCROLL ANIMATION ================= -->
+  <script>
+    const sections = document.querySelectorAll('.section, .wp-section, .page-hero');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+    sections.forEach(section => observer.observe(section));
+  </script>
 
 </body>
 </html>
