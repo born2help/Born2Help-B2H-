@@ -16,7 +16,7 @@
 </head>
 <body>
 
-  <!-- ================= HERO SECTION ================= -->
+<!-- ================= HERO SECTION ================= -->
 <section class="hero">
   <!-- Particle Background -->
   <div class="bg-particles">
@@ -26,25 +26,28 @@
     <span></span><span></span><span></span><span></span>
   </div>
 
+  <!-- Logos Inside Hero -->
+  <img src="images/burn.png" class="burn-logo parallax-layer depth-mid" alt="Burn Logo">
+  <img src="images/logo.png" class="main-logo-hero parallax-layer depth-logo" alt="Main Logo">
+
   <!-- Hero Content -->
   <div class="hero-content parallax-layer depth-front">
-    <h1 class="hero-title">Born To Help</h1>
-    <h2 class="hero-tagline">Born for Humanity</h2>
+    <h1 class="hero-title animate-up">Born To Help</h1>
+    <h2 class="hero-tagline animate-up" style="animation-delay: 0.3s;">Born for Humanity</h2>
 
-    <p class="hero-description">
-      Transforming small acts into lasting change. Every contribution 
-      becomes a form of <strong>Sadaqah Jariyah</strong>, bringing education, 
-      healthcare, food security, and dignity to those who need it most.
+    <p class="hero-description animate-up" style="animation-delay: 0.6s;">
+      Transforming small acts into lasting change. Every contribution becomes a form of
+      <strong>Sadaqah Jariyah</strong>, bringing education, healthcare, food security, 
+      and dignity to those who need it most.
     </p>
 
-    <p class="hero-subtext">
-      Join a movement where charity is continuous, ethical, and impactful — 
-      beyond profit, beyond speculation. Together, we can make a difference 
-      one helping hand at a time.
+    <p class="hero-subtext animate-up" style="animation-delay: 0.9s;">
+      Join a movement where charity is continuous, ethical, and impactful — beyond profit, 
+      beyond speculation. Together, we can make a difference one helping hand at a time.
     </p>
 
     <!-- Hero Buttons -->
-    <div class="hero-buttons">
+    <div class="hero-buttons animate-up" style="animation-delay: 1.2s;">
       <a href="donate.html" class="btn-primary glow">Donate with Purpose</a>
       <a href="tokenomics.html" class="btn-secondary glow">Explore Tokenomics</a>
     </div>
@@ -59,11 +62,8 @@
   <a href="transparency.html" class="nav-link">Transparency</a>
 </div>
 
-<!-- Logos Outside Hero -->
-<img src="images/burn.png" class="burn-logo parallax-layer depth-mid" alt="Burn Logo">
-<img src="images/logo.png" class="main-logo-hero parallax-layer depth-logo" alt="Main Logo">
-
 <script>
+// Sticky Hero Navigation
 const heroNav = document.querySelector('.hero-nav');
 const heroHeight = document.querySelector('.hero').offsetHeight;
 
@@ -74,8 +74,23 @@ window.addEventListener('scroll', () => {
     heroNav.classList.remove('sticky');
   }
 });
-</script>
- 
+
+// Particle hover effect
+const particles = document.querySelectorAll('.bg-particles span');
+document.querySelector('.hero').addEventListener('mousemove', e => {
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+  const xRatio = e.clientX / width;
+  const yRatio = e.clientY / height;
+
+  particles.forEach((p, i) => {
+    const moveX = (xRatio - 0.5) * (i + 1) * 20;
+    const moveY = (yRatio - 0.5) * (i + 1) * 20;
+    p.style.transform = `translate(${moveX}px, ${-i*10 + moveY}px)`;
+  });
+});
+</script> 
+  
 <!-- ================= FOUNDER MESSAGE ================= -->
 <section class="founder-section">
   <div class="container">
