@@ -2366,3 +2366,30 @@ a:hover::after {
     padding: 22px;
   }
 }
+
+/* ===== CLEAN CENTERED SECTION HEADING ===== */
+.clean-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+/* Remove any left border or line */
+.clean-header::before,
+.section-title::before {
+  display: none !important;
+}
+
+/* Colored underline */
+.center-underline {
+  width: 90px;
+  height: 4px;
+  margin: 12px auto 0;
+  border-radius: 4px;
+  background: linear-gradient(
+    90deg,
+    #facc15,  /* yellow */
+    #3b82f6,  /* blue */
+    #ef4444   /* red */
+  );
+  box-shadow: 0 0 12px rgba(250, 204, 21, 0.5);
+}
