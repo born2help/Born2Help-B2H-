@@ -49,41 +49,6 @@ p, li {
   overflow: hidden;
 }
 
-/* ================= TRUSTEE SECTION ================= */
-.trustee-row {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-  margin-top: 40px;
-}
-
-.trustee-card {
-  width: 200px;
-  text-align: center;
-}
-
-.trustee-card img {
-  width: 160px;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 15px;
-  box-shadow: 0 0 30px rgba(20, 184, 166, 0.6);
-}
-
-.trustee-card h4 {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 4px;
-}
-
-.trustee-card p {
-  font-size: 0.85rem;
-  color: #9ca3af;
-}
-
 .humanitarian-flow .section-title {
   font-size: 2.5rem;
   font-weight: 800;
@@ -2220,78 +2185,6 @@ a:hover::after {
   margin-left: 30px;
 }
 
-/* ================= GOVERNANCE SECTION ================= */
-/* Trustee Images Equal Size & Round */
-.trustee-img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;   /* Circle shape */
-  border: 3px solid #14b8a6; /* Optional subtle border */
-  box-shadow: 0 0 15px rgba(20, 184, 166, 0.5); /* glow behind trustee images */
-  display: block;
-  margin: 0 auto 15px;  /* Center and spacing */
-}
-
-/* Trustee Cards Equal Height */
-.board-card {
-  text-align: center;
-  padding: 20px;
-  flex: 1;
-  min-width: 220px;
-  max-width: 300px;
-  margin: 10px;
-  background: rgba(20, 184, 166, 0.05);  /* subtle glassy bg */
-  border-radius: 12px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.board-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 25px rgba(20, 184, 166, 0.4);
-}
-
-/* Governance Flow Nodes Glowing Effect */
-.governance-node.glow-node {
-  position: relative;
-  padding: 20px;
-  margin: 20px auto;
-  background: rgba(20, 184, 166, 0.05);  /* subtle glass */
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(20, 184, 166, 0.4);
-  text-align: center;
-}
-
-/* Glow Line Connecting Nodes */
-.governance-flow-container .glow-line {
-  width: 4px;
-  height: 100%;
-  background: linear-gradient(to bottom, #14b8a6, #ffffff, #14b8a6);
-  margin: 0 auto;
-  border-radius: 2px;
-}
-
-/* Responsive Trustee Cards */
-@media screen and (max-width: 1024px) {
-  .board-members {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .board-card {
-    flex: 1 1 45%;
-    margin: 15px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .founder-section .founder-image {
-    float: none;
-    text-align: center;
-    margin: 0 auto 20px;
-  }
-
   .founder-section .founder-image img {
     width: 150px;
     height: 150px;
@@ -2302,89 +2195,174 @@ a:hover::after {
   }
 }
 
-/* ================= GOVERNANCE FLOW SPACING ================= */
-.governance-flow-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  max-width: 400px; /* Adjust width of flow column */
-  margin: 0 auto;
-}
+/* =====================================================
+   GOVERNANCE, CONSTITUTION & TRUSTEES — CLEAN RESET
+   ===================================================== */
 
-/* Glow Line Connecting Nodes */
-.governance-flow-container .glow-line {
-  width: 4px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  background: linear-gradient(to bottom, #14b8a6, #ffffff, #14b8a6);
-  border-radius: 2px;
-  z-index: 1;
-}
-
-/* Governance Nodes */
-.governance-node.glow-node {
-  position: relative;
-  padding: 20px 15px;
-  margin: 40px 0; /* space between nodes; reduced from before */
-  width: 100%;
-  background: rgba(20, 184, 166, 0.05);
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(20, 184, 166, 0.4);
-  text-align: center;
-  z-index: 2; /* above glow line */
-}
-
-/* Governance Arrows */
-.governance-arrow {
-  font-size: 24px;
-  margin: 0;
-  line-height: 1;
-  color: #14b8a6;
-  z-index: 2;
-}
-
-/* Responsive adjustments */
-@media screen and (max-width: 1024px) {
-  .governance-flow-container {
-    max-width: 90%;
-  }
-
-  .governance-node.glow-node {
-    margin: 30px 0;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .governance-node.glow-node {
-    padding: 15px 10px;
-    margin: 20px 0;
-  }
-  .glow-line {
-    left: 50%;
-  }
-}
-
-/* ================= SECTION HEADER CENTER ================= */
+/* ---------- SECTION HEADER ---------- */
 .section-header-center {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 35px;
 }
 
 .section-header-center .section-title {
   font-size: 2.2rem;
   font-weight: 800;
   color: #ffffff;
-  margin-bottom: 12px;
 }
 
-.section-header-center .section-underline {
-  width: 80px;
+.section-underline {
+  width: 90px;
   height: 4px;
-  margin: 0 auto;
+  margin: 12px auto 0;
   background: linear-gradient(90deg, #14b8a6, #34ffd2);
   border-radius: 4px;
+}
+
+/* ---------- INTRO TEXT ---------- */
+.governance-intro {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  text-align: center;
+  color: #d1d5db;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* ---------- CONSTITUTION BLOCK ---------- */
+.constitution-block {
+  max-width: 900px;
+  margin: 0 auto 50px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.constitution-block h3 {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #14b8a6;
+  margin-bottom: 20px;
+}
+
+.constitution-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.constitution-list li {
+  padding: 10px 0;
+  font-size: 0.95rem;
+  color: #e5e7eb;
+  line-height: 1.6;
+}
+
+.constitution-list strong {
+  color: #ffffff;
+}
+
+.transparency-link {
+  color: #34ffd2;
+  text-decoration: underline;
+}
+
+/* ---------- GOVERNANCE NODES ---------- */
+.governance-node {
+  max-width: 750px;
+  margin: 22px auto;
+  padding: 22px 24px;
+  text-align: center;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.governance-node:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 30px rgba(20, 184, 166, 0.35);
+}
+
+.governance-node h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #14b8a6;
+  margin-bottom: 8px;
+}
+
+.governance-node p {
+  font-size: 0.95rem;
+  color: #e5e7eb;
+  line-height: 1.6;
+}
+
+/* ---------- TRUSTEES ---------- */
+.trustee-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin: 60px auto 20px;
+}
+
+.trustee-card {
+  width: 200px;
+  text-align: center;
+  transition: transform 0.35s ease;
+}
+
+.trustee-card:hover {
+  transform: translateY(-6px);
+}
+
+.trustee-card img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 14px;
+  box-shadow: 0 0 35px rgba(20, 184, 166, 0.7);
+  transition: box-shadow 0.35s ease;
+}
+
+.trustee-card:hover img {
+  box-shadow: 0 0 50px rgba(52, 255, 210, 0.9);
+}
+
+.trustee-card h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.trustee-card p {
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+/* ---------- PARTICLES SAFE ---------- */
+.bg-particles {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 768px) {
+  .trustee-row {
+    gap: 25px;
+  }
+
+  .governance-node {
+    margin: 18px 16px;
+  }
+
+  .constitution-block {
+    padding: 22px;
+  }
 }
