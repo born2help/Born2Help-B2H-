@@ -2614,40 +2614,6 @@ a:hover::after {
   border-right: none !important;
 }
 
-/* ---------------- RESTORE HERO PARTICLES ---------------- */
-.hero .bg-particles,
-.hero .bg-particles span {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-}
-
-/* ---------------- FOUNDER & CARD GLOWS ---------------- */
-.founder-card,
-.charity-card,
-.asset-card,
-.mv-card {
-  box-shadow: 0 10px 25px rgba(0,255,198,0.35);
-  transition: transform 0.4s, box-shadow 0.4s;
-}
-
-.founder-card:hover,
-.charity-card:hover,
-.asset-card:hover,
-.mv-card:hover {
-  transform: translateY(-8px);
-  box-shadow:
-    0 15px 35px rgba(0,255,198,0.45),
-    0 0 40px rgba(0,255,198,0.2) inset;
-}
-
-/* Restore subtle glowing background for Mission & Vision cards */
-.mission-vision-cards .mv-card {
-  background: rgba(0,255,198,0.05);
-  backdrop-filter: blur(12px);
-}
-
 /* ---------------- MISSION & VISION FIX ---------------- */
 .mission {
   background: linear-gradient(135deg, #0f2734, #1a4459, #215d77);
@@ -2693,11 +2659,6 @@ a:hover::after {
 .assets-grid {
   background: rgba(0,0,0,0.05);
   backdrop-filter: blur(8px);
-}
-
-/* ---------------- PARTICLES BACKUP ---------------- */
-.hero .bg-particles span {
-  animation: particleFloat 22s linear infinite !important;
 }
 
 /* ---------------- SAFETY OVERRIDE ---------------- */
