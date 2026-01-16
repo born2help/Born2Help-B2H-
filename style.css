@@ -2888,3 +2888,7 @@ a:hover::after {
 .bg-particles {
   display: none !important;
 }
+
+.bg-particles span:nth-child(1) { left: 10%; animation-duration: 24s; }
+.bg-particles span:nth-child(2) { left: 20%; animation-duration: 20s; }
+/* ... etc. up to nth-child(10) */
