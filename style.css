@@ -244,13 +244,13 @@ p, li {
 
 /* ================= MISSION & VISION CARD GLOW ================= */
 .mv-card {
-  background: rgba(0, 255, 198, 0.05);
-  backdrop-filter: blur(14px);
+  background: rgba(198, 255, 198, 0.05);
+  backdrop-filter: blur(12px);
   border-radius: 20px;
   padding: 35px 25px;
   flex: 1 1 280px;
   max-width: 350px;
-  box-shadow: 0 10px 25px rgba(0,255,198,0.2);
+  box-shadow: 0 10px 25px rgba(40,255,198,0.2);
   transition: transform 0.4s, box-shadow 0.4s;
   text-align: center;
   position: relative;
@@ -267,7 +267,7 @@ p, li {
   border-radius: 25px;
   background: linear-gradient(45deg, #00ffc6, #22c55e, #00bfa6);
   filter: blur(18px);
-  opacity: 0.5;
+  opacity: 1;
   z-index: -1;
   transition: opacity 0.3s;
 }
@@ -278,7 +278,7 @@ p, li {
 }
 
 .mv-card:hover {
-  transform: translateY(-12px);
+  transform: translateY(-6px);
   box-shadow: 0 18px 45px rgba(0,255,198,0.25), 0 0 35px rgba(0,255,198,0.15) inset;
 }
 
