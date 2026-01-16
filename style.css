@@ -2479,6 +2479,11 @@ a:hover::after {
 /* Additional: fix How Humanity Works heading color */
 .humanity-section .section-title {
     color: #22c55e !important;  /* same green as other headings */
+   text-align: center !important;       /* center headings */
+    font-weight: 800;
+    font-size: 2.2rem;
+    color: #22c55e;                      /* Emerald green */
+    -webkit-background-clip: text;
 }
 
 /* Donation & Real Assets heading */
