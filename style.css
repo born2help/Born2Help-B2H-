@@ -242,44 +242,23 @@ p, li {
   z-index: 1;
 }
 
-/* ================= MISSION & VISION CARD GLOW ================= */
+/* Individual Card */
 .mv-card {
-  background: rgba(198, 255, 198, 0.05);
-  backdrop-filter: blur(12px);
-  border-radius: 20px;
-  padding: 35px 25px;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(14px);
+  border-radius: 22px;
+  padding: 36px 26px;
   flex: 1 1 280px;
   max-width: 350px;
-  box-shadow: 0 10px 25px rgba(40,255,198,0.2);
-  transition: transform 0.4s, box-shadow 0.4s;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
   text-align: center;
-  position: relative;
-  z-index: 1;
-}
-
-.mv-card::before {
-  content: '';
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  right: -10px;
-  bottom: -10px;
-  border-radius: 25px;
-  background: linear-gradient(45deg, #00ffc6, #22c55e, #00bfa6);
-  filter: blur(18px);
-  opacity: 1;
-  z-index: -1;
-  transition: opacity 0.3s;
-}
-
-.mv-card:hover::before {
-  opacity: 1;
-  filter: blur(25px);
+  border: 1px solid rgba(255,255,255,0.05);
 }
 
 .mv-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 45px rgba(0,255,198,0.25), 0 0 35px rgba(0,255,198,0.15) inset;
+  transform: translateY(-10px);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.45), inset 0 0 20px rgba(0,255,198,0.1);
 }
 
 /* Card Icon */
