@@ -725,34 +725,54 @@ p, li {
   .how-humanity-works .section-header h2 { font-size: 2.2rem; }
 }
 
-/* ================= DONATIONS & REAL ASSETS (MODERN) ================= */
+/* ================= DONATIONS & REAL ASSETS (ULTIMATE MODERN) ================= */
 
 .assets-section {
   position: relative;
-  padding: 110px 20px;
+  padding: 120px 20px;
   background: linear-gradient(180deg, #0c1f26, #0f2a33);
   color: #dbeef3;
   text-align: center;
+  overflow: hidden;
+}
+
+/* Ambient background glow */
+.assets-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 25% 30%, rgba(0,255,200,0.10), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(59,130,246,0.10), transparent 45%);
+  pointer-events: none;
+}
+
+/* Header */
+.assets-header {
+  position: relative;
+  z-index: 2;
 }
 
 .assets-header h2 {
   font-size: 2.6rem;
   font-weight: 800;
-  color: #e8fffb;
+  color: #eafffb;
   letter-spacing: 1px;
+  text-shadow: 0 0 14px rgba(0,255,200,0.4);
 }
 
 .assets-underline {
   width: 110px;
   height: 4px;
   margin: 16px auto 26px;
-  background: linear-gradient(90deg, #00e6c3, #00bfa6);
+  background: linear-gradient(90deg, #facc15, #22c55e, #3b82f6);
   border-radius: 3px;
+  box-shadow: 0 0 14px rgba(56,189,248,0.6);
 }
 
 .assets-intro {
   max-width: 760px;
-  margin: 0 auto 70px;
+  margin: 0 auto 80px;
   font-size: 1.15rem;
   color: #b9dcd6;
   line-height: 1.7;
@@ -762,50 +782,91 @@ p, li {
 .assets-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 28px;
+  gap: 32px;
   max-width: 1100px;
-  margin: 0 auto 60px;
+  margin: 0 auto 70px;
+  position: relative;
+  z-index: 2;
 }
 
+/* Cards */
 .asset-card {
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(12px);
   border-radius: 22px;
-  padding: 32px 26px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  padding: 34px 26px;
+  box-shadow:
+    0 16px 35px rgba(0,0,0,0.4),
+    0 0 0 rgba(0,0,0,0);
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+  position: relative;
 }
 
+/* Hover lift */
 .asset-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.5);
+  transform: translateY(-12px);
+  box-shadow:
+    0 26px 55px rgba(0,0,0,0.65);
 }
 
+/* Headings */
 .asset-card h3 {
-  font-size: 1.35rem;
-  color: #eafffb;
+  font-size: 1.4rem;
   margin-bottom: 14px;
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: 0.4px;
 }
 
+/* Paragraph */
 .asset-card p {
   font-size: 0.98rem;
-  line-height: 1.6;
-  color: #c7e3de;
+  line-height: 1.65;
+  color: #cfeee8;
+}
+
+/* ================= COLORED HEADING SYSTEM ================= */
+
+/* Red – Emergency / Relief */
+.asset-card.red h3 {
+  color: #ef4444;
+  text-shadow: 0 0 14px rgba(239,68,68,0.55);
+}
+
+/* Green – Sustainability / Sadaqah */
+.asset-card.green h3 {
+  color: #22c55e;
+  text-shadow: 0 0 14px rgba(34,197,94,0.55);
+}
+
+/* Yellow – Transparency / Trust */
+.asset-card.yellow h3 {
+  color: #facc15;
+  text-shadow: 0 0 14px rgba(250,204,21,0.55);
+}
+
+/* Blue – Assets / Infrastructure */
+.asset-card.blue h3 {
+  color: #3b82f6;
+  text-shadow: 0 0 14px rgba(59,130,246,0.55);
 }
 
 /* Highlight card (Sadaqah Jariyah) */
 .asset-card.highlight {
-  border: 1px solid rgba(0, 255, 200, 0.35);
-  box-shadow: 0 0 25px rgba(0, 255, 200, 0.25);
+  border: 1px solid rgba(34,197,94,0.45);
+  box-shadow:
+    0 0 30px rgba(34,197,94,0.35),
+    0 20px 45px rgba(0,0,0,0.55);
 }
 
+/* Footer text */
 .assets-footer-text {
   max-width: 780px;
   margin: 0 auto;
   font-size: 1.05rem;
   color: #b0d8d1;
   line-height: 1.7;
+  position: relative;
+  z-index: 2;
 }
 
 /* Responsive */
