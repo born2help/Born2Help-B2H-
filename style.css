@@ -914,143 +914,102 @@ p, li {
   }
 }
 
-/* ================= ROADMAP – COMPACT & COLORFUL ================= */
+/* ================= ROADMAP – MODERN & COLORFUL ================= */
 .roadmap {
   position: relative;
-  padding: 60px 20px;
+  padding: 80px 20px;
   background: linear-gradient(135deg, #081821, #0f3a50, #1a5670);
   color: #e0f7fa;
   text-align: center;
   overflow: hidden;
-}
-
-.roadmap .section-title {
-  font-size: 2.2rem;
-  font-weight: 800;
-  margin-bottom: 15px;
-  color: #00ffcc;
-  text-shadow: 0 0 20px rgba(0, 255, 204, 0.6);
-}
-
-.roadmap-list {
-  list-style: none;
-  padding-left: 0;
-  max-width: 700px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  text-align: left;
-}
-
-.roadmap-list li {
-  background: rgba(0, 255, 204, 0.1);
-  backdrop-filter: blur(8px);
-  border-radius: 15px;
-  padding: 12px 18px;
-  font-weight: 600;
-  color: #b0e0e6;
-  box-shadow: 0 0 18px rgba(0, 255, 204, 0.3);
-  transition: transform 0.3s, box-shadow 0.3s;
-  display: flex;
-  align-items: center;
-}
-
-.roadmap-list li:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 0 30px rgba(0, 255, 204, 0.6), 0 0 45px rgba(0, 255, 204, 0.3) inset;
-}
-
-.step-circle {
-  width: 18px;
-  height: 18px;
-  display: inline-block;
-  border-radius: 50%;
-  margin-right: 12px;
-  flex-shrink: 0;
-}
-
-/* ================= ROADMAP – COLORFUL TIMELINE ================= */
-.roadmap {
-  position: relative;
-  padding: 60px 20px;
-  background: linear-gradient(135deg, #081821, #0f3a50, #1a5670);
-  color: #e0f7fa;
-  text-align: center;
-  overflow: hidden;
-}
-
-.roadmap .section-title {
-  font-size: 2.2rem;
-  font-weight: 800;
-  margin-bottom: 25px;
-  color: #00ffcc;
-  text-shadow: 0 0 20px rgba(0, 255, 204, 0.6);
-}
-
-.roadmap-list {
-  list-style: none;
-  padding-left: 0;
-  max-width: 700px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  text-align: left;
-  position: relative;
-}
-
-/* Vertical Line */
-.roadmap-list::before {
-  content: '';
-  position: absolute;
-  left: 18px; /* aligns with circle center */
-  top: 0;
-  bottom: 0;
-  width: 4px;
-  background: linear-gradient(to bottom, #14b8a6, #f59e0b, #3b82f6, #ef4444, #10b981);
-  border-radius: 2px;
-  z-index: 0;
-}
-
-.roadmap-list li {
-  background: rgba(0, 255, 204, 0.1);
-  backdrop-filter: blur(8px);
-  border-radius: 15px;
-  padding: 12px 18px 12px 50px; /* space for circle + line */
-  font-weight: 600;
-  color: #b0e0e6;
-  box-shadow: 0 0 18px rgba(0, 255, 204, 0.3);
-  transition: transform 0.3s, box-shadow 0.3s;
-  display: flex;
-  align-items: center;
-  position: relative;
   z-index: 1;
 }
 
-.roadmap-list li:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 0 30px rgba(0, 255, 204, 0.6), 0 0 45px rgba(0, 255, 204, 0.3) inset;
+/* Section Header */
+.roadmap .section-title {
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin-bottom: 25px;
+  color: #22c55e;
+  text-shadow: 0 0 20px rgba(34,197,94,0.6);
+  position: relative;
 }
 
+.roadmap .section-title::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 5px;
+  background: linear-gradient(90deg, #22c55e, #0fffc3);
+  margin: 10px auto 0;
+  border-radius: 3px;
+  box-shadow: 0 0 12px rgba(0,255,198,0.5);
+}
+
+/* Vertical Timeline */
+.roadmap-list {
+  list-style: none;
+  padding-left: 0;
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  position: relative;
+}
+
+/* Gradient line */
+.roadmap-list::before {
+  content: '';
+  position: absolute;
+  left: 18px;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background: linear-gradient(to bottom, #14b8a6, #f59e0b, #3b82f6, #ef4444, #10b981);
+  border-radius: 3px;
+  z-index: 0;
+  box-shadow: 0 0 12px rgba(255,255,255,0.2);
+}
+
+/* Timeline Items */
+.roadmap-list li {
+  background: rgba(0,255,198,0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 14px 18px 14px 60px;
+  font-weight: 600;
+  color: #b0e0e6;
+  box-shadow: 0 8px 22px rgba(0,255,198,0.2);
+  display: flex;
+  align-items: center;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.roadmap-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 35px rgba(0,255,198,0.5), 0 0 50px rgba(0,255,198,0.25) inset;
+}
+
+/* Step Circle */
 .step-circle {
-  width: 18px;
-  height: 18px;
+  width: 22px;
+  height: 22px;
   display: inline-block;
   border-radius: 50%;
-  margin-right: 12px;
-  flex-shrink: 0;
   position: absolute;
-  left: 10px;
+  left: 12px;
   top: 50%;
   transform: translateY(-50%);
-  transition: box-shadow 0.3s, transform 0.3s;
+  background: linear-gradient(45deg, #22c55e, #0fffc3);
+  box-shadow: 0 0 12px #22c55e, 0 0 20px #0fffc3;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Glow effect on hover */
 .roadmap-list li:hover .step-circle {
-  box-shadow: 0 0 15px #fff, 0 0 25px currentColor, 0 0 40px currentColor;
-  transform: translateY(-50%) scale(1.3);
+  transform: translateY(-50%) scale(1.4);
+  box-shadow: 0 0 20px #22c55e, 0 0 35px #0fffc3, 0 0 50px currentColor inset;
 }
 
 /* Responsive */
@@ -1059,7 +1018,10 @@ p, li {
     left: 10px;
   }
   .roadmap-list li {
-    padding-left: 40px;
+    padding-left: 50px;
+  }
+  .step-circle {
+    left: 4px;
   }
 }
 
