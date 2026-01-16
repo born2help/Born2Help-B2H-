@@ -1,3 +1,4 @@
+
 /* ===============================
    B2H GLOBAL FOUNDATION CSS
    Unified & Optimized
@@ -31,196 +32,6 @@ h1, h2, h3, h4, h5, h6 {
 
 p, li {
   font-weight: 400;
-}
-
-/* ================= HERO SECTION ================= */
-.hero {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  padding: 50px 20px;
-  background: linear-gradient(135deg, #1e3c72, #2a5298, #00c6ff, #00ffb7);
-  color: #fff;
-  overflow: hidden;
-}
-
-/* Hero Logos */
-.hero img.burn-logo {
-  position: absolute;
-  top: 1.5in;
-  right: 0.5in;
-  width: 400px;
-  max-width: 20%;
-  z-index: 2;
-}
-
-.hero img.main-logo-hero {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 150px;
-  max-width: 12%;
-  z-index: 3;
-}
-
-/* Hero Content & Animation */
-.hero-content {
-  position: relative;
-  z-index: 4;
-  max-width: 800px;
-  padding: 0 20px;
-  animation: depth-float 4s ease-in-out infinite alternate;
-  margin-top: 80px;
-}
-
-@keyframes depth-float {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-8px); }
-}
-
-.hero-title {
-  font-size: 3rem;
-  font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 20px;
-  color: #fffb00;
-  text-shadow: 1px 1px 15px rgba(0,0,0,0.5);
-}
-
-.hero-subtitle, .hero-subtext {
-  font-size: 1.2rem;
-  color: rgba(255,255,255,0.9);
-  margin-top: 15px;
-}
-
-/* Hero Line Animation */
-.hero-content .line {
-  display: block;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: slide-in 1s forwards;
-}
-
-.hero-content .line:nth-child(1) { animation-delay: 0.2s; }
-.hero-content .line:nth-child(2) { animation-delay: 0.5s; }
-.hero-content .line:nth-child(3) { animation-delay: 0.8s; }
-
-@keyframes slide-in {
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Hero Buttons */
-.hero-buttons {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.hero-buttons .btn {
-  margin: 10px;
-  padding: 12px 25px;
-  border-radius: 50px;
-  font-weight: 600;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.hero-buttons .btn.primary {
-  background: #00d084;
-  color: #fff;
-  box-shadow: 0 0 20px #00d08488;
-}
-
-.hero-buttons .btn.outline {
-  background: transparent;
-  border: 2px solid #ffe600;
-  color: #ffe600;
-  box-shadow: 0 0 15px #ffe60066;
-}
-
-.hero-buttons .btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 25px rgba(255,255,255,0.8);
-}
-
-/* Hero Block Fixed */
-.hero > .hero-blocks {
-  position: absolute !important;
-  left: 24px !important;
-  bottom: 24px !important;
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 12px !important;
-  z-index: 20 !important;
-}
-
-.hero > .hero-blocks > .hero-block {
-  width: 120px !important;
-  height: 32px !important;
-  border-radius: 999px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  font-weight: 600;
-  font-size: 14px;
-  color: #fff !important;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.hero-block:hover {
-  transform: translateX(6px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.35);
-}
-
-/* ================= HERO NAVIGATION ================= */
-.hero-nav {
-  position: relative; /* keep them in flow instead of absolute */
-  display: flex;
-  justify-content: flex-end; /* push to right */
-  gap: 25px; /* space between links */
-  padding: 20px 40px; /* space from top and sides */
-  z-index: 5; /* ensure nav is above background but below hero logos if needed */
-  background: rgba(0, 0, 0, 0.3); /* optional subtle background for readability */
-  border-radius: 10px; /* optional for style */
-}
-
-.hero-nav .nav-link {
-  color: #fff;
-  font-weight: 600;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.hero-nav .nav-link:hover {
-  color: #14b8a6; /* your green glow accent */
-}
-
-/* ================= HERO NAV STICKY FLOAT ================= */
-.hero-nav.sticky {
-  position: fixed;
-  top: 10px; /* slight margin from top */
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(14px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.6);
-  transition: all 0.4s ease;
-  z-index: 999;
-}
-
-/* Optional: slightly shrink on scroll */
-.hero-nav.sticky .nav-link {
-  padding: 6px 12px;
-  font-size: 0.95rem;
 }
 
 /* ================= FOUNDER SECTION ================= */
@@ -1439,135 +1250,306 @@ p, li {
   color: #94a3b8;
 }
 
-/* ================= PAGE LAYOUT (ABOUT / WHITE PAPER / TRANSPARENCY) ================= */
+/* =========================================================
+   B2H GLOBAL FOUNDATION — FINAL CLEAN CSS
+   Stable · Ethical · Modern · No Conflicts
+========================================================= */
 
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= BASE ================= */
+body.dark-page {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #e6edf3;
+  min-height: 100vh;
+}
+
+/* ================= GLASS LAYOUT ================= */
+.glass-page {
+  padding: 40px 20px;
+}
+
+.glass-container {
+  max-width: 1100px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+  padding: 50px 40px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+/* ================= HERO ================= */
 .page-hero {
-  padding: 120px 20px 60px;
   text-align: center;
-  background: radial-gradient(circle at top, rgba(20,184,166,0.15), transparent 60%);
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  margin-bottom: 40px;
 }
 
 .page-hero h1 {
-  font-size: 3rem;
+  font-size: 2.7rem;
   font-weight: 800;
+  color: #ffd166;
   margin-bottom: 12px;
 }
 
 .page-hero p {
+  font-size: 1.1rem;
   color: #cbd5e1;
-  max-width: 700px;
-  margin: 0 auto;
 }
 
-.page-content {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 40px 20px 80px;
+/* ================= BUTTONS ================= */
+.hero-buttons {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 
-.content-card {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 18px;
-  padding: 30px;
-  margin-bottom: 30px;
-  backdrop-filter: blur(10px);
-}
-
-.content-card h3 {
-  color: #14b8a6;
-  margin-bottom: 12px;
-}
-
-.content-card ul {
-  padding-left: 20px;
-}
-
-.content-card li {
-  margin-bottom: 8px;
-}
-
-.content-card.highlight {
-  border-color: rgba(20,184,166,0.4);
-  box-shadow: 0 0 30px rgba(20,184,166,0.1);
-}
-
-/* Back Home Button */
-.back-home {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 1000;
-  padding: 10px 16px;
-  background: rgba(0,0,0,0.7);
-  color: #fff;
-  text-decoration: none;
+.btn-primary,
+.btn-secondary {
+  padding: 12px 26px;
   border-radius: 30px;
   font-weight: 600;
-  backdrop-filter: blur(8px);
+  text-decoration: none;
   transition: all 0.3s ease;
 }
 
-.back-home:hover {
-  background: #14b8a6;
-  color: #000;
+.btn-primary {
+  background: linear-gradient(135deg, #06d6a0, #00b4d8);
+  color: #002b36;
 }
 
-/* ===============================
-   WHITE PAPER — SCOPED SAFE
-================================ */
-
-.white-paper {
-  max-width: 900px;
-  margin: 120px auto;
-  padding: 60px 50px;
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 16px;
-  backdrop-filter: blur(6px);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(6, 214, 160, 0.35);
 }
 
-.white-paper h1 {
-  font-size: 2.8rem;
-  font-weight: 800;
-  margin-bottom: 30px;
+.btn-secondary {
+  border: 1px solid #ffd166;
+  color: #ffd166;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 209, 102, 0.15);
+}
+
+/* ================= CONTENT ================= */
+.section {
+  margin-top: 35px;
+}
+
+.section p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #e2e8f0;
+  margin-bottom: 16px;
+}
+
+/* ================= HEADINGS ================= */
+.section h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #06d6a0;
+  margin: 45px 0 18px;
+  padding-left: 14px;
+  border-left: 4px solid #06d6a0;
+}
+
+/* ================= LISTS ================= */
+.section ul {
+  list-style: none;
+  margin: 18px 0 30px;
+  padding-left: 0;
+}
+
+.section ul li {
+  padding: 10px 14px;
+  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 3px solid #ffd166;
+  border-radius: 6px;
+  color: #f1f5f9;
+}
+
+/* ================= BACK LINK ================= */
+.glass-back {
+  display: inline-block;
+  margin-top: 40px;
+  color: #ffd166;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.glass-back:hover {
+  text-decoration: underline;
+}
+
+/* ================= FOOTER ================= */
+.site-footer {
+  margin-top: 60px;
+  padding: 30px 20px;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
   text-align: center;
 }
 
-.white-paper h2 {
-  font-size: 1.8rem;
-  margin-top: 50px;
-  margin-bottom: 15px;
-  border-left: 4px solid #fff;
-  padding-left: 14px;
-}
-
-.white-paper h3 {
-  font-size: 1.2rem;
-  margin-top: 30px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.white-paper p {
-  font-size: 1.05rem;
-  line-height: 1.8;
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
   margin-bottom: 18px;
 }
 
-.white-paper ul li {
-  margin-bottom: 10px;
+.footer-links a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-weight: 500;
 }
 
-/* ================= PARTICLE FIX (SAFE) ================= */
+.footer-links a:hover {
+  color: #ffd166;
+}
 
-/* Hero MUST create positioning context */
-.hero {
+.footer-bottom p {
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+/* ================= SAFETY OVERRIDE ================= */
+.page-hero,
+.section,
+.glass-container,
+.site-footer {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+}
+
+/* =========================================================
+   B2H MICRO-INTERACTIONS — SAFE ENHANCEMENT LAYER
+   Paste at END of CSS
+========================================================= */
+
+/* ---------------- Smooth Global Transitions ---------------- */
+a,
+button,
+.section,
+.glass-container,
+.section ul li {
+  transition: all 0.35s ease;
+}
+
+/* ---------------- Section Soft Lift ---------------- */
+.section:hover {
+  transform: translateY(-2px);
+}
+
+/* ---------------- List Item Hover ---------------- */
+.section ul li:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-left-color: #06d6a0;
+}
+
+/* ---------------- Glass Container Presence ---------------- */
+.glass-container:hover {
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.55),
+    inset 0 0 0 1px rgba(255,255,255,0.08);
+}
+
+/* ---------------- Button Calm Pulse ---------------- */
+.btn-primary {
+  animation: softPulse 4s ease-in-out infinite;
+}
+
+@keyframes softPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 rgba(6, 214, 160, 0);
+  }
+  50% {
+    box-shadow: 0 0 18px rgba(6, 214, 160, 0.35);
+  }
+}
+
+/* ---------------- Button Hover Depth ---------------- */
+.btn-primary:hover,
+.btn-secondary:hover {
+  transform: translateY(-3px);
+}
+
+/* ---------------- Elegant Link Underline ---------------- */
+a {
+  position: relative;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #06d6a0;
+  transition: width 0.3s ease;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+/* ---------------- Section Fade-In (CSS-Only Safe) ---------------- */
+.page-hero,
+.section,
+.glass-container {
+  animation: gentleFade 0.9s ease forwards;
+}
+
+@keyframes gentleFade {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------------- Footer Calm Hover ---------------- */
+.footer-links a:hover {
+  transform: translateY(-2px);
+}
+
+/* ---------------- Accessibility Safety ---------------- */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* ================= FINAL PARTICLES (GLOBAL SAFE) ================= */
+
+.hero,
+.tokenomics {
   position: relative;
   overflow: hidden;
 }
 
-/* Particle container */
 .bg-particles {
   position: absolute;
   inset: 0;
@@ -1575,739 +1557,460 @@ p, li {
   pointer-events: none;
 }
 
-/* Particle dots */
 .bg-particles span {
   position: absolute;
-  bottom: -10px;
-  width: 6px;
-  height: 6px;
-  background: rgba(255,255,255,0.25);
-  border-radius: 50%;
-  animation: particleFloat 18s linear infinite;
-}
-
-/* Random horizontal positions */
-.bg-particles span:nth-child(1) { left: 10%; animation-duration: 20s; }
-.bg-particles span:nth-child(2) { left: 20%; animation-duration: 24s; }
-.bg-particles span:nth-child(3) { left: 30%; animation-duration: 18s; }
-.bg-particles span:nth-child(4) { left: 40%; animation-duration: 26s; }
-.bg-particles span:nth-child(5) { left: 50%; animation-duration: 22s; }
-.bg-particles span:nth-child(6) { left: 60%; animation-duration: 28s; }
-.bg-particles span:nth-child(7) { left: 70%; animation-duration: 21s; }
-.bg-particles span:nth-child(8) { left: 80%; animation-duration: 25s; }
-.bg-particles span:nth-child(9) { left: 90%; animation-duration: 19s; }
-
-/* Animation */
-@keyframes particleFloat {
-  from {
-    transform: translateY(0) scale(1);
-    opacity: 0;
-  }
-  20% { opacity: 0.4; }
-  to {
-    transform: translateY(-120vh) scale(1.4);
-    opacity: 0;
-  }
-}
-
-/* Hero content ABOVE particles */
-.hero > *:not(.bg-particles) {
-  position: relative;
-  z-index: 1;
-}
-
-/* ================= PARTICLE VISIBILITY BOOST ================= */
-
-.bg-particles span {
+  bottom: -20px;
   width: 8px;
   height: 8px;
+  border-radius: 50%;
   background: radial-gradient(
     circle,
     rgba(255,255,255,1) 0%,
-    rgba(255,255,255,0.6) 35%,
-    rgba(255,255,255,0.2) 60%,
+    rgba(255,255,255,0.7) 35%,
+    rgba(255,255,255,0.3) 60%,
     transparent 70%
   );
-  filter: blur(0.2px);
+  animation: particleFloat 22s linear infinite;
+  opacity: 0.9;
   box-shadow:
-    0 0 12px rgba(255,255,255,0.8),
-    0 0 12px rgba(255,255,255,0.35),
-    0 0 20px rgba(255,255,255,0.15);
+    0 0 10px rgba(255,255,255,0.8),
+    0 0 20px rgba(255,255,255,0.4);
 }
 
-/* Slightly slower = more elegant */
+/* Horizontal spread */
+.bg-particles span:nth-child(1) { left: 10%; animation-duration: 24s; }
+.bg-particles span:nth-child(2) { left: 20%; animation-duration: 20s; }
+.bg-particles span:nth-child(3) { left: 30%; animation-duration: 26s; }
+.bg-particles span:nth-child(4) { left: 40%; animation-duration: 22s; }
+.bg-particles span:nth-child(5) { left: 50%; animation-duration: 28s; }
+.bg-particles span:nth-child(6) { left: 60%; animation-duration: 23s; }
+.bg-particles span:nth-child(7) { left: 70%; animation-duration: 27s; }
+.bg-particles span:nth-child(8) { left: 80%; animation-duration: 21s; }
+.bg-particles span:nth-child(9) { left: 90%; animation-duration: 25s; }
+
 @keyframes particleFloat {
   from {
     transform: translateY(0) scale(0.8);
     opacity: 0;
   }
-  25% { opacity: 0.6; }
-  60% { opacity: 0.9; }
+  20% { opacity: 0.6; }
+  50% { opacity: 0.9; }
   to {
     transform: translateY(-120vh) scale(1.3);
     opacity: 0;
   }
 }
 
-/* ================= PARTICLES – BRIGHTER PREMIUM GLOW ================= */
-
-.bg-particles span {
-  background: radial-gradient(
-    circle,
-    rgba(255,255,255,1) 0%,
-    rgba(255,255,255,0.75) 30%,
-    rgba(255,255,255,0.35) 55%,
-    transparent 70%
-  );
-  box-shadow:
-    0 0 8px rgba(255,255,255,0.9),
-    0 0 16px rgba(255,255,255,0.55),
-    0 0 28px rgba(255,255,255,0.35);
-  opacity: 0.85;
+/* ================= HERO SECTION ================= */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #1e3c72, #2a5298, #00c6ff, #00ffb7);
+  color: #fff;
+  overflow: hidden;
 }
 
-/* ================= TOKENOMICS PARTICLES ================= */
+/* ================= HERO PARTICLES ================= */
+.bg-particles {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
 
-.tokenomics {
+.bg-particles span {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,0.7) 35%, rgba(255,255,255,0.3) 60%, transparent 70%);
+  animation: particleFloat 22s linear infinite;
+  opacity: 0.9;
+  box-shadow:
+    0 0 10px rgba(255,255,255,0.8),
+    0 0 20px rgba(255,255,255,0.4);
+}
+
+@keyframes particleFloat {
+  0% { transform: translateY(0) scale(0.8); opacity: 0; }
+  20% { opacity: 0.6; }
+  50% { opacity: 0.9; }
+  100% { transform: translateY(-120vh) scale(1.3); opacity: 0; }
+}
+
+/* ================= HERO LOGOS ================= */
+.main-logo-hero {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 150px;
+  max-width: 12%;
+  z-index: 2;
+  animation: floatLogo 5s ease-in-out infinite alternate-reverse;
+}
+
+.burn-logo {
+  position: absolute;
+  top: 1.5in;
+  right: 0.6in;
+  width: 280px;
+  max-width: 45vw;
+  opacity: 0.95;
+  z-index: 2;
+  filter: drop-shadow(0 10px 28px rgba(0,0,0,0.6));
+  animation: floatLogo 6s ease-in-out infinite alternate;
+}
+
+@keyframes floatLogo {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+/* ================= HERO CONTENT ================= */
+.hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 900px;
+  padding: 0 20px;
+  margin-top: 80px;
+  animation: depth-float 4s ease-in-out infinite alternate;
+}
+
+@keyframes depth-float {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-8px); }
+}
+
+/* Hero Title & Taglines */
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #00ffd5, #00cfff, #ffd166, #ff6f61);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow:
+    0 0 10px rgba(255,255,255,0.3),
+    0 0 20px rgba(0,255,213,0.5),
+    0 0 30px rgba(255,209,102,0.5);
+  animation: glowText 2.5s infinite alternate;
+}
+
+.hero-tagline {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #ffb347;
+  text-shadow:
+    0 0 8px #ffb347,
+    0 0 12px #ff7a00,
+    0 0 18px #ffd166;
+  animation: glowText 3s infinite alternate-reverse;
+}
+
+.hero-subtitle, .hero-subtext, .hero-description {
+  font-size: 1.15rem;
+  color: #e0e0e0;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  text-shadow: 0 0 4px rgba(0,0,0,0.5);
+}
+
+/* Glow Animation */
+@keyframes glowText {
+  0% {
+    filter: brightness(1);
+    text-shadow: 0 0 10px rgba(255,255,255,0.3), 0 0 20px rgba(0,255,213,0.5), 0 0 30px rgba(255,209,102,0.5);
+  }
+  50% {
+    filter: brightness(1.3);
+    text-shadow: 0 0 15px rgba(255,255,255,0.5), 0 0 25px rgba(0,255,213,0.7), 0 0 40px rgba(255,209,102,0.7);
+  }
+  100% {
+    filter: brightness(1);
+    text-shadow: 0 0 10px rgba(255,255,255,0.3), 0 0 20px rgba(0,255,213,0.5), 0 0 30px rgba(255,209,102,0.5);
+  }
+}
+
+/* ================= HERO BUTTONS ================= */
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-buttons a.btn-primary,
+.hero-buttons a.btn-secondary {
+  padding: 15px 35px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.hero-buttons a.btn-primary {
+  background: #00ffd5;
+  color: #0a0a0a;
+  box-shadow: 0 0 15px #00ffd5, 0 0 25px #00ffd5;
+}
+
+.hero-buttons a.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px #00ffd5, 0 0 40px #00ffd5;
+}
+
+.hero-buttons a.btn-secondary {
+  background: #ffb347;
+  color: #0a0a0a;
+  box-shadow: 0 0 15px #ffb347, 0 0 25px #ffb347;
+}
+
+.hero-buttons a.btn-secondary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px #ffb347, 0 0 40px #ffb347;
+}
+
+/* Motivational tagline */
+.hero-motivation {
+  font-size: 1.35rem;
+  color: #fff;
+  margin: 20px 0;
+  text-shadow: 0 0 10px rgba(255,255,255,0.2), 0 0 15px rgba(0,255,213,0.3);
+  animation: fadeUp 1.5s ease forwards;
+}
+
+/* Highlighted gradient text */
+.hero-motivation .highlight {
+  background: linear-gradient(90deg, #00ffd5, #ffd166, #ff6f61);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  text-shadow: 0 0 12px rgba(255,255,255,0.3);
+}
+
+/* ---------------- Hero Button Glow & Floating ---------------- */
+.hero-buttons a.btn-primary,
+.hero-buttons a.btn-secondary {
+  position: relative;
+  display: inline-block;
+  padding: 15px 35px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: floatButton 3s ease-in-out infinite alternate;
+}
+
+/* Primary Button Glow */
+.hero-buttons a.btn-primary {
+  background: #00ffd5;
+  color: #0a0a0a;
+  box-shadow: 0 0 15px #00ffd5, 0 0 25px #00ffd5;
+}
+
+.hero-buttons a.btn-primary:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px #00ffd5, 0 0 50px #00ffd5;
+}
+
+/* Secondary Button Glow */
+.hero-buttons a.btn-secondary {
+  background: #ffb347;
+  color: #0a0a0a;
+  box-shadow: 0 0 15px #ffb347, 0 0 25px #ffb347;
+}
+
+.hero-buttons a.btn-secondary:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px #ffb347, 0 0 50px #ffb347;
+}
+
+/* Floating Animation for Buttons */
+@keyframes floatButton {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+/* ---------------- Hero Navigation Top Panel ---------------- */
+.hero-nav {
+  position: absolute;
+  top: 25px;
+  right: 40px;
+  display: flex;
+  gap: 25px;
+  padding: 10px 20px;
+  background: rgba(0,0,0,0.25);
+  border-radius: 12px;
+  z-index: 10;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.hero-nav .nav-link {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 6px 12px;
+  transition: 0.3s;
+}
+
+.hero-nav .nav-link:hover {
+  color: #00ffd5;
+  text-shadow: 0 0 8px #00ffd5;
+}
+
+/* Sticky behavior for nav */
+.hero-nav.sticky {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+  z-index: 999;
+}
+
+/* Optional: shrink nav links on sticky */
+.hero-nav.sticky .nav-link {
+  padding: 5px 10px;
+  font-size: 0.95rem;
+}
+
+/* ---------------- Hero Titles Glowing Gradient ---------------- */
+
+/* Main Hero Title - Born To Help */
+.hero-title {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 20px;
+  background: linear-gradient(270deg, #00ffd5, #00cfff, #ffd166, #ff6f61, #ffb347);
+  background-size: 1000% 1000%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientGlow 10s ease infinite;
+  text-shadow:
+    0 0 10px rgba(255,255,255,0.3),
+    0 0 20px rgba(0,255,213,0.5),
+    0 0 30px rgba(255,209,102,0.5);
+}
+
+/* Sub Hero Title - Burn for Humanity */
+.hero-tagline {
+  font-size: 2.4rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 25px;
+  background: linear-gradient(270deg, #ffb347, #ff6f61, #ffd166, #00cfff, #00ffd5);
+  background-size: 1000% 1000%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientGlow 12s ease infinite reverse;
+  text-shadow:
+    0 0 8px rgba(255,179,71,0.7),
+    0 0 15px rgba(255,111,97,0.6),
+    0 0 25px rgba(255,209,102,0.5);
+}
+
+/* Keyframes for gradient animation */
+@keyframes gradientGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===============================
+   HERO ACTION BUTTONS – FINAL
+=============================== */
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 35px;
+  z-index: 5;
+  position: relative;
+}
+
+/* Base Button */
+.hero-actions a {
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #00ffd5, #00cfff);
+  color: #002b2b;
+  box-shadow:
+    0 0 12px rgba(0,255,213,0.5),
+    0 0 25px rgba(0,207,255,0.3);
+  transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
 }
 
-.tokenomics .bg-particles {
-  opacity: 0.9;
-}
-
-/* Transparency enhancements */
-.transparency-page .lead {
-  font-size: 1.15rem;
-  text-align: center;
-  opacity: 0.9;
-}
-
-.glass-divider {
-  border: none;
-  height: 1px;
-  margin: 40px 0;
-  background: linear-gradient(to right, transparent, rgba(255,255,255,0.25), transparent);
-}
-
-.transparency-page .closing {
-  font-size: 1.1rem;
-  font-weight: 600;
-  opacity: 0.95;
-}
-
-/* ================= GLASS PAPER PAGES ================= */
-
-.glass-page {
-  min-height: 100vh;
-  padding: 140px 20px 80px;
-  background:
-    radial-gradient(circle at top, rgba(255,255,255,0.04), transparent 60%),
-    linear-gradient(180deg, #050505, #0b0b0b);
-}
-
-.glass-container {
-  max-width: 980px;
-  margin: auto;
-  padding: 60px 55px;
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(12px);
-  border-radius: 22px;
-  box-shadow:
-    0 25px 70px rgba(0,0,0,0.7),
-    inset 0 0 0 1px rgba(255,255,255,0.06);
-}
-
-/* Headings */
-.glass-container h1 {
-  font-size: 2.8rem;
-  font-weight: 800;
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.glass-container h2 {
-  margin-top: 50px;
-  margin-bottom: 16px;
-  font-size: 1.7rem;
-  border-left: 4px solid #fff;
-  padding-left: 14px;
-}
-
-.glass-container p,
-.glass-container li {
-  font-size: 1.05rem;
-  line-height: 1.85;
-  opacity: 0.95;
-}
-
-.glass-container ul {
-  margin-left: 20px;
-}
-
-/* Back Home */
-.glass-back {
-  display: inline-block;
-  margin-top: 50px;
-  font-weight: 600;
-  opacity: 0.8;
-  transition: 0.3s;
-}
-
-.glass-back:hover {
-  opacity: 1;
-  transform: translateX(-6px);
-}
-
-/* White Paper Glass Enhancements */
-.whitepaper-page .lead {
-  font-size: 1.25rem;
-  text-align: center;
-  opacity: 0.95;
-}
-
-.whitepaper-page .sub-lead {
-  text-align: center;
-  opacity: 0.8;
-  margin-bottom: 30px;
-}
-
-.whitepaper-page .note {
-  font-style: italic;
-  opacity: 0.8;
-}
-
-.whitepaper-page .impact {
-  font-size: 1.1rem;
-  font-weight: 600;
-  opacity: 0.95;
-}
-
-.whitepaper-page .disclaimer {
-  font-size: 0.95rem;
-  opacity: 0.75;
-}
-
-/* About Page Enhancements */
-.about-page .hero-subtitle {
-  font-size: 1.2rem;
-  font-weight: 500;
-  opacity: 0.85;
-  text-align: center;
-  margin-top: 10px;
-}
-
-.about-page .content-card h3 {
-  color: #0b5e3a;
-}
-
-.about-page .content-card {
-  padding: 20px 25px;
-  margin-bottom: 25px;
-}
-
-.about-page .content-card.highlight {
-  background: rgba(11, 94, 58, 0.1);
-  border-left: 4px solid #0b5e3a;
-}
-
-/* ================= HERO NAV POSITION FIX ================= */
-
-/* Keep hero nav above particles and logos */
-.hero-nav {
+/* Hover Glow Pulse */
+.hero-actions a::before {
+  content: "";
   position: absolute;
-  top: 30px;              /* move it slightly down from top */
-  right: 40px;            /* push away from burn logo */
-  z-index: 10;
-  display: flex;
-  gap: 22px;
-}
-
-/* Responsive safety */
-@media (max-width: 992px) {
-  .hero-nav {
-    top: 20px;
-    right: 20px;
-    gap: 16px;
-  }
-}
-
-/* Mobile: stack neatly */
-@media (max-width: 768px) {
-  .hero-nav {
-    position: relative;
-    top: 0;
-    right: 0;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-}
-
-body.dark-page {
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-}
-
-h1, h2, h3 {
-  color: #00ffd5; /* Example neon teal */
-  text-shadow: 0 0 10px rgba(0, 255, 213, 0.7), 0 0 20px rgba(0, 255, 213, 0.5);
-}
-
-.btn-primary {
-  background: #00ffd5;
-  color: #0a0a0a;
-}
-.btn-primary:hover {
-  box-shadow: 0 0 15px #00ffd5, 0 0 25px #00ffd5;
-}
-.btn-secondary {
-  background: #ffb347;
-  color: #0a0a0a;
-}
-.btn-secondary:hover {
-  box-shadow: 0 0 15px #ffb347, 0 0 25px #ffb347;
-}
-
-hr.section-divider {
-  border: none;
-  height: 2px;
-  background: linear-gradient(to right, #00ffd5, #008080);
-  margin: 30px 0;
-  border-radius: 5px;
-}
-
-p {
-  color: #e0e0e0;
-  text-shadow: 0 0 2px rgba(0,0,0,0.5);
-  line-height: 1.8;
-}
-
-/* ================= Modern Visual Upgrade for B2H Pages ================= */
-
-/* ---------------- Body Background ---------------- */
-body.dark-page {
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  color: #e0e0e0;
-  font-family: 'Montserrat', sans-serif;
-  transition: background 0.5s ease;
-}
-
-/* ---------------- Headings ---------------- */
-h1, h2, h3 {
-  font-weight: 800;
-  text-shadow: 0 0 10px rgba(0,0,0,0.4);
-  margin-bottom: 20px;
-}
-
-.white-paper-section h1,
-.white-paper-section h2 {
-  color: #00cfff; /* Neon Blue for White Paper */
-  text-shadow: 0 0 15px rgba(0, 207, 255, 0.7);
-}
-
-.transparency-section h1,
-.transparency-section h2 {
-  color: #00ffd5; /* Neon Teal for Transparency */
-  text-shadow: 0 0 15px rgba(0, 255, 213, 0.7);
-}
-
-.tokenomics-section h1,
-.tokenomics-section h2 {
-  color: #7fff00; /* Neon Green for Tokenomics */
-  text-shadow: 0 0 15px rgba(127, 255, 0, 0.7);
-}
-
-.donate-section h1,
-.donate-section h2 {
-  color: #ffa500; /* Neon Orange for Donate */
-  text-shadow: 0 0 15px rgba(255, 165, 0, 0.7);
-}
-
-.about-section h1,
-.about-section h2 {
-  color: #c47fff; /* Neon Purple for About */
-  text-shadow: 0 0 15px rgba(196, 127, 255, 0.7);
-}
-
-/* ---------------- Paragraphs ---------------- */
-p {
-  color: #e0e0e0;
-  line-height: 1.8;
-  text-shadow: 0 0 2px rgba(0,0,0,0.4);
-}
-
-/* ---------------- Buttons ---------------- */
-.btn-primary, .btn-secondary {
-  padding: 12px 28px;
-  font-weight: 600;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  display: inline-block;
-  margin-right: 15px;
-}
-
-.btn-primary {
-  background: #00ffd5;
-  color: #0a0a0a;
-}
-.btn-primary:hover {
-  box-shadow: 0 0 15px #00ffd5, 0 0 25px #00ffd5;
-  transform: translateY(-2px);
-}
-
-.btn-secondary {
-  background: #ffb347;
-  color: #0a0a0a;
-}
-.btn-secondary:hover {
-  box-shadow: 0 0 15px #ffb347, 0 0 25px #ffb347;
-  transform: translateY(-2px);
-}
-
-/* ---------------- Glass / Container ---------------- */
-.glass-container {
-  backdrop-filter: blur(12px) brightness(1.1);
-  border-radius: 15px;
-  padding: 40px;
-  margin: 40px auto;
-  max-width: 1100px;
-  border: 1px solid rgba(255,255,255,0.1);
-}
-
-/* ---------------- Section Dividers ---------------- */
-hr.section-divider {
-  border: none;
-  height: 3px;
-  background: linear-gradient(to right, #00ffd5, #00cfff);
-  margin: 30px 0;
-  border-radius: 5px;
-  box-shadow: 0 0 8px rgba(0,255,213,0.5);
-}
-
-/* ---------------- Links ---------------- */
-a {
-  color: #00cfff;
-  transition: color 0.3s ease;
-}
-a:hover {
-  color: #00ffd5;
-  text-shadow: 0 0 8px rgba(0, 255, 213, 0.6);
-}
-
-/* ---------------- Footer ---------------- */
-.site-footer {
-  background: rgba(0,0,0,0.85);
-  color: #e0e0e0;
-  padding: 25px 0;
-}
-.site-footer a {
-  color: #00cfff;
-  text-decoration: none;
-}
-.site-footer a:hover {
-  color: #00ffd5;
-  text-shadow: 0 0 6px rgba(0, 255, 213, 0.6);
-}
-
-/* ---------------- Hero Sections ---------------- */
-.page-hero {
-  text-align: center;
-  padding: 50px 20px;
-  border-bottom: 1px solid rgba(255,255,255,0.2);
-  margin-bottom: 40px;
-}
-
-/* ---------------- Hero Buttons ---------------- */
-.hero-buttons a {
-  margin: 15px 10px;
-}
-
-/* ---------------- Glass Back Button ---------------- */
-.glass-back {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 10px 20px;
-  border-radius: 8px;
-  background: rgba(255,255,255,0.1);
-  color: #00cfff;
-  text-decoration: none;
-  box-shadow: 0 0 8px rgba(0, 207, 255, 0.5);
-  transition: all 0.3s ease;
-}
-.glass-back:hover {
-  background: rgba(255,255,255,0.2);
-  transform: translateY(-2px);
-  box-shadow: 0 0 12px #00ffd5, 0 0 25px #00cfff;
-}
-
-/* ================= Animations ================= */
-
-/* ---------------- Fade In Headings ---------------- */
-@keyframes fadeInUp {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-h1, h2 {
+  inset: 0;
+  background: radial-gradient(circle, rgba(255,255,255,0.4), transparent 60%);
   opacity: 0;
-  animation: fadeInUp 1s forwards;
-  animation-delay: 0.3s;
+  transition: opacity 0.4s ease;
 }
 
-/* ---------------- Slide Up Sections ---------------- */
-@keyframes slideUp {
-  0% { opacity: 0; transform: translateY(40px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-.section {
-  opacity: 0;
-  animation: slideUp 1s forwards;
-  animation-delay: 0.5s;
-}
-
-/* ---------------- Button Glow Animation ---------------- */
-@keyframes glowPulse {
-  0%, 100% { box-shadow: 0 0 10px rgba(0,255,213,0.6), 0 0 20px rgba(0,255,213,0.3); }
-  50% { box-shadow: 0 0 20px rgba(0,255,213,0.8), 0 0 30px rgba(0,255,213,0.5); }
-}
-
-.btn-primary, .btn-secondary {
-  animation: glowPulse 2s infinite alternate;
-}
-
-/* ---------------- Glass Back Button Glow ---------------- */
-.glass-back {
-  animation: glowPulse 2.5s infinite alternate;
-}
-
-/* ================= MODERN PAGE STYLING FOR ALL PAGES ================= */
-
-/* ----------------- Page Background ----------------- */
-body.dark-page {
-    background: linear-gradient(135deg, #1e2a38, #283747, #1e2a38); /* modern gradient instead of plain black */
-    color: #e0e0e0; /* base text color for readability */
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.6;
-}
-
-/* ----------------- Container & Glass Sections ----------------- */
-.glass-container {
-    background: rgba(255, 255, 255, 0.05); /* subtle frosted glass effect */
-    backdrop-filter: blur(12px);
-    padding: 40px 20px;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    margin: 30px auto;
-    max-width: 1000px;
-    transition: all 0.3s ease;
-}
-
-/* ----------------- Hero Section ----------------- */
-.page-hero {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.page-hero h1 {
-    color: #ffd166; /* vibrant gold */
-    font-size: 2.8rem;
-    margin-bottom: 10px;
-}
-
-.page-hero p {
-    color: #06d6a0; /* fresh teal for subtitle */
-    font-size: 1.3rem;
-}
-
-/* ----------------- Hero Buttons ----------------- */
-.hero-buttons a {
-    display: inline-block;
-    margin: 10px 15px;
-    padding: 12px 30px;
-    border-radius: 50px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-}
-
-.btn-primary {
-    background: #ef476f; /* lively pink/red */
-    color: #fff;
-}
-
-.btn-primary:hover {
-    background: #d93663;
-    transform: translateY(-2px);
-}
-
-.btn-secondary {
-    background: #118ab2; /* bright blue */
-    color: #fff;
-}
-
-.btn-secondary:hover {
-    background: #0f7a99;
-    transform: translateY(-2px);
-}
-
-/* ----------------- Section Styling ----------------- */
-.section {
-    margin-bottom: 50px;
-}
-
-.section h2 {
-    color: #ffd166; /* same vibrant headings as hero */
-    border-bottom: 2px solid #06d6a0; /* fresh divider line */
-    padding-bottom: 6px;
-    margin: 30px 0 15px;
-}
-
-.section p {
-    color: #f1f1f1; /* readable text */
-    margin-bottom: 15px;
-}
-
-.section ul {
-    color: #f1f1f1;
-    margin-left: 25px;
-    margin-bottom: 20px;
-}
-
-.section ul li {
-    margin-bottom: 10px;
-    position: relative;
-}
-
-.section ul li::before {
-    content: "•";
-    color: #06d6a0;
-    position: absolute;
-    left: -20px;
-}
-
-/* ----------------- Glass Back Button ----------------- */
-.glass-back {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 10px 20px;
-    color: #fff;
-    background: rgba(0,0,0,0.3);
-    border-radius: 50px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.glass-back:hover {
-    background: rgba(255, 209, 102, 0.9);
-    color: #000;
-    transform: translateY(-2px);
-}
-
-/* ----------------- Footer Styling ----------------- */
-.site-footer {
-    background: rgba(0,0,0,0.6);
-    padding: 30px 20px;
-    margin-top: 60px;
-    border-top: 3px solid #ffd166;
-    color: #f1f1f1;
-}
-
-.site-footer a {
-    color: #06d6a0;
-    margin-right: 15px;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.site-footer a:hover {
-    color: #ffd166;
-}
-
-.footer-bottom {
-    margin-top: 20px;
-    font-size: 0.9rem;
-    text-align: center;
-}
-
-/* ----------------- Divider Enhancements ----------------- */
-.wp-section {
-    padding: 20px 0;
-    margin-bottom: 30px;
-    border-left: 3px solid #ffd166;
-    padding-left: 15px;
-    transition: all 0.3s ease;
-}
-
-.wp-section:hover {
-    background: rgba(255, 255, 255, 0.03);
-    transform: translateY(-2px);
-}
-
-/* ----------------- Small Adjustments ----------------- */
-h1, h2, h3, h4, h5 {
-    font-weight: 800;
-}
-
-p, li {
-    font-weight: 400;
-}
-
-ul {
-    list-style: none;
-    padding-left: 20px;
-}
-
-/* ---------------- Scroll Fade In (Optional for Sections) ---------------- */
-.section.visible, .wp-section.visible, .page-hero.visible {
+.hero-actions a:hover::before {
   opacity: 1;
-  transform: translateY(0);
 }
 
-/* Reset body text color */
-body {
-  color: #e0e0e0; /* light gray for readability on dark/blue background */
-  background-color: #0d1117; /* or your chosen background */
-  font-family: 'Montserrat', sans-serif;
+/* Hover Motion */
+.hero-actions a:hover {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow:
+    0 0 20px rgba(255,209,102,0.8),
+    0 0 40px rgba(255,111,97,0.6);
 }
 
-/* Paragraphs, list items, and general text */
-p, li, span {
-  color: #e0e0e0; /* ensures visibility */
+/* Individual Accent Buttons */
+.hero-actions a.donate {
+  background: linear-gradient(135deg, #ffd166, #ff6f61);
+  color: #3a1f00;
 }
 
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
-  color: #00ffd5; /* neon teal as heading color */
+.hero-actions a.tokenomics {
+  background: linear-gradient(135deg, #00cfff, #00ffd5);
 }
 
-/* ================= TEXT SAFETY OVERRIDE ================= */
-
-/* Force visibility of all main content */
-.section,
-.wp-section,
-.glass-container,
-.page-hero {
-    display: block !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    height: auto !important;
-    overflow: visible !important;
+.hero-actions a.about,
+.hero-actions a.whitepaper,
+.hero-actions a.transparency {
+  background: linear-gradient(135deg, #1f2933, #0f172a);
+  color: #e5f6ff;
+  border: 1px solid rgba(0,255,213,0.4);
 }
 
-/* Force readable text */
-.section p,
-.section li,
-.wp-section p,
-.wp-section li,
-.page-hero p {
-    color: #f1f1f1 !important;
-}
-
-/* Headings always visible */
-h1, h2, h3, h4 {
-    opacity: 1 !important;
-    visibility: visible !important;
+/* Hover for dark buttons */
+.hero-actions a.about:hover,
+.hero-actions a.whitepaper:hover,
+.hero-actions a.transparency:hover {
+  background: linear-gradient(135deg, #00ffd5, #00cfff);
+  color: #002b2b;
 }
