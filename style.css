@@ -328,28 +328,6 @@ p, li {
   z-index: 2;
 }
 
-.how-humanity-works .section-header h2 {
-  font-size: 42px;
-  font-weight: 700;
-  color: #eafffb;
-}
-
-.section-underline {
-  width: 120px;
-  height: 4px;
-  margin: 14px auto 22px;
-  background: linear-gradient(90deg, #00ffc6, #00bfa6);
-  box-shadow: 0 0 18px rgba(0,255,200,0.6);
-  border-radius: 2px;
-}
-
-.subheading {
-  color: #b9dcd6;
-  font-size: 18px;
-  max-width: 620px;
-  margin: 0 auto 70px;
-}
-
 /* FLOW */
 .flow-container {
   position: relative;
