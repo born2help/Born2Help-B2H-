@@ -2518,3 +2518,10 @@ a:hover::after {
   color: #3b82f6;
   text-shadow: 0 0 14px rgba(59,130,246,0.6);
 }
+
+/* ===== DONATIONS & REAL ASSETS – MAIN HEADING FIX ===== */
+
+.assets-header h2 {
+  color: #22c55e !important;
+  text-shadow: 0 0 18px rgba(34,197,94,0.7);
+}
