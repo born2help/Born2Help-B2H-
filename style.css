@@ -2270,3 +2270,65 @@ a:hover::after {
   background: linear-gradient(180deg, #f97316, #fb923c); /* Orange */
   animation: pulseBar 2.8s infinite alternate;
 }
+
+/* ================= VERTICAL BARS - COLOURED WITH GLOW ================= */
+.bar-charity,
+.bar-ops,
+.bar-burn,
+.bar-liquidity,
+.bar-community {
+  position: relative;
+  border-radius: 12px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: #0b0f14;
+  font-weight: 700;
+  box-shadow: inset 0 0 10px rgba(255,255,255,0.3);
+  transition: all 0.4s ease;
+}
+
+/* Glow effect at the top of each bar */
+.bar-charity::after,
+.bar-ops::after,
+.bar-burn::after,
+.bar-liquidity::after,
+.bar-community::after {
+  content: '';
+  position: absolute;
+  top: -8px; /* above the bar */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 20px;
+  border-radius: 50%;
+  filter: blur(10px);
+  opacity: 0.8;
+}
+
+/* Glow colors matching the bars */
+.bar-charity::after { background: #3b82f6; }
+.bar-ops::after { background: #ef4444; }
+.bar-burn::after { background: #facc15; }
+.bar-liquidity::after { background: #22c55e; }
+.bar-community::after { background: #f97316; }
+
+/* Pulse animation for bars and glow */
+@keyframes pulseBar {
+  0% { transform: scaleY(1); opacity: 0.9; }
+  50% { transform: scaleY(1.05); opacity: 1; }
+  100% { transform: scaleY(1); opacity: 0.9; }
+}
+
+.bar-charity,
+.bar-ops,
+.bar-burn,
+.bar-liquidity,
+.bar-community {
+  animation: pulseBar 2s infinite alternate;
+}
+
+.bar-ops { animation-duration: 2.2s; }
+.bar-burn { animation-duration: 1.8s; }
+.bar-liquidity { animation-duration: 2.5s; }
+.bar-community { animation-duration: 2.8s; }
