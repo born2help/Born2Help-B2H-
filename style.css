@@ -984,40 +984,42 @@ p, li {
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-/* ================= GOVERNANCE SECTION ================= */
+/* ================= GOVERNANCE SECTION — MODERN & COMPACT ================= */
 .governance-section {
-  padding: 80px 20px;
+  padding: 70px 20px;
   background: linear-gradient(135deg, #0f172a, #020617);
   color: #e0e7ff;
   text-align: center;
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
 
 .governance-section h2 {
-  font-size: 2.6rem;
-  font-weight: 800;
+  font-size: 2.5rem;
+  font-weight: 900;
   color: #22c55e;
+  text-shadow: 0 0 15px rgba(34,197,94,0.7);
   margin-bottom: 20px;
-  text-shadow: 0 0 10px rgba(34,197,94,0.7);
   position: relative;
 }
 
 .governance-section h2::after {
   content: '';
   display: block;
-  width: 80px;
+  width: 90px;
   height: 4px;
-  background: linear-gradient(90deg, #22c55e, #0fffc3);
-  margin: 10px auto 0;
+  background: linear-gradient(90deg, #22c55e, #0fffc3, #22c55e);
+  margin: 12px auto 30px;
   border-radius: 2px;
+  box-shadow: 0 0 8px rgba(34,197,94,0.4);
 }
 
 .governance-intro {
-  max-width: 900px;
-  margin: 0 auto 50px;
-  font-size: 1.15rem;
-  line-height: 1.6;
+  max-width: 880px;
+  margin: 0 auto 40px;
+  font-size: 1.12rem;
+  line-height: 1.65;
   color: #cbd5e1;
 }
 
@@ -1025,18 +1027,18 @@ p, li {
 .constitution-block ul {
   list-style: none;
   padding-left: 0;
-  max-width: 850px;
-  margin: 0 auto 50px;
+  max-width: 800px;
+  margin: 0 auto 40px;
   text-align: left;
 }
 
 .constitution-block li {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 15px;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  margin-bottom: 12px;
   background: rgba(34,197,94,0.05);
   padding: 12px 18px;
-  border-radius: 12px;
+  border-radius: 14px;
   transition: all 0.3s ease;
 }
 
@@ -1053,14 +1055,19 @@ p, li {
 /* ================= GOVERNANCE FLOW ================= */
 .governance-flow-container {
   position: relative;
-  max-width: 900px;
-  margin: 0 auto 60px;
+  max-width: 880px;
+  margin: 0 auto 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  z-index: 2;
 }
 
 .glow-line {
   position: absolute;
   left: 50%;
-  top: 40px;
+  top: 20px;
   bottom: 0;
   width: 4px;
   margin-left: -2px;
@@ -1068,25 +1075,30 @@ p, li {
   box-shadow: 0 0 20px #22c55e, 0 0 40px #0fffc3;
   border-radius: 2px;
   z-index: 0;
-  animation: glowLine 2s infinite alternate;
+  animation: glowLine 2.5s infinite alternate;
 }
 
 @keyframes glowLine {
-  0% { opacity: 0.7; transform: scaleY(1); }
+  0% { opacity: 0.6; transform: scaleY(1); }
   50% { opacity: 0.9; transform: scaleY(1.05); }
-  100% { opacity: 0.7; transform: scaleY(1); }
+  100% { opacity: 0.6; transform: scaleY(1); }
 }
 
 .governance-node {
   position: relative;
   z-index: 1;
-  max-width: 320px;
-  margin: 40px auto;
-  padding: 20px;
-  border-radius: 14px;
-  background: rgba(0,200,150,0.08);
-  box-shadow: 0 0 15px rgba(0,255,150,0.2);
+  max-width: 300px;
+  padding: 18px;
+  border-radius: 16px;
+  background: rgba(0,255,180,0.08);
+  box-shadow: 0 0 15px rgba(0,255,180,0.2);
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.governance-node:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,255,180,0.35);
 }
 
 .governance-node h4 {
@@ -1101,49 +1113,34 @@ p, li {
   line-height: 1.5;
 }
 
-.governance-arrow {
-  font-size: 1.8rem;
-  margin: 10px 0;
-  color: #0fffc3;
-}
-
 /* ================= BOARD OF TRUSTEES ================= */
 .board-members {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
+  gap: 28px;
+  margin-top: 40px;
 }
 
 .board-card {
   background: #111827;
-  border-radius: 18px;
-  padding: 20px;
+  border-radius: 20px;
+  padding: 18px;
   width: 220px;
   text-align: center;
   box-shadow: 0 8px 20px rgba(0,255,150,0.15);
   transition: all 0.4s ease;
+  position: relative;
 }
 
 .board-card img {
-  width: 130px;
-  height: 130px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   border: 3px solid #22c55e;
   margin-bottom: 12px;
-  transition: all 0.3s ease;
-}
-
-.board-card h4 {
-  color: #fff;
-  font-size: 1.1rem;
-  margin-bottom: 6px;
-}
-
-.board-card p {
-  color: #cbd5e1;
-  font-size: 0.9rem;
-  line-height: 1.4;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 15px rgba(34,197,94,0.5), 0 0 25px rgba(0,255,180,0.3) inset;
 }
 
 .board-card:hover {
@@ -1152,21 +1149,33 @@ p, li {
 }
 
 .board-card:hover img {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px #22c55e;
+  transform: scale(1.08);
+  box-shadow: 0 0 25px #22c55e, 0 0 35px #0fffc3 inset;
+}
+
+.board-card h4 {
+  color: #fff;
+  font-size: 1.15rem;
+  margin-bottom: 6px;
+}
+
+.board-card p {
+  color: #cbd5e1;
+  font-size: 0.92rem;
+  line-height: 1.4;
 }
 
 /* ================= RESPONSIVE ================= */
 @media (max-width:1024px) {
-  .governance-flow-container { max-width: 600px; }
-  .governance-node { max-width: 280px; }
+  .governance-flow-container { max-width: 650px; }
+  .governance-node { max-width: 260px; }
   .board-card { width: 200px; }
 }
 
 @media (max-width:768px) {
-  .governance-flow-container { max-width: 100%; }
-  .governance-node { max-width: 90%; }
-  .board-card { width: 100%; max-width: 260px; }
+  .governance-flow-container { max-width: 100%; flex-direction: column; gap: 24px; }
+  .governance-node { max-width: 95%; margin: 0 auto; }
+  .board-card { width: 100%; max-width: 260px; margin: 0 auto; }
 }
 
 /* ================= TRANSPARENCY PAGE ================= */
