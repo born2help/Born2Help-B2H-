@@ -420,3 +420,17 @@ a {
     font-size: 1.5rem;
   }
 }
+
+/* ================= HERO & TOKENOMICS GLOW ================= */
+.hero-title, .hero-tagline {
+  text-shadow: 0 0 8px #22c55e, 0 0 20px #0fffc3;
+}
+
+.mv-card:hover {
+  box-shadow: 0 0 25px #22c55e, 0 0 35px #0fffc3 inset;
+}
+
+/* Tokenomics bars hover glow */
+.token-box:hover {
+  box-shadow: 0 0 25px #22c55e, 0 0 35px #0fffc3 inset;
+}
