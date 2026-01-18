@@ -390,8 +390,36 @@
 
 <!-- ================= FOOTER ================= -->
 <footer class="footer">
-  <div class="container footer-container">
-    <div class="footer-top">
-      <!-- Logo & Description -->
-      <div class="footer-logo">
-        <img src="images/logo.png" alt="B2H Logo">
+    <div class="footer-container">
+        <div class="footer-top">
+            <div class="footer-logo"><img src="images/main-logo.png" alt="Footer Logo"></div>
+            <div class="footer-links">
+                <a href="#about">About</a> |
+                <a href="#tokenomics">Tokenomics</a> |
+                <a href="#donate">Donate</a> |
+                <a href="#white-paper">White Paper</a>
+            </div>
+        </div>
+        <p class="footer-bottom">&copy; 2026 B2H Global Foundation. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- ================= PARTICLES JS ================= -->
+<script>
+    const hero = document.querySelector('.hero');
+    for(let i=0;i<100;i++){
+        let span = document.createElement('span');
+        span.style.left = Math.random()*100 + 'vw';
+        span.style.top = Math.random()*100 + 'vh';
+        span.style.width = Math.random()*6+4 + 'px';
+        span.style.height = span.style.width;
+        span.style.background = rgba(0,255,198,${Math.random()*0.5 + 0.2});
+        span.style.borderRadius = '50%';
+        span.style.position = 'absolute';
+        span.style.animation = float ${Math.random()*10 + 5}s ease-in-out infinite;
+        hero.appendChild(span);
+    }
+</script>
+
+</body>
+</html>
