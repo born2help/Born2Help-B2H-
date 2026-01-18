@@ -538,3 +538,26 @@ img { max-width: 100%; display: block; }
   border-radius: 20px; /* optional, for smooth edges */
   padding: 40px 20px; /* ensure enough spacing */
 }
+
+/* ================= WORKING SECTION GLOW ================= */
+.assets-section::before,
+.charity-section::before,
+.how-humanity-works::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background: radial-gradient(circle, rgba(0,255,198,0.25), transparent 70%);
+  filter: blur(60px);
+  z-index: 0;
+  border-radius: 25px;
+}
+
+.assets-section,
+.charity-section,
+.how-humanity-works {
+  position: relative;
+  z-index: 1;
+}
