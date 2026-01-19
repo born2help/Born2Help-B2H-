@@ -147,11 +147,8 @@ document.querySelectorAll('.hero-nav a').forEach(link => {
         top: target.offsetTop - 80,
         behavior: 'smooth'
       });
-    }
-  });
-});
 
-// ================== CARD HOVER + GLOW EFFECT ==================
+     // ================== CARD HOVER + GLOW EFFECT ==================
 
 // Select all card types
 const cardSelectors = [
@@ -198,3 +195,4 @@ cardSelectors.forEach(selector => {
     });
   });
 });
+ 
