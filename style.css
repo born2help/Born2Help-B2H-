@@ -774,3 +774,90 @@ img { max-width: 100%; display: block; }
   .hero-content { margin-top: 10px; }
   .hero-actions { margin-top: 25px; }
 }
+
+/* ===== HERO SECTION FINAL ADJUSTMENTS ===== */
+.hero {
+  padding: 40px 20px; /* extra top padding to bring main logo down */
+  justify-content: flex-start; /* align items from top */
+  position: relative;
+  height: 100vh; /* full viewport height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #081821, #0f3a50, #1a5670);
+}
+
+/* Main logo */
+.main-logo-hero {
+  width: 180px; /* reduce size for proportion */
+  max-width: 40%; /* responsive */
+  margin-top: 50px; /* vertical spacing from top */
+  margin-bottom: 20px; /* spacing below logo */
+  z-index: 2;
+}
+
+/* Burn logo stays on top-right */
+.burn-logo {
+  width: 240px;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  z-index: 2;
+}
+
+/* Hero content */
+.hero-content {
+  max-width: 800px;
+  z-index: 2;
+  margin-top: 20px;
+}
+
+/* Hero buttons */
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 50px; /* push buttons below content */
+  z-index: 2;
+  position: relative;
+}
+
+.hero-actions a {
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+
+.hero-actions a.donate { background: #22c55e; color: #fff; }
+.hero-actions a.tokenomics { background: #3b82f6; color: #fff; }
+.hero-actions a.about { background: #f59e0b; color: #fff; }
+.hero-actions a.white-paper { background: #ef4444; color: #fff; }
+.hero-actions a.transparency { background: #10b981; color: #fff; }
+
+.hero-actions a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(0,255,198,0.5);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .main-logo-hero { width: 160px; margin-top: 40px; margin-bottom: 15px; }
+  .hero-content { margin-top: 15px; }
+  .hero-actions { margin-top: 40px; }
+}
+
+@media (max-width: 768px) {
+  .main-logo-hero { width: 140px; margin-top: 30px; margin-bottom: 10px; }
+  .hero-content { margin-top: 10px; }
+  .hero-actions { margin-top: 35px; }
+}
+
+@media (max-width: 480px) {
+  .main-logo-hero { width: 120px; margin-top: 20px; margin-bottom: 10px; }
+  .hero-content { margin-top: 5px; }
+  .hero-actions { margin-top: 30px; }
+}
