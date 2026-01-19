@@ -1,4 +1,5 @@
 /* ================= HERO BG PARTICLES ================= */
+const hero = document.querySelector('.hero');
 const bgParticles = document.querySelectorAll('.bg-particles span');
 
 bgParticles.forEach(p => {
@@ -17,9 +18,10 @@ document.querySelectorAll('.hero-content .line').forEach((line, index) => {
 
 // Add 3D depth float to hero content
 const heroContent = document.querySelector('.hero-content');
-heroContent.classList.add('depth-float');
+if(heroContent) heroContent.classList.add('depth-float');
 
-// ================== HERO MOUSE PARALLAX ==================
+/* ================= HERO MOUSE PARALLAX ================= */
+const parallaxLayers = document.querySelectorAll('.depth-bg, .depth-mid, .depth-logo, .depth-front');
 hero.addEventListener('mousemove', e => {
   const centerX = window.innerWidth / 2;
   const centerY = window.innerHeight / 2;
@@ -39,17 +41,11 @@ hero.addEventListener('mousemove', e => {
   });
 });
 
-// ================== MOUSE FOLLOWING PARTICLES ==================
+/* ================= MOUSE FOLLOWING PARTICLES ================= */
 const mouseParticles = [];
 for (let i = 0; i < 15; i++) {
   const p = document.createElement('div');
-  p.classList.add('mouse-particle');
-  p.style.width = p.style.height = (3 + Math.random() * 4) + 'px';
-  p.style.position = 'absolute';
-  p.style.background = 'rgba(255,255,255,0.35)';
-  p.style.borderRadius = '50%';
-  p.style.pointerEvents = 'none';
-  p.style.transition = 'transform 0.1s linear';
+  p.classList.add('mouse-particle'); // CSS controls size, color, opacity
   hero.appendChild(p);
   mouseParticles.push(p);
 }
@@ -61,20 +57,17 @@ hero.addEventListener('mousemove', e => {
   });
 });
 
-// ================== FOUNDER TEXT SLIDE IN ON VIEW ==================
+/* ================= FOUNDER TEXT SLIDE IN ON VIEW ================= */
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add("show");
-    }
+    if(entry.isIntersecting) entry.target.classList.add("show");
   });
 }, { threshold: 0.5 });
 
 document.querySelectorAll(".founder-text").forEach(el => observer.observe(el));
 
-// ================== FOUNDER PARTICLE AURA ==================
+/* ================= FOUNDER PARTICLE AURA ================= */
 const founderImage = document.querySelector('.founder-image');
-
 if (founderImage) {
   const auraContainer = document.createElement('div');
   auraContainer.classList.add('founder-aura');
@@ -92,27 +85,23 @@ if (founderImage) {
   founderImage.appendChild(auraContainer);
 }
 
-// ================== FLOATING GLOW BEHIND CARDS ==================
+/* ================= FLOATING GLOW BEHIND CARDS ================= */
 function createCardGlows(sectionClass, numGlows = 8) {
   const section = document.querySelector(sectionClass);
   if (!section) return;
-
   for (let i = 0; i < numGlows; i++) {
     const glow = document.createElement('div');
-    glow.classList.add('card-glow');
-    glow.style.width = glow.style.height = `${10 + Math.random() * 20}px`;
-    glow.style.left = `${Math.random() * 90}%`;
-    glow.style.top = `${Math.random() * 90}%`;
-    glow.style.animationDuration = `${8 + Math.random() * 12}s`;
+    glow.classList.add('card-glow'); // CSS handles size, position, animation
     section.appendChild(glow);
   }
 }
 
+// Add card glows — let CSS handle styling
 createCardGlows('.governance-section', 10);
 createCardGlows('.constitution-section', 10);
 createCardGlows('.trustee-section', 10);
 
-// ================== TOKENOMICS PARTICLE PARALLAX ==================
+/* ================= TOKENOMICS PARTICLE PARALLAX ================= */
 const tokenParticles = document.querySelectorAll('.tokenomics-particles span');
 document.addEventListener('mousemove', e => {
   const x = (e.clientX / window.innerWidth) - 0.5;
@@ -123,7 +112,7 @@ document.addEventListener('mousemove', e => {
   });
 });
 
-// ================== FADE-IN ON SCROLL ==================
+/* ================= FADE-IN ON SCROLL ================= */
 const fadeElements = document.querySelectorAll('.token-box, .section-title, .section-intro, .flow-list li, .roadmap-list li');
 
 const fadeOnScroll = () => {
@@ -138,8 +127,8 @@ const fadeOnScroll = () => {
 window.addEventListener('scroll', fadeOnScroll);
 fadeOnScroll();
 
-// ================== STICKY HERO NAVIGATION & SMOOTH SCROLL ==================
-const heroNav = document.querySelector('.hero-action'); // added hero nav inside hero
+/* ================= STICKY HERO NAVIGATION & SMOOTH SCROLL ================= */
+const heroNav = document.querySelector('.hero-action');
 const navOffset = heroNav ? heroNav.offsetTop : 0;
 
 window.addEventListener('scroll', () => {
@@ -148,7 +137,6 @@ window.addEventListener('scroll', () => {
   else heroNav.classList.remove('sticky');
 });
 
-// Smooth scrolling for hero nav links
 document.querySelectorAll('.hero-nav a').forEach(link => {
   link.addEventListener('click', e => {
     e.preventDefault();
