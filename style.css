@@ -660,3 +660,25 @@ img { max-width: 100%; display: block; }
   right: 0 !important;
   z-index: 6 !important;
 }
+
+/* =========================
+   HERO HEIGHT FIX
+========================= */
+
+.hero {
+  min-height: 100vh !important;
+  height: auto !important;
+  padding-bottom: 80px !important;
+  overflow: visible !important;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 5;
+}
+
+.hero-actions {
+  position: relative !important;
+  z-index: 7 !important;
+  margin-top: 30px !important;
+}
