@@ -38,7 +38,7 @@ img { max-width: 100%; display: block; }
 
 /* Hero Logos */
 .main-logo-hero {
-  width: 190px; /* 15% smaller than before */
+  width: 190px; /* 20% smaller than before */
   margin-bottom: 20px;
   z-index:2;
   display: block;
