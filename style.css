@@ -741,3 +741,36 @@ img { max-width: 100%; display: block; }
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px){
+
+/* ===== HERO SECTION VERTICAL ADJUSTMENT ===== */
+.hero {
+  padding: 40px 20px; /* extra top padding to bring main logo down */
+  justify-content: flex-start; /* start from top and adjust with padding */
+  position: relative;
+}
+
+.main-logo-hero {
+  margin-top: 60px; /* push logo down from top */
+  margin-bottom: 25px; /* space between logo and content */
+}
+
+.hero-content {
+  margin-top: 20px; /* push content slightly below logo */
+}
+
+.hero-actions {
+  margin-top: 40px; /* push buttons down below content */
+}
+
+/* Responsive adjustments for vertical spacing */
+@media (max-width: 1024px) {
+  .main-logo-hero { margin-top: 50px; margin-bottom: 20px; }
+  .hero-content { margin-top: 15px; }
+  .hero-actions { margin-top: 30px; }
+}
+
+@media (max-width: 768px) {
+  .main-logo-hero { margin-top: 40px; margin-bottom: 15px; }
+  .hero-content { margin-top: 10px; }
+  .hero-actions { margin-top: 25px; }
+}
