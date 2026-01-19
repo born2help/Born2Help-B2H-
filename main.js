@@ -10,13 +10,13 @@ bgParticles.forEach(p => {
   p.style.animationDelay = Math.random() * 10 + 's';
 });
 
-/* Hero text lines animation */
+// Hero lines animation
 document.querySelectorAll('.hero-content .line').forEach((line, index) => {
   line.style.animationDelay = (index * 0.3) + 's';
   line.classList.add('slide-in');
 });
 
-/* Hero content 3D depth float */
+// Add 3D depth float to hero content
 const heroContent = document.querySelector('.hero-content');
 if(heroContent) heroContent.classList.add('depth-float');
 
@@ -45,7 +45,7 @@ hero.addEventListener('mousemove', e => {
 const mouseParticles = [];
 for (let i = 0; i < 15; i++) {
   const p = document.createElement('div');
-  p.classList.add('mouse-particle'); 
+  p.classList.add('mouse-particle'); // CSS controls size, color, opacity
   hero.appendChild(p);
   mouseParticles.push(p);
 }
@@ -57,7 +57,7 @@ hero.addEventListener('mousemove', e => {
   });
 });
 
-/* ================= FOUNDER TEXT SLIDE IN ================= */
+/* ================= FOUNDER TEXT SLIDE IN ON VIEW ================= */
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if(entry.isIntersecting) entry.target.classList.add("show");
@@ -85,18 +85,21 @@ if (founderImage) {
   founderImage.appendChild(auraContainer);
 }
 
-/* ================= FLOATING CARD GLOWS ================= */
+/* ================= FLOATING GLOW BEHIND CARDS ================= */
 function createCardGlows(sectionClass, numGlows = 8) {
   const section = document.querySelector(sectionClass);
   if (!section) return;
   for (let i = 0; i < numGlows; i++) {
     const glow = document.createElement('div');
-    glow.classList.add('card-glow');
+    glow.classList.add('card-glow'); // CSS handles size, position, animation
     section.appendChild(glow);
   }
 }
 
-['.governance-section', '.constitution-section', '.trustee-section'].forEach(sel => createCardGlows(sel, 10));
+// Add card glows — let CSS handle styling
+createCardGlows('.governance-section', 10);
+createCardGlows('.constitution-section', 10);
+createCardGlows('.trustee-section', 10);
 
 /* ================= TOKENOMICS PARTICLE PARALLAX ================= */
 const tokenParticles = document.querySelectorAll('.tokenomics-particles span');
@@ -124,7 +127,7 @@ const fadeOnScroll = () => {
 window.addEventListener('scroll', fadeOnScroll);
 fadeOnScroll();
 
-/* ================= STICKY HERO NAVIGATION ================= */
+/* ================= STICKY HERO NAVIGATION & SMOOTH SCROLL ================= */
 const heroNav = document.querySelector('.hero-action');
 const navOffset = heroNav ? heroNav.offsetTop : 0;
 
@@ -144,24 +147,43 @@ document.querySelectorAll('.hero-nav a').forEach(link => {
         top: target.offsetTop - 80,
         behavior: 'smooth'
       });
-    }
-  });
-});
 
-/* ================= CARD HOVER + GLOW EFFECT ================= */
-const cardSelectors = ['.asset-card', '.charity-card', '.board-card', '.mv-card'];
+     // ================== CARD HOVER + GLOW EFFECT ==================
+
+// Select all card types
+const cardSelectors = [
+  '.asset-card',
+  '.charity-card',
+  '.board-card',
+  '.mv-card'
+];
 
 cardSelectors.forEach(selector => {
   const cards = document.querySelectorAll(selector);
   
   cards.forEach(card => {
+    // Create glow element
     const glow = document.createElement('div');
     glow.classList.add('card-hover-glow');
     card.style.position = 'relative';
+    glow.style.position = 'absolute';
+    glow.style.top = '50%';
+    glow.style.left = '50%';
+    glow.style.transform = 'translate(-50%, -50%) scale(0)';
+    glow.style.width = '120%';
+    glow.style.height = '120%';
+    glow.style.background = 'radial-gradient(circle, rgba(34, 197, 94, 0.5), rgba(34, 197, 94, 0))';
+    glow.style.borderRadius = '15px';
+    glow.style.pointerEvents = 'none';
+    glow.style.transition = 'transform 0.4s ease, opacity 0.4s ease';
+    glow.style.opacity = '0';
+    glow.style.zIndex = '0';
     card.appendChild(glow);
 
+    // Hover effect
     card.addEventListener('mouseenter', () => {
       card.style.transform = 'translateY(-10px)';
+      card.style.transition = 'transform 0.4s ease';
       glow.style.transform = 'translate(-50%, -50%) scale(1)';
       glow.style.opacity = '1';
     });
