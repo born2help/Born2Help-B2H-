@@ -521,6 +521,36 @@ img { max-width: 100%; display: block; }
   box-shadow: 0 0 8px rgba(255,255,255,0.25);
 }
 
+/* ================= TOKENOMICS PERCENTAGE ================= */
+.bar-fill {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Percentage at the right */
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding-right: 6px;
+  overflow: hidden;
+}
+
+/* Animate percentage text as bar grows */
+.bar-fill::after {
+  content: attr(data-width);
+  position: absolute;
+  right: 6px;
+  color: #fff;
+  font-weight: 700;
+  opacity: 0;
+  animation: showPercent 1.6s forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes showPercent {
+  0% { opacity: 0; transform: translateX(10px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
 /* Floating particles inside bar */
 .bar-fill span.bar-particle {
   position: absolute;
