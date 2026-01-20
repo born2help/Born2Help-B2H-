@@ -1019,3 +1019,35 @@ img { max-width: 100%; display: block; }
   position: relative;
   z-index: 2;
 }
+
+.governance-flow-container {
+  position: relative;
+  max-width: 700px;
+  margin: 40px auto;
+  padding-left: 50px;
+}
+
+.glow-line {
+  position: absolute;
+  left: 18px;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background: linear-gradient(
+    to bottom,
+    #14b8a6,
+    #22c55e,
+    #3b82f6,
+    #f59e0b,
+    #ef4444
+  );
+  box-shadow:
+    0 0 12px rgba(0,255,198,0.7),
+    0 0 30px rgba(0,255,198,0.4);
+  border-radius: 3px;
+}
+
+.board-title {
+  text-align: center;
+  margin-top: 80px;
+}
