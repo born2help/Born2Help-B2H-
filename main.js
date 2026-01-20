@@ -85,47 +85,6 @@ cardSelectors.forEach(selector => {
   });
 });
 
-/* ================= TOKENOMICS BAR ANIMATION (FIXED) ================= */
-document.addEventListener('DOMContentLoaded', () => {
-  const bars = document.querySelectorAll('.bar-fill');
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const el = entry.target;
-
-        if (el.classList.contains('bar-charity')) el.style.width = '5%';
-        if (el.classList.contains('bar-ops')) el.style.width = '3%';
-        if (el.classList.contains('bar-burn')) el.style.width = '2%';
-        if (el.classList.contains('bar-liquidity')) el.style.width = '10%';
-        if (el.classList.contains('bar-community')) el.style.width = '80%';
-
-        observer.unobserve(el);
-      }
-    });
-  }, { threshold: 0.4 });
-
-  bars.forEach(bar => observer.observe(bar));
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-  const bars = document.querySelectorAll('.bar-fill');
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const el = entry.target;
-        const width = el.dataset.width || '50%';
-        el.style.setProperty('--bar-width', width);
-        el.style.width = width;
-        observer.unobserve(el);
-      }
-    });
-  }, { threshold: 0.4 });
-
-  bars.forEach(bar => observer.observe(bar));
-});
-
 // ================= TOKENOMICS FLOATING PARTICLES =================
 document.addEventListener('DOMContentLoaded', () => {
   const bars = document.querySelectorAll('.bar-fill');
