@@ -592,6 +592,53 @@ img { max-width: 100%; display: block; }
   filter: blur(15px);
 }
 
+/* Animated token bars */
+.bar {
+  height: 25px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.bar span {
+  position: absolute;
+  right: 10px;
+  color: #fff;
+  font-weight: 700;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+/* Glow overlay */
+.bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0; /* start at 0 for animation */
+  height: 100%;
+  border-radius: 12px;
+  background: inherit;
+  filter: blur(8px);
+  opacity: 0.4;
+  transition: opacity 0.3s, width 1.5s ease-out;
+}
+
+/* Individual bar gradients */
+.bar-charity { background: linear-gradient(90deg, #ff4d4f, #ef4444); }
+.bar-ops { background: linear-gradient(90deg, #fbbf24, #f59e0b); }
+.bar-burn { background: linear-gradient(90deg, #60a5fa, #3b82f6); }
+.bar-liquidity { background: linear-gradient(90deg, #2dd4bf, #14b8a6); }
+.bar-community { background: linear-gradient(90deg, #22c55e, #16a34a); }
+
+/* Bar filling animation */
+.bar.animate::after {
+  width: 100%; /* will fill to its container width */
+}
+
 /* Responsive adjustments */
 @media (max-width: 900px) {
   .tokenomics-title {
