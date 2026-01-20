@@ -194,12 +194,12 @@ img { max-width: 100%; display: block; }
   text-align: center;
 }
 
-/* ===== FOUNDER IMAGE HOVER EFFECT (BOARD-CARD STYLE) ===== */
-.founder-image {
-  position: relative;
-  display: inline-block;
-  width: 250px;   /* founder picture size */
-  height: 250px;
+/* ===== FOUNDER IMAGE HOVER EFFECT (BRIGHTER GLOW) ===== */
+.founder-image:hover::before {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.05);  /* glow expands slightly */
+  background: radial-gradient(circle, rgba(34,197,94,0.6), transparent 60%);
+  filter: blur(30px);  /* stronger glow blur */
 }
 
 .founder-image img {
