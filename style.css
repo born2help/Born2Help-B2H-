@@ -566,6 +566,55 @@ img { max-width: 100%; display: block; }
   .tokenomics-subtitle { font-size: 1rem; }
 }
 
+/* ===============================
+   TOKENOMICS BAR – ENHANCED FIX
+   =============================== */
+
+.tokenomics-bar {
+  margin: 22px 0;
+}
+
+.bar-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 600;
+  color: #eaeaea;
+  margin-bottom: 6px;
+}
+
+/* Track (background) */
+.bar-track {
+  width: 100%;
+  height: 14px;
+  background: rgba(255,255,255,0.08); /* NOT black */
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Fill (actual bar) */
+.bar-fill {
+  height: 100%;
+  width: 0;
+  border-radius: 20px;
+  animation: growBar 1.6s ease-out forwards;
+  box-shadow: 0 0 12px rgba(255,255,255,0.25);
+}
+
+/* Animation */
+@keyframes growBar {
+  from { width: 0; }
+  to { width: var(--bar-width); }
+}
+
+/* Colors */
+.red    { background: linear-gradient(90deg, #ff4d4d, #ff8080); }
+.orange { background: linear-gradient(90deg, #ff9f1c, #ffbf69); }
+.blue   { background: linear-gradient(90deg, #3a86ff, #6fa8ff); }
+.green  { background: linear-gradient(90deg, #2ec4b6, #7ae582); }
+.lgreen { background: linear-gradient(90deg, #90db7b, #caffbf); }
+
 /* ================= HOW HUMANITY WORKS ================= */
 .how-humanity-works { background: #081821; color: #b0e0e6; text-align: center; }
 .flow-container { position: relative; max-width: 900px; margin: 0 auto; }
