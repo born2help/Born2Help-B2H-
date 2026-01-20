@@ -986,3 +986,8 @@ img { max-width: 100%; display: block; }
   color: #22c55e;
   margin: 60px 0 30px;
 }
+
+/* ===== DEBUG TEST — MUST CHANGE SCREEN ===== */
+body {
+  outline: 10px solid red !important;
+}
