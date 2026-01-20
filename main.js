@@ -24,7 +24,7 @@ if(heroContent) heroContent.classList.add('depth-float');
 const mouseParticles = [];
 for (let i = 0; i < 15; i++) {
   const p = document.createElement('div');
-  p.classList.add('mouse-particle'); // CSS controls size, color, opacity
+  p.classList.add('mouse-particle');
   hero.appendChild(p);
   mouseParticles.push(p);
 }
@@ -70,12 +70,11 @@ function createCardGlows(sectionClass, numGlows = 8) {
   if (!section) return;
   for (let i = 0; i < numGlows; i++) {
     const glow = document.createElement('div');
-    glow.classList.add('card-glow'); // CSS handles size, position, animation
+    glow.classList.add('card-glow');
     section.appendChild(glow);
   }
 }
 
-// Add card glows — let CSS handle styling
 createCardGlows('.governance-section', 10);
 createCardGlows('.constitution-section', 10);
 createCardGlows('.trustee-section', 10);
@@ -126,22 +125,17 @@ document.querySelectorAll('.hero-nav a').forEach(link => {
         top: target.offsetTop - 80,
         behavior: 'smooth'
       });
+    }
+  });
+});
 
-     // ================== CARD HOVER + GLOW EFFECT ==================
-
-// Select all card types
-const cardSelectors = [
-  '.asset-card',
-  '.charity-card',
-  '.board-card',
-  '.mv-card'
-];
+/* ================= CARD HOVER + GLOW EFFECT ================= */
+const cardSelectors = ['.asset-card', '.charity-card', '.board-card', '.mv-card'];
 
 cardSelectors.forEach(selector => {
   const cards = document.querySelectorAll(selector);
-  
+
   cards.forEach(card => {
-    // Create glow element
     const glow = document.createElement('div');
     glow.classList.add('card-hover-glow');
     card.style.position = 'relative';
@@ -151,7 +145,7 @@ cardSelectors.forEach(selector => {
     glow.style.transform = 'translate(-50%, -50%) scale(0)';
     glow.style.width = '120%';
     glow.style.height = '120%';
-    glow.style.background = 'radial-gradient(circle, rgba(34, 197, 94, 0.5), rgba(34, 197, 94, 0))';
+    glow.style.background = 'radial-gradient(circle, rgba(34,197,94,0.5), rgba(34,197,94,0))';
     glow.style.borderRadius = '15px';
     glow.style.pointerEvents = 'none';
     glow.style.transition = 'transform 0.4s ease, opacity 0.4s ease';
@@ -159,7 +153,6 @@ cardSelectors.forEach(selector => {
     glow.style.zIndex = '0';
     card.appendChild(glow);
 
-    // Hover effect
     card.addEventListener('mouseenter', () => {
       card.style.transform = 'translateY(-10px)';
       card.style.transition = 'transform 0.4s ease';
@@ -172,5 +165,39 @@ cardSelectors.forEach(selector => {
       glow.style.transform = 'translate(-50%, -50%) scale(0)';
       glow.style.opacity = '0';
     });
+  });
+});
+
+/* ================= TOKENOMICS BAR ANIMATION ================= */
+document.addEventListener('DOMContentLoaded', () => {
+  const bars = [
+    { selector: '.bar-charity', width: 5 },
+    { selector: '.bar-ops', width: 3 },
+    { selector: '.bar-burn', width: 2 },
+    { selector: '.bar-liquidity', width: 10 },
+    { selector: '.bar-community', width: 80 },
+  ];
+
+  bars.forEach(bar => {
+    const el = document.querySelector(bar.selector);
+    let current = 0;
+
+    function animate() {
+      if (current < bar.width) {
+        current += 1;
+        el.style.width = current + '%';
+        requestAnimationFrame(animate);
+      } else {
+        el.style.width = bar.width + '%';
+      }
+    }
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) animate();
+      });
+    }, { threshold: 0.3 });
+
+    observer.observe(el);
   });
 });
