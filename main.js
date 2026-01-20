@@ -72,64 +72,72 @@ cardSelectors.forEach(selector => {
   });
 });
 
-/* ================= TOKENOMICS BAR ANIMATION ================= */
+/* ================= TOKENOMICS BAR ANIMATION + PARTICLES ================= */
 document.addEventListener('DOMContentLoaded', () => {
   const bars = document.querySelectorAll('.bar-fill');
 
+  // Animate width based on class or data attribute
   const observerBar = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const el = entry.target;
+        const targetWidth = el.dataset.width || el.style.getPropertyValue('--bar-width') || '50%';
+        let current = 0;
+        const maxWidth = parseFloat(targetWidth);
 
-        // Set width based on class
-        if (el.classList.contains('bar-charity')) el.style.width = '5%';
-        if (el.classList.contains('bar-ops')) el.style.width = '3%';
-        if (el.classList.contains('bar-burn')) el.style.width = '2%';
-        if (el.classList.contains('bar-liquidity')) el.style.width = '10%';
-        if (el.classList.contains('bar-community')) el.style.width = '80%';
-
+        const anim = () => {
+          if (current < maxWidth) {
+            current += 0.5; // growth speed
+            el.style.width = current + '%';
+            requestAnimationFrame(anim);
+          } else {
+            el.style.width = targetWidth;
+          }
+        };
+        anim();
         observerBar.unobserve(el);
+
+        // Add floating particles inside this bar
+        for (let i = 0; i < 4; i++) {
+          const particle = document.createElement('span');
+          particle.classList.add('bar-particle');
+          particle.style.position = 'absolute';
+          particle.style.width = (2 + Math.random() * 4) + 'px';
+          particle.style.height = particle.style.width;
+          particle.style.background = 'rgba(255,255,255,0.6)';
+          particle.style.borderRadius = '50%';
+          particle.style.top = Math.random() * 100 + '%';
+          particle.style.left = Math.random() * 100 + '%';
+          particle.style.pointerEvents = 'none';
+          particle.style.animation = `floatParticle ${3 + Math.random()*2}s ease-in-out infinite alternate`;
+          el.appendChild(particle);
+        }
       }
     });
   }, { threshold: 0.4 });
 
   bars.forEach(bar => observerBar.observe(bar));
 
-  // ================= FLOATING PARTICLES INSIDE BARS =================
-  bars.forEach(bar => {
-    const particleContainer = document.createElement('div');
-    particleContainer.classList.add('bar-particles');
-    particleContainer.style.position = 'absolute';
-    particleContainer.style.top = '0';
-    particleContainer.style.left = '0';
-    particleContainer.style.width = '100%';
-    particleContainer.style.height = '100%';
-    particleContainer.style.pointerEvents = 'none';
-    particleContainer.style.overflow = 'hidden';
-    bar.appendChild(particleContainer);
-
-    for (let i = 0; i < 6; i++) {
-      const p = document.createElement('span');
-      p.style.position = 'absolute';
-      p.style.width = Math.random() * 4 + 2 + 'px';
-      p.style.height = Math.random() * 4 + 2 + 'px';
-      p.style.background = 'rgba(255,255,255,0.6)';
-      p.style.borderRadius = '50%';
-      p.style.top = Math.random() * 100 + '%';
-      p.style.left = Math.random() * 100 + '%';
-      p.style.animation = `barParticleMove ${1.5 + Math.random()}s linear infinite alternate`;
-      particleContainer.appendChild(p);
+  // Add keyframes for floating particles
+  const floatParticleStyle = document.createElement('style');
+  floatParticleStyle.innerHTML = `
+    @keyframes floatParticle {
+      0% { transform: translate(0,0); opacity: 0.6; }
+      50% { transform: translate(0,-8px); opacity: 0.9; }
+      100% { transform: translate(0,0); opacity: 0.6; }
     }
-  });
-
-  // Add keyframes dynamically
-  const style = document.createElement('style');
-  style.textContent = `
-  @keyframes barParticleMove {
-    0% { transform: translateY(0) translateX(0); opacity: 0.6; }
-    50% { transform: translateY(-6px) translateX(4px); opacity: 1; }
-    100% { transform: translateY(0) translateX(0); opacity: 0.6; }
-  }
+    .bar-fill span { pointer-events: none; }
   `;
-  document.head.appendChild(style);
+  document.head.appendChild(floatParticleStyle);
+
+  // Add subtle particle movement inside bar tracks (optional)
+  const barParticleStyle = document.createElement('style');
+  barParticleStyle.textContent = `
+    @keyframes barParticleMove {
+      0% { transform: translateY(0) translateX(0); opacity: 0.6; }
+      50% { transform: translateY(-6px) translateX(4px); opacity: 1; }
+      100% { transform: translateY(0) translateX(0); opacity: 0.6; }
+    }
+  `;
+  document.head.appendChild(barParticleStyle);
 });
