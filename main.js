@@ -106,3 +106,47 @@ document.addEventListener("DOMContentLoaded", () => {
     }, stepTime);
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const tokenomicsSection = document.getElementById("tokenomics");
+  if (!tokenomicsSection) return;
+
+  const bars = tokenomicsSection.querySelectorAll(".bar-fill");
+
+  // Intersection Observer to animate only when section enters viewport
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        bars.forEach(bar => {
+          const span = bar.querySelector("span");
+          if (!span) return;
+
+          const target = parseInt(span.getAttribute("data-width"));
+          let current = 0;
+
+          // Animate bar width
+          bar.style.transition = "width 1.8s ease-out";
+          bar.style.width = target + "%";
+
+          // Animate percentage number
+          const duration = 1800; // match transition duration
+          const stepTime = Math.max(Math.floor(duration / target), 20); // prevent too fast
+
+          const counter = setInterval(() => {
+            if (current < target) {
+              current++;
+              span.textContent = current + "%";
+            } else {
+              span.textContent = target + "%";
+              clearInterval(counter);
+            }
+          }, stepTime);
+        });
+
+        obs.unobserve(entry.target); // animate only once
+      }
+    });
+  }, { threshold: 0.3 });
+
+  observer.observe(tokenomicsSection);
+});
