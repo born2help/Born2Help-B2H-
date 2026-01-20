@@ -998,6 +998,13 @@ img { max-width: 100%; display: block; }
   text-decoration: underline;
 }
 
- .governance-block h3 {
-  text-align: center;
-} 
+/* FORCE Transparency Framework color */
+.governance-section .governance-intro a.transparency-link {
+  color: #f59e0b !important;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.governance-section .governance-intro a.transparency-link:hover {
+  text-decoration: underline;
+}  
