@@ -958,3 +958,41 @@ img { max-width: 100%; display: block; }
   gap: 20px;
   justify-content: center;
 }
+
+/* ===== GOVERNANCE COMPACT & CENTER FIX ===== */
+
+/* Center and limit width of entire governance section */
+.governance-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+/* Compact the flow container */
+.governance-flow-container {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  padding-left: 32px; /* reduced from 40px */
+}
+
+/* Keep glow line but tighter */
+.glow-line {
+  left: 14px;        /* pulls line closer */
+  width: 3px;        /* slimmer but same glow */
+}
+
+/* Governance nodes compact spacing */
+.governance-node {
+  margin-bottom: 22px;
+}
+
+/* Center Board of Trustees heading */
+.governance-section h2 {
+  text-align: center;
+}
+
+/* Board section width control */
+.board-members {
+  max-width: 900px;
+  margin: 0 auto;
+}
