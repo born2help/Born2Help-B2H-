@@ -636,12 +636,6 @@ img { max-width: 100%; display: block; }
 .green  { background: linear-gradient(90deg, #2ec4b6, #7ae582); }
 .lgreen { background: linear-gradient(90deg, #90db7b, #caffbf); }
 
-#particles-js {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-}
-
 /* ===============================
    TOKENOMICS – VISUAL RESET
    =============================== */
