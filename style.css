@@ -506,7 +506,7 @@ img { max-width: 100%; display: block; }
 .bar-fill {
   height: 100%;
   width: 0%;
-  border-radius: 14px;
+  border-radius: 14px 0 0 14px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -514,7 +514,7 @@ img { max-width: 100%; display: block; }
   font-weight: 700;
   color: #fff;
   transition: width 1.5s ease-out;
-  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  min-width: 40px; /* IMPORTANT */
 }
 
 /* Individual colors */
@@ -525,8 +525,9 @@ img { max-width: 100%; display: block; }
 .bar-community { background: linear-gradient(90deg,#22c55e,#86efac); }
 
 .bar-fill span {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   opacity: 0.9;
+  white-space: nowrap;
 }
 
 /* Glow effect for bars on hover */
