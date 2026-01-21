@@ -1298,6 +1298,68 @@ img { max-width: 100%; display: block; }
   padding-top: 6px;
 }
 
+/* ================= FOOTER COMPACT ================= */
+.footer {
+  padding: 25px 20px; /* reduce overall height */
+}
+
+.footer-container {
+  gap: 15px; /* reduce spacing between logo, links, contact, social */
+}
+
+.footer-logo img {
+  width: 110px; /* slightly smaller logo */
+  margin-bottom: 8px;
+}
+
+.footer-logo p {
+  font-size: 0.85rem; /* slightly smaller text */
+  line-height: 1.3;
+}
+
+.footer-links ul li {
+  margin-bottom: 4px; /* smaller gap between links */
+}
+
+.footer-contact p {
+  margin: 2px 0; /* smaller gap between contact lines */
+}
+
+.footer-social a {
+  margin-right: 6px;
+  font-size: 1.1rem; /* slightly smaller social icons */
+}
+
+/* Footer bottom */
+.footer-bottom {
+  margin-top: 15px;
+  font-size: 0.8rem;
+  padding-top: 8px;
+}
+
+/* Responsive mobile adjustments */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px; /* reduce spacing */
+  }
+
+  .footer-logo,
+  .footer-links,
+  .footer-contact,
+  .footer-social {
+    flex: 1 1 100%;
+    margin-bottom: 8px;
+  }
+
+  .footer-social a {
+    margin: 4px;
+    font-size: 1rem;
+  }
+}
+
 /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
   background: rgba(0,255,198,0.05);
