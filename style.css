@@ -568,140 +568,164 @@ img { max-width: 100%; display: block; }
   .tokenomics-subtitle { font-size: 1rem; }
 }
 
-/* ================= HOW HUMANITY WORKS ================= */
+/* ================= HOW HUMANITY WORKS – ENHANCED ================= */
+
 .how-humanity-works {
-  background: #081821;
-  color: #b0e0e6;
+  background: radial-gradient(circle at top, #0b2230, #06131b);
+  color: #cfeff5;
   text-align: center;
-  padding: 80px 20px;
+  padding: 90px 20px;
   position: relative;
   overflow: hidden;
 }
 
-.how-humanity-works .section-title {
+/* Section header */
+.how-humanity-works .section-header h2 {
   font-size: 2.8rem;
   font-weight: 800;
-  margin-bottom: 25px;
-  color: #22c55e; /* vibrant green headings */
-  text-shadow: 0 0 12px rgba(34,197,94,0.6);
+  color: #f59e0b; /* matches tokenomics accent */
+  text-shadow: 0 0 14px rgba(245,158,11,0.6);
 }
 
+.how-humanity-works .section-underline {
+  width: 90px;
+  height: 4px;
+  background: linear-gradient(to right, #22c55e, #f59e0b, #ef4444);
+  margin: 14px auto 20px;
+  border-radius: 2px;
+}
+
+.how-humanity-works .subheading {
+  color: #b6e6ee;
+  max-width: 620px;
+  margin: 0 auto 60px;
+}
+
+/* Flow container */
 .flow-container {
   position: relative;
   max-width: 900px;
   margin: 0 auto;
 }
 
+/* Vertical glowing line */
 .flow-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
   width: 6px;
   height: 100%;
-  background: linear-gradient(to bottom, #14b8a6, #f59e0b, #3b82f6, #ef4444, #10b981);
+  background: linear-gradient(
+    to bottom,
+    #22c55e,
+    #f59e0b,
+    #3b82f6,
+    #ef4444
+  );
+  border-radius: 4px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.25);
+}
+
+/* Moving arrows */
+.moving-arrow {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  border-radius: 4px;
-  box-shadow: 0 0 12px rgba(255,255,255,0.2);
-  z-index: 0;
+  font-size: 2.2rem;
+  color: #f59e0b;
+  animation: arrowFlow 2.4s infinite ease-in-out;
+  opacity: 0.9;
 }
 
+.moving-arrow.delay-1 { animation-delay: 0.6s; }
+.moving-arrow.delay-2 { animation-delay: 1.2s; }
+
+@keyframes arrowFlow {
+  0% {
+    top: 0%;
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    top: 90%;
+    opacity: 0;
+  }
+}
+
+/* Steps */
 .flow-steps {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 50px;
+  gap: 60px;
   position: relative;
   z-index: 1;
 }
 
 .step {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  max-width: 400px;
-  text-align: center;
-}
-
-.step-icon {
-  width: 80px;
-  margin-bottom: 15px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 18px;
+  padding: 25px 20px;
+  max-width: 420px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 25px rgba(0,0,0,0.4);
 }
 
 .step h3 {
   color: #22c55e;
   font-size: 1.6rem;
   margin-bottom: 8px;
-  text-shadow: 0 0 6px rgba(34,197,94,0.5);
 }
 
 .step p {
-  color: #b0e0e6;
-  font-size: 1rem;
+  color: #cdebf1;
   line-height: 1.6;
 }
 
-/* Moving arrows along the flow */
-.moving-arrow {
-  position: absolute;
-  font-size: 2rem;
-  color: #ff6b35; /* vibrant orange/red for visibility */
-  animation: moveArrow 2s infinite linear;
+/* Icons glow */
+.step-icon {
+  width: 70px;
+  margin-bottom: 14px;
+  filter: drop-shadow(0 0 10px rgba(34,197,94,0.6));
 }
 
-.moving-arrow.delay-1 {
-  animation-delay: 0.3s;
-}
-.moving-arrow.delay-2 {
-  animation-delay: 0.6s;
+/* CTA button */
+.cta {
+  margin-top: 70px;
 }
 
-@keyframes moveArrow {
-  0% { top: 0; opacity: 0; }
-  25% { top: 20px; opacity: 0.6; }
-  50% { top: 40px; opacity: 1; }
-  75% { top: 20px; opacity: 0.6; }
-  100% { top: 0; opacity: 0; }
-}
-
-/* Glowing halo behind each step */
-.step::before {
-  content: '';
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  width: calc(100% + 20px);
-  height: calc(100% + 20px);
-  border-radius: 20px;
-  background: radial-gradient(circle, rgba(34,197,94,0.15) 0%, transparent 70%);
-  z-index: -1;
-  filter: blur(12px);
-}
-
-/* Join the Movement button style */
-.how-humanity-works .btn {
-  background: linear-gradient(90deg, #ff6b35, #ff9a3c);
-  color: #fff;
+.cta .btn {
+  padding: 14px 38px;
+  font-size: 1.1rem;
   font-weight: 700;
-  padding: 14px 28px;
-  font-size: 1rem;
-  border-radius: 12px;
-  text-decoration: none;
-  transition: transform 0.3s, box-shadow 0.3s;
+  color: #fff;
+  background: linear-gradient(135deg, #f59e0b, #ef4444);
+  border-radius: 50px;
+  box-shadow: 0 0 25px rgba(245,158,11,0.6);
+  transition: all 0.35s ease;
 }
 
-.how-humanity-works .btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(255,107,53,0.5);
+.cta .btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 0 40px rgba(239,68,68,0.9);
 }
 
-/* Responsive adjustments */
+/* Mobile */
 @media (max-width: 768px) {
-  .flow-line { left: 10px; height: 100%; }
-  .step { padding-left: 50px; max-width: 90%; }
-  .step-icon { width: 60px; margin-bottom: 12px; }
-  .step h3 { font-size: 1.4rem; }
-  .step p { font-size: 0.95rem; }
-  .moving-arrow { font-size: 1.6rem; }
+  .flow-line {
+    left: 12px;
+  }
+
+  .moving-arrow {
+    left: 12px;
+    transform: none;
+  }
+
+  .step {
+    margin-left: 40px;
+  }
 }
 
 /* ================= CHARITY ================= */
