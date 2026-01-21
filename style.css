@@ -1266,6 +1266,101 @@ img { max-width: 100%; display: block; }
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px){
 
+/* ================= FOOTER – COMPACT & HERO MOBILE FIX ================= */
 
+/* -------- Compact Footer -------- */
+.footer {
+  background: #0f2734;
+  color: #b0e0e6;
+  padding: 25px 20px 15px; /* reduced vertical padding */
+  font-size: 0.95rem;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px; /* reduced gap */
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px; /* reduced gap */
+}
+
+/* Logo & Description */
+.footer-logo {
+  flex: 1 1 200px; /* slightly smaller */
+  text-align: left;
+}
+
+.footer-logo img {
+  width: 120px; /* smaller logo */
+  margin-bottom: 6px; /* reduced spacing */
+}
+
+.footer-logo p {
+  font-size: 0.85rem;
+  line-height: 1.35;
+}
+
+/* Quick Links, Contact, Social */
+.footer-links,
+.footer-contact,
+.footer-social {
+  flex: 1 1 160px; /* slightly smaller */
+}
+
+.footer-links ul li {
+  margin-bottom: 4px; /* reduced spacing */
+}
+
+.footer-social a {
+  margin-right: 5px; /* closer together */
+  font-size: 1.1rem;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 15px; /* reduced spacing */
+  font-size: 0.8rem;
+  padding-top: 6px;
+}
+
+/* -------- Hero Section Mobile Fix -------- */
+@media (max-width: 768px) {
+  .hero .main-logo-hero,
+  .hero .burn-logo {
+    width: 100px; /* smaller logos */
+    position: relative;
+    display: block;
+    margin: 0 auto 10px; /* vertical stack with spacing */
+  }
+
+  .hero-content {
+    padding: 20px 10px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .hero-actions a {
+    width: 80%; /* buttons full width but with margin */
+    text-align: center;
+  }
+}
 
 
