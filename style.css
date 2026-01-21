@@ -1331,6 +1331,10 @@ img { max-width: 100%; display: block; }
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px){
+  /* mobile rules */
+}
+
+/* NOTHING BROKEN BELOW THIS */
 
 /* ===============================
    INNER PAGES — GLOBAL DESIGN
