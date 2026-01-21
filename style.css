@@ -918,6 +918,21 @@ img { max-width: 100%; display: block; }
   line-height: 1.5;
 }
 
+/* ================= CHARITY SECTION ADJUSTMENTS ================= */
+
+/* Center images inside charity cards */
+.charity-card img {
+  display: block;
+  margin: 0 auto; /* center horizontally */
+}
+
+/* Wrap intro text in two lines and center */
+.charity-intro {
+  max-width: 600px; /* restrict line length */
+  margin: 0 auto 40px auto; /* center horizontally */
+  text-align: center; /* keep centered */
+}
+
 /* ================= DONATIONS & ASSETS ================= */
 .assets-section { background: #081821; color: #b0e0e6; text-align: center; padding: 80px 20px; }
 .assets-header h2 { color: #22c55e; margin-bottom: 10px; }
