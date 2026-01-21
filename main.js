@@ -79,7 +79,7 @@ cardSelectors.forEach(selector => {
 
   const bars = section.querySelectorAll(".bar-fill");
 
-  // Reset bars to 0
+  // Reset all bars
   bars.forEach(bar => {
     bar.style.width = "0%";
     const span = bar.querySelector("span");
@@ -101,7 +101,7 @@ cardSelectors.forEach(selector => {
         bar.style.transition = "width 1.8s ease-out";
         bar.style.width = target + "%";
 
-        // Animate percentage number smoothly
+        // Animate number smoothly
         const interval = setInterval(() => {
           if (current < target) {
             current++;
@@ -110,10 +110,10 @@ cardSelectors.forEach(selector => {
             span.textContent = target + "%";
             clearInterval(interval);
           }
-        }, 18); // 18ms for smooth count
+        }, 18);
       });
 
-      obs.unobserve(section); // run once only
+      obs.unobserve(section); // run only once
     });
   }, { threshold: 0.35 });
 
