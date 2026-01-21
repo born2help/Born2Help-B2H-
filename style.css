@@ -1326,13 +1326,12 @@ img { max-width: 100%; display: block; }
 /* ================= PARTICLES ADJUSTMENT ================= */
 .particles-js-canvas-el { position:absolute !important; top:0; left:0; width:100% !important; height:100% !important; z-index:0; }
 
-/* ================= RESPONSIVE ================= */
 @media (max-width: 768px){
-  /* mobile rules */
+  /* mobile styles */
 }
 
-/* NOTHING BROKEN BELOW THIS */
-
+/* ===== END OF FILE ===== */
+  
 /* ===============================
    INNER PAGES — GLOBAL DESIGN
    SAFE TO ADD AT END OF FILE
