@@ -119,3 +119,16 @@ cardSelectors.forEach(selector => {
 
   observer.observe(section);
 })();
+
+/* ================= HOW HUMANITY WORKS – ARROW ANIMATION ================= */
+document.addEventListener("DOMContentLoaded", function () {
+
+  const arrows = document.querySelectorAll(".moving-arrow");
+
+  arrows.forEach((arrow, index) => {
+    arrow.style.left = "50%";
+    arrow.style.transform = "translateX(-50%)";
+    arrow.style.animationDelay = `${index * 0.4}s`;
+  });
+
+});
