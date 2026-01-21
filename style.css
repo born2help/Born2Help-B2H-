@@ -438,7 +438,8 @@ img { max-width: 100%; display: block; }
   font-weight: 600;
 }
 
-/* ================= TOKENOMICS ================= */
+<!-- ================= TOKENOMICS CSS ================= -->
+<style>
 .tokenomics {
   background: #0f2734;
   color: #e0f7fa;
@@ -488,12 +489,10 @@ img { max-width: 100%; display: block; }
   flex: 1 1 200px;
   max-width: 220px;
   text-align: center;
-  transition: transform 0.4s ease;
+  position: relative;
+  transition: transform 0.4s;
 }
-
-.token-box:hover {
-  transform: translateY(-6px);
-}
+.token-box:hover { transform: translateY(-6px); }
 
 /* Bar track */
 .bar {
@@ -502,50 +501,39 @@ img { max-width: 100%; display: block; }
   background: rgba(255,255,255,0.08);
   border-radius: 12px;
   overflow: hidden;
+  position: relative;
 }
 
-/* ================= BAR FILL ================= */
+/* Bar fill */
 .bar-fill {
   width: 0%;
   height: 100%;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   padding-right: 6px;
-  border-radius: 12px;
-  white-space: nowrap;
-  font-size: 0.85rem;
   font-weight: 700;
-  color: #ffffff;
+  font-size: 0.85rem;
+  color: #fff;
   overflow: hidden;
   transition: width 1.8s ease-out;
 }
 
 /* Percentage text */
 .bar-fill span {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #fff;
   pointer-events: none;
 }
 
 /* Bar colors */
-.bar-fill.red {
-  background: linear-gradient(90deg, #ff4d4d, #ff8080);
-}
-
-.bar-fill.orange {
-  background: linear-gradient(90deg, #ff9f1c, #ffd166);
-}
-
-.bar-fill.blue {
-  background: linear-gradient(90deg, #3a86ff, #7db9ff);
-}
-
-.bar-fill.green {
-  background: linear-gradient(90deg, #2ec4b6, #8ef1df);
-}
-
-.bar-fill.lgreen {
-  background: linear-gradient(90deg, #90db7b, #caffbf);
-}
+.bar-fill.red    { background: linear-gradient(90deg, #ff4d4d, #ff8080); }
+.bar-fill.orange { background: linear-gradient(90deg, #ff9f1c, #ffd166); }
+.bar-fill.blue   { background: linear-gradient(90deg, #3a86ff, #7db9ff); }
+.bar-fill.green  { background: linear-gradient(90deg, #2ec4b6, #8ef1df); }
+.bar-fill.lgreen { background: linear-gradient(90deg, #90db7b, #caffbf); }
 
 /* Box headings */
 .token-box h3 {
@@ -556,18 +544,11 @@ img { max-width: 100%; display: block; }
 
 /* Responsive */
 @media (max-width: 900px) {
-  .token-box {
-    max-width: 100%;
-  }
-
-  .tokenomics-title {
-    font-size: 2.4rem;
-  }
-
-  .tokenomics-subtitle {
-    font-size: 1rem;
-  }
+  .token-box { max-width: 100%; }
+  .tokenomics-title { font-size: 2.4rem; }
+  .tokenomics-subtitle { font-size: 1rem; }
 }
+</style>
 
 /* ================= HOW HUMANITY WORKS ================= */
 .how-humanity-works { background: #081821; color: #b0e0e6; text-align: center; }
