@@ -1332,6 +1332,26 @@ img { max-width: 100%; display: block; }
 
 /* ================= MOBILE ================= */ @media (max-width: 768px) { .page-hero h1 { font-size: 2.1rem; } .wp-section { padding: 26px 20px; margin: 35px 16px; } .hero-buttons, .hero-actions { gap: 12px; } }
 
+/* ================= HERO SUBPAGES ================= */
+.page-hero {
+  text-align: center;
+  padding: 60px 20px 40px; /* reduced top & bottom padding */
+  position: relative;
+  z-index: 2;
+}
+
+.page-hero h1 {
+  font-size: 2.4rem; /* slightly smaller */
+  margin-bottom: 12px; /* less gap with subtitle */
+}
+
+.page-hero .subtitle {
+  font-size: 1rem;
+  color: #b0e0e6;
+  opacity: 0.9;
+  margin-bottom: 20px; /* controls space before buttons */
+}
+
   /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
   background: rgba(0,255,198,0.05);
