@@ -4,25 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Donate — B2H Global Foundation</title>
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Optional Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-
-  <script>
-  const sections = document.querySelectorAll('.section, .wp-section, .page-hero');
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.2 });
-
-  sections.forEach(section => observer.observe(section));
-</script>
-
 <body class="dark-page glass-page">
+
   <section class="glass-container">
 
     <!-- ================= HERO ================= -->
@@ -30,9 +23,9 @@
       <h1 class="green-glow">Donate with Purpose</h1>
       <p class="subtitle">Your contribution is an act of service — not an investment</p>
       <div class="hero-buttons">
-        <a href="white-paper.html" class="btn-primary">Read White Paper</a>
-        <a href="transparency.html" class="btn-secondary">View Transparency</a>
-        <a href="index.html" class="hero-home">← Back Home</a>
+        <a href="white-paper.html" class="btn-primary"><i class="fas fa-file-pdf"></i> Read White Paper</a>
+        <a href="transparency.html" class="btn-secondary"><i class="fas fa-eye"></i> View Transparency</a>
+        <a href="index.html" class="hero-home"><i class="fas fa-house"></i> ← Back Home</a>
       </div>
       <hr class="section-divider">
     </section>
@@ -122,12 +115,33 @@
         <a href="white-paper.html">White Paper</a>
         <a href="transparency.html">Transparency</a>
         <a href="tokenomics.html">Tokenomics</a>
+        <a href="donate.html">Donate</a>
       </div>
       <div class="footer-bottom">
         <p>&copy; 2026 B2H Global Foundation. All Rights Reserved.</p>
       </div>
     </div>
   </footer>
+
+  <!-- ================= SCROLL REVEAL SCRIPT ================= -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('.section, .wp-section, .page-hero');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting){
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.2 });
+
+      sections.forEach(section => observer.observe(section));
+
+      // Safety fallback to ensure content always visible
+      sections.forEach(section => section.classList.add('visible'));
+    });
+  </script>
 
 </body>
 </html>
