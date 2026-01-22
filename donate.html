@@ -1,32 +1,33 @@
+Donate html
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Donate — B2H Global Foundation</title>
-
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
-
-  <!-- Main CSS -->
   <link rel="stylesheet" href="style.css">
-
-  <!-- Optional Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body class="dark-page glass-page">
 
   <section class="glass-container">
 
     <!-- ================= HERO ================= -->
-    <section class="page-hero">
+    <section class="page-hero visible">
       <h1 class="green-glow">Donate with Purpose</h1>
       <p class="subtitle">Your contribution is an act of service — not an investment</p>
+      
       <div class="hero-buttons">
-        <a href="white-paper.html" class="btn-primary"><i class="fas fa-file-pdf"></i> Read White Paper</a>
-        <a href="transparency.html" class="btn-secondary"><i class="fas fa-eye"></i> View Transparency</a>
-        <a href="index.html" class="hero-home"><i class="fas fa-house"></i> ← Back Home</a>
+        <a href="white-paper.html" class="btn-secondary"><i class="fas fa-file-alt"></i> Read White Paper</a>
+        <a href="transparency.html" class="btn-secondary"><i class="fas fa-balance-scale"></i> View Transparency</a>
+        <a href="index.html" class="btn-primary"><i class="fas fa-home"></i> Back Home</a>
       </div>
+
       <hr class="section-divider">
     </section>
 
@@ -34,7 +35,7 @@
     <section class="section">
 
       <div class="wp-section">
-        <h2 class="section-title">Purpose of Donations</h2>
+        <h2 class="section-title"><i class="fas fa-heart"></i> Purpose of Donations</h2>
         <p>
           B2H donations support humanitarian initiatives, long-term sustainability,
           and ethical operations. Donations are not speculative, refundable, or profit-generating.
@@ -43,7 +44,7 @@
       <hr class="section-divider">
 
       <div class="wp-section">
-        <h2 class="section-title">What Your Donation Supports</h2>
+        <h2 class="section-title"><i class="fas fa-gift"></i> What Your Donation Supports</h2>
         <ul>
           <li>Humanitarian relief and aid programs</li>
           <li>Education, healthcare, and food security initiatives</li>
@@ -54,7 +55,7 @@
       <hr class="section-divider">
 
       <div class="wp-section">
-        <h2 class="section-title">What Donations Are NOT</h2>
+        <h2 class="section-title"><i class="fas fa-ban"></i> What Donations Are NOT</h2>
         <ul>
           <li>Not an investment</li>
           <li>Not a promise of financial return</li>
@@ -65,7 +66,7 @@
       <hr class="section-divider">
 
       <div class="wp-section">
-        <h2 class="section-title">Participation Principles</h2>
+        <h2 class="section-title"><i class="fas fa-users"></i> Participation Principles</h2>
         <p>
           Donations are accepted only from individuals who understand and
           agree with B2H’s humanitarian-first principles.
@@ -74,7 +75,7 @@
       <hr class="section-divider">
 
       <div class="wp-section">
-        <h2 class="section-title">Sadaqah Jariyah</h2>
+        <h2 class="section-title"><i class="fas fa-hand-holding-heart"></i> Sadaqah Jariyah</h2>
         <p>
           B2H enables participation as a form of <strong>Sadaqah Jariyah</strong> —
           continuous charity that benefits people over time.
@@ -83,7 +84,7 @@
       <hr class="section-divider">
 
       <div class="wp-section">
-        <h2 class="section-title">Donation Methods</h2>
+        <h2 class="section-title"><i class="fas fa-credit-card"></i> Donation Methods</h2>
         <p>
           Approved donation methods will be transparently published when active.
           Any request for private, direct, or unofficial payments should be treated
@@ -93,7 +94,7 @@
       <hr class="section-divider">
 
       <div class="wp-section highlight">
-        <h2 class="section-title green-glow">Important Notice</h2>
+        <h2 class="section-title green-glow"><i class="fas fa-exclamation-triangle"></i> Important Notice</h2>
         <p>
           Anyone promising guaranteed returns, special access, or financial benefits
           does not represent B2H. Always follow ethical, official channels.
@@ -110,7 +111,7 @@
   <footer class="site-footer dark-section">
     <div class="container footer-container">
       <div class="footer-links">
-        <a href="index.html">Home</a>
+        <a href="index.html" class="back-home">← Back Home</a>
         <a href="about.html">About</a>
         <a href="white-paper.html">White Paper</a>
         <a href="transparency.html">Transparency</a>
@@ -123,24 +124,19 @@
     </div>
   </footer>
 
-  <!-- ================= SCROLL REVEAL SCRIPT ================= -->
+  <!-- ================= SCROLL ANIMATION ================= -->
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const sections = document.querySelectorAll('.section, .wp-section, .page-hero');
+    const sections = document.querySelectorAll('.section, .wp-section, .page-hero');
 
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if(entry.isIntersecting){
-            entry.target.classList.add('visible');
-          }
-        });
-      }, { threshold: 0.2 });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
 
-      sections.forEach(section => observer.observe(section));
-
-      // Safety fallback to ensure content always visible
-      sections.forEach(section => section.classList.add('visible'));
-    });
+    sections.forEach(section => observer.observe(section));
   </script>
 
 </body>
