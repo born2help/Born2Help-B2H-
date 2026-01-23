@@ -130,5 +130,22 @@
     sections.forEach(section => observer.observe(section));
   </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll('.page-hero, p, li, h1, h2, h3, h4, .hero-actions a, .glass-back');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2 });
+
+    elements.forEach(el => observer.observe(el));
+});
+</script>
+
 </body>
 </html>
