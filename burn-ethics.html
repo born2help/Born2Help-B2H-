@@ -4,40 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Burn & Ethics — B2H Global Foundation</title>
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Subpage CSS -->
+  <link rel="stylesheet" href="subpage.css">
 </head>
 
-<body class="dark-page glass-page">
+<body class="b2h-subpage">
 
-  <!-- ================= TOP NAVIGATION ================= -->
-  <nav class="top-nav">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="white-paper.html">White Paper</a>
-    <a href="burn-ethics.html" class="active">Burn & Ethics</a>
-    <a href="founder-continuity.html">Founder Continuity</a>
-    <a href="tokenomics.html">Tokenomics</a>
-    <a href="donate.html">Donate</a>
-  </nav>
-
+  <!-- ================= MAIN GLASS CONTAINER ================= -->
   <section class="glass-container">
 
     <!-- ================= HERO ================= -->
-    <section class="page-hero" id="hero">
+    <section class="page-hero">
       <h1 class="green-glow">Burn & Ethics</h1>
       <p class="subtitle">Every action & every burn is guided by responsibility, ethics, and compassion</p>
-      <div class="hero-buttons">
-        <a href="white-paper.html" class="btn-secondary"><i class="fas fa-file-alt"></i> Read White Paper</a>
-        <a href="about.html" class="btn-secondary"><i class="fas fa-info-circle"></i> About B2H</a>
-        <a href="tokenomics.html" class="btn-secondary"><i class="fas fa-coins"></i> Tokenomics</a>
-        <a href="index.html" class="btn-primary"><i class="fas fa-home"></i> Back Home</a>
+
+      <div class="hero-actions">
+        <a href="white-paper.html"><i class="fas fa-file-alt"></i> Read White Paper</a>
+        <a href="about.html"><i class="fas fa-info-circle"></i> About B2H</a>
+        <a href="tokenomics.html"><i class="fas fa-coins"></i> Tokenomics</a>
+        <a href="index.html" class="hero-home"><i class="fas fa-home"></i> Back Home</a>
       </div>
+
       <hr class="section-divider">
     </section>
 
     <!-- ================= BURN SECTION ================= -->
-    <section class="section" id="burn">
+    <section class="section">
       <div class="wp-section">
         <h2 class="section-title">Burn to Help — What It Means</h2>
         <p>
@@ -76,7 +75,7 @@
     </section>
 
     <!-- ================= ETHICS SECTION ================= -->
-    <section class="section" id="ethics">
+    <section class="section">
       <div class="wp-section">
         <h2 class="section-title">Ethics in B2H</h2>
         <p>
@@ -97,7 +96,7 @@
     </section>
 
     <!-- ================= FOUNDER SAFEGUARDS ================= -->
-    <section class="section" id="founder">
+    <section class="section">
       <div class="wp-section">
         <h2 class="section-title">Founder Safeguards</h2>
         <p>
@@ -116,22 +115,36 @@
   </section>
 
   <!-- ================= FOOTER ================= -->
-  <footer class="site-footer dark-section">
-    <div class="container footer-container">
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="white-paper.html">White Paper</a>
-        <a href="burn-ethics.html" class="active">Burn & Ethics</a>
-        <a href="founder-continuity.html">Founder Continuity</a>
-        <a href="tokenomics.html">Tokenomics</a>
-        <a href="donate.html">Donate</a>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 B2H Global Foundation. All Rights Reserved.</p>
-      </div>
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="white-paper.html">White Paper</a>
+      <a href="burn-ethics.html" class="active">Burn & Ethics</a>
+      <a href="founder-continuity.html">Founder Continuity</a>
+      <a href="tokenomics.html">Tokenomics</a>
+      <a href="donate.html">Donate</a>
     </div>
+    <p>&copy; 2026 B2H Global Foundation. All Rights Reserved.</p>
   </footer>
+
+  <!-- ================= FADE-IN SCRIPT ================= -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const elements = document.querySelectorAll('.page-hero, .section, .wp-section, p, li, h1, h2, h3, h4, .hero-actions a, .glass-back');
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting){
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+
+      elements.forEach(el => observer.observe(el));
+    });
+  </script>
 
 </body>
 </html>
