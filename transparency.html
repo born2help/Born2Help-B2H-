@@ -8,25 +8,42 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
 
-  <!-- Subpage CSS -->
+  <!-- Unified Subpage CSS -->
   <link rel="stylesheet" href="subpage.css">
 </head>
 
 <body class="b2h-subpage">
 
+  <!-- ================= NAVIGATION ================= -->
+  <nav class="site-nav">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="index.html">B2H</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="white-paper.html">White Paper</a></li>
+        <li><a href="burn-ethics.html">Burn & Ethics</a></li>
+        <li><a href="founder-continuity.html">Founder Continuity</a></li>
+        <li><a href="donate.html" class="nav-donate">Donate</a></li>
+      </ul>
+    </div>
+  </nav>
+
   <!-- ================= MAIN GLASS CONTAINER ================= -->
   <section class="glass-container">
 
     <!-- ================= HERO ================= -->
-    <section class="page-hero">
+    <section class="page-hero visible">
       <h1 class="green-glow">Transparency Framework</h1>
       <p class="subtitle">Trust through responsibility — not exposure</p>
 
       <div class="hero-actions">
-        <a href="about.html" class="btn-secondary">About B2H</a>
-        <a href="white-paper.html" class="btn-secondary">White Paper</a>
-        <a href="tokenomics.html" class="btn-secondary">Tokenomics</a>
-        <a href="index.html" class="btn-primary">← Back Home</a>
+        <a href="about.html" class="whitepaper">About B2H</a>
+        <a href="white-paper.html" class="whitepaper">White Paper</a>
+        <a href="tokenomics.html" class="whitepaper">Tokenomics</a>
+        <a href="index.html" class="donate">← Back Home</a>
       </div>
 
       <hr class="section-divider">
@@ -124,7 +141,6 @@
       <a href="index.html" class="glass-back">← Back Home</a>
 
     </section>
-
   </section>
 
   <!-- ================= FOOTER ================= -->
@@ -134,29 +150,28 @@
       <a href="about.html">About</a>
       <a href="white-paper.html">White Paper</a>
       <a href="burn-ethics.html">Burn & Ethics</a>
+      <a href="founder-continuity.html">Founder Continuity</a>
       <a href="transparency.html" class="active">Transparency</a>
       <a href="tokenomics.html">Tokenomics</a>
       <a href="donate.html">Donate</a>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 B2H Global Foundation. All Rights Reserved.</p>
-    </div>
+    <p>&copy; 2026 B2H Global Foundation. All Rights Reserved.</p>
   </footer>
 
-  <!-- ================= SCROLL ANIMATION ================= -->
+  <!-- ================= FADE-IN SCRIPT ================= -->
   <script>
-    const sections = document.querySelectorAll('.page-hero, .section, .wp-section');
+    const elements = document.querySelectorAll('.page-hero, .section, .wp-section, p, li, h1, h2, .hero-actions a, .glass-back');
 
-    const observer = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
+        if(entry.isIntersecting){
           entry.target.classList.add('visible');
           observer.unobserve(entry.target);
         }
       });
     }, { threshold: 0.2 });
 
-    sections.forEach(section => observer.observe(section));
+    elements.forEach(el => observer.observe(el));
   </script>
 
 </body>
