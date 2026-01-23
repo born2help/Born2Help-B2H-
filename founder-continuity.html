@@ -8,48 +8,32 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
 
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="style.css">
+  <!-- Subpage CSS -->
+  <link rel="stylesheet" href="subpage.css">
 </head>
 
-<body class="dark-page glass-page">
+<body class="b2h-subpage">
 
-  <!-- ================= NAVIGATION ================= -->
-  <nav class="site-nav">
-    <div class="nav-container">
-      <div class="nav-logo">
-        <a href="index.html">B2H</a>
-      </div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="white-paper.html">White Paper</a></li>
-        <li><a href="burn-ethics.html">Burn & Ethics</a></li>
-        <li><a href="founder-continuity.html" class="active">Founder Continuity</a></li>
-        <li><a href="donate.html" class="nav-donate">Donate</a></li>
-      </ul>
-    </div>
-  </nav>
-
+  <!-- ================= MAIN GLASS CONTAINER ================= -->
   <section class="glass-container">
 
     <!-- ================= HERO ================= -->
-    <section class="page-hero visible">
+    <section class="page-hero">
       <h1 class="green-glow">Founder Continuity & Succession Lock</h1>
       <p class="subtitle">
         Leadership exists to protect the mission — never to own it
       </p>
 
       <div class="hero-actions">
-        <a href="white-paper.html" class="whitepaper">White Paper</a>
-        <a href="burn-ethics.html" class="whitepaper">Burn & Ethics</a>
-        <a href="index.html" class="donate">← Back Home</a>
+        <a href="white-paper.html">White Paper</a>
+        <a href="burn-ethics.html">Burn & Ethics</a>
+        <a href="index.html" class="hero-home">← Back Home</a>
       </div>
 
       <hr class="section-divider">
     </section>
 
-    <!-- ================= CONTENT ================= -->
+    <!-- ================= PAGE CONTENT ================= -->
     <section class="section">
 
       <div class="wp-section">
@@ -208,27 +192,40 @@
       </div>
 
       <a href="index.html" class="glass-back">← Back Home</a>
-
     </section>
 
   </section>
 
   <!-- ================= FOOTER ================= -->
-  <footer class="site-footer dark-section">
-    <div class="container footer-container">
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="white-paper.html">White Paper</a>
-        <a href="burn-ethics.html">Burn & Ethics</a>
-        <a href="founder-continuity.html">Founder Continuity</a>
-        <a href="donate.html">Donate</a>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 B2H Global Foundation. All Rights Reserved.</p>
-      </div>
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="white-paper.html">White Paper</a>
+      <a href="burn-ethics.html">Burn & Ethics</a>
+      <a href="founder-continuity.html" class="active">Founder Continuity</a>
+      <a href="donate.html">Donate</a>
     </div>
+    <p>&copy; 2026 B2H Global Foundation. All Rights Reserved.</p>
   </footer>
+
+  <!-- ================= FADE-IN SCRIPT ================= -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const elements = document.querySelectorAll('.page-hero, .section, .wp-section, p, li, h1, h2, h3, h4, .hero-actions a, .glass-back');
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting){
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+
+      elements.forEach(el => observer.observe(el));
+    });
+  </script>
 
 </body>
 </html>
