@@ -1,265 +1,238 @@
 /* ========================================
-   B2H Global Foundation — Rich Subpages CSS
-   Applies to all subpages (About → Vision)
-   Scoped under .b2h-subpage
+   B2H Global Foundation — Refined Subpage CSS
    ======================================== */
 
-.b2h-subpage {
+/* ---------------- BODY & TYPOGRAPHY ---------------- */
+body {
     font-family: 'Montserrat', sans-serif;
     background: #0e0f12;
     color: #f4f4f9;
     margin: 0;
     padding: 0;
-    line-height: 1.7;
+    line-height: 1.75;
+    transition: background 0.5s;
 }
 
-/* ---------------- TYPOGRAPHY ---------------- */
-.b2h-subpage h1, 
-.b2h-subpage h2, 
-.b2h-subpage h3, 
-.b2h-subpage h4 {
+h1, h2, h3, h4 {
     font-weight: 800;
     color: #00ff95;
-    text-shadow: 0 0 6px #00ff95, 0 0 12px #00ff95;
+    text-shadow: 0 0 8px #00ff95, 0 0 12px #00ffc6;
     margin-top: 0;
     margin-bottom: 0.75rem;
 }
 
-.b2h-subpage h2.section-title {
-    font-size: 2rem;
-}
-
-.b2h-subpage h3 {
-    font-size: 1.5rem;
-    color: #00ffd1;
-    text-shadow: 0 0 4px #00ffd1;
-    margin-bottom: 0.5rem;
-}
-
-.b2h-subpage p, 
-.b2h-subpage li {
+p, li {
     font-weight: 400;
-    color: #ddd;
-    max-width: 800px;
+    color: #d8f4e3;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    transition: color 0.3s ease;
 }
 
-.b2h-subpage p strong,
-.b2h-subpage p span.highlight {
-    color: #00ff95;
-    font-weight: 600;
+p:hover {
+    color: #00ffcc;
 }
 
-/* ---------------- LISTS ---------------- */
-.b2h-subpage ul {
+ul {
     padding-left: 1.8rem;
-    margin-bottom: 1rem;
 }
 
-.b2h-subpage ul li {
-    margin-bottom: 0.6rem;
+ul li {
+    margin-bottom: 0.8rem;
     position: relative;
-    padding-left: 1.2rem;
-    transition: transform 0.2s ease;
+    padding-left: 0.8rem;
 }
 
-.b2h-subpage ul li:hover {
-    transform: translateX(3px);
-}
-
-.b2h-subpage ul li::before {
-    content: "✔";
-    color: #00ff95;
+ul li::before {
+    content: "•";
     position: absolute;
     left: 0;
+    color: #00ff95;
+    font-size: 1.2rem;
 }
 
-/* ---------------- LINKS ---------------- */
-.b2h-subpage a {
+/* ---------------- LINKS & BUTTONS ---------------- */
+a {
     text-decoration: none;
     color: #00ff95;
     font-weight: 600;
     transition: all 0.3s ease;
 }
 
-.b2h-subpage a:hover {
-    color: #00ffd1;
-    text-shadow: 0 0 5px #00ffd1;
+a:hover {
+    color: #00ffc6;
+    text-shadow: 0 0 6px #00ffc6;
 }
 
-/* ---------------- GLASS CONTAINER & HERO ---------------- */
-.b2h-subpage .glass-container {
-    padding: 3rem;
-    background: rgba(15, 16, 18, 0.82);
+/* Hero / page buttons */
+.hero-actions a,
+.glass-container .hero-actions a,
+.page-hero a {
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 0.7rem 1.5rem;
+    border-radius: 10px;
+    border: 2px solid #00ff95;
+    background: rgba(0,255,149,0.1);
+    color: #00ff95;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 0 8px #00ff9550, 0 0 16px #00ff9520;
+    transition: all 0.3s ease;
+}
+
+.hero-actions a:hover,
+.glass-container .hero-actions a:hover {
+    background: #00ff95;
+    color: #0e0f12;
+    transform: translateY(-2px);
+    box-shadow: 0 0 12px #00ff9580, 0 0 24px #00ff9540;
+}
+
+/* ---------------- GLASS CONTAINER ---------------- */
+.glass-container {
+    padding: 2.5rem;
+    background: rgba(15,16,18,0.85);
     backdrop-filter: blur(14px) saturate(180%);
     border-radius: 1.2rem;
-    margin: 3rem auto;
+    margin: 2rem auto;
     max-width: 1100px;
-    box-shadow: 0 12px 32px rgba(0,0,0,0.65);
+    box-shadow: 0 12px 28px rgba(0,255,149,0.3);
+    transition: all 0.4s ease;
 }
 
-.b2h-subpage .page-hero {
+.glass-container:hover {
+    box-shadow: 0 16px 32px rgba(0,255,149,0.5);
+}
+
+/* ---------------- PAGE HERO ---------------- */
+.page-hero {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
     opacity: 0;
     transform: translateY(20px);
-    transition: all 0.7s ease-out;
+    transition: all 0.6s ease-out;
 }
 
-.b2h-subpage .page-hero.visible {
+.page-hero.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-.b2h-subpage .page-hero h1 {
+.page-hero h1 {
     font-size: 3rem;
+    text-shadow: 0 0 10px #00ff95, 0 0 20px #00ff95;
 }
 
-.b2h-subpage .subtitle {
-    font-size: 1.25rem;
+.subtitle {
+    font-size: 1.3rem;
     color: #a0f0c0;
-    margin-bottom: 1.5rem;
-}
-
-/* ---------------- HERO BUTTONS ---------------- */
-.b2h-subpage .hero-actions a {
-    display: inline-block;
-    margin: 0.5rem;
-    padding: 0.75rem 1.6rem;
-    border-radius: 10px;
-    border: 2px solid #00ff95;
-    background: transparent;
-    color: #00ff95;
-    font-weight: 600;
-    transition: all 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-}
-
-.b2h-subpage .hero-actions a:hover {
-    background: #00ff95;
-    color: #0e0f12;
-    transform: scale(1.05);
-    box-shadow: 0 0 12px #00ff95;
+    margin-bottom: 1.2rem;
+    text-shadow: 0 0 6px #00ff9530;
 }
 
 /* ---------------- SECTIONS ---------------- */
-.b2h-subpage .section {
-    padding: 2rem 2rem;
-    margin-bottom: 3rem;
+.section {
+    padding: 2.2rem 1.8rem;
+    margin-bottom: 2.5rem;
     border-left: 5px solid #00ff95;
     background: rgba(20, 21, 25, 0.9);
     border-radius: 1rem;
     opacity: 0;
     transform: translateY(20px);
-    transition: all 0.7s ease-out;
+    transition: all 0.6s ease-out;
 }
 
-.b2h-subpage .section.light {
-    background: rgba(30, 31, 35, 0.9);
+.section.light {
+    background: rgba(30, 31, 35, 0.85);
     border-left-color: #00ffd1;
 }
 
-.b2h-subpage .section.visible {
+.section.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* ---------------- HIGHLIGHT & QUOTES ---------------- */
-.b2h-subpage .wp-section.highlight {
-    background: rgba(0, 255, 149, 0.14);
+.section h2.section-title {
+    font-size: 2rem;
+    color: #00ff95;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px #00ff9540;
+}
+
+.wp-section.highlight {
+    background: rgba(0, 255, 149, 0.1);
     border-left-color: #00ff95;
     padding: 2rem;
-    border-radius: 1.2rem;
-    box-shadow: 0 0 12px rgba(0,255,149,0.3);
-    font-style: italic;
-}
-
-.b2h-subpage blockquote {
-    background: rgba(0, 255, 149, 0.08);
-    border-left: 4px solid #00ff95;
-    padding: 1rem 1.5rem;
-    margin: 1.5rem 0;
-    border-radius: 0.8rem;
-    font-style: italic;
-    color: #c0ffc0;
-    box-shadow: 0 0 8px rgba(0,255,149,0.2);
-}
-
-/* ---------------- INFO BOX ---------------- */
-.b2h-subpage .info-box {
-    background: rgba(0, 255, 149, 0.08);
-    border-left: 4px solid #00ff95;
-    padding: 1.5rem 1.8rem;
-    margin: 1.5rem 0;
     border-radius: 1rem;
-    box-shadow: 0 0 10px rgba(0,255,149,0.2);
+    box-shadow: 0 0 12px #00ff9520 inset;
 }
 
 /* ---------------- DIVIDERS ---------------- */
-.b2h-subpage .section-divider {
+.section-divider {
     border: none;
     height: 1px;
     margin: 2rem 0;
-    background: linear-gradient(to right, rgba(0,255,149,0), rgba(0,255,149,0.7), rgba(0,255,149,0));
+    background: linear-gradient(to right, rgba(0,255,149,0), rgba(0,255,149,0.6), rgba(0,255,149,0));
 }
 
 /* ---------------- GLASS BACK BUTTON ---------------- */
-.b2h-subpage .glass-back {
+.glass-back {
     display: inline-block;
     margin-top: 1.5rem;
-    padding: 0.5rem 1.2rem;
-    background: rgba(0, 255, 149, 0.12);
+    padding: 0.6rem 1.3rem;
+    background: rgba(0,255,149,0.1);
     color: #00ff95;
     border-radius: 10px;
     border: 1px solid #00ff95;
-    transition: all 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
+    font-weight: 600;
 }
 
-.b2h-subpage .glass-back:hover {
+.glass-back:hover {
     background: #00ff95;
     color: #0e0f12;
-    transform: scale(1.05);
-    box-shadow: 0 0 12px #00ff95;
+    transform: translateY(-2px);
+    box-shadow: 0 0 12px #00ff9580;
 }
 
 /* ---------------- FOOTER ---------------- */
-.b2h-subpage .site-footer {
+.site-footer {
     background: #0b0c0f;
     color: #bbb;
     padding: 2rem 1rem;
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
 }
 
-.b2h-subpage .site-footer .footer-links {
+.site-footer .footer-links {
     margin-bottom: 1rem;
 }
 
-.b2h-subpage .site-footer .footer-links a {
+.site-footer .footer-links a {
     margin: 0 0.6rem;
     color: #00ff95;
     transition: all 0.3s ease;
 }
 
-.b2h-subpage .site-footer .footer-links a:hover {
+.site-footer .footer-links a:hover {
     color: #00ffd1;
-    text-shadow: 0 0 5px #00ffd1;
+    text-shadow: 0 0 6px #00ff95;
 }
 
 /* ---------------- RESPONSIVE ---------------- */
 @media(max-width: 768px) {
-    .b2h-subpage .page-hero h1 {
+    .page-hero h1 {
         font-size: 2rem;
     }
 
-    .b2h-subpage .hero-actions a {
+    .hero-actions a {
         padding: 0.5rem 1rem;
         font-size: 0.9rem;
     }
 
-    .b2h-subpage .section {
+    .section {
         padding: 1.5rem 1rem;
-    }
-
-    .b2h-subpage ul {
-        padding-left: 1.2rem;
     }
 }
