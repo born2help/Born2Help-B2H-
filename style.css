@@ -85,7 +85,7 @@ img { max-width: 100%; display: block; }
   font-weight: 700;
 }
 
-/* ================= HERO SUBPAGE BUTTONS - MODERN VIBRANT ================= */
+/* ================= HERO SUBPAGE BUTTONS - VIBRANT & GLOW ================= */
 .hero-subpages {
   display: flex;
   flex-wrap: wrap;
@@ -102,7 +102,7 @@ img { max-width: 100%; display: block; }
   font-weight: 700;
   font-size: 15px;
   text-decoration: none;
-  color: #000; /* default text black */
+  color: #000; /* default black text for light buttons */
   transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
@@ -128,27 +128,27 @@ img { max-width: 100%; display: block; }
   top: 100%;
 }
 
-/* Hover effect */
+/* Hover lift & glow effect */
 .hero-subpages a:hover {
   transform: translateY(-4px) scale(1.07);
   box-shadow: 0 8px 20px rgba(0,0,0,0.35), 0 0 12px rgba(255,255,255,0.2) inset;
 }
 
-/* Individual button colors with readable text */
-.hero-subpages a.btn-about { background: #1e3a8a; color: #fff; }          /* dark blue */
-.hero-subpages a.btn-white-paper { background: #f3f4f6; color: #000; }    /* light silver */
-.hero-subpages a.btn-tokenomics { background: #06b6d4; color: #000; }     /* cyan */
-.hero-subpages a.btn-transparency { background: #0ea5e9; color: #fff; }   /* sky blue */
-.hero-subpages a.btn-donate { background: #dc2626; color: #fff; }         /* red */
-.hero-subpages a.btn-constitution { background: #f59e0b; color: #000; }  /* amber */
-.hero-subpages a.btn-burn-ethics { background: #f97316; color: #fff; }    /* deep orange */
-.hero-subpages a.btn-founder-continuity { background: #fde047; color: #000; } /* yellow */
-.hero-subpages a.btn-participation-safeguard { background: #16a34a; color: #fff; } /* green */
-.hero-subpages a.btn-disclaimer { background: #ef4444; color: #fff; }     /* crimson */
-.hero-subpages a.btn-vision { background: #8b5cf6; color: #fff; }         /* purple */
-.hero-subpages a.btn-sress-test { background: #f97316; color: #fff; }     /* orange */
+/* ================= INDIVIDUAL BUTTON COLORS ================= */
+.hero-subpages a.btn-about { background: #1e3a8a; color: #fff; }          /* Dark Blue */
+.hero-subpages a.btn-white-paper { background: #06b6d4; color: #000; }    /* Bright Cyan */
+.hero-subpages a.btn-tokenomics { background: #0ea5e9; color: #fff; }     /* Sky Blue */
+.hero-subpages a.btn-transparency { background: #dc2626; color: #fff; }   /* Red */
+.hero-subpages a.btn-donate { background: #f59e0b; color: #000; }         /* Amber */
+.hero-subpages a.btn-constitution { background: #f97316; color: #fff; }  /* Deep Orange */
+.hero-subpages a.btn-burn-ethics { background: #fde047; color: #000; }    /* Yellow */
+.hero-subpages a.btn-founder-continuity { background: #16a34a; color: #fff; } /* Green */
+.hero-subpages a.btn-participation-safeguard { background: #ef4444; color: #fff; } /* Crimson */
+.hero-subpages a.btn-disclaimer { background: #8b5cf6; color: #fff; }     /* Purple */
+.hero-subpages a.btn-vision { background: #f973d6; color: #000; }         /* Pink/Fuchsia */
+.hero-subpages a.btn-stress-test { background: #ff8c42; color: #000; }    /* Orange */
 
-/* Responsive adjustments */
+/* ================= RESPONSIVE ================= */
 @media screen and (max-width: 768px) {
   .hero-subpages {
     gap: 10px;
