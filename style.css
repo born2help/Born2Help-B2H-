@@ -132,29 +132,7 @@ img { max-width: 100%; display: block; }
     margin: 0 auto 10px; /* vertical stack with spacing */
   }
 
-  /* Ensure subpage buttons are above the particles canvas */
-.hero-subpages {
-  position: relative;  /* establish stacking context */
-  z-index: 10;         /* above the particles canvas */
-}
-
-/* Also make sure hero-content stays above particles */
-.hero-content {
-  position: relative;
-  z-index: 5;  /* above particles but below buttons */
-}
-
-/* Ensure particles canvas stays behind */
-#particles-js {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;  /* behind everything */
-} 
-
-  /* ================= FOUNDER SECTION BEAUTIFIED (FIXED) ================= */
+    /* ================= FOUNDER SECTION BEAUTIFIED (FIXED) ================= */
 .founder-section {
   background: #0f2734;
   color: #e0f7fa;
@@ -1260,6 +1238,28 @@ img { max-width: 100%; display: block; }
     font-size: 1.1rem;
   }
 }
+
+  /* Ensure subpage buttons are above the particles canvas */
+.hero-subpages {
+  position: relative;  /* establish stacking context */
+  z-index: 10;         /* above the particles canvas */
+}
+
+/* Also make sure hero-content stays above particles */
+.hero-content {
+  position: relative;
+  z-index: 5;  /* above particles but below buttons */
+}
+
+/* Ensure particles canvas stays behind */
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;  /* behind everything */
+} 
 
    /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
