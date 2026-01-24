@@ -283,3 +283,48 @@ a:hover { color: #7CFC00; }
   .page-hero .subtitle { font-size: 1.05rem; }
   .wp-section { padding: 18px; }
 }
+
+/* Accent text */
+.page-hero h1,
+.section-title {
+  color: var(--page-accent);
+  text-shadow:
+    0 0 10px var(--page-accent),
+    0 0 25px color-mix(in srgb, var(--page-accent) 60%, transparent);
+}
+
+/* Accent buttons */
+.hero-actions a,
+.glass-back,
+.btn-primary,
+.donate {
+  background: var(--page-accent);
+  color: #0c0c0c;
+}
+
+.hero-actions a:hover,
+.glass-back:hover,
+.btn-primary:hover,
+.donate:hover {
+  box-shadow:
+    0 0 14px var(--page-accent),
+    0 0 32px color-mix(in srgb, var(--page-accent) 60%, transparent);
+}
+
+/* Section glow */
+.wp-section {
+  border: 1px solid color-mix(in srgb, var(--page-accent) 30%, transparent);
+  box-shadow:
+    0 4px 20px color-mix(in srgb, var(--page-accent) 20%, transparent);
+}
+
+.wp-section:hover {
+  box-shadow:
+    0 8px 40px color-mix(in srgb, var(--page-accent) 45%, transparent);
+}
+
+/* Highlight sections */
+.wp-section.highlight {
+  border-left: 4px solid var(--page-accent);
+  background: color-mix(in srgb, var(--page-accent) 10%, transparent);
+}
