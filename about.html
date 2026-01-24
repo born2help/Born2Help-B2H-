@@ -4,70 +4,83 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>B2H Global Foundation — About</title>
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Unified Subpage CSS -->
   <link rel="stylesheet" href="subpage.css">
 </head>
+
 <body class="b2h-subpage">
 
   <!-- ================= MAIN GLASS CONTAINER ================= -->
   <section class="glass-container">
 
     <!-- ================= HERO ================= -->
-    <section class="page-hero">
+    <section class="page-hero visible">
       <h1 class="green-glow">B2H Global Foundation</h1>
-      <p class="subtitle glow-text">Built for Humanity • Driven by Purpose • Guided by Ethics</p>
+      <p class="subtitle">
+        Built for Humanity • Driven by Purpose • Guided by Ethics
+      </p>
 
       <div class="hero-actions">
-        <a href="donate.html" class="btn-glow">Donate Now</a>
-        <a href="white-paper.html" class="btn-glow">Read White Paper</a>
-        <a href="burn-ethics.html" class="btn-glow">Burn & Ethics</a>
-        <a href="founder-continuity.html" class="btn-glow">Founder Continuity</a>
-        <a href="index.html" class="hero-home btn-glow">← Back Home</a>
+        <a href="donate.html" class="donate">Donate Now</a>
+        <a href="white-paper.html" class="whitepaper">Read White Paper</a>
+        <a href="burn-ethics.html" class="whitepaper">Burn & Ethics</a>
+        <a href="founder-continuity.html" class="whitepaper">Founder Continuity</a>
+        <a href="index.html" class="whitepaper">← Back Home</a>
       </div>
 
       <hr class="section-divider">
     </section>
 
-    <!-- ================= PAGE CONTENT ================= -->
+    <!-- ================= CONTENT ================= -->
     <section class="section">
 
       <div class="wp-section">
-        <h2 class="section-title green-glow">Who We Are</h2>
+        <h2 class="section-title">Who We Are</h2>
         <p>
           <strong>B2H</strong> (Burn to Help | Born for Humanity) is a humanitarian-first foundation.
-          Every effort is converted into measurable, sustainable aid. Ethics, responsibility, and long-term impact guide all decisions.
-        </p>
-      </div>
-
-      <hr class="section-divider">
-
-      <blockquote class="glow-quote">
-        "Technology should serve humanity without compromising ethics."
-        <br>— <strong>Mubashir Munnawar</strong>
-      </blockquote>
-
-      <div class="wp-section">
-        <h2 class="section-title green-glow">Our Vision</h2>
-        <p>
-          A world where relief, dignity, education, and care persist regardless of wealth or economic conditions.
-          Systems exist not just for the present but for generations to come.
+          Every effort is converted into measurable, sustainable aid.
+          Ethics, responsibility, and long-term impact guide all decisions.
         </p>
       </div>
 
       <hr class="section-divider">
 
       <div class="wp-section">
-        <h2 class="section-title green-glow">Our Mission</h2>
+        <blockquote>
+          “Technology should serve humanity without compromising ethics.”
+          <br><br>
+          — <strong>Mubashir Munnawar</strong>
+        </blockquote>
+      </div>
+
+      <hr class="section-divider">
+
+      <div class="wp-section">
+        <h2 class="section-title">Our Vision</h2>
         <p>
-          We transform contributions into sustainable mechanisms that continuously serve humanity,
-          creating a true <strong>Sadaqah Jariyah</strong> for participants and beneficiaries alike.
+          A world where relief, dignity, education, and care persist regardless of wealth
+          or economic conditions — systems designed to serve generations.
+        </p>
+      </div>
+
+      <hr class="section-divider">
+
+      <div class="wp-section">
+        <h2 class="section-title">Our Mission</h2>
+        <p>
+          Transform contributions into sustainable mechanisms that continuously serve humanity,
+          creating true <strong>Sadaqah Jariyah</strong> for participants and beneficiaries alike.
         </p>
       </div>
 
       <hr class="section-divider">
 
       <div class="wp-section highlight">
-        <h2 class="section-title green-glow">Core Values</h2>
+        <h2 class="section-title">Core Values</h2>
         <ul>
           <li><strong>Integrity</strong> — over shortcuts or speed</li>
           <li><strong>Trust</strong> — over hype or trends</li>
@@ -77,21 +90,28 @@
         </ul>
       </div>
 
-      <div class="info-box glow-box">
-        <strong>Impact:</strong> Over 500,000 people reached this year through humanitarian programs.
+      <hr class="section-divider">
+
+      <div class="wp-section">
+        <p>
+          <strong>Impact:</strong> Over 500,000 people reached through humanitarian initiatives,
+          ethical relief systems, and long-term assistance programs.
+        </p>
       </div>
 
       <hr class="section-divider">
 
       <div class="wp-section">
-        <h2 class="section-title green-glow">Founder’s Intention</h2>
+        <h2 class="section-title">Founder’s Intention</h2>
         <p>
-          B2H was founded by <strong>Mubashir Munnawar</strong> with a single principle: technology should serve humanity without personal gain.
-          Every decision is made with patience, accountability, and full ethical responsibility.
+          B2H was founded by <strong>Mubashir Munnawar</strong> with one principle:
+          technology must serve humanity without personal gain.
+          Every decision is made with patience, accountability, and ethical responsibility.
         </p>
       </div>
 
-      <a href="index.html" class="glass-back btn-glow">← Back Home</a>
+      <a href="index.html" class="glass-back">← Back Home</a>
+
     </section>
 
   </section>
@@ -104,7 +124,6 @@
       <a href="white-paper.html">White Paper</a>
       <a href="burn-ethics.html">Burn & Ethics</a>
       <a href="founder-continuity.html">Founder Continuity</a>
-      <a href="disclaimer.html">Disclaimer</a>
       <a href="tokenomics.html">Tokenomics</a>
       <a href="donate.html">Donate</a>
     </div>
@@ -115,12 +134,12 @@
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const elements = document.querySelectorAll(
-        '.page-hero, .section, p, li, h1, h2, h3, h4, .hero-actions a, .glass-back, blockquote, .info-box'
+        '.page-hero, .section, .wp-section'
       );
 
       const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
-          if(entry.isIntersecting){
+          if (entry.isIntersecting) {
             entry.target.classList.add('visible');
             observer.unobserve(entry.target);
           }
