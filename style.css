@@ -637,48 +637,35 @@ img { max-width: 100%; display: block; }
 /* Vertical glowing line */
 .flow-line {
   position: absolute;
-  left: 50%;
-  top: 0;
-  transform: translateX(-50%);
-  width: 6px;
-  height: 100%;
-  background: linear-gradient(
-    to bottom,
-    #22c55e,
-    #f59e0b,
-    #3b82f6,
-    #ef4444
-  );
-  border-radius: 4px;
-  box-shadow: 0 0 20px rgba(255,255,255,0.25);
+  top: 50%; /* adjust if line is off-center */
+  left: 0;
+  width: 100%;
+  height: 4px; /* thickness of the line */
+  background: linear-gradient(to right, #14b8a6, #22c55e); /* gradient or solid color */
+  z-index: 1; /* make sure it's above the section background but below icons/arrows */
 }
 
-/* Moving arrows */
+.flow-steps .step {
+  position: relative;
+  z-index: 2; /* steps above the line */
+}
+
 .moving-arrow {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 2.2rem;
-  color: #f59e0b;
-  animation: arrowFlow 2.4s infinite ease-in-out;
-  opacity: 0.9;
+  z-index: 3; /* arrows above line */
+  font-size: 1.5rem;
+  color: #14b8a6;
+  animation: moveArrow 2s linear infinite;
 }
 
-.moving-arrow.delay-1 { animation-delay: 0.6s; }
-.moving-arrow.delay-2 { animation-delay: 1.2s; }
+/* optional delay for second/third arrow */
+.moving-arrow.delay-1 { animation-delay: 0.5s; }
+.moving-arrow.delay-2 { animation-delay: 1s; }
 
-@keyframes arrowFlow {
-  0% {
-    top: 0%;
-    opacity: 0;
-  }
-  30% {
-    opacity: 1;
-  }
-  100% {
-    top: 90%;
-    opacity: 0;
-  }
+@keyframes moveArrow {
+  0% { left: 0; opacity: 0; }
+  50% { left: 50%; opacity: 1; }
+  100% { left: 100%; opacity: 0; }
 }
 
 /* Steps */
@@ -736,22 +723,6 @@ img { max-width: 100%; display: block; }
 .cta .btn:hover {
   transform: translateY(-4px) scale(1.05);
   box-shadow: 0 0 40px rgba(239,68,68,0.9);
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .flow-line {
-    left: 12px;
-  }
-
-  .moving-arrow {
-    left: 12px;
-    transform: none;
-  }
-
-  .step {
-    margin-left: 40px;
-  }
 }
 
 /* ================= HUMANITY STEPS – SCROLL + ALT LAYOUT ================= */
