@@ -595,7 +595,7 @@ img { max-width: 100%; display: block; }
 }
 
 /* ================= HOW B2H WORKS – FINAL ================= */
-.how-humanity-works {
+.how-B2H-works {
   background: radial-gradient(circle at top, #0b2230, #06131b);
   color: #cfeff5;
   text-align: center;
@@ -605,12 +605,12 @@ img { max-width: 100%; display: block; }
 }
 
 /* Section header */
-.how-humanity-works .section-header {
+.how-B2H-works .section-header {
   text-align: center;
   margin-bottom: 50px;
 }
 
-.how-humanity-works .section-header h2 {
+.how-B2H-works .section-header h2 {
   font-size: 2.8rem;
   font-weight: 800;
   color: #22c55e; /* original green glow accent */
@@ -618,7 +618,7 @@ img { max-width: 100%; display: block; }
   margin-bottom: 12px;
 }
 
-.how-humanity-works .section-underline {
+.how-B2H-works .section-underline {
   width: 90px;
   height: 4px;
   margin: 0 auto 20px;
@@ -626,7 +626,7 @@ img { max-width: 100%; display: block; }
   background: linear-gradient(to right, #22c55e, #f59e0b, #ef4444); /* multi-color */
 }
 
-.how-humanity-works .subheading {
+.how-B2H-works .subheading {
   color: #b6e6ee;
   max-width: 620px;
   margin: 0 auto;
