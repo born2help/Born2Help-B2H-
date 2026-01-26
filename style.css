@@ -1380,6 +1380,34 @@ img { max-width: 100%; display: block; }
   transform: rotate(45deg) translateX(100%);
 }
 
+/* Flow line + moving arrows – SLOW + MULTICOLORED */
+.moving-arrow {
+  position: absolute;
+  top: 50%;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #22c55e, #f59e0b, #ef4444);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  transform: translateY(-50%);
+  z-index: 2;
+  animation: moveArrowBounce 6s linear infinite; /* slower from 3s → 6s */
+}
+
+.moving-arrow.delay-1 { animation-delay: 1s; }
+.moving-arrow.delay-2 { animation-delay: 2s; }
+
+@keyframes moveArrowBounce {
+  0%   { left: 0; transform: translateY(-50%) translateY(0); opacity: 0; }
+  10%  { opacity: 1; }
+  25%  { transform: translateY(-50%) translateY(-5px); }
+  50%  { left: calc(100% - 20px); transform: translateY(-50%) translateY(0); opacity: 1; }
+  75%  { transform: translateY(-50%) translateY(5px); }
+  90%  { opacity: 0; }
+  100% { left: 100%; opacity: 0; transform: translateY(-50%) translateY(0); }
+}
+
   /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
   background: rgba(0,255,198,0.05);
