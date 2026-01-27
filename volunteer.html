@@ -85,15 +85,44 @@
           Fill out the form below to express your interest. Our team will contact you to guide you through the next steps.
         </p>
 
-        <!-- Volunteer Form -->
-        <form class="volunteer-form" action="mailto:your-email@example.com" method="post" enctype="text/plain">
-          <input type="text" name="name" placeholder="Full Name" required>
-          <input type="email" name="email" placeholder="Email Address" required>
-          <input type="text" name="city" placeholder="City / Location">
-          <textarea name="message" placeholder="Why do you want to volunteer?" rows="5" required></textarea>
-          <button type="submit" class="btn-join volunteer">Join as Volunteer</button>
-        </form>
+        <!-- ================= VOLUNTEER FORM ================= -->
+<section class="volunteer-form-section">
+  <div class="container">
+    <h2 class="section-title green-glow"><i class="fas fa-hands-helping"></i> Join as a Volunteer</h2>
+    <p class="subtitle glow-text">
+      Fill out this form to contribute your time and skills for humanity.
+    </p>
+
+    <form class="volunteer-form">
+      <div class="form-row">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
       </div>
+
+      <div class="form-row">
+        <input type="tel" name="phone" placeholder="Phone Number">
+        <input type="text" name="location" placeholder="City / Country">
+      </div>
+
+      <div class="form-row">
+        <select name="area" required>
+          <option value="" disabled selected>Select Area of Contribution</option>
+          <option value="education">Education</option>
+          <option value="healthcare">Healthcare</option>
+          <option value="logistics">Logistics & Operations</option>
+          <option value="awareness">Spread Awareness</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <textarea name="message" rows="4" placeholder="Your Message / Skills"></textarea>
+      </div>
+
+      <button type="submit" class="btn-glow green-btn">Submit Application</button>
+    </form>
+  </div>
+</section>
 
       <hr class="section-divider">
 
