@@ -784,9 +784,8 @@ a:hover::after {
 
 /* Placeholder dark gray */
 .volunteer-form input::placeholder,
-.volunteer-form textarea::placeholder,
-.volunteer-form select option[disabled] {
-  color: #555;
+.volunteer-form textarea::placeholder {
+  color: #cbd5e1; /* soft light silver */
 }
 
 /* On focus: change text color */
