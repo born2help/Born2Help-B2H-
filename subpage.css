@@ -767,3 +767,39 @@ a:hover::after {
     flex: 1 1 100%;
   }
 }
+
+/* Volunteer Form Inputs */
+.volunteer-form input,
+.volunteer-form textarea,
+.volunteer-form select {
+  background: #0f2734;
+  color: #fff;
+  border: 1px solid #22c55e;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  width: 100%;
+  transition: color 0.3s, border 0.3s;
+}
+
+/* Placeholder dark gray */
+.volunteer-form input::placeholder,
+.volunteer-form textarea::placeholder,
+.volunteer-form select option[disabled] {
+  color: #555;
+}
+
+/* On focus: change text color */
+.volunteer-form input:focus,
+.volunteer-form textarea:focus,
+.volunteer-form select:focus {
+  color: #000;          /* typed text black */
+  background: #fff;     /* input background white */
+  outline: none;
+  border-color: #22c55e;
+}
+
+/* Textarea resize fix */
+.volunteer-form textarea {
+  resize: none;
+}
