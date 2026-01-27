@@ -14,7 +14,7 @@
   <!-- Subpage CSS -->
   <link rel="stylesheet" href="subpage.css">
 
- <!-- ================= OPEN GRAPH META TAGS ================= -->
+  <!-- ================= OPEN GRAPH META TAGS ================= -->
   <meta property="og:title" content="B2H Global Foundation">
   <meta property="og:description" content="Built for Humanity · Driven by Purpose · Guided by Ethics">
   <meta property="og:image" content="images/hero.jpg">
@@ -122,6 +122,35 @@
         </p>
       </div>
 
+      <!-- ================= DONATE NOW CTA ================= -->
+      <div class="donation-cta">
+        <a href="#" class="btn-join donate-now">💚 Donate Now</a>
+      </div>
+
+      <!-- ================= OPTIONAL DONATION FORM ================= -->
+      <div class="donation-form">
+        <h3>Select Donation Type</h3>
+        <form>
+          <label>
+            Name: <input type="text" name="donor_name" required>
+          </label>
+          <label>
+            Email: <input type="email" name="donor_email" required>
+          </label>
+          <label>
+            Amount (USD): <input type="number" name="donation_amount" required>
+          </label>
+          <label>
+            Donation Type:
+            <select name="donation_type">
+              <option value="one_time">One-Time</option>
+              <option value="monthly">Monthly</option>
+            </select>
+          </label>
+          <button type="submit" class="btn-join donate-now">Proceed to Donate</button>
+        </form>
+      </div>
+
       <a href="index.html" class="glass-back btn-glow">← Back Home</a>
 
     </section>
@@ -144,7 +173,7 @@
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const elements = document.querySelectorAll(
-        '.page-hero, .section, .wp-section, p, li, h1, h2, .hero-actions a, .glass-back'
+        '.page-hero, .section, .wp-section, p, li, h1, h2, .hero-actions a, .glass-back, .donation-cta, .donation-form'
       );
 
       const observer = new IntersectionObserver((entries, observer) => {
