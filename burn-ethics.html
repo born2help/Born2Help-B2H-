@@ -11,20 +11,21 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <!-- Subpage CSS -->
+  <!-- Unified Subpage CSS -->
   <link rel="stylesheet" href="subpage.css">
 </head>
 
-<body class="b2h-subpage">
 <body class="b2h-subpage" style="--page-accent:#FF1493;">
 
   <!-- ================= MAIN GLASS CONTAINER ================= -->
   <section class="glass-container">
 
     <!-- ================= HERO ================= -->
-    <section class="page-hero">
+    <section class="page-hero visible">
       <h1 class="green-glow">Burn & Ethics</h1>
-      <p class="subtitle">Every action & every burn is guided by responsibility, ethics, and compassion</p>
+      <p class="subtitle">
+        Every action and every burn is guided by responsibility, ethics, and compassion
+      </p>
 
       <div class="hero-actions">
         <a href="white-paper.html" class="btn-glow"><i class="fas fa-file-alt"></i> Read White Paper</a>
@@ -38,52 +39,69 @@
 
     <!-- ================= BURN SECTION ================= -->
     <section class="section">
+
       <div class="wp-section">
         <h2 class="section-title">Burn to Help — What It Means</h2>
         <p>
-          In B2H, burning is not destruction. It is a conscious, responsible act designed to protect dignity, reduce suffering, 
-          and sustain the mission.
+          In B2H, burning is not destruction. It is a conscious, responsible act
+          designed to protect dignity, reduce suffering, and sustain the mission.
         </p>
         <p>
-          Unlike other projects that burn for hype or scarcity, B2H burns create real-world impact, stability, and relief.
-          Every burn is purposeful — if it does not serve humanity or strengthen the mission, it does not belong in B2H.
+          Unlike projects that burn for hype or artificial scarcity, B2H burns
+          exist only when they create real-world impact, stability, and relief.
+          If an action does not serve humanity or protect the mission, it has no place in B2H.
         </p>
       </div>
+
+      <hr class="section-divider">
 
       <div class="wp-section highlight">
         <h2 class="section-title green-glow">How Burns Serve Humanity</h2>
         <p>
-          A portion of what is sacrificed during burns is allocated to humanitarian initiatives, operational sustainability, 
-          and continuous service. Helping people is an obligation, not a marketing strategy.
+          A portion of what is sacrificed through burns supports humanitarian initiatives,
+          operational sustainability, and continuous service.
+          Helping people is an obligation — never a marketing strategy.
         </p>
       </div>
+
+      <hr class="section-divider">
 
       <div class="wp-section">
         <h2 class="section-title">Protection for Participants</h2>
         <p>
-          Burns are carefully designed: never reckless, never emotional, and never driven by short-term pressure.
-          Sustainability ensures that participants’ trust and confidence are always preserved.
+          Burns are carefully designed: never reckless, never emotional,
+          and never driven by short-term pressure.
+          Sustainability protects trust, confidence, and long-term participation.
         </p>
       </div>
+
+      <hr class="section-divider">
 
       <div class="wp-section highlight">
         <h2 class="section-title green-glow">Faith, Accountability & Permanence</h2>
         <p>
-          Every burn is executed with full accountability, transparency, and respect for human dignity. 
-          B2H believes in intention before outcome, ensuring that each action aligns with humanitarian and faith-based principles.
+          Every burn is executed with full accountability, transparency,
+          and respect for human dignity.
+          Intention precedes outcome — ensuring alignment with humanitarian
+          and faith-based principles.
         </p>
       </div>
+
     </section>
 
     <!-- ================= ETHICS SECTION ================= -->
     <section class="section">
+
       <div class="wp-section">
         <h2 class="section-title">Ethics in B2H</h2>
         <p>
-          All actions are guided by responsibility, transparency, and fairness. B2H strictly rejects exploitation, interest (Riba), 
-          and personal enrichment. Every contribution serves humanity only.
+          All actions within B2H are governed by responsibility, fairness, and transparency.
+          The foundation strictly rejects exploitation, interest (Riba),
+          and personal enrichment. Every contribution exists solely to serve humanity.
         </p>
       </div>
+
+      <hr class="section-divider">
 
       <div class="wp-section highlight">
         <h2 class="section-title green-glow">Core Ethical Principles</h2>
@@ -94,19 +112,23 @@
           <li>Voluntary participation with informed consent</li>
         </ul>
       </div>
+
     </section>
 
     <!-- ================= FOUNDER SAFEGUARDS ================= -->
     <section class="section">
+
       <div class="wp-section">
         <h2 class="section-title">Founder Safeguards</h2>
         <p>
-          The Founder holds no ownership or financial privilege. Authority exists only to safeguard values, prevent misuse, 
-          and activate protections in case of ethical deviations.
+          The Founder holds no ownership or financial privilege.
+          Authority exists only to protect values, prevent misuse,
+          and activate safeguards if ethical boundaries are threatened.
         </p>
         <p>
-          Transparency rules, financial locks, audit pathways, and mission-freeze mechanisms ensure no single individual 
-          can override purpose or accountability.
+          Transparency rules, financial locks, audit pathways,
+          and mission-freeze mechanisms ensure that no individual
+          can override accountability or purpose.
         </p>
       </div>
 
@@ -129,13 +151,16 @@
     <p>&copy; 2026 B2H Global Foundation. All Rights Reserved.</p>
   </footer>
 
+  <!-- ================= FADE-IN SCRIPT ================= -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      const elements = document.querySelectorAll('.page-hero, .section, .wp-section, p, li, h1, h2, h3, h4, .hero-actions a, .glass-back');
+      const elements = document.querySelectorAll(
+        '.page-hero, .section, .wp-section'
+      );
 
       const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
-          if(entry.isIntersecting){
+          if (entry.isIntersecting) {
             entry.target.classList.add('visible');
             observer.unobserve(entry.target);
           }
