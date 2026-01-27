@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Become a Volunteer — B2H Global Foundation</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Subpage CSS -->
+  <link rel="stylesheet" href="subpage.css">
+
+  <!-- ================= OPEN GRAPH META TAGS ================= -->
+  <meta property="og:title" content="B2H Global Foundation">
+  <meta property="og:description" content="Join us in serving humanity — volunteer for sustainable impact">
+  <meta property="og:image" content="images/hero.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourdomain.com/volunteer.html">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="b2h-subpage" style="--page-accent:#3b82f6;">
+
+  <section class="glass-container">
+
+    <!-- ================= HERO ================= -->
+    <section class="page-hero">
+      <h1 class="blue-glow">Become a Volunteer</h1>
+      <p class="subtitle glow-text">
+        Serve humanity, gain experience, and make a meaningful impact
+      </p>
+
+      <div class="hero-actions">
+        <a href="donate.html" class="btn-glow"><i class="fas fa-heart"></i> Donate</a>
+        <a href="spread-awareness.html" class="btn-glow"><i class="fas fa-bullhorn"></i> Spread Awareness</a>
+        <a href="index.html" class="btn-glow">← Back Home</a>
+      </div>
+
+      <hr class="section-divider">
+    </section>
+
+    <!-- ================= PAGE CONTENT ================= -->
+    <section class="section">
+
+      <div class="wp-section">
+        <h2 class="section-title blue-glow"><i class="fas fa-users"></i> Who Can Volunteer</h2>
+        <p>
+          B2H welcomes individuals of all ages and backgrounds who are committed to humanitarian work, ethical participation, and helping communities in need.
+          Volunteering is voluntary, value-driven, and non-profit oriented.
+        </p>
+      </div>
+
+      <hr class="section-divider">
+
+      <div class="wp-section">
+        <h2 class="section-title blue-glow"><i class="fas fa-hands-helping"></i> Volunteer Principles</h2>
+        <ul>
+          <li>Service with integrity, patience, and dedication</li>
+          <li>Adherence to ethical guidelines and accountability</li>
+          <li>Respect for community and participants</li>
+          <li>Contribution to sustainable humanitarian impact</li>
+        </ul>
+      </div>
+
+      <hr class="section-divider">
+
+      <div class="wp-section">
+        <h2 class="section-title blue-glow"><i class="fas fa-clipboard-list"></i> How It Works</h2>
+        <p>
+          Once you join, you will receive guidance from our volunteer coordinators.
+          Opportunities include event support, online awareness campaigns, and community assistance.
+          All tasks are aligned with B2H’s long-term mission to serve humanity responsibly.
+        </p>
+      </div>
+
+      <hr class="section-divider">
+
+      <div class="wp-section">
+        <h2 class="section-title blue-glow"><i class="fas fa-user-check"></i> Join as Volunteer</h2>
+        <p>
+          Fill out the form below to express your interest. Our team will contact you to guide you through the next steps.
+        </p>
+
+        <!-- Volunteer Form -->
+        <form class="volunteer-form" action="mailto:your-email@example.com" method="post" enctype="text/plain">
+          <input type="text" name="name" placeholder="Full Name" required>
+          <input type="email" name="email" placeholder="Email Address" required>
+          <input type="text" name="city" placeholder="City / Location">
+          <textarea name="message" placeholder="Why do you want to volunteer?" rows="5" required></textarea>
+          <button type="submit" class="btn-join volunteer">Join as Volunteer</button>
+        </form>
+      </div>
+
+      <hr class="section-divider">
+
+      <div class="wp-section highlight">
+        <h2 class="section-title blue-glow"><i class="fas fa-exclamation-triangle"></i> Important Notice</h2>
+        <p>
+          Participation is voluntary. Volunteers are expected to adhere to B2H’s ethical and faith-aligned principles.
+          No financial return, promises, or benefits are implied by volunteering.
+        </p>
+      </div>
+
+      <a href="index.html" class="glass-back btn-glow">← Back Home</a>
+
+    </section>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="vision.html">Vision</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="tokenomics.html">Tokenomics</a>
+      <a href="constitution.html">Constitution</a>
+    </div>
+    <p>&copy; 2026 B2H Global Foundation. All Rights Reserved.</p>
+  </footer>
+
+  <!-- ================= FADE-IN SCRIPT ================= -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const elements = document.querySelectorAll(
+        '.page-hero, .section, .wp-section, p, li, h1, h2, .hero-actions a, .glass-back'
+      );
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+
+      elements.forEach(el => observer.observe(el));
+    });
+  </script>
+
+</body>
+</html>
