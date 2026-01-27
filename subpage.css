@@ -1,5 +1,5 @@
 /* ===============================
-   B2H Subpage Unified CSS
+   B2H Subpage Unified CSS (Corrected)
    Works for all 12 pages
    =============================== */
 
@@ -41,7 +41,7 @@ a {
   transition: color var(--transition-speed);
 }
 a:hover {
-  color: lighten(var(--b2h-accent), 20%);
+  color: #7effa0; /* lighter green accent for hover */
 }
 
 /* ----------------- Navigation ----------------- */
@@ -99,13 +99,9 @@ a:hover {
   text-align: center;
   padding: 2rem 1rem;
   margin-bottom: 2rem;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all var(--transition-speed) ease-out;
-}
-.page-hero.visible {
-  opacity: 1;
+  opacity: 1; /* always visible now */
   transform: translateY(0);
+  transition: all var(--transition-speed) ease-out;
 }
 
 .page-hero h1 {
@@ -139,20 +135,16 @@ a:hover {
 }
 .hero-actions a:hover {
   transform: translateY(-3px);
-  background: lighten(var(--b2h-accent), 10%);
+  background: #7effa0;
 }
 
 /* ----------------- Sections ----------------- */
 .section {
   margin: 2rem 0;
   padding: 1rem 0;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all var(--transition-speed) ease-out;
-}
-.section.visible {
-  opacity: 1;
+  opacity: 1; /* always visible now */
   transform: translateY(0);
+  transition: all var(--transition-speed) ease-out;
 }
 
 .section.light {
@@ -231,39 +223,25 @@ a:hover {
   color: var(--b2h-accent);
 }
 
-/* ----------------- Fade-in for page elements ----------------- */
-.page-hero,
-.section,
-.wp-section,
-p,
-li,
-h1,
-h2,
-.hero-actions a,
-.glass-back {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all var(--transition-speed) ease-out;
-}
-.visible {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
+/* ----------------- Blockquotes ----------------- */
+.wp-section blockquote {
+  color: var(--b2h-text-soft);
+  border-left: 3px solid var(--b2h-accent);
+  padding-left: 1rem;
+  margin: 1rem 0;
+  font-style: italic;
 }
 
-/* ================= FIX TEXT VISIBILITY ON ABOUT, BUR ETHICS, VISION ================= */
+/* ----------------- Ensure visibility on About, Burn Ethics, Vision ----------------- */
 .b2h-subpage .glass-container,
 .b2h-subpage .glass-container * {
-  color: var(--b2h-text-main) !important; /* Ensure main text is visible */
-}
-
-.b2h-subpage .wp-section blockquote {
-  color: var(--b2h-text-soft) !important; /* Blockquotes slightly softer */
+  color: var(--b2h-text-main) !important;
 }
 
 .b2h-subpage .page-hero h1,
 .b2h-subpage .section-title,
 .b2h-subpage .wp-section h2 {
-  color: var(--b2h-text-main) !important; /* Titles always visible */
+  color: var(--b2h-text-main) !important;
 }
 
 .b2h-subpage .subtitle {
