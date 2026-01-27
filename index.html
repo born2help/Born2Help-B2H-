@@ -14,8 +14,8 @@
   <!-- Main CSS -->
   <link rel="stylesheet" href="style.css">
 
- <style>
-/* ================= HERO SUBPAGE BUTTONS ================= */
+<style>
+/* ================= HERO SUBPAGE BUTTONS — MODERNIZED ================= */
 .hero-subpages {
   display: flex;
   flex-wrap: wrap;
@@ -25,35 +25,61 @@
 }
 
 .hero-subpages a {
-  padding: 10px 18px;
+  position: relative;
+  padding: 10px 20px;
   border-radius: 25px;
   font-weight: 600;
   font-size: 14px;
   text-decoration: none;
   color: #fff;
-  transition: all 0.3s ease;
+  overflow: hidden;
+  z-index: 0;
+  transition: all 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Sparkle overlay effect for modern touch */
+.hero-subpages a::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.3) 50%,
+    rgba(255,255,255,0) 100%
+  );
+  transform: rotate(25deg) translateX(-100%);
+  transition: transform 0.7s ease;
+  z-index: -1;
+  border-radius: 25px;
 }
 
 /* Hover effect */
+.hero-subpages a:hover::before {
+  transform: rotate(25deg) translateX(200%);
+}
+
 .hero-subpages a:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
 
 /* Individual button colors */
-.hero-subpages a.btn-about { background: #4da6ff; }          /* calm blue */
-.hero-subpages a.btn-white-paper { background: #d6d6d6; }    /* neutral silver */
-.hero-subpages a.btn-tokenomics { background: #00ffd0; }     /* cyan */
-.hero-subpages a.btn-transparency { background: #8B0000; }   /* red */
-.hero-subpages a.btn-donate { background: #7CFC00; }         /* life green */
-.hero-subpages a.btn-constitution { background: #f5c542; }  /* constitution */
-.hero-subpages a.btn-burn-ethics { background: #FF1493; }    /* pink */
-.hero-subpages a.btn-founder-continuity { background: #facc15; color: #000; } /* yellow, black text */
-.hero-subpages a.btn-participation-safeguard { background: #00008B; } /* emerald */
-.hero-subpages a.btn-disclaimer { background: #ff6b6b; }     /* soft red */
-.hero-subpages a.btn-vision { background: #9b6bff; }         /* royal purple */
-.hero-subpages a.btn-sress-test { background: #ff8c42; }     /* deep orange */
-  
+.hero-subpages a.btn-about { background: #4da6ff; }           /* calm blue */
+.hero-subpages a.btn-white-paper { background: #d6d6d6; color: #000; } /* silver with black text */
+.hero-subpages a.btn-tokenomics { background: #00ffd0; color: #000; }   /* cyan */
+.hero-subpages a.btn-transparency { background: #8B0000; }    /* red */
+.hero-subpages a.btn-donate { background: #7CFC00; color: #000; }       /* life green */
+.hero-subpages a.btn-constitution { background: #f5c542; color: #000; }/* constitution yellow */
+.hero-subpages a.btn-burn-ethics { background: #FF1493; }     /* pink */
+.hero-subpages a.btn-founder-continuity { background: #facc15; color: #000; } /* yellow */
+.hero-subpages a.btn-participation-safeguard { background: #006400; } /* deep green */
+.hero-subpages a.btn-disclaimer { background: #ff6b6b; }      /* soft red */
+.hero-subpages a.btn-vision { background: #9b6bff; }          /* royal purple */
+.hero-subpages a.btn-sress-test { background: #ff8c42; }      /* deep orange */
 
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
