@@ -12,7 +12,6 @@
   <link rel="stylesheet" href="subpage.css">
 </head>
 
-<body class="b2h-subpage">
 <body class="b2h-subpage" style="--page-accent:#ff6b6b;">
 
   <!-- ================= MAIN GLASS CONTAINER ================= -->
@@ -21,7 +20,7 @@
     <!-- ================= HERO ================= -->
     <section class="page-hero">
       <h1 class="green-glow">Disclaimer</h1>
-      <p class="subtitle">Important Information for Participants</p>
+      <p class="subtitle">Important Information for All Participants</p>
 
       <div class="hero-actions">
         <a href="constitution.html" class="btn-glow">📜 Constitution</a>
@@ -31,56 +30,81 @@
       <hr class="section-divider">
     </section>
 
-    <!-- ================= PAGE CONTENT ================= -->
+    <!-- ================= CONTENT ================= -->
     <section class="section">
 
       <div class="wp-section">
-        <h2 class="section-title">General Disclaimer</h2>
+        <h2 class="section-title">General Notice</h2>
         <p>
-          Participation in B2H is entirely voluntary. Any contribution or interaction
-          is made with the understanding that it supports humanitarian purposes,
-          operational sustainability, and long-term mission continuity.
+          B2H (Burn to Help · Born for Humanity) is a humanitarian initiative.
+          Participation is entirely voluntary and undertaken with the understanding
+          that all contributions, actions, and engagements are directed toward
+          ethical humanitarian purposes and long-term mission sustainability.
         </p>
         <p>
-          B2H does not provide investment services and bears no responsibility
-          for market behavior, asset valuation, or individual financial decisions.
+          B2H does <strong>not</strong> operate as an investment vehicle,
+          financial service, or profit-generating scheme.
         </p>
       </div>
 
-      <hr class="section-divider">
+      <div class="wp-section light">
+        <h2 class="section-title">No Investment or Financial Advice</h2>
+        <p>
+          Nothing within B2H — including tokens, documentation, communications,
+          or public materials — constitutes financial, legal, or investment advice.
+        </p>
+        <p>
+          There are no promises, guarantees, or expectations of profit,
+          price appreciation, dividends, or returns of any kind.
+        </p>
+      </div>
 
       <div class="wp-section">
         <h2 class="section-title">Limitation of Liability</h2>
         <p>
-          B2H, its founder, contributors, and affiliates shall not be held liable
-          for losses, damages, misinterpretation, or misuse beyond what is
-          explicitly described in the Constitution, Transparency, and Tokenomics sections.
+          B2H, its founder, custodians, contributors, and affiliates shall not
+          be held liable for financial losses, misinterpretation, market behavior,
+          or decisions made by participants.
+        </p>
+        <p>
+          Responsibility lies solely with the individual participant,
+          subject to the ethical boundaries defined in the Constitution,
+          Transparency, and Tokenomics sections.
         </p>
       </div>
 
-      <hr class="section-divider">
+      <div class="wp-section light">
+        <h2 class="section-title">Ethical & Faith-Aligned Framework</h2>
+        <p>
+          B2H is governed by ethical and faith-aligned principles.
+          Practices involving interest (Riba), exploitation, deception,
+          coercion, or unjust enrichment are strictly prohibited.
+        </p>
+        <p>
+          Any verified deviation from these principles will be addressed
+          transparently and responsibly.
+        </p>
+      </div>
 
       <div class="wp-section">
-        <h2 class="section-title">Ethical & Faith-Based Guidance</h2>
+        <h2 class="section-title">Transparency Boundaries</h2>
         <p>
-          All actions and structures within B2H are governed by ethical
-          and faith-aligned principles. Interest (Riba), exploitation,
-          deception, or unjust enrichment are strictly prohibited.
+          While B2H is committed to transparency, certain operational,
+          security, and humanitarian considerations may limit public disclosure.
         </p>
         <p>
-          Any proven deviation from these principles will be addressed
-          openly and responsibly.
+          Such limitations exist solely to protect participants,
+          beneficiaries, and the mission itself.
         </p>
       </div>
-
-      <hr class="section-divider">
 
       <div class="wp-section highlight">
         <h2 class="section-title green-glow">Participant Responsibility</h2>
         <p>
-          Each participant is responsible for understanding the nature,
-          intent, and limitations of B2H. Independent verification,
-          personal due diligence, and cautious engagement are strongly encouraged.
+          Each participant is responsible for understanding the purpose,
+          limitations, and structure of B2H before engaging.
+          Independent research, personal judgment, and cautious participation
+          are strongly encouraged.
         </p>
       </div>
 
@@ -98,6 +122,7 @@
       <a href="white-paper.html">White Paper</a>
       <a href="transparency.html">Transparency</a>
       <a href="tokenomics.html">Tokenomics</a>
+      <a href="constitution.html">Constitution</a>
       <a href="donate.html">Donate</a>
     </div>
     <p>&copy; 2026 B2H Global Foundation. All Rights Reserved.</p>
@@ -106,11 +131,13 @@
   <!-- ================= FADE-IN SCRIPT ================= -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      const elements = document.querySelectorAll('.page-hero, .section, .wp-section, p, li, h1, h2, h3, h4, .hero-actions a, .glass-back');
+      const elements = document.querySelectorAll(
+        '.page-hero, .section, .wp-section, p, li, h1, h2, .hero-actions a, .glass-back'
+      );
 
       const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
-          if(entry.isIntersecting){
+          if (entry.isIntersecting) {
             entry.target.classList.add('visible');
             observer.unobserve(entry.target);
           }
