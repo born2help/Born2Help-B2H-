@@ -1,6 +1,6 @@
 /* ===============================
-   B2H Subpage Unified CSS (Corrected)
-   Works for all 12 pages
+   B2H Subpage Unified CSS (Scoped)
+   Only affects pages with body.b2h-subpage
    =============================== */
 
 /* ----------------- Root & Variables ----------------- */
@@ -17,317 +17,61 @@
   --transition-speed: 0.6s;
   --font-heading: 'Montserrat', sans-serif;
   --font-body: 'Montserrat', sans-serif;
+  --gradient-accent: linear-gradient(90deg, #32cd32, #00ffd0, #32cd32);
 }
 
-/* ----------------- Global ----------------- */
-* {
+/* ----------------- Global for Subpages Only ----------------- */
+.b2h-subpage * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
   font-family: var(--font-body);
+  color: var(--b2h-text-main);
 }
 
-body.b2h-subpage {
+.b2h-subpage a {
+  text-decoration: none;
+  color: var(--b2h-accent);
+  transition: color var(--transition-speed);
+}
+
+.b2h-subpage a:hover {
+  color: #7effa0;
+}
+
+/* ----------------- Body ----------------- */
+.b2h-subpage {
   background-color: var(--b2h-bg-dark);
   color: var(--b2h-text-main);
   line-height: 1.6;
   font-size: 16px;
   scroll-behavior: smooth;
-}
-
-a {
-  text-decoration: none;
-  color: var(--b2h-accent);
-  transition: color var(--transition-speed);
-}
-a:hover {
-  color: #7effa0; /* lighter green accent for hover */
-}
-
-/* ----------------- Navigation ----------------- */
-.site-nav {
-  position: sticky;
-  top: 0;
-  background: var(--b2h-bg-soft);
-  z-index: 100;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
-}
-
-.nav-container {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.75rem 1rem;
-}
-
-.nav-links {
-  display: flex;
-  gap: 1rem;
-}
-
-.nav-links li {
-  list-style: none;
-}
-
-.nav-links a {
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
-  transition: background var(--transition-speed);
-}
-.nav-links a:hover,
-.nav-links a.active {
-  background: var(--b2h-accent);
-  color: var(--b2h-bg-dark);
-}
-
-/* ----------------- Glass Container ----------------- */
-.glass-container {
-  backdrop-filter: blur(12px);
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  border-radius: var(--glass-radius);
-  margin: 2rem auto;
-  max-width: 1000px;
-  padding: var(--glass-padding);
-  box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+  overflow-x: hidden;
 }
 
 /* ----------------- Hero Section ----------------- */
-.page-hero {
+.b2h-subpage .page-hero {
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 80px 20px 40px;
   margin-bottom: 2rem;
-  opacity: 1; /* always visible now */
-  transform: translateY(0);
-  transition: all var(--transition-speed) ease-out;
 }
 
-.page-hero h1 {
+.b2h-subpage .page-hero h1 {
   font-family: var(--font-heading);
   font-size: 3rem;
-  color: var(--b2h-accent);
-  text-shadow: 0 0 15px var(--b2h-accent);
-  margin-bottom: 1rem;
-}
-
-.page-hero .subtitle {
-  font-size: 1.2rem;
-  color: var(--b2h-text-soft);
-  margin-bottom: 1.5rem;
-}
-
-.hero-actions {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-}
-.hero-actions a {
-  padding: 0.7rem 1.5rem;
-  background: var(--b2h-accent);
-  color: var(--b2h-bg-dark);
-  border-radius: 15px;
-  font-weight: 600;
-  transition: transform var(--transition-speed), background var(--transition-speed);
-}
-.hero-actions a:hover {
-  transform: translateY(-3px);
-  background: #7effa0;
-}
-
-/* ----------------- Sections ----------------- */
-.section {
-  margin: 2rem 0;
-  padding: 1rem 0;
-  opacity: 1; /* always visible now */
-  transform: translateY(0);
-  transition: all var(--transition-speed) ease-out;
-}
-
-.section.light {
-  background: rgba(255,255,255,0.05);
-  border-radius: 15px;
-  padding: 1.5rem;
-}
-
-.section-title {
-  font-family: var(--font-heading);
-  font-size: 2rem;
-  color: var(--b2h-accent);
-  margin-bottom: 0.8rem;
-}
-
-.wp-section {
-  margin-bottom: 1.5rem;
-}
-.wp-section ul {
-  padding-left: 1.5rem;
-  margin-top: 0.5rem;
-}
-.wp-section li {
-  margin-bottom: 0.5rem;
-}
-
-/* Highlighted Section */
-.wp-section.highlight {
-  border-left: 4px solid var(--b2h-accent);
-  padding-left: 1rem;
-}
-
-/* Divider */
-.section-divider {
-  border: none;
-  height: 1px;
-  background: rgba(255,255,255,0.2);
-  margin: 2rem 0;
-}
-
-/* ----------------- Buttons ----------------- */
-.glass-back,
-.btn-glow {
-  display: inline-block;
-  padding: 0.6rem 1.3rem;
-  margin-top: 1rem;
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  border-radius: 15px;
-  color: var(--b2h-accent);
-  font-weight: 600;
-  text-decoration: none;
-  transition: all var(--transition-speed);
-}
-.glass-back:hover,
-.btn-glow:hover {
-  background: var(--b2h-accent);
-  color: var(--b2h-bg-dark);
-  transform: translateY(-2px);
-}
-
-/* ----------------- Footer ----------------- */
-.site-footer {
-  text-align: center;
-  margin-top: 2rem;
-  padding: 2rem 1rem;
-  font-size: 0.9rem;
-  color: var(--b2h-text-soft);
-  border-top: 1px solid rgba(255,255,255,0.1);
-}
-.site-footer a {
-  margin: 0 0.5rem;
-  color: var(--b2h-text-soft);
-}
-.site-footer a:hover {
-  color: var(--b2h-accent);
-}
-
-/* ----------------- Blockquotes ----------------- */
-.wp-section blockquote {
-  color: var(--b2h-text-soft);
-  border-left: 3px solid var(--b2h-accent);
-  padding-left: 1rem;
-  margin: 1rem 0;
-  font-style: italic;
-}
-
-/* ----------------- Ensure visibility on About, Burn Ethics, Vision ----------------- */
-.b2h-subpage .glass-container,
-.b2h-subpage .glass-container * {
-  color: var(--b2h-text-main) !important;
-}
-
-.b2h-subpage .page-hero h1,
-.b2h-subpage .section-title,
-.b2h-subpage .wp-section h2 {
-  color: var(--b2h-text-main) !important;
-}
-
-.b2h-subpage .subtitle {
-  color: var(--b2h-text-soft) !important;
-}
-
-/* ===============================
-   Modern Enhancements for Subpages
-   =============================== */
-
-/* ----------------- Smooth Text Glow ----------------- */
-.page-hero h1,
-.section-title {
-  text-shadow: 0 0 10px rgba(50, 205, 50, 0.3), 0 0 20px rgba(50, 205, 50, 0.2);
-  transition: text-shadow 0.5s ease;
-}
-.page-hero h1:hover,
-.section-title:hover {
-  text-shadow: 0 0 15px rgba(50, 205, 50, 0.6), 0 0 30px rgba(50, 205, 50, 0.4);
-}
-
-/* ----------------- Smooth Button Hover ----------------- */
-.hero-actions a,
-.glass-back {
-  transition: all 0.4s ease, box-shadow 0.4s ease;
-  box-shadow: 0 5px 15px rgba(50, 205, 50, 0.2);
-}
-.hero-actions a:hover,
-.glass-back:hover {
-  box-shadow: 0 10px 25px rgba(50, 205, 50, 0.35);
-  transform: translateY(-4px) scale(1.02);
-}
-
-/* ----------------- Section Background Accent ----------------- */
-.section.light {
-  background: rgba(50, 205, 50, 0.05);
-  border-left: 4px solid var(--b2h-accent);
-  padding: 2rem 1.5rem;
-}
-
-/* ----------------- Smooth List Bullets ----------------- */
-.wp-section ul {
-  list-style: none;
-  padding-left: 1.2rem;
-  margin-top: 0.5rem;
-}
-.wp-section ul li::before {
-  content: "•";
-  color: var(--b2h-accent);
-  font-weight: bold;
-  display: inline-block;
-  width: 1em;
-  margin-left: -1em;
-}
-
-/* ----------------- Subtle Fade-in Shadows ----------------- */
-.wp-section,
-.page-hero {
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  border-radius: var(--glass-radius);
-}
-
-/* ----------------- Hero Subtitle Accent ----------------- */
-.page-hero .subtitle {
-  font-style: italic;
-  letter-spacing: 0.5px;
-  color: var(--b2h-text-soft);
-  text-shadow: 0 0 5px rgba(50, 205, 50, 0.15);
-}
-
-/* ===============================
-   Super Modern Enhancements for Subpages
-   =============================== */
-
-/* ----------------- Animated Gradient Accent ----------------- */
-:root {
-  --gradient-accent: linear-gradient(90deg, #32cd32, #00ffd0, #32cd32);
-}
-
-.page-hero h1,
-.section-title {
   background: var(--gradient-accent);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradientShift 6s ease infinite;
   font-weight: 800;
+  text-shadow: 0 0 15px rgba(50,205,50,0.7);
+}
+
+.b2h-subpage .page-hero p.subtitle {
+  font-size: 1.2rem;
+  color: var(--b2h-text-soft);
+  font-style: italic;
+  margin-top: 10px;
+  text-shadow: 0 0 5px rgba(50,205,50,0.15);
+  animation: subtitlePulse 3s ease-in-out infinite;
 }
 
 @keyframes gradientShift {
@@ -336,504 +80,21 @@ a:hover {
   100% { background-position: 0% 50%; }
 }
 
-/* ----------------- Glass Reflection Animation ----------------- */
-.glass-container::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  border-radius: var(--glass-radius);
-  pointer-events: none;
-  background: linear-gradient(120deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.05) 100%);
-  transform: translateX(-100%) rotate(25deg);
-  animation: glassSweep 8s linear infinite;
-}
-
-@keyframes glassSweep {
-  0% { transform: translateX(-100%) rotate(25deg); }
-  100% { transform: translateX(200%) rotate(25deg); }
-}
-
-/* ----------------- Smooth Card Lift on Hover ----------------- */
-.wp-section,
-.section.light {
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-.wp-section:hover,
-.section.light:hover {
-  transform: translateY(-6px) scale(1.01);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
-}
-
-/* ----------------- Button Micro-Interactions ----------------- */
-.hero-actions a,
-.glass-back {
-  position: relative;
-  overflow: hidden;
-}
-.hero-actions a::after,
-.glass-back::after {
-  content: "";
-  position: absolute;
-  top: 0; left: -100%;
-  width: 100%; height: 100%;
-  background: rgba(255,255,255,0.15);
-  transform: skewX(-25deg);
-  transition: all 0.5s ease;
-}
-.hero-actions a:hover::after,
-.glass-back:hover::after {
-  left: 200%;
-}
-
-/* ----------------- Floating Blockquote Effect ----------------- */
-.wp-section blockquote {
-  position: relative;
-  padding: 1rem 1.5rem;
-  font-style: italic;
-  border-left: 4px solid var(--b2h-accent);
-  background: rgba(50,205,50,0.05);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-.wp-section blockquote:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-}
-
-/* ----------------- Subtitle Pulse ----------------- */
-.page-hero .subtitle {
-  animation: subtitlePulse 3s ease-in-out infinite;
-}
 @keyframes subtitlePulse {
   0%, 100% { opacity: 0.85; }
   50% { opacity: 1; }
 }
 
-/* ----------------- Micro Glimmer on List Bullets ----------------- */
-.wp-section ul li::before {
-  content: "•";
-  display: inline-block;
-  width: 1em;
-  margin-left: -1em;
-  color: var(--b2h-accent);
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-.wp-section ul li:hover::before {
-  transform: scale(1.3) translateX(2px);
-  color: #00ffd0;
-}
-
-/* ===============================
-   Ultra-Modern Micro Effects for Subpages
-   =============================== */
-
-/* ----------------- Particle-Like Dots in Sections ----------------- */
-.section::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  pointer-events: none;
-  background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
-  background-size: 20px 20px;
-  opacity: 0.4;
-  animation: particleShift 30s linear infinite;
-  z-index: 0;
-}
-
-@keyframes particleShift {
-  0% { background-position: 0 0; }
-  100% { background-position: 200px 200px; }
-}
-
-/* Ensure section content is above particles */
-.section > * {
-  position: relative;
-  z-index: 1;
-}
-
-/* ----------------- Gradient Borders for WP Sections ----------------- */
-.wp-section {
-  border-left: 4px solid transparent;
-  border-image: linear-gradient(180deg, #32cd32, #00ffd0, #32cd32) 1;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-/* Slight float on hover */
-.wp-section:hover {
-  transform: translateY(-5px) scale(1.01);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
-}
-
-/* ----------------- Subtle Glow on Section Titles ----------------- */
-.section-title {
-  text-shadow: 0 0 10px rgba(50,205,50,0.3);
-}
-
-/* ----------------- Soft Gradient Backgrounds for Light Sections ----------------- */
-.section.light {
-  background: linear-gradient(135deg, rgba(50,205,50,0.05), rgba(0,255,208,0.05));
-}
-
-/* ----------------- Floating Micro Glimmers ----------------- */
-.section::after {
-  content: "";
-  position: absolute;
-  width: 4px; height: 4px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.1);
-  top: 10%; left: 20%;
-  animation: floatGlimmer 8s ease-in-out infinite;
-}
-
-@keyframes floatGlimmer {
-  0% { transform: translate(0,0) scale(1); opacity: 0.2; }
-  50% { transform: translate(50px, 30px) scale(1.5); opacity: 0.5; }
-  100% { transform: translate(0,0) scale(1); opacity: 0.2; }
-}
-
-/* ----------------- Interactive Lists Glow ----------------- */
-.wp-section ul li:hover {
-  text-shadow: 0 0 6px #32cd32, 0 0 10px #00ffd0;
-}
-
-/* ===============================
-   Modern Gradient Link & Button Effects
-   =============================== */
-
-/* ----------------- Gradient Underline on Links ----------------- */
-a {
-  position: relative;
-  display: inline-block;
-  color: var(--b2h-accent);
-  transition: color 0.3s ease;
-}
-
-a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 0%;
-  height: 2px;
-  background: linear-gradient(90deg, #32cd32, #00ffd0);
-  transition: width 0.4s ease;
-}
-
-a:hover::after {
-  width: 100%;
-}
-
-/* ----------------- Hero Buttons Glow Trails ----------------- */
-.hero-actions a {
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-actions a::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(50,205,50,0.2) 0%, transparent 70%);
-  transform: scale(0);
-  opacity: 0;
-  transition: transform 0.6s ease, opacity 0.6s ease;
-  pointer-events: none;
-}
-
-.hero-actions a:hover::before {
-  transform: scale(1);
-  opacity: 1;
-}
-
-/* Optional: slight shimmer animation on hover */
-.hero-actions a:hover {
-  animation: shimmer 1.2s ease-in-out infinite alternate;
-}
-
-@keyframes shimmer {
-  0% { box-shadow: 0 0 8px #32cd32, 0 0 15px #00ffd0; }
-  50% { box-shadow: 0 0 12px #32cd32, 0 0 25px #00ffd0; }
-  100% { box-shadow: 0 0 8px #32cd32, 0 0 15px #00ffd0; }
-}
-
-/* ================= Modern Sparkle Hover Effect ================= */
-.hero-actions a,
-.glass-back {
-  position: relative;
-  overflow: hidden;
-  z-index: 0;
-  transition: transform 0.4s ease, background 0.4s ease;
-}
-
-.hero-actions a::before,
-.glass-back::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(
-    120deg,
-    rgba(255,255,255,0) 0%,
-    rgba(255,255,255,0.4) 50%,
-    rgba(255,255,255,0) 100%
-  );
-  transform: rotate(25deg) translateX(-100%);
-  transition: transform 0.7s ease;
-  z-index: -1;
-}
-
-.hero-actions a:hover::before,
-.glass-back:hover::before {
-  transform: rotate(25deg) translateX(200%);
-}
-
-.hero-actions a:hover,
-.glass-back:hover {
-  transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 8px 20px rgba(50, 205, 50, 0.4);
-}
-
-/* ================= DONATE CTA ================= */
-.donation-cta {
-  text-align: center;
-  margin: 30px 0;
-}
-
-.btn-join.donate-now {
-  background: #22c55e;
-  color: #fff;
-  padding: 16px 32px;
-  font-weight: 700;
-  font-size: 1.1rem;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(34,197,94,0.35);
-  transition: all 0.35s ease;
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
-}
-
-.btn-join.donate-now::before {
-  content: '';
-  position: absolute;
-  top: -10px; left: -10px;
-  width: calc(100% + 20px); height: calc(100% + 20px);
-  border-radius: 14px;
-  background: radial-gradient(circle, rgba(255,255,255,0.15), transparent 70%);
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 0.35s ease, transform 0.35s ease;
-}
-
-.btn-join.donate-now:hover {
-  transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 0 30px rgba(34,197,94,0.5), 0 0 40px rgba(34,197,94,0.2) inset;
-}
-
-.btn-join.donate-now:hover::before {
-  opacity: 1;
-  transform: scale(1.05);
-}
-
-/* ================= DONATION FORM ================= */
-.donation-form {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 25px;
-  background: rgba(34,197,94,0.05);
-  border-radius: 15px;
-  text-align: left;
-}
-
-.donation-form h3 {
-  color: #22c55e;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.donation-form label {
-  display: block;
-  margin-bottom: 15px;
-  font-weight: 500;
-  color: #e5e7eb;
-}
-
-.donation-form input,
-.donation-form select {
-  width: 100%;
-  padding: 10px 12px;
-  border-radius: 8px;
-  border: 1px solid #c0f0e0;
-  margin-top: 5px;
-  background: #0b0f1a;
-  color: #e5e7eb;
-}
-
-.donation-form button {
-  display: block;
-  margin: 20px auto 0;
-}
-
-/* ================= VOLUNTEER FORM ================= */
-.volunteer-form-section {
-  background: #0f2734;
-  color: #e0f7fa;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.volunteer-form-section .subtitle {
-  max-width: 800px;
-  margin: 0 auto 40px;
-  font-size: 1.1rem;
-  color: #b0e0e6;
-}
-
-.volunteer-form {
-  max-width: 700px;
-  margin: 0 auto;
+/* Hero buttons */
+.b2h-subpage .hero-actions {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-  text-align: left;
-}
-
-.volunteer-form .form-row {
-  display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
-.volunteer-form input,
-.volunteer-form select,
-.volunteer-form textarea {
-  flex: 1 1 48%;
-  padding: 12px 16px;
-  border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.3);
-  background: rgba(255,255,255,0.05);
-  color: #e0f7fa;
-  font-size: 1rem;
-  outline: none;
-  transition: all 0.3s ease;
-}
-
-.volunteer-form textarea {
-  flex: 1 1 100%;
-  resize: vertical;
-}
-
-.volunteer-form input:focus,
-.volunteer-form select:focus,
-.volunteer-form textarea:focus {
-  border-color: #22c55e;
-  box-shadow: 0 0 10px rgba(34,197,94,0.5);
-  background: rgba(255,255,255,0.1);
-}
-
-.volunteer-form button.green-btn {
-  padding: 14px 28px;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #0b0f1a;
-  background: #22c55e;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: all 0.35s ease;
-  align-self: center;
-}
-
-.volunteer-form button.green-btn:hover {
-  transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 0 15px rgba(34,197,94,0.5);
-}
-
-/* Responsive adjustments */
-@media screen and (max-width: 768px) {
-  .volunteer-form .form-row {
-    flex-direction: column;
-  }
-  .volunteer-form input,
-  .volunteer-form select,
-  .volunteer-form textarea {
-    flex: 1 1 100%;
-  }
-}
-
-/* Volunteer Form Inputs */
-.volunteer-form input,
-.volunteer-form textarea,
-.volunteer-form select {
-  background: #0f2734;
-  color: #fff;
-  border: 1px solid #22c55e;
-  border-radius: 8px;
-  padding: 10px 15px;
-  font-size: 1rem;
-  width: 100%;
-  transition: color 0.3s, border 0.3s;
-}
-
-/* Placeholder dark gray */
-.volunteer-form input::placeholder,
-.volunteer-form textarea::placeholder {
-  color: #cbd5e1; /* soft light silver */
-}
-
-/* On focus: change text color */
-.volunteer-form input:focus,
-.volunteer-form textarea:focus,
-.volunteer-form select:focus {
-  color: #000;          /* typed text black */
-  background: #fff;     /* input background white */
-  outline: none;
-  border-color: #22c55e;
-}
-
-/* Textarea resize fix */
-.volunteer-form textarea {
-  resize: none;
-}
-
-/* ================= SUBPAGE STYLES ================= */
-/* All subpage styles scoped to .b2h-subpage to avoid affecting main page */
-.b2h-subpage {
-  font-family: 'Montserrat', sans-serif;
-  background: #0f2734;
-  color: #c0f0e0;
-  overflow-x: hidden;
-}
-
-/* Hero Section on Subpages */
-.b2h-subpage .page-hero {
-  text-align: center;
-  padding: 80px 20px 40px 20px;
-}
-
-.b2h-subpage .page-hero h1.green-glow {
-  color: #22c55e;
-  font-size: 3rem;
-  text-shadow: 0 0 15px rgba(34,197,94,0.7);
-}
-
-.b2h-subpage .page-hero p.subtitle {
-  font-size: 1.2rem;
-  color: #b0e0e6;
-  margin-top: 10px;
-}
-
-/* Hero action buttons */
 .b2h-subpage .hero-actions a.btn-glow {
-  display: inline-block;
-  margin: 10px;
   padding: 12px 22px;
   border-radius: 25px;
   font-weight: 600;
@@ -867,14 +128,14 @@ a:hover::after {
   transform: rotate(25deg) translateX(200%);
 }
 
-/* Section Styling */
+/* ----------------- Sections ----------------- */
 .b2h-subpage .section {
   padding: 40px 20px;
   max-width: 900px;
   margin: 0 auto;
+  position: relative;
 }
 
-/* wp-section inside subpages */
 .b2h-subpage .wp-section {
   margin-bottom: 40px;
 }
@@ -892,7 +153,27 @@ a:hover::after {
   color: #c0f0e0;
 }
 
-/* Donate boxes */
+.b2h-subpage .wp-section ul {
+  list-style: none;
+  padding-left: 1.5rem;
+}
+
+.b2h-subpage .wp-section ul li::before {
+  content: "•";
+  color: var(--b2h-accent);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.b2h-subpage .wp-section ul li:hover::before {
+  transform: scale(1.3) translateX(2px);
+  color: #00ffd0;
+}
+
+/* ----------------- Donate Boxes ----------------- */
 .b2h-subpage .donate-box {
   background: rgba(34,197,94,0.1);
   border-radius: 12px;
@@ -918,7 +199,7 @@ a:hover::after {
   transform: translateY(-3px) scale(1.03);
 }
 
-/* Footer */
+/* ----------------- Footer ----------------- */
 .b2h-subpage .site-footer {
   padding: 20px 0;
   background: #0b1f29;
@@ -927,9 +208,9 @@ a:hover::after {
   font-size: 0.95rem;
 }
 
-/* Responsive */
+/* ----------------- Responsive ----------------- */
 @media (max-width: 768px) {
-  .b2h-subpage .page-hero h1.green-glow {
+  .b2h-subpage .page-hero h1 {
     font-size: 2.2rem;
   }
   .b2h-subpage .hero-actions a.btn-glow {
