@@ -218,3 +218,40 @@
     font-size: 0.85rem;
   }
 }
+
+Css
+
+/* ================= Scroll Indicator ================= */
+.scroll-indicator {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.scroll-indicator span {
+  width: 28px;
+  height: 48px;
+  border: 2px solid #22c55e;
+  border-radius: 20px;
+  position: relative;
+}
+
+.scroll-indicator span::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  background: #22c55e;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  animation: scrollDot 1.6s infinite;
+}
+
+@keyframes scrollDot {
+  0% { opacity: 0; transform: translate(-50%, 0); }
+  40% { opacity: 1; }
+  80% { opacity: 0; transform: translate(-50%, 18px); }
+  100% { opacity: 0; }
+}
