@@ -1,36 +1,28 @@
 /* ===============================
-   B2H Subpage Unified CSS
-   Works for all subpages: Participate, Volunteer, Awareness
+   B2H Subpage Unified CSS (LOCKED)
+   Affects ONLY pages with body.b2h-subpage
    =============================== */
 
-/* ----------------- Root & Variables ----------------- */
-:root {
+body.b2h-subpage {
+
+  /* ---- Variables (SCOPED, SAFE) ---- */
   --b2h-bg-dark: #0b0f1a;
   --b2h-bg-soft: #111827;
   --b2h-text-main: #e5e7eb;
   --b2h-text-soft: #9ca3af;
   --b2h-accent: #32cd32;
-  --glass-bg: rgba(255, 255, 255, 0.05);
-  --glass-border: rgba(255, 255, 255, 0.2);
-  --glass-radius: 20px;
-  --glass-padding: 2rem;
-  --transition-speed: 0.6s;
-  --font-heading: 'Montserrat', sans-serif;
-  --font-body: 'Montserrat', sans-serif;
   --gradient-accent: linear-gradient(90deg, #32cd32, #00ffd0, #32cd32);
-}
+  --font-body: 'Montserrat', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
 
-/* ----------------- Global ----------------- */
-body.b2h-subpage {
   background-color: var(--b2h-bg-dark);
   color: var(--b2h-text-main);
   font-family: var(--font-body);
   line-height: 1.6;
   font-size: 16px;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
+/* ---- Global inside subpages only ---- */
 body.b2h-subpage * {
   box-sizing: border-box;
 }
@@ -38,268 +30,83 @@ body.b2h-subpage * {
 body.b2h-subpage a {
   color: var(--b2h-accent);
   text-decoration: none;
-  transition: color var(--transition-speed);
 }
 
-body.b2h-subpage a:hover {
-  color: #7effa0;
-}
-
-/* ----------------- Hero Section ----------------- */
-.b2h-subpage .page-hero {
+/* ---- Hero ---- */
+body.b2h-subpage .page-hero {
   text-align: center;
   padding: 80px 20px 40px;
 }
 
-.b2h-subpage .page-hero h1 {
+body.b2h-subpage .page-hero h1 {
   font-family: var(--font-heading);
   font-size: 3rem;
   font-weight: 800;
   background: var(--gradient-accent);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 15px rgba(50,205,50,0.7);
-  animation: gradientShift 6s ease infinite;
 }
 
-.b2h-subpage .page-hero p.subtitle {
-  font-size: 1.2rem;
-  font-style: italic;
-  color: var(--b2h-text-soft);
-  margin-top: 10px;
-  text-shadow: 0 0 5px rgba(50,205,50,0.15);
-  animation: subtitlePulse 3s ease-in-out infinite;
-}
-
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-@keyframes subtitlePulse {
-  0%, 100% { opacity: 0.85; }
-  50% { opacity: 1; }
-}
-
-/* Hero buttons / nav */
-.b2h-subpage .participate-nav {
-  display:flex;
-  justify-content:center;
-  gap:1rem;
-  flex-wrap:wrap;
-  margin-bottom:2rem;
-}
-
-.b2h-subpage .participate-nav a {
-  padding:12px 22px;
-  border-radius:30px;
-  font-weight:700;
-  background:#22c55e;
-  color:#0b0f1a;
-  box-shadow:0 6px 20px rgba(34,197,94,.35);
-  transition:.3s ease;
-}
-
-.b2h-subpage .participate-nav a:hover {
-  transform:translateY(-3px) scale(1.05);
-}
-
-/* Scroll Indicator */
-.scroll-indicator {
-  margin-top: 30px;
+/* ---- Navigation ---- */
+body.b2h-subpage .participate-nav {
   display: flex;
   justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
 }
 
-.scroll-indicator span {
-  width: 28px;
-  height: 48px;
-  border: 2px solid #22c55e;
-  border-radius: 20px;
-  position: relative;
-}
-
-.scroll-indicator span::before {
-  content: "";
-  position: absolute;
-  top: 8px;
-  left: 50%;
-  width: 6px;
-  height: 6px;
+body.b2h-subpage .participate-nav a {
+  padding: 12px 22px;
+  border-radius: 30px;
   background: #22c55e;
-  border-radius: 50%;
-  transform: translateX(-50%);
-  animation: scrollDot 1.6s infinite;
+  color: #0b0f1a;
+  font-weight: 700;
 }
 
-@keyframes scrollDot {
-  0% { opacity: 0; transform: translate(-50%, 0); }
-  40% { opacity: 1; }
-  80% { opacity: 0; transform: translate(-50%, 18px); }
-  100% { opacity: 0; }
-}
-
-/* ----------------- Section Styling ----------------- */
-.b2h-subpage .section {
-  padding: 40px 20px;
+/* ---- Sections ---- */
+body.b2h-subpage .section {
   max-width: 900px;
   margin: 0 auto;
-  position: relative;
+  padding: 40px 20px;
 }
 
-.b2h-subpage .section-title {
+body.b2h-subpage .section-title {
   font-size: 1.8rem;
   color: #22c55e;
-  margin-bottom: 12px;
 }
 
-.b2h-subpage .info-box, 
-.b2h-subpage .donate-box {
+/* ---- Boxes ---- */
+body.b2h-subpage .info-box {
   background: rgba(34,197,94,0.08);
   padding: 25px;
   border-radius: 16px;
-  margin-top: 20px;
-  line-height: 1.7;
 }
 
-/* Buttons */
-.green-btn {
+/* ---- Buttons ---- */
+body.b2h-subpage .green-btn {
   background: #22c55e;
   color: #0b0f1a;
   padding: 14px 28px;
-  font-weight: 700;
   border-radius: 12px;
-  text-decoration: none;
-  display: inline-block;
-  transition: all 0.35s ease;
-  cursor: pointer;
+  font-weight: 700;
 }
 
-.green-btn:hover {
-  transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 0 15px rgba(34,197,94,0.5);
-}
-
-.google-btn {
-  background: #0ea5e9;
-  color: #fff;
-}
-
-.google-btn:hover {
-  transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 0 15px rgba(14,165,233,0.5);
-}
-
-/* Form Styling */
-.participation-form input,
-.participation-form textarea,
-.volunteer-form input,
-.volunteer-form textarea,
-.volunteer-form select {
+/* ---- Forms ---- */
+body.b2h-subpage input,
+body.b2h-subpage textarea,
+body.b2h-subpage select {
   width: 100%;
   padding: 10px 15px;
-  margin-bottom: 15px;
   border-radius: 8px;
-  border: 1px solid #22c55e;
   background: #0f2734;
+  border: 1px solid #22c55e;
   color: #fff;
 }
 
-.volunteer-form .form-row {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-/* Awareness hero action buttons */
-.hero-actions {
-  display:flex;
-  justify-content:center;
-  gap:1rem;
-  flex-wrap:wrap;
-  margin-top:15px;
-}
-
-.btn-glow {
-  padding:12px 22px;
-  border-radius:25px;
-  font-weight:600;
-  color:#fff;
-  text-decoration:none;
-  position:relative;
-  overflow:hidden;
-  transition: all 0.4s ease;
-}
-
-.btn-glow::before {
-  content:"";
-  position:absolute;
-  top:-50%;
-  left:-50%;
-  width:200%;
-  height:200%;
-  background: linear-gradient(120deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
-  transform: rotate(25deg) translateX(-100%);
-  transition: transform 0.7s ease;
-  z-index: -1;
-}
-
-.btn-glow:hover::before {
-  transform: rotate(25deg) translateX(200%);
-}
-
-.btn-glow:hover {
-  transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 0 15px rgba(34,197,94,0.5);
-}
-
-/* Language Toggle */
-.language-toggle {
-  text-align:center;
-  margin:20px 0;
-}
-
-.lang-btn {
-  background: transparent;
-  border: 1px solid rgba(124,252,0,0.5);
-  color: #7CFC00;
-  padding:6px 14px;
-  margin:0 4px;
-  cursor:pointer;
-  border-radius:20px;
-  font-weight:600;
-  transition: all 0.3s ease;
-}
-
-.lang-btn:hover {
-  background: rgba(124,252,0,0.15);
-}
-
-.lang-btn.active {
-  background: #7CFC00;
-  color: #000;
-}
-
-/* Footer */
-.site-footer {
-  padding: 20px 0;
+/* ---- Footer ---- */
+body.b2h-subpage .site-footer {
   background: #0b1f29;
+  padding: 20px;
   text-align: center;
-  color: #c0f0e0;
-  font-size: 0.95rem;
-}
-
-/* ----------------- Responsive ----------------- */
-@media (max-width:768px){
-  .page-hero h1 {
-    font-size:2.2rem;
-  }
-  .participate-nav a, .btn-glow, .green-btn {
-    padding:10px 16px;
-    font-size:0.85rem;
-  }
-  .volunteer-form .form-row {
-    flex-direction: column;
-  }
 }
