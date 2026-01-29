@@ -1799,6 +1799,80 @@ img { max-width: 100%; display: block; }
   .footer-social a:hover::before { width: 70px; height: 70px; }
 }
 
+.footer {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 50px 20px 20px 20px;
+  font-size: 0.9rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer h4 {
+  color: #14b8a6;
+  margin-bottom: 10px;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #f59e0b;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 8px;
+}
+
+.footer-contact, .footer-social, .footer-newsletter {
+  max-width: 250px;
+}
+
+.footer-newsletter form {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.footer-newsletter input[type="email"] {
+  flex: 1;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+}
+
+.footer-newsletter button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  background: #14b8a6;
+  color: #fff;
+  cursor: pointer;
+}
+
+.footer-newsletter button:hover {
+  background: #f59e0b;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
 /* Ensure subpage buttons are above the particles canvas */
 .hero-subpages {
   position: relative;  /* establish stacking context */
