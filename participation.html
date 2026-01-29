@@ -5,57 +5,13 @@
 <title>Participate — B2H Global Foundation</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Language Toggle -->
-<div class="language-toggle">
-  <button onclick="setLanguage('en')" class="lang-btn active">EN</button>
-  <button onclick="setLanguage('id')" class="lang-btn">ID</button>
-</div>
-
+<!-- Google Fonts & FontAwesome -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="subpage.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-<style>
-/* === PAGE-SPECIFIC ONLY === */
-.participate-nav {
-  display:flex;
-  justify-content:center;
-  gap:1rem;
-  flex-wrap:wrap;
-  margin-bottom:2rem;
-}
-
-.participate-nav a {
-  padding:12px 22px;
-  border-radius:30px;
-  font-weight:700;
-  background:#22c55e;
-  color:#0b0f1a;
-  box-shadow:0 6px 20px rgba(34,197,94,.35);
-  transition:.3s ease;
-}
-
-.participate-nav a:hover {
-  transform:translateY(-3px) scale(1.05);
-}
-
-.participate-section {
-  scroll-margin-top:120px;
-}
-
-.info-box {
-  background:rgba(34,197,94,.08);
-  padding:25px;
-  border-radius:16px;
-  margin-top:20px;
-  line-height:1.7;
-}
-</style>
 </head>
-
 <body class="b2h-subpage">
-
-<section class="glass-container">
 
 <!-- ================= HERO ================= -->
 <section class="page-hero">
@@ -69,44 +25,36 @@
     <a href="index.html">← Home</a>
   </div>
 
-  <div class="scroll-indicator">
-  <span></span>
-</div>
+  <div class="scroll-indicator"><span></span></div>
 
   <!-- Participation Form -->
-<div class="participation-form">
-  <h3>Join Our Mission</h3>
-  <form id="participationForm">
-    <label for="name">Full Name</label>
-    <input type="text" id="name" required placeholder="Your name">
-
-    <label for="email">Email Address</label>
-    <input type="email" id="email" required placeholder="you@example.com">
-
-    <label for="message">Message / Interest</label>
-    <textarea id="message" rows="4" placeholder="Your message"></textarea>
-
-    <button type="submit" class="green-btn">Submit</button>
-  </form>
-  <p id="formSuccess" style="display:none; color:#22c55e; margin-top:15px; font-weight:600;">
-    Thank you! Your message has been received.
-  </p>
-</div>
+  <div class="participation-form" style="max-width:500px; margin:25px auto;">
+    <h3>Join Our Mission</h3>
+    <form id="participationForm">
+      <input type="text" id="name" required placeholder="Full Name">
+      <input type="email" id="email" required placeholder="Email Address">
+      <textarea id="message" rows="4" placeholder="Message / Interest"></textarea>
+      <button type="submit" class="green-btn">Submit</button>
+    </form>
+    <p id="formSuccess" style="display:none; color:#22c55e; margin-top:15px; font-weight:600;">
+      Thank you! Your message has been received.
+    </p>
+  </div>
 
   <!-- WhatsApp Volunteer Connect -->
-<div class="whatsapp-cta" style="text-align:center; margin-top:25px;">
-  <a href="https://wa.me/6285396622600" target="_blank" class="green-btn">
-    Chat with a Volunteer on WhatsApp
-  </a>
-</div>
+  <div class="whatsapp-cta" style="text-align:center; margin-top:15px;">
+    <a href="https://wa.me/6285396622600" target="_blank" class="green-btn">
+      Chat with a Volunteer on WhatsApp
+    </a>
+  </div>
 
   <!-- Google Form Connect -->
-<div class="google-form-cta" style="text-align:center; margin-top:15px;">
-  <a href="YOUR_GOOGLE_FORM_LINK_HERE" target="_blank" class="green-btn">
-    Fill Participation Form via Google
-  </a>
-</div>
-  
+  <div class="google-form-cta" style="text-align:center; margin-top:15px;">
+    <a href="YOUR_GOOGLE_FORM_LINK_HERE" target="_blank" class="green-btn google-btn">
+      Fill Participation Form via Google
+    </a>
+  </div>
+
 </section>
 
 <hr class="section-divider">
@@ -114,23 +62,10 @@
 <!-- ================= DONATE ================= -->
 <section id="donate" class="section participate-section">
   <h2 class="section-title green-glow">Donate</h2>
-
   <div class="info-box">
-    <p>
-      Your donation is a <strong>Sadaqah Jariyah</strong>.  
-      No financial returns, no privileges, no guarantees — only impact.
-    </p>
-
-    <p><strong>Bank Transfer (Indonesia)</strong></p>
-    <p>
-      PT Arab Indo Group<br>
-      BCA / BNI — Indonesia
-    </p>
-
-    <p><strong>WISE Transfer</strong></p>
-    <p>
-      Use WISE to send directly to our Indonesian company account.
-    </p>
+    <p>Your donation is a <strong>Sadaqah Jariyah</strong> — purely for impact, no returns.</p>
+    <p><strong>Bank Transfer (Indonesia)</strong><br>PT Arab Indo Group<br>BCA / BNI — Indonesia</p>
+    <p><strong>WISE Transfer</strong><br>Send directly to our Indonesian company account</p>
   </div>
 </section>
 
@@ -139,29 +74,19 @@
 <!-- ================= VOLUNTEER ================= -->
 <section id="volunteer" class="section participate-section">
   <h2 class="section-title green-glow">Volunteer</h2>
-
-  <form class="volunteer-form">
-    <div class="form-row">
-      <input type="text" placeholder="Full Name" required>
-      <input type="email" placeholder="Email Address" required>
-    </div>
-
-    <div class="form-row">
-      <input type="text" placeholder="Country / City">
-      <select>
-        <option disabled selected>How would you like to help?</option>
-        <option>Field Work</option>
-        <option>Education</option>
-        <option>Fundraising</option>
-        <option>Online Awareness</option>
-      </select>
-    </div>
-
+  <form class="volunteer-form" style="max-width:500px; margin:auto;">
+    <input type="text" placeholder="Full Name" required>
+    <input type="email" placeholder="Email Address" required>
+    <input type="text" placeholder="Country / City">
+    <select>
+      <option disabled selected>How would you like to help?</option>
+      <option>Field Work</option>
+      <option>Education</option>
+      <option>Fundraising</option>
+      <option>Online Awareness</option>
+    </select>
     <textarea rows="4" placeholder="Why do you want to volunteer?"></textarea>
-
-    <button type="button" class="green-btn">
-      Become a Volunteer
-    </button>
+    <button type="button" class="green-btn">Become a Volunteer</button>
   </form>
 </section>
 
@@ -170,23 +95,17 @@
 <!-- ================= AWARENESS ================= -->
 <section id="awareness" class="section participate-section">
   <h2 class="section-title green-glow">Spread Awareness</h2>
-
-  <div class="info-box">
-    <p>
-      You may not donate or volunteer — but your voice matters.
-    </p>
-
+  <div class="info-box" style="text-align:center;">
+    <p>You may not donate or volunteer — but your voice matters.</p>
     <div class="hero-actions">
       <a class="btn-glow" target="_blank"
          href="https://twitter.com/intent/tweet?text=Support%20B2H%20Global%20Foundation">
          Share on Twitter
       </a>
-
       <a class="btn-glow" target="_blank"
          href="https://www.facebook.com/sharer/sharer.php?u=https://yourdomain.com">
          Share on Facebook
       </a>
-
       <a class="btn-glow"
          href="mailto:?subject=Join B2H&body=Support humanitarian work with B2H Global Foundation">
          Share via Email
@@ -195,13 +114,14 @@
   </div>
 </section>
 
-</section>
-
+<!-- Footer -->
 <footer class="site-footer">
   <p>© 2026 B2H Global Foundation — Built for Humanity</p>
 </footer>
 
- <script>
+<!-- ================= Scripts ================= -->
+<script>
+  // Scroll indicator fade
   const indicator = document.querySelector('.scroll-indicator');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 100) {
@@ -210,33 +130,25 @@
       indicator.style.opacity = '1';
     }
   });
-</script> 
 
-  <script>
+  // Participation form success
   const form = document.getElementById('participationForm');
   const successMsg = document.getElementById('formSuccess');
-
   form.addEventListener('submit', (e) => {
-    e.preventDefault(); // prevent actual submission
-    successMsg.style.display = 'block'; // show success message
-    form.reset(); // clear form fields
+    e.preventDefault();
+    successMsg.style.display = 'block';
+    form.reset();
   });
-</script>
 
- <script>
+  // Language toggle
   function setLanguage(lang) {
     document.querySelectorAll('[data-en]').forEach(el => {
       el.innerText = el.getAttribute(`data-${lang}`);
     });
-
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-      btn.classList.remove('active');
-    });
-
-    document.querySelector(`.lang-btn[onclick*="${lang}"]`)
-      .classList.add('active');
+    document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+    document.querySelector(`.lang-btn[onclick*="${lang}"]`).classList.add('active');
   }
-</script> 
+</script>
 
 </body>
 </html>
