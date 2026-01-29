@@ -148,92 +148,93 @@ img { max-width: 100%; display: block; }
   }
 }
 
-/* ================= FOUNDER PAGE ================= */
+/* ======== FOUNDER PAGE STYLES ======== */
 .founder-page {
-  background-color: #fff; /* white background */
-  padding: 80px 20px;
-  font-family: 'Montserrat', sans-serif;
-  color: #333; /* default text color */
+  background-color: #fdfdfd; /* light background to match main page */
+  padding: 60px 20px;
+}
+
+.founder-page .container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .founder-page h2 {
-  text-align: right;       /* heading on right side */
   font-size: 2.5rem;
+  text-align: right;
   font-weight: 800;
-  color: #2e7d32;          /* green heading */
+  margin-bottom: 15px;
+  color: #10b981; /* green heading color */
   position: relative;
-  margin-bottom: 20px;
 }
 
-/* Glow underline on the left side */
 .founder-page h2::after {
   content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100px;
+  display: block;
+  width: 60px;
   height: 4px;
-  background: linear-gradient(90deg, #ff0066, #ffcc00, #00ffcc, #0066ff, #ff0066);
+  background: linear-gradient(to right, #10b981, #3b82f6, #ef4444, #f59e0b, #10b981);
+  margin-top: 8px;
   border-radius: 2px;
 }
 
-/* Container for image + text */
 .founder-content {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
-  align-items: center;
+  align-items: flex-start;
   margin-top: 40px;
 }
 
-/* Founder Image */
-.founder-content .founder-img {
-  width: 200px;          /* slightly larger */
-  height: 200px;
+.founder-img {
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 0 25px rgba(46,125,50,0.5); /* green glow shadow */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  flex-shrink: 0;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 
-/* Glow hover effect on image */
-.founder-content .founder-img:hover {
+.founder-img:hover {
+  box-shadow: 0 8px 30px rgba(16,185,129,0.6);
   transform: scale(1.05);
-  box-shadow: 0 0 40px rgba(46,125,50,0.8);
 }
 
-/* Founder Text */
-.founder-content .founder-text {
+.founder-text {
   flex: 1;
+  min-width: 300px;
   font-size: 1.05rem;
-  line-height: 1.7;
-  color: #333; /* text visible on white background */
+  line-height: 1.75;
+  color: #222;
 }
 
-/* Signature at the end */
-.founder-content .signature {
-  font-weight: 700;
-  font-size: 1.2rem;
-  margin-top: 20px;
-  color: #2e7d32;
+.founder-text p {
+  margin-bottom: 18px;
 }
 
-/* Responsive adjustments */
+.founder-text .signature {
+  margin-top: 25px;
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: #10b981;
+}
+
+/* ======== RESPONSIVE ======== */
 @media screen and (max-width: 900px) {
   .founder-content {
     flex-direction: column;
+    align-items: center;
     text-align: center;
-  }
-  .founder-content .founder-img {
-    margin-bottom: 20px;
   }
   .founder-page h2 {
     text-align: center;
   }
-  .founder-page h2::after {
-    left: 50%;
-    transform: translateX(-50%);
+  .founder-img {
+    width: 180px;
+    height: 180px;
+  }
+  .founder-text {
+    font-size: 1rem;
   }
 }
 
