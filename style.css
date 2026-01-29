@@ -1938,6 +1938,69 @@ img { max-width: 100%; display: block; }
   color: #ccc;
 }
 
+.btn-join.participate {
+  background: #32cd32;
+  color: #000;
+  border-radius: 25px;
+  font-weight: 600;
+  padding: 12px 25px;
+  transition: all 0.35s ease;
+}
+
+.btn-join.participate:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 0 15px rgba(50,205,50,0.5);
+}
+
+/* ======== FOUNDER IMAGE WRAPPER WITH FLOATING PARTICLES ======== */
+.founder-img-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* Image floating gently */
+.founder-img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: all 0.4s ease, transform 1.5s ease-in-out;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+}
+
+/* Gentle float animation */
+@keyframes floatFounder {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+.founder-img {
+  animation: floatFounder 4s ease-in-out infinite;
+}
+
+.founder-img:hover {
+  box-shadow: 0 12px 35px rgba(16,185,129,0.7);
+  transform: scale(1.08);
+}
+
+/* ======== PARTICLES AROUND FOUNDER ======== */
+.founder-img-wrapper span.founder-particle {
+  position: absolute;
+  display: block;
+  background: rgba(16,185,129,0.7);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: floatParticle 6s linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes floatParticle {
+  0%   { transform: translate(0,0) scale(1); opacity: 0.6; }
+  50%  { transform: translate(calc(var(--x) * 1px), calc(var(--y) * 1px)) scale(1.3); opacity: 0.9; }
+  100% { transform: translate(0,0) scale(1); opacity: 0.6; }
+}
+
   /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
   background: rgba(0,255,198,0.05);
