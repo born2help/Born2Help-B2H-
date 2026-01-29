@@ -148,20 +148,20 @@ img { max-width: 100%; display: block; }
   }
 }
 
-/* ======== FOUNDER PAGE STYLES ======== */
+/* ======== FOUNDER PAGE STYLES (DARK MODE) ======== */
 .founder-page {
-  background-color: #fdfdfd; /* light background to match main page */
+  background-color: #111; /* dark background to match main page */
   padding: 60px 20px;
 }
 
 .founder-page .container {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
 .founder-page h2 {
   font-size: 2.5rem;
-  text-align: right;
+  text-align: center; /* centered heading */
   font-weight: 800;
   margin-bottom: 15px;
   color: #10b981; /* green heading color */
@@ -171,10 +171,10 @@ img { max-width: 100%; display: block; }
 .founder-page h2::after {
   content: '';
   display: block;
-  width: 60px;
+  width: 120px; /* centered underline width */
   height: 4px;
   background: linear-gradient(to right, #10b981, #3b82f6, #ef4444, #f59e0b, #10b981);
-  margin-top: 8px;
+  margin: 8px auto 0; /* centered underline */
   border-radius: 2px;
 }
 
@@ -184,6 +184,7 @@ img { max-width: 100%; display: block; }
   gap: 40px;
   align-items: flex-start;
   margin-top: 40px;
+  justify-content: center;
 }
 
 .founder-img {
@@ -192,11 +193,11 @@ img { max-width: 100%; display: block; }
   border-radius: 50%;
   object-fit: cover;
   transition: all 0.4s ease;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
 }
 
 .founder-img:hover {
-  box-shadow: 0 8px 30px rgba(16,185,129,0.6);
+  box-shadow: 0 8px 30px rgba(16,185,129,0.7);
   transform: scale(1.05);
 }
 
@@ -205,7 +206,7 @@ img { max-width: 100%; display: block; }
   min-width: 300px;
   font-size: 1.05rem;
   line-height: 1.75;
-  color: #222;
+  color: #f5f5f5; /* light text for dark background */
 }
 
 .founder-text p {
@@ -217,6 +218,7 @@ img { max-width: 100%; display: block; }
   font-weight: 600;
   font-size: 1.15rem;
   color: #10b981;
+  text-align: right;
 }
 
 /* ======== RESPONSIVE ======== */
@@ -235,6 +237,9 @@ img { max-width: 100%; display: block; }
   }
   .founder-text {
     font-size: 1rem;
+  }
+  .founder-text .signature {
+    text-align: center;
   }
 }
 
