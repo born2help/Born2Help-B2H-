@@ -192,5 +192,16 @@
   });
 </script> 
 
+  <script>
+  const form = document.getElementById('participationForm');
+  const successMsg = document.getElementById('formSuccess');
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault(); // prevent actual submission
+    successMsg.style.display = 'block'; // show success message
+    form.reset(); // clear form fields
+  });
+</script>
+
 </body>
 </html>
