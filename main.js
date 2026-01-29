@@ -1,57 +1,77 @@
-/* ================= HERO BG PARTICLES ================= */
-const hero = document.querySelector('.hero');
-const bgParticles = document.querySelectorAll('.bg-particles span');
+/* ================= HERO PARTICLES (particles.js) ================= */
+particlesJS("particles-js", {
+  "particles": {
+    "number": { "value": 150, "density": { "enable": true, "value_area": 900 } },
+    "color": { "value": ["#32cd32","#00ffd0","#7CFC00"] },
+    "shape": { "type": "circle" },
+    "opacity": { "value": 0.7, "random": true },
+    "size": { "value": 3, "random": true },
+    "line_linked": { "enable": true, "distance": 130, "color": "#32cd32", "opacity": 0.25, "width": 1 },
+    "move": { "enable": true, "speed": 2.5, "direction": "none", "random": true, "straight": false, "out_mode": "out" }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" }, "resize": true },
+    "modes": { "grab": { "distance": 140, "line_linked": { "opacity": 0.6 } }, "push": { "particles_nb": 4 } }
+  },
+  "retina_detect": true
+});
 
-if (hero && bgParticles.length) {
-  bgParticles.forEach(p => {
-    p.style.left = Math.random() * 100 + '%';
-    const size = 3 + Math.random() * 6;
-    p.style.width = p.style.height = size + 'px';
-    p.style.animationDuration = 10 + Math.random() * 15 + 's';
-    p.style.animationDelay = Math.random() * 10 + 's';
-  });
-}
 
 /* ================= HERO TEXT ANIMATION ================= */
+const heroContent = document.querySelector('.hero-content');
+if(heroContent) heroContent.classList.add('depth-float');
 document.querySelectorAll('.hero-content .line').forEach((line, index) => {
-  line.style.animationDelay = (index * 0.3) + 's';
+  line.style.animationDelay = `${index * 0.3}s`;
   line.classList.add('slide-in');
 });
 
-const heroContent = document.querySelector('.hero-content');
-if (heroContent) heroContent.classList.add('depth-float');
+/* ================= TOKENOMICS BAR + PERCENTAGE ANIMATION ================= */
+(() => {
+  const section = document.getElementById("tokenomics");
+  if (!section) return;
 
-/* ================= MOUSE FOLLOWING PARTICLES ================= */
-if (hero) {
-  const mouseParticles = [];
-  for (let i = 0; i < 15; i++) {
-    const p = document.createElement('div');
-    p.classList.add('mouse-particle');
-    hero.appendChild(p);
-    mouseParticles.push(p);
-  }
+  const bars = section.querySelectorAll(".bar-fill");
+  bars.forEach(bar => { bar.style.width = "0%"; bar.querySelector("span").textContent = "0%"; });
 
-  hero.addEventListener('mousemove', e => {
-    mouseParticles.forEach((p, idx) => {
-      const offset = idx * 6;
-      p.style.transform = `translate(${e.clientX + offset}px, ${e.clientY + offset}px)`;
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if(!entry.isIntersecting) return;
+
+      bars.forEach(bar => {
+        const span = bar.querySelector("span");
+        const target = parseInt(bar.getAttribute("data-width"), 10);
+        let current = 0;
+        bar.style.transition = "width 2s ease-out";
+        bar.style.width = target + "%";
+
+        const interval = setInterval(() => {
+          if(current < target){ current++; span.textContent = current + "%"; }
+          else { span.textContent = target + "%"; clearInterval(interval); }
+        }, 20);
+      });
+
+      obs.unobserve(section);
     });
-  });
-}
+  }, { threshold: 0.35 });
+
+  observer.observe(section);
+})();
+
+/* ================= HOW B2H ARROWS ================= */
+document.querySelectorAll(".moving-arrow").forEach((arrow, index) => {
+  arrow.style.left = "0";
+  arrow.style.animationDelay = `${index * 0.4}s`;
+});
 
 /* ================= FOUNDER TEXT OBSERVER ================= */
 const founderObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) entry.target.classList.add("show");
-  });
+  entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add("show"); });
 }, { threshold: 0.4 });
-
 document.querySelectorAll(".founder-text").forEach(el => founderObserver.observe(el));
 
 /* ================= CARD HOVER GLOW ================= */
-const cardSelectors = ['.asset-card', '.charity-card', '.board-card', '.mv-card'];
-
-cardSelectors.forEach(selector => {
+['.asset-card', '.charity-card', '.board-card', '.mv-card'].forEach(selector => {
   document.querySelectorAll(selector).forEach(card => {
     const glow = document.createElement('div');
     glow.classList.add('card-hover-glow');
@@ -63,77 +83,10 @@ cardSelectors.forEach(selector => {
       glow.style.opacity = '1';
       glow.style.transform = 'scale(1)';
     });
-
     card.addEventListener('mouseleave', () => {
       card.style.transform = 'translateY(0)';
       glow.style.opacity = '0';
       glow.style.transform = 'scale(0)';
     });
   });
-});
-
-/* ================= TOKENOMICS BAR + PERCENTAGE ANIMATION ================= */
-(() => {
-  const section = document.getElementById("tokenomics");
-  if (!section) return;
-
-  const bars = section.querySelectorAll(".bar-fill");
-
-  // Reset all bars
-  bars.forEach(bar => {
-    bar.style.width = "0%";
-    const span = bar.querySelector("span");
-    if (span) span.textContent = "0%";
-  });
-
-  const observer = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-
-      bars.forEach(bar => {
-        const span = bar.querySelector("span");
-        if (!span) return;
-
-        const target = parseInt(bar.getAttribute("data-width"), 10);
-        let current = 0;
-
-        // Animate bar width
-        bar.style.transition = "width 1.8s ease-out";
-        bar.style.width = target + "%";
-
-        // Animate number smoothly
-        const interval = setInterval(() => {
-          if (current < target) {
-            current++;
-            span.textContent = current + "%";
-          } else {
-            span.textContent = target + "%";
-            clearInterval(interval);
-          }
-        }, 18);
-      });
-
-      obs.unobserve(section); // run only once
-    });
-  }, { threshold: 0.35 });
-
-  observer.observe(section);
-})();
-
-/* ================= HOW HUMANITY WORKS – ARROW ANIMATION ================= */
-document.addEventListener("DOMContentLoaded", function () {
-
-  const arrows = document.querySelectorAll(".moving-arrow");
-
-  arrows.forEach((arrow, index) => {
-    arrow.style.left = "50%";
-    arrow.style.transform = "translateX(-50%)";
-    arrow.style.animationDelay = `${index * 0.4}s`;
-  });
-
-});
-
-document.querySelectorAll('.bar-fill').forEach(bar => {
-  const width = bar.getAttribute('data-width');
-  setTimeout(() => { bar.style.width = width; }, 500);
 });
