@@ -402,15 +402,13 @@
     </div>
 
     <!-- Flow Line & Moving Arrows -->
-    <div class="flow-container">
-      <div class="flow-line"></div>
-      <span class="moving-arrow">➜</span>
-      <span class="moving-arrow">➜</span>
-      <span class="moving-arrow">➜</span>
-      <span class="moving-arrow">➜</span>
-      <span class="moving-arrow">➜</span>
-      <span class="moving-arrow">➜</span>
-    </div>
+   <div class="flow-container">
+  <div class="flow-line"></div>
+  <span class="moving-arrow" style="color:#32cd32;">➜</span>
+  <span class="moving-arrow" style="color:#00ffd0;">➜</span>
+  <span class="moving-arrow" style="color:#7CFC00;">➜</span>
+  <span class="moving-arrow" style="color:#00ffc6;">➜</span>
+</div>
 
     <!-- Steps -->
     <div class="flow-steps">
@@ -648,33 +646,40 @@
   
   /* ================= HERO PARTICLES ================= */
   particlesJS("particles-js", {
-    "particles": {
-      "number": {
-        "value": 120,
-        "density": { "enable": true, "value_area": 800 }
-      },
-      "color": { "value": "#00ffc6" },
-      "shape": { "type": "circle" },
-      "opacity": { "value": 0.6, "random": true },
-      "size": { "value": 3, "random": true },
-      "line_linked": { "enable": true, "distance": 120, "color": "#00ffc6", "opacity": 0.3, "width": 1 },
-      "move": { "enable": true, "speed": 2, "direction": "none", "random": true, "straight": false, "out_mode": "out" }
-    },
-    "interactivity": {
-      "detect_on": "canvas",
-      "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" }, "resize": true },
-      "modes": { "grab": { "distance": 140, "line_linked": { "opacity": 0.5 } }, "push": { "particles_nb": 4 } }
-    },
-    "retina_detect": true
-  });
+  "particles": {
+    "number": { "value": 150, "density": { "enable": true, "value_area": 900 } },
+    "color": { "value": ["#32cd32","#00ffd0","#7CFC00"] },
+    "shape": { "type": "circle" },
+    "opacity": { "value": 0.7, "random": true },
+    "size": { "value": 3, "random": true },
+    "line_linked": { "enable": true, "distance": 130, "color": "#32cd32", "opacity": 0.25, "width": 1 },
+    "move": { "enable": true, "speed": 2.5, "direction": "none", "random": true, "straight": false, "out_mode": "out" }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" }, "resize": true },
+    "modes": { "grab": { "distance": 140, "line_linked": { "opacity": 0.6 } }, "push": { "particles_nb": 4 } }
+  },
+  "retina_detect": true
+});
 
   document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".bar-fill").forEach(bar => {
     const width = bar.getAttribute("data-width");
     bar.style.width = "0%";
+    bar.querySelector("span").textContent = "0%";
+
     setTimeout(() => {
+      bar.style.transition = "width 2s ease-in-out";
       bar.style.width = width;
-      bar.querySelector("span").textContent = width;
+      let start = 0;
+      const target = parseInt(width);
+      const span = bar.querySelector("span");
+      const interval = setInterval(() => {
+        start++;
+        if(start > target){ clearInterval(interval); start = target; }
+        span.textContent = start + "%";
+      }, 20);
     }, 600);
   });
 });
