@@ -245,43 +245,7 @@ img { max-width: 100%; display: block; }
     align-items: center;
   }
   
-  .founder-img {
-    margin-bottom: 20px;
-  }
-}
-
-/* Founder image with round shape and glow */
-.founder-image {
-  position: relative;
-  width: 220px;
-  height: 220px;
-}
-
-.founder-image img {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  object-fit: cover;
-  display: block;
-  margin: 0 auto;
-  transition: transform 0.4s, box-shadow 0.4s;
-  position: relative;
-  z-index: 2;
-}
-
-/* Hover effect: brighter and lift */
-.founder-image:hover::before {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1.1);
-  background: radial-gradient(circle, rgba(34,197,94,0.7), transparent 60%);
-  filter: blur(45px);
-}
-
-.founder-image:hover img {
-  transform: translateY(-10px);
-}
-
-/* ================= PHILOSOPHY (CARDS) ================= */
+ /* ================= PHILOSOPHY (CARDS) ================= */
 .philosophy-section {
   background: #081821;
   color: #b0e0e6;
