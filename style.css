@@ -1991,6 +1991,95 @@ body, html {
   color: #ccc;
 }
 
+/* ================= FOUNDER PAGE ================= */
+.founder-page {
+  background-color: #fff; /* white background */
+  padding: 80px 20px;
+  font-family: 'Montserrat', sans-serif;
+  color: #333; /* default text color */
+}
+
+.founder-page h2 {
+  text-align: right;       /* heading on right side */
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #2e7d32;          /* green heading */
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* Glow underline on the left side */
+.founder-page h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff0066, #ffcc00, #00ffcc, #0066ff, #ff0066);
+  border-radius: 2px;
+}
+
+/* Container for image + text */
+.founder-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  margin-top: 40px;
+}
+
+/* Founder Image */
+.founder-content .founder-img {
+  width: 200px;          /* slightly larger */
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 25px rgba(46,125,50,0.5); /* green glow shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;
+}
+
+/* Glow hover effect on image */
+.founder-content .founder-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(46,125,50,0.8);
+}
+
+/* Founder Text */
+.founder-content .founder-text {
+  flex: 1;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #333; /* text visible on white background */
+}
+
+/* Signature at the end */
+.founder-content .signature {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  color: #2e7d32;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 900px) {
+  .founder-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .founder-content .founder-img {
+    margin-bottom: 20px;
+  }
+  .founder-page h2 {
+    text-align: center;
+  }
+  .founder-page h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
   /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
   background: rgba(0,255,198,0.05);
