@@ -1,112 +1,204 @@
-/* ===============================
-   B2H Subpage Unified CSS (LOCKED)
-   Affects ONLY pages with body.b2h-subpage
-   =============================== */
+/* ==================================================
+   B2H SUBPAGE MASTER CSS
+   Used by ALL subpages (12 pages)
+   SAFE — does NOT touch index.html
+   ================================================== */
 
 body.b2h-subpage {
+  --bg-main: #0b0f1a;
+  --bg-soft: #111827;
+  --glass-bg: rgba(17, 24, 39, 0.65);
+  --glass-border: rgba(255, 255, 255, 0.08);
 
-  /* ---- Variables (SCOPED, SAFE) ---- */
-  --b2h-bg-dark: #0b0f1a;
-  --b2h-bg-soft: #111827;
-  --b2h-text-main: #e5e7eb;
-  --b2h-text-soft: #9ca3af;
-  --b2h-accent: #32cd32;
-  --gradient-accent: linear-gradient(90deg, #32cd32, #00ffd0, #32cd32);
-  --font-body: 'Montserrat', sans-serif;
-  --font-heading: 'Montserrat', sans-serif;
+  --text-main: #e5e7eb;
+  --text-soft: #9ca3af;
 
-  background-color: var(--b2h-bg-dark);
-  color: var(--b2h-text-main);
-  font-family: var(--font-body);
-  line-height: 1.6;
-  font-size: 16px;
+  --accent: var(--b2h-accent, #32cd32);
+  --accent-grad: linear-gradient(90deg, #32cd32, #00ffd0, #32cd32);
+
+  font-family: 'Montserrat', sans-serif;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: var(--text-main);
+  margin: 0;
 }
 
-/* ---- Global inside subpages only ---- */
+/* ---------------- GLOBAL RESET ---------------- */
 body.b2h-subpage * {
   box-sizing: border-box;
 }
 
 body.b2h-subpage a {
-  color: var(--b2h-accent);
   text-decoration: none;
+  color: var(--accent);
 }
 
-/* ---- Hero ---- */
-body.b2h-subpage .page-hero {
+/* ---------------- GLASS CONTAINER ---------------- */
+.glass-container {
+  max-width: 1100px;
+  margin: 60px auto;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  backdrop-filter: blur(18px);
+  padding: 50px 30px;
+  box-shadow: 0 0 60px rgba(0,0,0,0.4);
+}
+
+/* ---------------- HERO ---------------- */
+.page-hero {
   text-align: center;
-  padding: 80px 20px 40px;
+  margin-bottom: 50px;
 }
 
-body.b2h-subpage .page-hero h1 {
-  font-family: var(--font-heading);
+.page-hero h1 {
   font-size: 3rem;
   font-weight: 800;
-  background: var(--gradient-accent);
+  background: var(--accent-grad);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* ---- Navigation ---- */
-body.b2h-subpage .participate-nav {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-bottom: 2rem;
+.subtitle {
+  color: var(--text-soft);
+  margin-top: 10px;
+  font-size: 1.1rem;
 }
 
-body.b2h-subpage .participate-nav a {
+/* ---------------- HERO ACTION BUTTONS ---------------- */
+.hero-actions {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+
+.btn-glow {
   padding: 12px 22px;
   border-radius: 30px;
-  background: #22c55e;
-  color: #0b0f1a;
-  font-weight: 700;
+  background: rgba(50, 205, 50, 0.15);
+  color: var(--accent);
+  border: 1px solid rgba(50, 205, 50, 0.35);
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
-/* ---- Sections ---- */
-body.b2h-subpage .section {
+.btn-glow:hover {
+  background: var(--accent);
+  color: #020617;
+  box-shadow: 0 0 25px rgba(50, 205, 50, 0.6);
+}
+
+/* ---------------- DIVIDERS ---------------- */
+.section-divider {
+  margin: 50px auto;
+  width: 60%;
+  height: 2px;
+  background: var(--accent-grad);
+  border: none;
+  border-radius: 50px;
+}
+
+/* ---------------- CONTENT SECTIONS ---------------- */
+.section {
   max-width: 900px;
-  margin: 0 auto;
-  padding: 40px 20px;
+  margin: auto;
 }
 
-body.b2h-subpage .section-title {
+.wp-section {
+  margin-bottom: 40px;
+}
+
+.section-title {
   font-size: 1.8rem;
-  color: #22c55e;
-}
-
-/* ---- Boxes ---- */
-body.b2h-subpage .info-box {
-  background: rgba(34,197,94,0.08);
-  padding: 25px;
-  border-radius: 16px;
-}
-
-/* ---- Buttons ---- */
-body.b2h-subpage .green-btn {
-  background: #22c55e;
-  color: #0b0f1a;
-  padding: 14px 28px;
-  border-radius: 12px;
   font-weight: 700;
+  margin-bottom: 15px;
+  background: var(--accent-grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-/* ---- Forms ---- */
-body.b2h-subpage input,
-body.b2h-subpage textarea,
-body.b2h-subpage select {
+.wp-section p,
+.wp-section li {
+  color: var(--text-soft);
+  line-height: 1.8;
+}
+
+/* ---------------- DONATE BOX ---------------- */
+.donate-box {
+  background: rgba(0,0,0,0.35);
+  border: 1px solid var(--glass-border);
+  border-radius: 18px;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.donate-box h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+/* ---------------- BUTTONS ---------------- */
+.green-btn,
+.btn-donate {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 14px 30px;
+  border-radius: 30px;
+  background: var(--accent);
+  color: #020617;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.green-btn:hover,
+.btn-donate:hover {
+  box-shadow: 0 0 30px rgba(50, 205, 50, 0.6);
+  transform: translateY(-2px);
+}
+
+/* ---------------- FORMS ---------------- */
+.participation-form input,
+.participation-form textarea,
+.participation-form select {
   width: 100%;
-  padding: 10px 15px;
-  border-radius: 8px;
-  background: #0f2734;
-  border: 1px solid #22c55e;
-  color: #fff;
+  padding: 14px 16px;
+  margin-bottom: 14px;
+  border-radius: 12px;
+  background: #020617;
+  border: 1px solid rgba(50,205,50,0.35);
+  color: var(--text-main);
 }
 
-/* ---- Footer ---- */
-body.b2h-subpage .site-footer {
-  background: #0b1f29;
-  padding: 20px;
+.participation-form input:focus,
+.participation-form textarea:focus,
+.participation-form select:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+/* ---------------- FOOTER ---------------- */
+.site-footer {
+  margin-top: 80px;
+  padding: 40px 20px;
   text-align: center;
+  background: #020617;
+  border-top: 1px solid var(--glass-border);
+}
+
+.site-footer a {
+  margin: 0 10px;
+  color: var(--text-soft);
+}
+
+.site-footer a:hover {
+  color: var(--accent);
+}
+
+.site-footer p {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #6b7280;
 }
