@@ -42,6 +42,9 @@
 
     <!-- ================= HERO ================= -->
     <section class="page-hero visible">
+
+     <canvas id="heroParticles" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;"></canvas> 
+      
       <h1>B2H Global Foundation</h1>
       <p class="subtitle">Built for Humanity • Driven by Purpose • Guided by Ethics</p>
 
@@ -130,19 +133,6 @@
     <p>&copy; 2026 B2H Global Foundation. All Rights Reserved.</p>
   </footer>
 
-  <!-- ================= FADE-IN SCRIPT ================= -->
-  <script>
-    const elements = document.querySelectorAll('.page-hero, .section, .wp-section');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.2 });
-    elements.forEach(el => observer.observe(el));
-  </script>
-
+<script src="subpage.js"></script>
 </body>
 </html>
