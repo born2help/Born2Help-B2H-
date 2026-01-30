@@ -117,5 +117,68 @@
   <p>&copy; 2026 B2H Global Foundation. All Rights Reserved.</p>
 </footer>
 
+  <!-- ================= VOLUNTEER PARTICLES ================= -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+  // Only apply if this is the volunteer subpage
+  if (!document.body.classList.contains('b2h-subpage')) return;
+
+  const hero = document.querySelector('.page-hero');
+  if (!hero) return;
+
+  // Create particles container
+  const particleCount = 25;
+  const particles = [];
+
+  for (let i = 0; i < particleCount; i++) {
+    const p = document.createElement('span');
+    p.classList.add('volunteer-particle');
+    hero.appendChild(p);
+    particles.push(p);
+
+    // Random position
+    p.style.left = Math.random() * 100 + '%';
+    p.style.top = Math.random() * 100 + '%';
+    const size = 4 + Math.random() * 6;
+    p.style.width = p.style.height = size + 'px';
+    p.style.opacity = Math.random() * 0.6 + 0.4;
+    p.style.background = 'rgba(50,205,50,0.7)';
+    p.style.borderRadius = '50%';
+    p.style.position = 'absolute';
+    p.style.pointerEvents = 'none';
+    p.style.transition = 'transform 1s linear';
+  }
+
+  // Floating animation
+  setInterval(() => {
+    particles.forEach(p => {
+      const dx = (Math.random() - 0.5) * 10;
+      const dy = (Math.random() - 0.5) * 10;
+      const transform = p.style.transform.match(/translate\((.*?)px,(.*?)px\)/);
+      let x = transform ? parseFloat(transform[1]) : 0;
+      let y = transform ? parseFloat(transform[2]) : 0;
+      p.style.transform = `translate(${x + dx}px, ${y + dy}px)`;
+    });
+  }, 1500);
+
+  // Optional: mouse hover attraction
+  hero.addEventListener('mousemove', e => {
+    particles.forEach(p => {
+      const rect = hero.getBoundingClientRect();
+      const mx = e.clientX - rect.left;
+      const my = e.clientY - rect.top;
+      const px = parseFloat(p.style.left) || 0;
+      const py = parseFloat(p.style.top) || 0;
+
+      const distX = (mx - px) * 0.01;
+      const distY = (my - py) * 0.01;
+      p.style.transform = `translate(${distX}px, ${distY}px)`;
+    });
+  });
+
+});
+</script>
+
 </body>
 </html>
