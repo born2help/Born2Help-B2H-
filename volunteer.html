@@ -117,62 +117,78 @@
   <p>&copy; 2026 B2H Global Foundation. All Rights Reserved.</p>
 </footer>
 
-  <!-- ================= VOLUNTEER PARTICLES ================= -->
+  <!-- ================= VOLUNTEER GLIMMERS ================= -->
 <script>
 document.addEventListener('DOMContentLoaded', () => {
 
-  // Only apply if this is the volunteer subpage
+  // Only for volunteer subpage
   if (!document.body.classList.contains('b2h-subpage')) return;
 
   const hero = document.querySelector('.page-hero');
   if (!hero) return;
 
-  // Create particles container
-  const particleCount = 25;
+  // Number of particles
+  const particleCount = 35;
   const particles = [];
 
+  // Create particles
   for (let i = 0; i < particleCount; i++) {
     const p = document.createElement('span');
     p.classList.add('volunteer-particle');
     hero.appendChild(p);
     particles.push(p);
 
-    // Random position
+    // Random initial position
     p.style.left = Math.random() * 100 + '%';
     p.style.top = Math.random() * 100 + '%';
-    const size = 4 + Math.random() * 6;
+
+    // Random size
+    const size = 3 + Math.random() * 8;
     p.style.width = p.style.height = size + 'px';
+
+    // Random opacity
     p.style.opacity = Math.random() * 0.6 + 0.4;
+
+    // Soft green glow
     p.style.background = 'rgba(50,205,50,0.7)';
+    p.style.boxShadow = '0 0 12px rgba(50,205,50,0.5), 0 0 25px rgba(50,205,50,0.2)';
+
     p.style.borderRadius = '50%';
     p.style.position = 'absolute';
     p.style.pointerEvents = 'none';
-    p.style.transition = 'transform 1s linear';
+    p.style.transition = 'transform 1.8s linear';
+    p.style.zIndex = '0';
   }
 
-  // Floating animation
-  setInterval(() => {
+  // Floating animation loop
+  function floatParticles() {
     particles.forEach(p => {
-      const dx = (Math.random() - 0.5) * 10;
-      const dy = (Math.random() - 0.5) * 10;
+      const dx = (Math.random() - 0.5) * 15;
+      const dy = (Math.random() - 0.5) * 15;
+
       const transform = p.style.transform.match(/translate\((.*?)px,(.*?)px\)/);
       let x = transform ? parseFloat(transform[1]) : 0;
       let y = transform ? parseFloat(transform[2]) : 0;
+
       p.style.transform = `translate(${x + dx}px, ${y + dy}px)`;
     });
-  }, 1500);
+    requestAnimationFrame(floatParticles);
+  }
+  floatParticles();
 
-  // Optional: mouse hover attraction
+  // Optional: mouse attraction
   hero.addEventListener('mousemove', e => {
-    particles.forEach(p => {
-      const rect = hero.getBoundingClientRect();
-      const mx = e.clientX - rect.left;
-      const my = e.clientY - rect.top;
-      const px = parseFloat(p.style.left) || 0;
-      const py = parseFloat(p.style.top) || 0;
+    const rect = hero.getBoundingClientRect();
+    const mx = e.clientX - rect.left;
+    const my = e.clientY - rect.top;
 
-      const distX = (mx - px) * 0.01;
-      const distY = (my - py) * 0.01;
+    particles.forEach((p, idx) => {
+      const px = parseFloat(p.dataset.x || p.offsetLeft);
+      const py = parseFloat(p.dataset.y || p.offsetTop);
+
+      const distX = (mx - px) * 0.01 * (idx % 5 + 1);
+      const distY = (my - py) * 0.01 * (idx % 5 + 1);
+
       p.style.transform = `translate(${distX}px, ${distY}px)`;
     });
   });
