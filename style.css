@@ -2109,6 +2109,30 @@ img { max-width: 100%; display: block; }
   }
 }
 
+/* ===== MOBILE CTA BUTTON FIX ===== */
+@media (max-width: 768px) {
+  .hero-actions .green-btn,
+  .hero-actions .btn-glow,
+  .participation-cta {
+    display: inline-block !important;
+    width: 90% !important;   /* full width but with padding */
+    max-width: 300px;
+    white-space: normal !important;
+    text-align: center !important;
+    line-height: 1.4 !important;
+    margin: 10px auto !important;
+    box-sizing: border-box;
+  }
+
+  /* Remove any pseudo-elements or overflow breaking it */
+  .hero-actions .green-btn::before,
+  .hero-actions .green-btn::after,
+  .participation-cta::before,
+  .participation-cta::after {
+    display: none !important;
+  }
+}
+
   /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
   background: rgba(0,255,198,0.05);
