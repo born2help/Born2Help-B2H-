@@ -224,3 +224,14 @@ body.b2h-subpage a {
   font-size: 0.9rem;
   color: #6b7280;
 }
+
+/* ================= VOLUNTEER HERO PARTICLES ================= */
+body.b2h-subpage .page-hero {
+  position: relative;
+  overflow: hidden; /* ensure particles don't overflow */
+}
+
+body.b2h-subpage .volunteer-particle {
+  will-change: transform;
+  z-index: 0; /* behind text */
+}
