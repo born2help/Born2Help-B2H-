@@ -1116,29 +1116,6 @@ img { max-width: 100%; display: block; }
   color: #b0e0e6;
 }
 
-/* Footer text */
-.assets-footer-text {
-  margin-top: 40px;
-  color: #b0e0e6;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 1.05rem;
-  line-height: 1.6;
-}
-
-/* Responsive */
-@media (max-width: 1024px) {
-  .asset-card { width: 45%; }
-}
-
-@media (max-width: 768px) {
-  .assets-grid { flex-direction: column; align-items: center; gap: 20px; }
-  .asset-card { width: 85%; padding: 20px; }
-  .assets-header h2 { font-size: 2.4rem; }
-  .assets-intro, .assets-footer-text { font-size: 1rem; }
-}
-
 /* ================= MISSION & VISION ================= */
 .mission { background: #0f2734; text-align: center; padding: 80px 20px; }
 .mission-vision-cards { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; }
