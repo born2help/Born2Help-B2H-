@@ -1831,6 +1831,108 @@ img { max-width: 100%; display: block; }
   }
 }
 
+/* ================= MAIN PAGE FOOTER ================= */
+.footer {
+  background: #0b1f29;
+  color: #e5e7eb;
+  padding: 40px 20px 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.footer a {
+  color: #32cd32;
+  text-decoration: none;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-subscribe, 
+.footer-address, 
+.footer-social {
+  flex: 1 1 250px;
+}
+
+.footer-subscribe h4,
+.footer-address h4,
+.footer-social h4 {
+  margin-bottom: 10px;
+  color: #32cd32;
+}
+
+.subscribe-form {
+  display: flex;
+  gap: 10px;
+}
+
+.subscribe-form input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #32cd32;
+  background: #0f2734;
+  color: #fff;
+}
+
+.subscribe-form button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background: #32cd32;
+  color: #0b1f29;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.footer-social .social-icons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.footer-social .social-icons a img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s;
+}
+
+.footer-social .social-icons a:hover img {
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #32cd32;
+  padding-top: 10px;
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .subscribe-form {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .subscribe-form button {
+    width: 100%;
+  }
+}
+
   /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
   background: rgba(0,255,198,0.05);
