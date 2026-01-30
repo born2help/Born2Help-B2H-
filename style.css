@@ -2001,6 +2001,17 @@ img { max-width: 100%; display: block; }
   100% { transform: translate(0,0) scale(1); opacity: 0.6; }
 }
 
+/* ===== Mobile fix: How B2H Works button ===== */
+@media (max-width: 768px) {
+  .how-b2h-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    margin: 10px auto;
+  }
+}
+
   /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
   background: rgba(0,255,198,0.05);
